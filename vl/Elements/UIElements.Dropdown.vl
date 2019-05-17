@@ -8,7 +8,7 @@
     ************************ DropdownDrawer ************************
 
 -->
-      <Node Name="DropdownDrawer" Bounds="563,381" Id="R8naKthPheFOUbYRwfkBnZ">
+      <Node Name="DropdownDrawer" Bounds="519,323" Id="R8naKthPheFOUbYRwfkBnZ">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1017,6 +1017,9 @@
                 <TypeReference LastCategoryFullName="UIElement.Core.Core" LastSymbolSource="UIElements.Core.vl">
                   <Choice Kind="InterfaceTypeFlag" Name="IUIElement" />
                 </TypeReference>
+                <TypeReference LastCategoryFullName="UIElement.Core.Core" LastSymbolSource="UIElements.Core.vl">
+                  <Choice Kind="InterfaceTypeFlag" Name="IIdleState" />
+                </TypeReference>
               </p:Interfaces>
               <Patch Id="SgTJPRZ2F2YMTA1zb8phtT">
                 <Canvas Id="VedVJ914SR1QBCTw9Wlp7l" CanvasType="Group">
@@ -1118,7 +1121,7 @@
                   </Pad>
                   <ControlPoint Id="VqfOSGzODgCMNrGTgmuZeq" Bounds="779,161" />
                   <ControlPoint Id="LkI4gNdOogpMP4i4ZFCXVd" Bounds="894,161" />
-                  <Node Bounds="753,526,127,95" Id="CpvGE8cEqSnO9y6rMkUYxi">
+                  <Node Bounds="753,526,216,112" Id="CpvGE8cEqSnO9y6rMkUYxi">
                     <p:NodeReference LastCategoryFullName="UIElement.Core.Utils" LastSymbolSource="UIElements.Core.vl">
                       <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GoToState" />
@@ -1141,7 +1144,9 @@
                     </Patch>
                     <Pin Id="GUN289aBaQIPpxZYfAW0Wz" Name="Go" Kind="InputPin" />
                     <Pin Id="AyAsak5OZTsMWdhCtgZVIx" Name="State Reference" Kind="InputPin" />
+                    <Pin Id="BuDv7Rmp02oLjx4YBLR87h" Name="Global State" Kind="InputPin" />
                   </Node>
+                  <ControlPoint Id="KcMMhmC5X2HNANQY5glk9X" Bounds="968,488" />
                 </Canvas>
                 <Patch Id="EfXFOPGZ9v6QH2vjTjqEYr" Name="Create">
                   <Pin Id="DIc6ThG9RxHLVzsepN3iRZ" Name="State Reference" Kind="InputPin" />
@@ -1171,6 +1176,7 @@
                   <Pin Id="NmGnRsqRL42Nm7NFa006xP" MergeId="144260" Name="Mouse State" Kind="InputPin" />
                   <Pin Id="U03GpSL0lryPjYWhEsk8Rd" Name="Notification" Kind="InputPin" />
                   <Pin Id="TXdVyTVyZzqNeYgXhXvu7O" Name="Keyboard State" Kind="InputPin" />
+                  <Pin Id="G9onvtY6fSkMRHhn7YVWTk" Name="Global State" Kind="InputPin" />
                 </Patch>
                 <Link Id="UMqSbZVcmXSP9vF9cIgQEn" Ids="IPjbgObWysTNMPFiTLrB2f,RspGl3PFxuwPDoXawPtzeF" />
                 <Link Id="NR3vhekAIo1MnN1eGOYbou" Ids="ECjB4S5LjeAL9mgsOIIrs0,LXzC4SBmLSmQd8lv5936Vh" />
@@ -1193,6 +1199,8 @@
                 <Link Id="LzlslKHFQwdOQMg5hGYp6X" Ids="J7x1V1jr3vPLD5t2NLlKxf,AyAsak5OZTsMWdhCtgZVIx" />
                 <Link Id="KBsqT8EfPKUPS0thlmKZjr" Ids="KlgtHUSvNXZNqdQ9JEu5nx,GUN289aBaQIPpxZYfAW0Wz" />
                 <Link Id="LexUxPrP3cPNt3FaNM8YzE" Ids="TXdVyTVyZzqNeYgXhXvu7O,LkI4gNdOogpMP4i4ZFCXVd" IsHidden="true" />
+                <Link Id="JzjHFAydjDFMvRCSx0NyZY" Ids="G9onvtY6fSkMRHhn7YVWTk,KcMMhmC5X2HNANQY5glk9X" IsHidden="true" />
+                <Link Id="OIIeb3rsUX8PtEd1hQaacK" Ids="KcMMhmC5X2HNANQY5glk9X,BuDv7Rmp02oLjx4YBLR87h" />
               </Patch>
             </Node>
             <!--
@@ -1336,6 +1344,7 @@
                     </Patch>
                     <Pin Id="IyqteSALDHhP7gZzN93juY" Name="Go" Kind="InputPin" />
                     <Pin Id="LPHoBXKClseOtGD72sE28n" Name="State Reference" Kind="InputPin" />
+                    <Pin Id="Cp2e0zh7nLvL4FOQpBjiZj" Name="Global State" Kind="InputPin" />
                   </Node>
                   <Node Bounds="1037,741,37,19" Id="PyEWYX9hRAaPgPxzrVJsE9">
                     <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
@@ -1444,6 +1453,13 @@
                     <ControlPoint Id="IrsOdOyDB0qNPOlkOmXhAh" Bounds="747,405" Alignment="Top" />
                   </Node>
                   <ControlPoint Id="JyekoKz2tyyM0YwdGbYIgY" Bounds="851,531" />
+                  <ControlPoint Id="II3pS8Kil8dQPtxhD0aHgj" Bounds="538,558" />
+                  <Pad Id="P6a5GrC2DhpPG5Qv0gHCtM" Comment="Handled" Bounds="520,486,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="Boolean" />
+                    </p:TypeAnnotation>
+                  </Pad>
+                  <ControlPoint Id="SlXbOPWwdonPPe30RF3VY2" Bounds="1197,866" />
                 </Canvas>
                 <Patch Id="NcmPT0FeO9uMZAuQhrHLVI" Name="Create">
                   <Pin Id="Rcy36CGUzMbOAdArvnBBL4" Name="State Reference" Kind="InputPin" />
@@ -1474,6 +1490,7 @@
                   <Pin Id="AoHJTbrqODdQSi6x2Hxcab" Name="Notification" Kind="InputPin" />
                   <Pin Id="EaoJWtu1vcxOGFesK4G8WK" Name="Mouse State" Kind="InputPin" />
                   <Pin Id="FU4VY9Fc2AfLpH0iMHjz4S" Name="Keyboard State" Kind="InputPin" />
+                  <Pin Id="RRmMsuCvE7NOgLM3HOMKPR" Name="Global State" Kind="InputPin" />
                   <Pin Id="JBqhRS5FM2fLYOf1FptgRC" Name="Handled" Kind="OutputPin" />
                 </Patch>
                 <Slot Id="BLc8H766B2ANcewcD5aq9b" Name="Entries Rectangles" />
@@ -1527,6 +1544,10 @@
                 <Link Id="SJt5C3QuQu2PA7KgZzaW66" Ids="FU4VY9Fc2AfLpH0iMHjz4S,JfiU84s8H20PB116BKMlCL" IsHidden="true" />
                 <Link Id="AIvtjWPuqKwLXjm7RCKnqO" Ids="EaoJWtu1vcxOGFesK4G8WK,JyekoKz2tyyM0YwdGbYIgY" IsHidden="true" />
                 <Link Id="DkNQrAv0yanMzuVXd9JwLr" Ids="EaoJWtu1vcxOGFesK4G8WK,B4NU1GScZlzPbEVPUho4iE" IsHidden="true" />
+                <Link Id="Ju44fUeTwY0M2EnChNWF5u" Ids="II3pS8Kil8dQPtxhD0aHgj,JBqhRS5FM2fLYOf1FptgRC" IsHidden="true" />
+                <Link Id="P2V8L7AtRY0Pq3W8s91FXI" Ids="P6a5GrC2DhpPG5Qv0gHCtM,II3pS8Kil8dQPtxhD0aHgj" />
+                <Link Id="GWZL5r0f5TnLLJDkJpG8DD" Ids="RRmMsuCvE7NOgLM3HOMKPR,SlXbOPWwdonPPe30RF3VY2" IsHidden="true" />
+                <Link Id="Eb9dUMxtiImPhjMpGaAXgp" Ids="SlXbOPWwdonPPe30RF3VY2,Cp2e0zh7nLvL4FOQpBjiZj" />
               </Patch>
             </Node>
             <Node Bounds="152,397,120,95" Id="OcspYASc80CQArmm9pt7qi">
@@ -1567,17 +1588,18 @@
                 <Choice Kind="OperationCallFlag" Name="ProcessNotification" />
                 <CategoryReference Kind="InterfaceTypeFlag" Name="IUIElement" NeedsToBeDirectParent="true" />
               </p:NodeReference>
-              <Pin Id="NAIPoRikfzZQOhsUDuo3wM" Name="Input" Kind="StateInputPin" />
+              <Pin Id="L48CnVryTbsP6FYaYZ0JDD" Name="Input" Kind="InputPin" />
               <Pin Id="P18uaJ7XGDgLkGb36SwD1c" Name="Notification" Kind="InputPin" />
               <Pin Id="F8EVrkmFsbPNE62XLCmf6x" Name="Mouse State" Kind="InputPin" />
               <Pin Id="BLylTXMFQQrOUSFQ1F02V4" Name="Keyboard State" Kind="InputPin" />
+              <Pin Id="TP5qXWnYHWrL8ugcdrcJO4" Name="Global State" Kind="InputPin" />
               <Pin Id="Fpes4qGxvxRMXOIoYz2uY0" Name="Output" Kind="StateOutputPin" />
               <Pin Id="QokpYYJHqseQZI5LQzdDcc" Name="Handled" Kind="OutputPin" />
             </Node>
             <Pad Id="B7Fq9AJoDsCPPrfWHHUDTV" SlotId="BuKk6ndI1ykLNd0BRvJ4y0" Bounds="272,531">
               <p:ValueBoxSettings />
             </Pad>
-            <Pad Id="V7oo6jx3qAmLv1zBuvuZBy" SlotId="BuKk6ndI1ykLNd0BRvJ4y0" Bounds="679,83">
+            <Pad Id="V7oo6jx3qAmLv1zBuvuZBy" SlotId="BuKk6ndI1ykLNd0BRvJ4y0" Bounds="678,71">
               <p:ValueBoxSettings />
             </Pad>
             <Pad Id="QsfQrWD8frRMRmDgVSd8XV" SlotId="BuKk6ndI1ykLNd0BRvJ4y0" Bounds="680,148">
@@ -1723,6 +1745,7 @@
             <Pin Id="RNQT2vACvvfMYiTFKSrK0D" Name="Notification" Kind="InputPin" />
             <Pin Id="EoL8BDxQyQzLz3x2xv0JY3" Name="Mouse State" Kind="InputPin" />
             <Pin Id="N9eUWIE9voENHv1ijeaRXO" Name="Keyboard State" Kind="InputPin" />
+            <Pin Id="KxBjm5eFX7NOuYgD4SYKXp" Name="Global State" Kind="InputPin" />
             <Pin Id="F3jRW1k9RugNcmwFC0TBy2" Name="Handled" Kind="OutputPin" />
           </Patch>
           <Link Id="UdkHf3dY3MYQMAehedmqI3" Ids="SDKSOhMgfbeLkq7GPIATuQ,M5OpdD77MowMDACamXItOd" IsHidden="true" />
@@ -1735,7 +1758,6 @@
           <Link Id="NNd5ndUlj1wQXnWWbrDrUJ" Ids="KThXV8eZlN5PiToD3CheQw,IzM9akQxze6OgwUFvawusC" />
           <Link Id="S0YFR6jWmPGOHHIo9gSFom" Ids="E2eDyut9hrtPd8eJ6uketQ,B7Fq9AJoDsCPPrfWHHUDTV" />
           <Slot Id="BuKk6ndI1ykLNd0BRvJ4y0" Name="State" />
-          <Link Id="KQs1ToX2T51LitTA6n85gr" Ids="V7oo6jx3qAmLv1zBuvuZBy,NAIPoRikfzZQOhsUDuo3wM" />
           <Link Id="QqmLuCrOHAtQQQQPt3jTIf" Ids="Fpes4qGxvxRMXOIoYz2uY0,QsfQrWD8frRMRmDgVSd8XV" />
           <Patch Id="J5GXH4gKSInK9YrKdeE8sW" Name="GoToIdleState" ParticipatingElements="Dkdi7JR8QVaMZSVT6qe9EI" />
           <Patch Id="Nfy9O80N06OLzAQBkv7J8o" Name="GoToSelectionState" ParticipatingElements="Rbi2DS7Y6k9MII6Y8CqliQ" />
@@ -1766,6 +1788,7 @@
           <Link Id="NDBeRhHlPGpMKpEbQJ6Tew" Ids="R5qr1IXxvxING4YUdjnyMz,Dpom1kDYYTdNuNBb3uzkER" />
           <Link Id="QEUjfEDXY4mQc1Uk3roDom" Ids="Dpom1kDYYTdNuNBb3uzkER,HGkEGcXlfWxQEgNS8bb3ap" IsHidden="true" />
           <Link Id="L4TDEXCMqNZPWueRYdpSM2" Ids="TSuM54icG8oNhnjSOZAZxj,AfBxkJ9JQdWO6Z9J4WbcW8" />
+          <Link Id="MUR68XPfAdmL52iTv6Qbyp" Ids="V7oo6jx3qAmLv1zBuvuZBy,L48CnVryTbsP6FYaYZ0JDD" />
         </Patch>
       </Node>
       <!--
@@ -1773,12 +1796,12 @@
     ************************ RegisterServices ************************
 
 -->
-      <Node Name="RegisterServices" Bounds="338,476,80,80" Id="UhkkWgawXunMUHgeS3pET4">
+      <Node Name="RegisterServices" Bounds="392,434,200,159" Id="UhkkWgawXunMUHgeS3pET4">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
           <Choice Kind="OperationDefinition" Name="Operation" />
         </p:NodeReference>
         <Patch Id="EqJML2TLEmxOKFihOgLr6M">
-          <Node Bounds="364,510,103,95" Id="PGnbH5zyd6OQRrt851aRX3">
+          <Node Bounds="477,478,103,95" Id="PGnbH5zyd6OQRrt851aRX3">
             <p:NodeReference LastCategoryFullName="System.Reflection.IVLFactory" LastSymbolSource="System.Reflection.vl">
               <Choice Kind="OperationCallFlag" Name="RegisterService" />
               <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
@@ -1792,9 +1815,9 @@
                   <Choice Kind="TypeFlag" Name="ISkiaLayerProvider" />
                 </p:TypeAnnotation>
               </Pin>
-              <ControlPoint Id="RBqQsOZYFZcMLJQl366amh" Bounds="378,518" />
-              <ControlPoint Id="SiFUpA5Lx57NofyvhiOhyp" Bounds="378,598" />
-              <Node Bounds="376,542,79,26" Id="VC8I3PoMSQkQHxH4KPkvAd">
+              <ControlPoint Id="RBqQsOZYFZcMLJQl366amh" Bounds="491,486" />
+              <ControlPoint Id="SiFUpA5Lx57NofyvhiOhyp" Bounds="491,566" />
+              <Node Bounds="489,510,79,26" Id="VC8I3PoMSQkQHxH4KPkvAd">
                 <p:NodeReference LastCategoryFullName="UIElements.Dropdown.DropdownDrawer" LastSymbolSource="UIElements.Dropdown.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="ClassType" Name="DropdownDrawer" />
@@ -1809,7 +1832,7 @@
           <Link Id="QVyglRwAeLMPrA4hMXtfLz" Ids="SiFUpA5Lx57NofyvhiOhyp,Mz0aQOu53hOODjBYJOCSTf" IsHidden="true" />
           <Link Id="TFh2EaSZ9A9MhVTKjJ1hE4" Ids="RBqQsOZYFZcMLJQl366amh,JMeKpqX6nQuQToWZbk78Fr" />
           <Link Id="TwLVPuo55ZeOCoYrAABP8q" Ids="Ghd2CAyQF2HMD6rY7Jrk5s,SiFUpA5Lx57NofyvhiOhyp" />
-          <ControlPoint Id="TLVrPAB91tsQBjHWqwquTO" Bounds="366,484" />
+          <ControlPoint Id="TLVrPAB91tsQBjHWqwquTO" Bounds="479,452" />
           <Link Id="N1HddOLswJLLZO6amsN0qt" Ids="TLVrPAB91tsQBjHWqwquTO,I5YywxDcQPxMhTZSiGSPpi" />
           <Pin Id="MEokpsACTeNQDdgfpPBeDe" Name="Factory" Kind="InputPin" Bounds="366,484" />
           <Link Id="Ajs6Xy5NppRPI29ehcPxnh" Ids="MEokpsACTeNQDdgfpPBeDe,TLVrPAB91tsQBjHWqwquTO" IsHidden="true" />
