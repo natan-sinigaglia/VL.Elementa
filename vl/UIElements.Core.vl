@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="RFpVcPNN2izOKCgwQWWU6Q" LanguageVersion="2019.1.0-0348-ge3308a107f" Version="0.128">
+<Document xmlns:p="property" Id="RFpVcPNN2izOKCgwQWWU6Q" LanguageVersion="2019.1.0-0344-gd5eabf23a7" Version="0.128">
   <NugetDependency Id="GOwKPeNC1sPOBYReGUdBSy" Location="VL.CoreLib" Version="2019.1.0-332" />
   <Patch Id="IJqofqiv6iCOhlZVPuNmRg">
     <Canvas Id="N2TI9DvYkG0L6BwxZmbEbR" DefaultCategory="UIElement.Core" CanvasType="FullCategory">
@@ -2831,6 +2831,127 @@
             <Link Id="MoHZS6jhSZDNjWUfazA11j" Ids="TxSNyIiWIkCO2N0VomgSfq,BNe2EAE5EwaQRpZ8a9N1QR" />
             <Link Id="VNecE4y7PwoQTVV3YhE2Db" Ids="LU1RIHlKtMPLLn7SCWr8Tr,LbzAmfrPocKLOqCl6iN6VH" />
             <Link Id="Pt90rPnvpTrQd5pCm5qIWr" Ids="DNk7BINhKS7NzJZdgWrw7L,LU1RIHlKtMPLLn7SCWr8Tr" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ GetSlider2DComponentsRectangles ************************
+
+-->
+        <Node Name="GetSlider2DComponentsRectangles" Bounds="1560,638,240,274" Id="MnvZ2GnKo65MzCBeeI17ui">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="CaSBjQvFx7tNzE9XF2mN9H">
+            <Node Bounds="1573,690,66,19" Id="NNkI8uC6otvNi9ZIAJbIU5">
+              <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="BottomLeft" />
+              </p:NodeReference>
+              <Pin Id="ScbjkEU6Ta6P6EDqJlQZAz" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Uomn1ixUh02Of7StME2Uqt" Name="Bottom Left" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1572,805,61,19" Id="KITe86l8F96QEJGM0uxqcd">
+              <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Rectangle (Join)" />
+              </p:NodeReference>
+              <Pin Id="FSOfkkT4HkLM4U1JhrKBBj" Name="Position" Kind="InputPin" />
+              <Pin Id="J98iAS1mMyZOdxPuXoPwAb" Name="Size" Kind="InputPin" />
+              <Pin Id="LJptP5yAgW2PefMkp5tdzW" Name="Anchor" Kind="InputPin" DefaultValue="BottomLeft">
+                <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="RectangleAnchor" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="CU3Z6NM9wV5PV28W734C6Z" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="1742,690,46,19" Id="Kdv4yG7ozJZLc5G0Q4bP6v">
+              <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Height" />
+                <CategoryReference Kind="RecordType" Name="Rectangle" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="OKjEPefnaEtQKGiSGH9rrl" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Mxky7EDC4lUPOB3JlYGnI7" Name="Height" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1742,727,25,19" Id="FZPcMxTJtX7LwP984YuV60">
+              <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="*" />
+              </p:NodeReference>
+              <Pin Id="IqVfJ7HxMcFPs1LtcVCVXI" Name="Input" Kind="InputPin" />
+              <Pin Id="BRgTSMdQVVPPL8MGmG2b77" Name="Input 2" Kind="InputPin" DefaultValue="0.4">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="OKHEqKVC6oyLOF1hr9Faq3" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1662,751,85,19" Id="MvhxIZn6iDCLFFVZPtYYmx">
+              <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Vector (Join)" />
+                <CategoryReference Kind="Vector2Type" Name="Vector2" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="KkyX3BpPvWHOezsLTv3iFA" Name="X" Kind="InputPin" />
+              <Pin Id="KDQqFf1rEDlLdx01ukNdeQ" Name="Y" Kind="InputPin" />
+              <Pin Id="KVOvRcxZBPYPSfIYMdjsQR" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="1662,690,42,19" Id="Ldt4hvjnnmZP4cbkIW5cTW">
+              <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Width" />
+                <CategoryReference Kind="RecordType" Name="Rectangle" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="HhlPZMWvRcPMjmgWREbAlk" Name="Input" Kind="StateInputPin" />
+              <Pin Id="AtN4YroxXmiNZkVu85mV5H" Name="Width" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1662,727,25,19" Id="P1lMIENobTzQCkSGrrwn0e">
+              <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="*" />
+              </p:NodeReference>
+              <Pin Id="C3L4ASdWRuHNYhRoYfoj4E" Name="Input" Kind="InputPin" />
+              <Pin Id="Q5lDlw6rBRlM4SL6pemEJp" Name="Input 2" Kind="InputPin" DefaultValue="0.35">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="PoqEwP3cnUmOapL8lXUyJO" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="NyUSwmipmv5NoBoe4hXYPv" Bounds="1575,656" />
+            <Link Id="DOg3AOjYsvDOWRZASgnnSU" Ids="Uomn1ixUh02Of7StME2Uqt,FSOfkkT4HkLM4U1JhrKBBj" />
+            <Link Id="A0BNeEiNmSYPXRrzjQ0tHG" Ids="KVOvRcxZBPYPSfIYMdjsQR,J98iAS1mMyZOdxPuXoPwAb" />
+            <Link Id="AjJCTcCg51uLeOZzWvMWXF" Ids="Mxky7EDC4lUPOB3JlYGnI7,IqVfJ7HxMcFPs1LtcVCVXI" />
+            <Link Id="HeLYFvohchCMcUq5BfkyRe" Ids="AtN4YroxXmiNZkVu85mV5H,C3L4ASdWRuHNYhRoYfoj4E" />
+            <Link Id="JwfKKw7YgBbOcOTRu90pV6" Ids="OKHEqKVC6oyLOF1hr9Faq3,KDQqFf1rEDlLdx01ukNdeQ" />
+            <Link Id="O43b93JqBhfM3cxAWiCnpT" Ids="PoqEwP3cnUmOapL8lXUyJO,KkyX3BpPvWHOezsLTv3iFA" />
+            <Link Id="FHRvslSucmaPiCyrI1MDCI" Ids="NyUSwmipmv5NoBoe4hXYPv,HhlPZMWvRcPMjmgWREbAlk" />
+            <Link Id="JamP1hvmkiVQUtSRJjTj5e" Ids="NmBbXhvia1ILHB1PXEjRfA,NyUSwmipmv5NoBoe4hXYPv" IsHidden="true" />
+            <Link Id="Mro3iymoLA7MQ54UpXoAMw" Ids="NyUSwmipmv5NoBoe4hXYPv,ScbjkEU6Ta6P6EDqJlQZAz" />
+            <Link Id="NjFaasBXO4uMRnqPGzhMAI" Ids="NyUSwmipmv5NoBoe4hXYPv,OKjEPefnaEtQKGiSGH9rrl" />
+            <Node Bounds="1572,851,81,19" Id="GgYqIQQAwjIQX9cSio01BQ">
+              <p:NodeReference LastCategoryFullName="UIElement.Core.Utils" LastSymbolSource="UIElements.Core.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="SplitRectangle (Vertical)" />
+              </p:NodeReference>
+              <Pin Id="Cq7IUU5QsQgLwjuRa46aXw" Name="Bounds" Kind="InputPin" />
+              <Pin Id="F1OL5Csa1pSPGO9bTd2PIn" Name="Divisions Count" Kind="InputPin" />
+              <Pin Id="Q6V3Sr1mBvgMAt18XepdgZ" Name="Gutter" Kind="InputPin" />
+              <Pin Id="TkBVebCa2KZP61ameHBPM7" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Link Id="PX5cCkrsCgxNiU4yjwsioa" Ids="CU3Z6NM9wV5PV28W734C6Z,Cq7IUU5QsQgLwjuRa46aXw" />
+            <Pad Id="RBgH54jcsKiMfCoaBOrb2l" Comment="" Bounds="1612,837,20,15" ShowValueBox="true" isIOBox="true" Value="2">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Link Id="JCGpU0okOLKPt37GpHPJ8B" Ids="RBgH54jcsKiMfCoaBOrb2l,F1OL5Csa1pSPGO9bTd2PIn" />
+            <ControlPoint Id="CXjAiqCqlTEQPSQ0GjnxNw" Bounds="1574,895" />
+            <Link Id="J5pNbRJIUW2NqwKRKqWsMS" Ids="TkBVebCa2KZP61ameHBPM7,CXjAiqCqlTEQPSQ0GjnxNw" />
+            <Link Id="TxfNsVd6TdPNSkQhWAwaFc" Ids="CXjAiqCqlTEQPSQ0GjnxNw,KxKqxTMrfa6LkmXlHaTfIg" IsHidden="true" />
+            <Pin Id="KxKqxTMrfa6LkmXlHaTfIg" Name="Output" Kind="OutputPin" Bounds="1536,1017" />
+            <Pin Id="NmBbXhvia1ILHB1PXEjRfA" Name="Bounds" Kind="InputPin" Bounds="595,185" />
           </Patch>
         </Node>
       </Canvas>
