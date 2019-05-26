@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UIElements.Core
+namespace UIElements.Style
 {
 
-    public enum Button_Shape
+    public enum Shape
     {
         Rectangle,
         Triangle_Up,
@@ -19,7 +19,7 @@ namespace UIElements.Core
         Menu
     }
 
-    public enum Interaction_State
+    public enum Style_State
     {
         Idle,
         Hovered,
@@ -28,8 +28,10 @@ namespace UIElements.Core
         TextPreview
     }
 
-    public enum Style_Element
+    public enum Style_Property
     {
+        Base_Color,
+        Base_Text_Color,
         Fill_Visible,
         Fill_Color,
         Fill_Paint,
