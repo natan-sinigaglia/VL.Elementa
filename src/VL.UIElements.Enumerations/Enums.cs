@@ -19,6 +19,13 @@ namespace UIElements.Style
         Menu
     }
 
+    public enum Style_Object
+    {
+        Background,
+        Foreground,
+        Text
+    }
+
     public enum Style_State
     {
         Idle,
