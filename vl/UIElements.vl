@@ -115,7 +115,7 @@
                     <p:NodeReference LastCategoryFullName="UIElements.Style.StyleProperties" LastSymbolSource="UIElements.Style.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetText" />
-                      <CategoryReference Kind="RecordType" Name="StyleProperties" NeedsToBeDirectParent="true" />
+                      <CategoryReference Kind="Category" Name="Style" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="QpCz0Y60zYyLXFn4bxphBz" Name="Input" Kind="StateInputPin" />
                     <Pin Id="DPmFhFEIV5AN9asg2AyytF" Name="Text_Enable" Kind="OutputPin" />
@@ -124,8 +124,8 @@
                   <Node Bounds="421,698,105,26" Id="ICMrvJWBN4QLDUsOHIW4Pl">
                     <p:NodeReference LastCategoryFullName="UIElements.Style.StyleProperties" LastSymbolSource="UIElements.Style.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <CategoryReference Kind="RecordType" Name="StyleProperties" />
                       <Choice Kind="OperationCallFlag" Name="GetBackground" />
+                      <CategoryReference Kind="Category" Name="Style" />
                     </p:NodeReference>
                     <Pin Id="SlGwk8rmufGOE6nWacApho" Name="Input" Kind="StateInputPin" />
                     <Pin Id="RcwKMigWARfMTX7Qw5c3YG" Name="Background_Fill_Enable" Kind="OutputPin" />
@@ -232,8 +232,9 @@
                 <Pin Id="TQDgLfUNi6DMyvRsT0r6iP" Name="Input" Kind="StateInputPin" />
                 <Pin Id="HLswMoP3tSHLRZ0MbDTMU3" Name="Notification" Kind="InputPin" />
                 <Pin Id="NvVZJ4SLbmbOjgqSeqcZGv" Name="Caller Info" Kind="InputPin" />
-                <Pin Id="JRf6LvWfQscMA515aTqrGP" Name="Output" Kind="OutputPin" />
+                <Pin Id="BHIVyHoC5DdOMcZtDOgpIf" Name="Output" Kind="OutputPin" />
                 <Pin Id="MTf6jgQHnExNa0Mj1x9BvU" Name="Handled" Kind="OutputPin" />
+                <Pin Id="JRf6LvWfQscMA515aTqrGP" Name="State Output" Kind="OutputPin" />
               </Node>
               <Pad Id="FrYInYhVv3ZQIxm2W1Rsi0" SlotId="PrYD0zvP684MTzsMgbqaCF" Bounds="226,7" />
               <Pad Id="FkcZPnDLymYPwdWso2rfQI" Comment="" Bounds="616,107" isIOBox="true" />
@@ -301,23 +302,24 @@
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="ComputeStyle" />
                     </p:NodeReference>
+                    <Pin Id="Rvgog5cfjAYPsCwIxhc92h" Name="Style Sheet" Kind="InputPin" />
                     <Pin Id="JmBP54OvQ9WOmAfiJXIrJh" Name="Parent Style" Kind="InputPin" />
-                    <Pin Id="A1hg2o3ShFxOHexCgpKtIz" Name="Catalog" Kind="InputPin" />
                     <Pin Id="K0OUgRQMJfmLQaQmDwcGlc" Name="Element" Kind="InputPin" />
                     <Pin Id="GaVnuYBki9ROeXFvNbqgxn" Name="Class" Kind="InputPin" />
                     <Pin Id="QrKb5iKzZWPNU1EWpbgfie" Name="Style" Kind="OutputPin" />
+                    <Pin Id="A1hg2o3ShFxOHexCgpKtIz" Name="Catalog" Kind="InputPin" />
                   </Node>
                   <Node Bounds="719,230,36,26" Id="IGVAV3YqyMFPbdJHqdIA4T">
                     <p:NodeReference LastCategoryFullName="UIElements.Style.Style" LastSymbolSource="UIElements.Style.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="Split" />
-                      <CategoryReference Kind="Category" Name="Style" NeedsToBeDirectParent="true">
+                      <CategoryReference Kind="Category" Name="StyleSheet" NeedsToBeDirectParent="true">
                         <p:OuterCategoryReference Kind="Category" Name="Style" NeedsToBeDirectParent="true" />
                       </CategoryReference>
                     </p:NodeReference>
                     <Pin Id="REluhtjTtzJNrYPNflsYKP" Name="Input" Kind="StateInputPin" />
-                    <Pin Id="KlpAtNzu0ZGMVFavGCxid6" Name="Base Style Properties" Kind="OutputPin" />
                     <Pin Id="BSQCckPfwxvPm8pMpBSLSz" Name="Catalog" Kind="OutputPin" />
+                    <Pin Id="KlpAtNzu0ZGMVFavGCxid6" Name="Base Style" Kind="OutputPin" />
                   </Node>
                   <Pad Id="Fstiefp3FXqLjVVeUgWWxa" Comment="Element" Bounds="772,257,35,15" ShowValueBox="true" isIOBox="true" Value="Label">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -581,7 +583,7 @@
             <Patch Id="Cq5YitV6qmHPZhzQXBGdsi" Name="SetStyle">
               <Pin Id="MlshILE0n1cPCEdDUIx2ax" MergeId="164590" Name="Style" Kind="InputPin">
                 <p:TypeAnnotation>
-                  <Choice Kind="TypeFlag" Name="Style" />
+                  <Choice Kind="TypeFlag" Name="StyleSheet" />
                 </p:TypeAnnotation>
               </Pin>
             </Patch>
@@ -740,4 +742,7 @@
   <DocumentDependency Id="EcRx1VHBqQ2O8pXNjvhkat" Location="./UIElements.Style.vl" IsForward="true" />
   <DocumentDependency Id="GGzYYJFSWaALvoLLq3IQC9" Location="./UIElements.Utils.vl" IsForward="true" />
   <DocumentDependency Id="EAjAxXURlO5NHif56mdlCf" Location="./UIElement.Layout.vl" IsForward="true" />
+  <DocumentDependency Id="FDk3JmnowBhMuKAxz9IQg1" Location="./Elements/UIElements.Rectangle.vl" IsForward="true" />
+  <DocumentDependency Id="ElQ7b2FaE6wLkstIMCYL0o" Location="./Elements/UIElements.LayoutableObject.vl" IsForward="true" />
+  <DocumentDependency Id="A4Xp4cTIuPCMzRVfFJQt9L" Location="./Elements/UIElements.RoundRectangle.vl" IsForward="true" />
 </Document>
