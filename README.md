@@ -1,2 +1,4 @@
-# VL.UIElements
-Collection of UI widgets for easy UI prototyping
+# Elementa
+
+UI elements library made for vvvv (written in vl)
+
