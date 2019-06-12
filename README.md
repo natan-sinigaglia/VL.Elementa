@@ -1,2 +1,5 @@
-# VL.UIElements
-Collection of UI widgets for easy UI prototyping in Skia
+# Elementa
+
+UI widgets library
+
+Made in vl for skia rendering
