@@ -2,4 +2,5 @@
 
 UI widgets library
 
-Made in vl for skia rendering
+Made in vl.
+Skia based rendering.
