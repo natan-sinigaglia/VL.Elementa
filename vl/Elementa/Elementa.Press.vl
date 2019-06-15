@@ -204,6 +204,7 @@
                   <Pin Id="M6thxUndT2dPmiaLnSnmxA" Name="Input" Kind="StateInputPin" />
                   <Pin Id="NtY8r322HbQL7Q6NUVr7Kb" Name="Foreground_Fill_Enable" Kind="OutputPin" />
                   <Pin Id="Kx5HSSwsY76PHIPHbuELdW" Name="Foreground_Fill_Paint" Kind="OutputPin" />
+                  <Pin Id="OIgY9OUjZZpNnucZfKp6mc" Name="Foreground_Highlight_Paint" Kind="OutputPin" />
                   <Pin Id="QXnBnPMvXmJOg0fH3svKGP" Name="Foreground_Stroke_Enable" Kind="OutputPin" />
                   <Pin Id="JPpjPntEIhZOvJsS1FQZLV" Name="Foreground_Stroke_Paint" Kind="OutputPin" />
                 </Node>
@@ -253,6 +254,7 @@
                   <Pin Id="Lmg95hT8GJVO9Sxj0BMO2q" Name="Input" Kind="StateInputPin" />
                   <Pin Id="UpgGEJYpBp9OUqzlas8pCA" Name="Foreground_Fill_Enable" Kind="OutputPin" />
                   <Pin Id="El61xIqp3mnOrZNGK8C8uN" Name="Foreground_Fill_Paint" Kind="OutputPin" />
+                  <Pin Id="BYREKNRrguOPcU46hAAgff" Name="Foreground_Highlight_Paint" Kind="OutputPin" />
                   <Pin Id="J6sC72nFv20ODgQ1OOaPeN" Name="Foreground_Stroke_Enable" Kind="OutputPin" />
                   <Pin Id="VpwZVIKPacoLLLiL6zOEox" Name="Foreground_Stroke_Paint" Kind="OutputPin" />
                 </Node>
@@ -900,6 +902,19 @@
             <ControlPoint Id="IpLdwxL782OQK8t39fOaUM" Bounds="652,382" />
             <ControlPoint Id="QbCXJpgHZSnMRwupxgkDuV" Bounds="415,389" />
             <ControlPoint Id="USHx4w6RyD0Lr3fcRfQZkq" Bounds="651,293" />
+            <ControlPoint Id="LBYNioJEjZ8NA3ntaFWcUr" Bounds="942,281" />
+            <ControlPoint Id="DQBLXe8y40fPRvYxnSEfpi" Bounds="941,388" />
+            <Pad Id="PI9aA3buOXbNW4vMKQhg7a" SlotId="NzkSJwJlx9bPX2cZ7oWwwo" Bounds="940,334" />
+            <Pad Id="EU5PHA2XwPALCpvFIPYkA1" Comment="" Bounds="966,312,20,15" ShowValueBox="true" isIOBox="true">
+              <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments>
+                  <TypeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="Elementa.Core.vl">
+                    <Choice Kind="TypeFlag" Name="IComponent" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pad>
           </Canvas>
           <Patch Id="HTtdUewHnhkNzsXSCvqBSl" Name="Create" />
           <Patch Id="OfwbIcNe3SuNL1oOo54UCc" Name="Update" ParticipatingElements="U934YbvDWKIMJWVqAYYjY0" ManuallySortedPins="true">
@@ -975,12 +990,26 @@
             <Fragment Id="TWbrTMlDZUWNgQ29r7Nhuw" Patch="PpxQG0J9r1cL7SwNesE7Ne" />
             <Fragment Id="F4cuq83TaEWL1Y2ftxdDse" Patch="UdYPiPEjAtTQdRkpa62IxJ" />
             <Fragment Id="R2YIh3EcQBGMatJdQaQ0gZ" Patch="AuncuhSiuM6LZpniZ6uwyr" />
+            <Fragment Id="LjWQZJgcnenPGuLPPBIBiU" Patch="EPe2sPVqJpRQWoIRUtHBbj" />
+            <Fragment Id="Nzdx3iqJoaFNcUpsu6C7C9" Patch="RrtPjwGsxqeOiD92n7oFRT" />
           </ProcessDefinition>
           <Link Id="FmmJY5Dm8cyLYK1c26I6Jz" Ids="USHx4w6RyD0Lr3fcRfQZkq,BgLbmAK5MuiLxVhJ8VtGgk" />
           <Link Id="TyGTerkw9xOLUO3iHsoDbs" Ids="VtPXp115chsLT2ZRl7QiKw,USHx4w6RyD0Lr3fcRfQZkq" IsHidden="true" />
           <Patch Id="AuncuhSiuM6LZpniZ6uwyr" Name="SetSelected">
             <Pin Id="VtPXp115chsLT2ZRl7QiKw" Name="Selected" Kind="InputPin" />
           </Patch>
+          <Patch Id="EPe2sPVqJpRQWoIRUtHBbj" Name="SetComponents">
+            <Pin Id="PLpWG1dHZzQMEEkZjVAzkV" Name="Components" Kind="InputPin" />
+          </Patch>
+          <Link Id="JpFKb0k8o52PgmwbDfwXkm" Ids="PLpWG1dHZzQMEEkZjVAzkV,LBYNioJEjZ8NA3ntaFWcUr" IsHidden="true" />
+          <Link Id="AWSITqBHU8XNm1m3VHRboc" Ids="DQBLXe8y40fPRvYxnSEfpi,D1a79Dah3B2Md1EmKIyPuv" IsHidden="true" />
+          <Patch Id="RrtPjwGsxqeOiD92n7oFRT" Name="GetComponents">
+            <Pin Id="D1a79Dah3B2Md1EmKIyPuv" Name="Components" Kind="OutputPin" />
+          </Patch>
+          <Slot Id="NzkSJwJlx9bPX2cZ7oWwwo" Name="Components" />
+          <Link Id="AMIabVp8hcwP4zRS94Uw6l" Ids="LBYNioJEjZ8NA3ntaFWcUr,PI9aA3buOXbNW4vMKQhg7a" />
+          <Link Id="JsUwVYbg3CHLZaWsechczL" Ids="PI9aA3buOXbNW4vMKQhg7a,DQBLXe8y40fPRvYxnSEfpi" />
+          <Link Id="TbBTFnOZkwYLkhqtbVSLTi" Ids="EU5PHA2XwPALCpvFIPYkA1,PI9aA3buOXbNW4vMKQhg7a" />
         </Patch>
       </Node>
       <!--
