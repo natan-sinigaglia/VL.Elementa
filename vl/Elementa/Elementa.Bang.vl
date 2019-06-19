@@ -387,15 +387,6 @@
               <Pin Id="T8MdCQmxUp3L63KBay2cyi" Name="Output" Kind="StateOutputPin" />
               <Pin Id="OgcKzOGgCo1LR8ZkOh2vDA" Name="Hovered" Kind="OutputPin" />
             </Node>
-            <Node Bounds="1188,238,60,19" Id="PyyOoTMG2iDPCEh6E7pxra">
-              <p:NodeReference LastCategoryFullName="Elementa.Core.StyleSheet" LastSymbolSource="Elementa.Core.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="RecordType" Name="StyleSheet" NeedsToBeDirectParent="true" />
-                <Choice Kind="ProcessNode" Name="AvoidNull" />
-              </p:NodeReference>
-              <Pin Id="BEruFiMQBQjLrCpVcDjY40" Name="Input" Kind="InputPin" />
-              <Pin Id="JCic0HshccxOGUQ6jLJEAa" Name="Output" Kind="OutputPin" />
-            </Node>
             <Node Bounds="1080,300,140,19" Id="UpTARo6qa22QW7JdyNi5hV">
               <p:NodeReference LastCategoryFullName="Elementa.Utils.Style" LastSymbolSource="Elementa.Utils.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -416,14 +407,14 @@
               </p:TypeAnnotation>
             </Pad>
             <Node Bounds="1122,97,70,26" Id="NUahBIGWthoPjBOjFncwWC">
-              <p:NodeReference LastCategoryFullName="Elementa.Bang.BangManager" LastSymbolSource="Elementa.Bang.vl">
+              <p:NodeReference>
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="GetStyle" />
+                <Choice Kind="OperationCallFlag" Name="GetStyleSheet" />
                 <CategoryReference Kind="ClassType" Name="BangManager" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="KyzTtAXhyaGLJC9eeQp37v" Name="Input" Kind="StateInputPin" />
               <Pin Id="O2uWyMZJHYbNlBHgcTuEsv" Name="Output" Kind="StateOutputPin" />
-              <Pin Id="T7inoNmAovMMVlTO6deLjS" Name="Style" Kind="OutputPin" />
+              <Pin Id="T7inoNmAovMMVlTO6deLjS" Name="Style Sheet" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="NHSPWzxaW12P7YhkKuAfz6" Bounds="1125,72" />
             <Node Bounds="438,255,72,26" Id="DXnAMfagaZLLSTmisBD5wP">
@@ -472,9 +463,19 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GetSelected" />
                 <CategoryReference Kind="Category" Name="Components" NeedsToBeDirectParent="true" />
+                <PinReference Kind="OutputPin" Name="Selected" />
               </p:NodeReference>
               <Pin Id="S8bJG6aJNMSMgxmsE5TlZB" Name="Input" Kind="InputPin" />
               <Pin Id="PhNDz3xFDQOO7RGYqjZy6z" Name="Selected" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="1230,203,160,19" Id="R1PnLIwnIAbNoYpcg2H58D">
+              <p:NodeReference LastCategoryFullName="Elementa.Core.Components" LastSymbolSource="Elementa.Core.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="ComputeStyleFromComponents" />
+              </p:NodeReference>
+              <Pin Id="LBdWijfzWWiO2wKTMWjn5d" Name="Style" Kind="InputPin" />
+              <Pin Id="QRMN0SnDv1ZMtN5lF94VBZ" Name="Components" Kind="InputPin" />
+              <Pin Id="SOZr2uaghs9PuBXMApR5xJ" Name="Output" Kind="OutputPin" />
             </Node>
           </Canvas>
           <Patch Id="EfkFLilHIAQNhaFjfrLjCp" Name="Create" />
@@ -524,7 +525,6 @@
           <Link Id="KgT25tLZCTcOH7qqVnmCPo" Ids="MHu8kDaEyeULMh1mzhDCHU,QHt32LLtzS4O7JNnhY88cS" />
           <Link Id="Tsqib7ERStILsUioWTr09L" Ids="Q4u7VjCRLhtLsefhnCo8fn,Lhuw6v65UzqN5yHDgbRx3O" />
           <Link Id="NqKE8dP9Cw1NIhpsYkBnBY" Ids="HFGhXMcmqV4O80HSuYNNlY,TaiU4SAW8iGL1SlS2FDvPB" />
-          <Link Id="H6lctrqXz4nNorFY1n5N5X" Ids="JCic0HshccxOGUQ6jLJEAa,FrmPI380CCLOmDoLJ1rYTW" />
           <Link Id="TeOBURNQx1AP7AooDgXqbL" Ids="V54DgnJyuYeMnog470g0Y2,KsAD4S5A8jQL8P9jccg5Cu" />
           <Link Id="IR9NR2YRFJQLyP2PZlJ9fv" Ids="OgcKzOGgCo1LR8ZkOh2vDA,I6GlQXiLYKaPvTpgzGv68d" />
           <Link Id="JfkAKmXcYnkNedXTgaX11u" Ids="PBAQDhoMgQkLZlYEtqOmbo,NHSPWzxaW12P7YhkKuAfz6" IsHidden="true" />
@@ -554,13 +554,15 @@
           <Link Id="S3d7oLfNK70MEEQjvX0RUm" Ids="NXE0uhMdZwONnbNV9qKqwb,DzwCMdB9Um5L26K2Yf7MIt" />
           <Link Id="CI03rQGmC9NMfFWe5Voj8K" Ids="HFGhXMcmqV4O80HSuYNNlY,QktroCvBjGiPlZ6KyshKpg" />
           <Link Id="I9cwNUVRXvELO2uyTjUoFk" Ids="RFaiYFIe6exMlcOt9xbdu1,Ljw2xFRkAPZPdG1wWw1U22" />
-          <Link Id="DXPRpgxVfbSMN2gN5iw7PN" Ids="T7inoNmAovMMVlTO6deLjS,BEruFiMQBQjLrCpVcDjY40" />
           <Link Id="F5V6hsMtebqLE186tkzkD3" Ids="O2uWyMZJHYbNlBHgcTuEsv,PRESE2HoullNsd3QoGxLmb" />
           <Link Id="BV8zGH6q5DzOWupjVi7dQx" Ids="RWmd55I972KPjct8nDgSZS,H5BL8CSyuwcMRF7FeNQYVq" />
           <Link Id="LpD1mvlAE89O9jHAi86dAy" Ids="BUPyo8JXDYWPzwrDV2aYg1,S8bJG6aJNMSMgxmsE5TlZB" />
           <Link Id="TfhdrhTOEePMsdmDbj3sNE" Ids="PhNDz3xFDQOO7RGYqjZy6z,UCcS54aIMi1NTKjyqBZNlw" />
           <Link Id="DXZgmzR4HwcMp9lKLm5XN5" Ids="EhDv1aHcqSuMZZmNYXjRzX,RRR0zReVbUoLcqCYciOUsX" />
           <Link Id="BijKUoatRkPOFpE8p6K02a" Ids="UZ1cl1C2BuNLtpyjBFfV85,N7czR3InYf9MSUu8JaYrQq" />
+          <Link Id="H6WiU02qo2FMMw134GHK9N" Ids="T7inoNmAovMMVlTO6deLjS,LBdWijfzWWiO2wKTMWjn5d" />
+          <Link Id="DCOvVprJa5IQCoB4uphtWT" Ids="BUPyo8JXDYWPzwrDV2aYg1,QRMN0SnDv1ZMtN5lF94VBZ" />
+          <Link Id="NS86OyDoMH3MZLK89aC3pT" Ids="SOZr2uaghs9PuBXMApR5xJ,FrmPI380CCLOmDoLJ1rYTW" />
         </Patch>
       </Node>
       <!--
@@ -1139,7 +1141,7 @@
               </p:NodeReference>
               <Pin Id="RO41znbn1XFPDEGhpG6qt9" Name="Local Bounds" Kind="InputPin" />
               <Pin Id="LsOKAySiqYEPhraXAgekfF" Name="Value Properties" Kind="InputPin" />
-              <Pin Id="Kw8R4K1iqheNTAOGvppUnn" Name="Style" Kind="InputPin" />
+              <Pin Id="Kw8R4K1iqheNTAOGvppUnn" Name="Style Sheet" Kind="InputPin" />
               <Pin Id="Cma8TUow76KOf5HAbNknAL" Name="Global Bounds" Kind="InputPin" />
               <Pin Id="C6tcVkjydiwP8TkkrTQtex" Name="Components" Kind="InputPin" />
               <Pin Id="LXbbbWYl8zeOpQrslxrOAb" Name="Output" Kind="OutputPin" />
@@ -1414,13 +1416,13 @@
           <Patch Id="TuyShzj0KoBLsPgKBY5fWe" Name="GetValueProperties">
             <Pin Id="GzgTUAlgYdMLV5YqnJGV3v" Name="Value Properties" Kind="OutputPin" />
           </Patch>
-          <Slot Id="Cr4pwBSjCwxPMB7npA3Y8t" Name="Style">
+          <Slot Id="Cr4pwBSjCwxPMB7npA3Y8t" Name="Style Sheet">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="StyleSheet" />
             </p:TypeAnnotation>
           </Slot>
-          <Patch Id="NP0cfFEc9kdMJtMiVbikON" Name="SetStyle">
-            <Pin Id="UeuYOQiStCFLadOec3Dk8i" MergeId="508875" Name="Style" Kind="InputPin">
+          <Patch Id="NP0cfFEc9kdMJtMiVbikON" Name="SetStyleSheet">
+            <Pin Id="UeuYOQiStCFLadOec3Dk8i" MergeId="508875" Name="Style Sheet" Kind="InputPin">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="StyleSheet" />
               </p:TypeAnnotation>
@@ -1428,8 +1430,8 @@
           </Patch>
           <Link Id="Py5Oez2YvPmPDT2KnbsaTV" Ids="UeuYOQiStCFLadOec3Dk8i,Njugw02HSN5LsrJmiblfmG" IsHidden="true" />
           <Link Id="CxRNojJQeGpLCW2SuP6dqX" Ids="H6PAAp2lorkNb7UW5KcAmJ,MWIT3tp9vyoNL73USSXvfY" IsHidden="true" />
-          <Patch Id="HxLLyoZ1QZYN9iTVu9Z25T" Name="GetStyle">
-            <Pin Id="MWIT3tp9vyoNL73USSXvfY" Name="Style" Kind="OutputPin" />
+          <Patch Id="HxLLyoZ1QZYN9iTVu9Z25T" Name="GetStyleSheet">
+            <Pin Id="MWIT3tp9vyoNL73USSXvfY" Name="Style Sheet" Kind="OutputPin" />
           </Patch>
           <Link Id="HfSOZgQonPLMYjAo3eqE1O" Ids="Njugw02HSN5LsrJmiblfmG,CsBEv8nRn74OewrVLBZwE5" />
           <Patch Id="CpoRwY6J24FMmpmfVsziI9" Name="GetOrientation" />
