@@ -12,4 +12,9 @@ namespace Elementa
         Down, Up, Pressed
     }
 
+    public enum Elementum_State
+    {
+        Idle, Hovered, Selected, Focused, Preview
+    }
+
 }
