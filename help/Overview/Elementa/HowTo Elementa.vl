@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2019.1.0-0369-g908f4b6811" Version="0.128">
+<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2019.1.0-0424-g671cf57969" Version="0.128">
   <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2019.1.0-287" />
   <Patch Id="U2OktPJIft6LmRYDfHRaRo">
     <Canvas Id="OnAcnjd8HswONAJUfjLtjR" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -142,12 +142,12 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Press</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="70,1054,105,19" Id="KVlKvjUe3PYOg1XuqMlhMM">
+          <Node Bounds="70,1084,105,19" Id="KVlKvjUe3PYOg1XuqMlhMM">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="Kh9yBi3OEd5MvWP8UR1lL8" Name="Bounds" Kind="InputPin" DefaultValue="824, 34, 704, 634">
+            <Pin Id="Kh9yBi3OEd5MvWP8UR1lL8" Name="Bounds" Kind="InputPin" DefaultValue="824, 32, 704, 632">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -160,7 +160,11 @@
                 <Choice Kind="TypeFlag" Name="CommonSpace" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="BYks0LGwsdZN4pSVmGOEkk" Name="Enabled" Kind="InputPin" />
+            <Pin Id="BYks0LGwsdZN4pSVmGOEkk" Name="Enabled" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="DlxHZrGPfnLQD62Dlmk0y6" Name="Form" Kind="OutputPin" />
             <Pin Id="UfNkUiA1K96NqRQncEzmHK" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="R2IHlGXWw9JOObTxbrCzAF" Name="Render Time" Kind="OutputPin" />
@@ -209,15 +213,19 @@
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="90,997,70,19" Id="TcAzEtI5S3QNJ6r6y51KDH">
+          <Node Bounds="90,1027,105,19" Id="TcAzEtI5S3QNJ6r6y51KDH">
             <p:NodeReference LastCategoryFullName="Elementa.Core.Skia" LastSymbolSource="Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ToSkiaLayer (OverlayLayer)" />
             </p:NodeReference>
             <Pin Id="CZ2toJlF15cPEfFIkhvVkM" Name="Input" Kind="InputPin" />
+            <Pin Id="Ok1pvzpCDYHPju4qacqWcM" Name="ClientBounds" Kind="InputPin" />
             <Pin Id="AUZzdq1j3biLGCCeyJNLrl" Name="Output" Kind="OutputPin" />
             <Pin Id="EsCFS84RcqvL1wpGxM2iXz" Name="Mouse State" Kind="OutputPin" />
+            <Pin Id="J3j8Wq6mdREPMEoGP8jC0O" Name="Selected" Kind="OutputPin" />
             <Pin Id="Fyl4Xjod5zOO8Qdlb3Sp1B" Name="Keyboard State" Kind="OutputPin" />
+            <Pin Id="AWIS9Q5bHZrMLZlcotCDda" Name="Taskables" Kind="OutputPin" />
+            <Pin Id="BY4LzYDmnWcLo6TjR7UXJ6" Name="Stream" Kind="OutputPin" />
           </Node>
           <Node Bounds="975,155,85,19" Id="Hkvq6gkv6prNyJYbwpCt4W">
             <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="Elementa.Core.vl">
@@ -671,19 +679,8 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="119,1100,35,19" Id="KJRTrcDPA03Paoi7DbJdg0">
-            <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="Size" />
-              <CategoryReference Kind="RecordType" Name="Rectangle" NeedsToBeDirectParent="true">
-                <p:OuterCategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
-              </CategoryReference>
-            </p:NodeReference>
-            <Pin Id="LrR9JGnvxjPOvcuQ2CAy18" Name="Input" Kind="StateInputPin" />
-            <Pin Id="QpOHIPT4f4yLa3TZavW1SH" Name="Size" Kind="OutputPin" />
-          </Node>
-          <Pad Id="Jf5jJduIbhkMK7J9xQXrZM" SlotId="Qdy8mYqErKoO3uAp3Ub5Z4" Bounds="120,1136" />
-          <Pad Id="Ozd0lPruJKZMut2K6q8YdX" SlotId="Qdy8mYqErKoO3uAp3Ub5Z4" Bounds="4269,580" />
+          <Pad Id="Jf5jJduIbhkMK7J9xQXrZM" SlotId="Qdy8mYqErKoO3uAp3Ub5Z4" Bounds="122,1127" />
+          <Pad Id="Ozd0lPruJKZMut2K6q8YdX" SlotId="Qdy8mYqErKoO3uAp3Ub5Z4" Bounds="4272,546" />
           <Node Bounds="-127,539,85,19" Id="N2dxSK5r4GDNltVuFFTLvX">
             <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1192,6 +1189,18 @@
             <Pin Id="CibuzUchWpHOKJ3BLSuBpV" Name="Style Sheet" Kind="InputPin" />
             <Pin Id="BQy7hXVB2umLtGClyNvLpJ" Name="Output" Kind="OutputPin" />
           </Node>
+          <Pad Id="LVkKEdWibAoQL2U9CQBxqx" SlotId="Qdy8mYqErKoO3uAp3Ub5Z4" Bounds="192,1008" />
+          <Node Bounds="4270,567,35,19" Id="QPk4dmEVnjgORxWHufDTF9">
+            <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Size" />
+              <CategoryReference Kind="RecordType" Name="Rectangle" NeedsToBeDirectParent="true">
+                <p:OuterCategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </CategoryReference>
+            </p:NodeReference>
+            <Pin Id="U3GT6n1ODRjMBR9cPZmcx0" Name="Input" Kind="StateInputPin" />
+            <Pin Id="D20AUOLzCxPNWh7NgJSUYp" Name="Size" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="KdTKK5TpWjnPJ5vScQ5VCP" Name="Create" ParticipatingElements="NIBoxvng5OoORjUtEMcCnf" />
         <Patch Id="JqQ55xVIbp9PzgWa6c2UoC" Name="Update" />
@@ -1245,11 +1254,8 @@
         <Link Id="ERctaP5CPFzMZ2dQiUsQrJ" Ids="KlQA7DmRIURMm0NGSO8XRc,V0uAx3NnWYgQDTUkwDtWPb" />
         <Link Id="SlrrMwbGLpzPWcZ7MLZCQF" Ids="NtbXLzD8I5iO8z7Q56GlYo,MOmpobg2zIjNp6itQchP7O" />
         <Link Id="RcXJa4hfXHeOJA3H1XzKy5" Ids="BAEc67IzFRJQKT97TyfbNS,Ufi66vAIfrIPKw4l9DL6nH" />
-        <Link Id="HBXpN4fEQalPj9VRp4xai4" Ids="UfNkUiA1K96NqRQncEzmHK,LrR9JGnvxjPOvcuQ2CAy18" />
         <Slot Id="Qdy8mYqErKoO3uAp3Ub5Z4" Name="Client Bounds" />
-        <Link Id="IokGZ0z1QgGLhUuQpWORIJ" Ids="QpOHIPT4f4yLa3TZavW1SH,Jf5jJduIbhkMK7J9xQXrZM" />
         <Link Id="Td7yP6TJ1phLVkjENL3M4i" Ids="GSXEy11R6LUOPgrpj0c6kS,MqCzJUJ0jvxPI9VzK78U4R" />
-        <Link Id="SbPXiIS10MTL8467DH12ik" Ids="Ozd0lPruJKZMut2K6q8YdX,IUiBSlRtGp6NyZsDc3BWiQ" />
         <Link Id="KKvUfmzoCeEPGyarh9deGd" Ids="R5sagrkDAnQP3zB98D6nfa,E8hYGWdIPgAMRCYZ8k9d2U" />
         <Link Id="NK1uH1aNHkcL5cCdQVOIzO" Ids="PEZA0dFJRO5PDd0rC5EkuO,QJGFWNqiSlbLSRcdf1Btth" />
         <Link Id="DfRpxth2ylMNi7fbQpuekm" Ids="KFdF2vpy2RyN6DjB7cvOZX,FoZP4w0fscNPAEikCTKfTs" />
@@ -1326,9 +1332,13 @@
         <Link Id="Rh9OiHrRVqDLYdU5GOW9od" Ids="Rrn4aPmB3B0PqM7cpfJEsA,KQJnQaPBcG5M4AtSZQwL7y" />
         <Link Id="MYXHxIv3KI4P5Zu8JA5GTa" Ids="OoMwtd34cnWNvN5tTCJBgD,CibuzUchWpHOKJ3BLSuBpV" />
         <Link Id="RihICwb0YR7MYCbzGcj0vX" Ids="BQy7hXVB2umLtGClyNvLpJ,PTdcxinFL5HNeQEhpNpDYm" />
+        <Link Id="S9AVq496d9SMIo9x9hEbyF" Ids="UfNkUiA1K96NqRQncEzmHK,Jf5jJduIbhkMK7J9xQXrZM" />
+        <Link Id="CkshcJ5mogmOREzLWOdals" Ids="Ozd0lPruJKZMut2K6q8YdX,U3GT6n1ODRjMBR9cPZmcx0" />
+        <Link Id="T4uQEiUEPyRQGuIBjjxV18" Ids="D20AUOLzCxPNWh7NgJSUYp,IUiBSlRtGp6NyZsDc3BWiQ" />
+        <Link Id="KrZ9547NHyNNYUySL2SuyG" Ids="LVkKEdWibAoQL2U9CQBxqx,Ok1pvzpCDYHPju4qacqWcM" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2019.1.0-0287-g67d678e5a2" />
-  <NugetDependency Id="QejdpzMQamENcMmbehbgqR" Location="Elementa" Version="0.0.0.0" />
+  <DocumentDependency Id="DHTzNotOBZZLteaVMAWcyD" Location="../../../Elementa.vl" />
 </Document>
