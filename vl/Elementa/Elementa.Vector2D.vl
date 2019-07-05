@@ -247,11 +247,6 @@
               <Pin Id="RNWm9UGLQiEOXFCn9P4y5R" Name="Style" Kind="OutputPin" />
               <Pin Id="FiukNTNDwUTMBryWnWzI5k" Name="Styles Spread" Kind="OutputPin" />
             </Node>
-            <Pad Id="ChiybP0ZkBlM3FuX4rmc3H" Comment="" Bounds="1035,-35,54,15" ShowValueBox="true" isIOBox="true" Value="Vector2D">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pad>
             <Node Bounds="516,136,103,26" Id="SsgMLcudFMbLXrf3BgV4P4">
               <p:NodeReference LastCategoryFullName="UIElements.Value.ValueManager" LastSymbolSource="Elementa.Value.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -423,11 +418,16 @@
               <Pin Id="KXLumes3N3BPPhgrdz6WCl" Name="Previewable" Kind="OutputPin" />
               <Pin Id="Rc5UCQt9AorQPiaYXM3FBX" Name="Preview" Kind="OutputPin" />
             </Node>
-            <Pad Id="K1nIHREebH1MtklJODMS8s" Comment="Has Changed" Bounds="567,785,35,35" ShowValueBox="true" isIOBox="true" />
+            <ControlPoint Id="IuDj5t3nzhqOS5c2Bir7zv" Bounds="1036,-40" />
           </Canvas>
           <Patch Id="DM9tT70ZP4kPeil0qynZ20" Name="Create" />
           <Patch Id="OOl2Am7oKSRMKE5HNYZnfJ" Name="Update">
             <Pin Id="IIiYKoN130uMw0nhZIexZ5" Name="Manager" Kind="InputPin" />
+            <Pin Id="SdydVel7d7QLV8pH4fT3Jy" Name="Style Element Name" Kind="InputPin" Bounds="1103,261" DefaultValue="Vector2D">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="MAnq1eqRemKNS2s94ooJq3" Name="Layer" Kind="OutputPin" Bounds="511,594" />
           </Patch>
           <ProcessDefinition Id="O27s1tFoMOCPqybnnU6PgM">
@@ -449,7 +449,6 @@
           <Link Id="Q5W20Vb0MwOLTa2v9lc0lg" Ids="Sj1KZwUPd44Pz1ePaiwXpR,M6Y6MteZRKnN25IB2eQ4HK" />
           <Link Id="EhfK1CeDWhxPMqgly8TPHk" Ids="PNW8OFy0a75OLabjqZOThH,SakK1F2c3eMLniWWDnwRPz" />
           <Link Id="GyjHzBIH2AEN14TctlBzWs" Ids="IIiYKoN130uMw0nhZIexZ5,OeQNRFHaEGJPnr43tQCkPI" IsHidden="true" />
-          <Link Id="LHCVlGyfiv9NbP1bUiiaXl" Ids="ChiybP0ZkBlM3FuX4rmc3H,C9whY8GpYgRNLiF7nPgJLE" />
           <Link Id="UTakoF95rqLOyvhfsvgGIn" Ids="OeQNRFHaEGJPnr43tQCkPI,CnPvxOMpB9APRQFFMugTXu" />
           <Link Id="Rzq7gfRwjfOO52Pk3ATgrP" Ids="IIiYKoN130uMw0nhZIexZ5,Txed3TAJtlHLeuq4xsyegV" IsHidden="true" />
           <Link Id="HlZnAhAf1AQOdX3NlcTuAn" Ids="Txed3TAJtlHLeuq4xsyegV,B2xydDcDUJ7LqcgOgOPQmE" />
@@ -507,8 +506,9 @@
           <Link Id="TcbrO19szGwO4YFgDZJUGJ" Ids="GSEviEBwfkEPcAWjnpNHUA,PQwThXZ8FjxLaEnuTNqmSZ" />
           <Link Id="UpPdc2p93xoMWs6NIIEg2c" Ids="Rc5UCQt9AorQPiaYXM3FBX,ImobXo8W6U7LlUbIqDH4Kf" />
           <Link Id="JLNBp4il3C2Ory79vpX8Fq" Ids="GYK4ZDz60h6PqRxVN7VZ8s,SFowpI0WZlXQK5zk4zdmmk" />
-          <Link Id="GPgEPGtuUXLNWf6ZE7POiZ" Ids="PV1nD264zpyPhqadT2WAVh,K1nIHREebH1MtklJODMS8s" />
           <Link Id="QgRvjEys4QIM8bw0B41oYK" Ids="QSWfXfboysAMNtHb9ywURB,NIec1jHZpIpNJDoQ45n2mo" />
+          <Link Id="QIemqO6XNm7PUV1bxoXBHr" Ids="SdydVel7d7QLV8pH4fT3Jy,IuDj5t3nzhqOS5c2Bir7zv" IsHidden="true" />
+          <Link Id="MvfuoIWqRxbNsjXtGeW6T9" Ids="IuDj5t3nzhqOS5c2Bir7zv,C9whY8GpYgRNLiF7nPgJLE" />
         </Patch>
       </Node>
       <!--
@@ -536,7 +536,7 @@
                   <p:NodeReference LastCategoryFullName="Elementa.Vector2D.Vector2DLogic.IdleVector2DState" LastSymbolSource="Elementa.Vector2D.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
-                    <CategoryReference Kind="ClassType" Name="IdleVector2DState" NeedsToBeDirectParent="true">
+                    <CategoryReference Kind="Category" Name="IdleVector2DState" NeedsToBeDirectParent="true">
                       <p:OuterCategoryReference Kind="Category" Name="Vector2DLogic" NeedsToBeDirectParent="true" />
                     </CategoryReference>
                   </p:NodeReference>
@@ -577,7 +577,7 @@
               <p:NodeReference LastCategoryFullName="Elementa.Vector2D.Vector2DLogic.TypingComponentState" LastSymbolSource="Elementa.Vector2D.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Update" />
-                <CategoryReference Kind="ClassType" Name="TypingComponentState" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="Category" Name="TypingComponentState" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="AqURF3XNx4ONP1wVO3N4X0" Name="Input" Kind="StateInputPin" />
               <Pin Id="TkIbMYd2IKjO6IUf5ipRmY" Name="Apply" Kind="InputPin" />
@@ -601,10 +601,10 @@
             </Pad>
             <!--
 
-    ************************ IdleVector2DState ************************
+    ************************ IdleVector2DState (Internal) ************************
 
 -->
-            <Node Name="IdleVector2DState" Bounds="570,147" Id="QvSsfRPfJW6LvyEGQNUZ5Q">
+            <Node Name="IdleVector2DState (Internal)" Bounds="570,147" Id="QvSsfRPfJW6LvyEGQNUZ5Q">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
@@ -657,7 +657,7 @@
                             <p:NodeReference LastCategoryFullName="Elementa.Vector2D.Vector2DLogic.DraggingComponentState" LastSymbolSource="Elementa.Vector2D.vl">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="OperationCallFlag" Name="Create" />
-                              <CategoryReference Kind="ClassType" Name="DraggingComponentState" NeedsToBeDirectParent="true" />
+                              <CategoryReference Kind="Category" Name="DraggingComponentState" NeedsToBeDirectParent="true" />
                             </p:NodeReference>
                             <Pin Id="AwZOcpxty92N4vUN5btdFr" Name="State Reference" Kind="InputPin" />
                             <Pin Id="PsUQYOpvNTbMqFiHEFLsu5" Name="Manager" Kind="InputPin" />
@@ -683,7 +683,7 @@
                             <p:NodeReference LastCategoryFullName="Elementa.Vector2D.Vector2DLogic.TypingComponentState" LastSymbolSource="Elementa.Vector2D.vl">
                               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                               <Choice Kind="OperationCallFlag" Name="Create" />
-                              <CategoryReference Kind="ClassType" Name="TypingComponentState" NeedsToBeDirectParent="true" />
+                              <CategoryReference Kind="Category" Name="TypingComponentState" NeedsToBeDirectParent="true" />
                             </p:NodeReference>
                             <Pin Id="THBXqBs0jTiMqPvwStyF4k" Name="State Reference" Kind="InputPin" />
                             <Pin Id="IlPlqoxVeaXLXTnvG3U9h7" Name="Manager" Kind="InputPin" />
@@ -1026,10 +1026,10 @@
             </Node>
             <!--
 
-    ************************ DraggingComponentState ************************
+    ************************ DraggingComponentState (Internal) ************************
 
 -->
-            <Node Name="DraggingComponentState" Bounds="570,207" Id="BJAORZ5KnFSOz6cJZhsWSu">
+            <Node Name="DraggingComponentState (Internal)" Bounds="570,207" Id="BJAORZ5KnFSOz6cJZhsWSu">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
@@ -1072,9 +1072,9 @@
                       <Node Bounds="1359,538,80,26" Id="QixfWyJvM2rQDlHqoYYKlG">
                         <p:NodeReference LastCategoryFullName="Elementa.Vector2D.Vector2DLogic.IdleVector2DState" LastSymbolSource="Elementa.Vector2D.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                          <CategoryReference Kind="ClassType" Name="IdleVector2DState" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
-                          <CategoryReference Kind="ClassType" Name="IdleVector2DState" NeedsToBeDirectParent="true">
+                          <CategoryReference Kind="Category" Name="IdleVector2DState" />
+                          <CategoryReference Kind="Category" Name="IdleVector2DState" NeedsToBeDirectParent="true">
                             <p:OuterCategoryReference Kind="Category" Name="Vector2DLogic" NeedsToBeDirectParent="true" />
                           </CategoryReference>
                         </p:NodeReference>
@@ -1520,10 +1520,10 @@
             </Node>
             <!--
 
-    ************************ TypingComponentState ************************
+    ************************ TypingComponentState (Internal) ************************
 
 -->
-            <Node Name="TypingComponentState" Bounds="570,267" Id="NaZ2aHnmZEJM3MvnTtVh6g">
+            <Node Name="TypingComponentState (Internal)" Bounds="570,267" Id="NaZ2aHnmZEJM3MvnTtVh6g">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
@@ -1614,9 +1614,9 @@
                       <Node Bounds="953,1126,85,26" Id="KCVCUzdygH4M8TS0CFsKKh">
                         <p:NodeReference LastCategoryFullName="Elementa.Vector2D.Vector2DLogic.IdleVector2DState" LastSymbolSource="Elementa.Vector2D.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                          <CategoryReference Kind="ClassType" Name="IdleVector2DState" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
-                          <CategoryReference Kind="ClassType" Name="IdleVector2DState" NeedsToBeDirectParent="true">
+                          <CategoryReference Kind="Category" Name="IdleVector2DState" />
+                          <CategoryReference Kind="Category" Name="IdleVector2DState" NeedsToBeDirectParent="true">
                             <p:OuterCategoryReference Kind="Category" Name="Vector2DLogic" NeedsToBeDirectParent="true" />
                           </CategoryReference>
                         </p:NodeReference>
@@ -1865,8 +1865,8 @@
                       <Node Bounds="1634,1087,100,26" Id="HcdPAktabcNMJQxZXsQdu2">
                         <p:NodeReference LastCategoryFullName="Elementa.Vector2D.Vector2DLogic.TypingComponentState" LastSymbolSource="Elementa.Vector2D.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                          <CategoryReference Kind="ClassType" Name="TypingComponentState" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
+                          <CategoryReference Kind="Category" Name="TypingComponentState" />
                         </p:NodeReference>
                         <Pin Id="R7c5OUHjcxhNqxCo12BRxq" Name="State Reference" Kind="InputPin" />
                         <Pin Id="QLbYlaKx7NlLz0fU2f67M4" Name="Manager" Kind="InputPin" />
@@ -2594,6 +2594,7 @@
                 <Choice Kind="ProcessAppFlag" Name="Vector2DDrawer" />
               </p:NodeReference>
               <Pin Id="F2wiqAICxOzL8MbHqDrJti" Name="Manager" Kind="InputPin" />
+              <Pin Id="PczsacO4zFlNVPA5MyuNbQ" Name="Style Element Name" Kind="InputPin" />
               <Pin Id="NwfRvpSEIAFODYrO1e65ov" Name="Layer" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="Mfndmd87ZTEMoEYaEKLrm1" Bounds="480,454" />
@@ -3336,6 +3337,7 @@
                 <Choice Kind="ProcessAppFlag" Name="Vector2DDrawer" />
               </p:NodeReference>
               <Pin Id="IpB4N0GnDNqLFrOHofYCnK" Name="Manager" Kind="InputPin" />
+              <Pin Id="AdPqI54YqISMWoLyHflAtp" Name="Style Element Name" Kind="InputPin" />
               <Pin Id="KCaSa1qaA8UMvfLZ9aEDvl" Name="Layer" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="DE53RhQGtVMLCecbsnONth" Bounds="480,454" />
@@ -3410,17 +3412,14 @@
             </Node>
             <ControlPoint Id="Nrs7zmcKwCULiGNOCkHmxQ" Bounds="785,467" />
             <ControlPoint Id="InjN2ukw8BeMmq7Ca2om9q" Bounds="711,611" />
-            <Node Bounds="782,500,115,19" Id="SK1ueVjnt0gO2q6EPVpgF9">
-              <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="AddBasicComponents" />
-              </p:NodeReference>
-              <Pin Id="RIchldV2uLsLNAT8xpxgqC" Name="Input" Kind="InputPin" />
-              <Pin Id="Q2ExkGvuIo7QQJNLOlu28E" Name="Output" Kind="OutputPin" />
-            </Node>
             <Pad Id="NJ70dpJ5gHsQE50rnw4w9Y" Comment="Push To Observable" Bounds="313,331,35,35" ShowValueBox="true" isIOBox="true" Value="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="HoRlC5DiyzlOupTcM3zI1O" Comment="Style Element Name" Bounds="440,659,101,15" ShowValueBox="true" isIOBox="true" Value="Vector2DMonitor">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
           </Canvas>
@@ -3518,10 +3517,10 @@
           <Link Id="RQcRBS4J1sMLJcFJG8p52b" Ids="RMp8Eiz08Y1LH2RoEZhsez,Nrs7zmcKwCULiGNOCkHmxQ" IsHidden="true" />
           <Link Id="DNkhMuZaQKdLbhZKociANx" Ids="InjN2ukw8BeMmq7Ca2om9q,UhV40wrE0QMPlMuLmWYaZC" IsHidden="true" />
           <Link Id="T3bIOmuILwgLnzp90SUMPw" Ids="Sj9UAd03F7JMZO5V6oZ1EL,InjN2ukw8BeMmq7Ca2om9q" />
-          <Link Id="GyW9HNTbqPMLGeFBsGeDPm" Ids="Nrs7zmcKwCULiGNOCkHmxQ,RIchldV2uLsLNAT8xpxgqC" />
-          <Link Id="HxjRMJse5h9P2dtAiP5EMw" Ids="Q2ExkGvuIo7QQJNLOlu28E,AaMT88kGOlIOScg45YJY49" />
           <Link Id="BdvalGMYzcuMW0Rk61KnFD" Ids="LBoqZ7pHcXHNfouaukaSsQ,RrTiFLRCZQcL9jABADewXr" />
           <Link Id="BcgKmAteyx6N96RL4dmDbU" Ids="NJ70dpJ5gHsQE50rnw4w9Y,KFz6ZaSkDRiP2uSHDq82Yv" />
+          <Link Id="Qwtr0ejwCcPOhBkCAT727n" Ids="Nrs7zmcKwCULiGNOCkHmxQ,AaMT88kGOlIOScg45YJY49" />
+          <Link Id="OobDDOCMrigMpjI5U8a705" Ids="HoRlC5DiyzlOupTcM3zI1O,AdPqI54YqISMWoLyHflAtp" />
         </Patch>
       </Node>
     </Canvas>

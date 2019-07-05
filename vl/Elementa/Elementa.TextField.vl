@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CY2o7l2UYY9NypAVMIRmAE" LanguageVersion="2019.1.0-0411-gf6daa4918b" Version="0.128">
+<Document xmlns:p="property" Id="CY2o7l2UYY9NypAVMIRmAE" LanguageVersion="2019.1.0-0424-g671cf57969" Version="0.128">
   <NugetDependency Id="HzRCJJwUSOgNW9AXnSbhkA" Location="VL.CoreLib" Version="2019.1.0-332" />
   <Patch Id="QZDHOeK4pvoPUQN3J2eweC">
     <Canvas Id="QRX48Kus6psQEVsIwOjduY" DefaultCategory="Elementa.TextField" CanvasType="FullCategory">
       <!--
 
-    ************************ TextFieldDrawer ************************
+    ************************ TextFieldDrawer (Internal) ************************
 
 -->
-      <Node Name="TextFieldDrawer" Bounds="484,421" Id="K0OJ8wcDBdTMb0oXyKkJe6">
+      <Node Name="TextFieldDrawer (Internal)" Bounds="484,421" Id="K0OJ8wcDBdTMb0oXyKkJe6">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
@@ -130,8 +130,8 @@
             <Node Bounds="160,68,80,26" Id="DBjI9iuFEfFP9Gx3hncCJT">
               <p:NodeReference LastCategoryFullName="UIElements.TextField.TextFieldManager" LastSymbolSource="UIElements.TextField.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                 <Choice Kind="OperationCallFlag" Name="GetGlobalBounds" />
+                <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="IMb7nmRsQgXNV0LTdICAjc" Name="Input" Kind="StateInputPin" />
               <Pin Id="KNY8CewbjYJNF0Hi8sgy6f" Name="Output" Kind="StateOutputPin" />
@@ -148,12 +148,7 @@
               <Pin Id="Q9yI6ex2Lk8PESd37RLwoj" Name="Style" Kind="OutputPin" />
               <Pin Id="Aa6TPBiryCbP25ahuqgC7g" Name="Styles Spread" Kind="OutputPin" />
             </Node>
-            <Pad Id="MrezaOZmYNdLM5uh0MSvF6" Comment="Element" Bounds="866,93,55,15" ShowValueBox="true" isIOBox="true" Value="TextField">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pad>
-            <Node Bounds="703,-5,80,26" Id="V1siIIncAbsLKrygniizsA">
+            <Node Bounds="713,41,80,26" Id="V1siIIncAbsLKrygniizsA">
               <p:NodeReference LastCategoryFullName="Elementa.TextField.TextFieldManager" LastSymbolSource="Elementa.TextField.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GetStyleSheet" />
@@ -162,7 +157,7 @@
               <Pin Id="JlWUo6hGlU2ONHfLo849C1" Name="Output" Kind="StateOutputPin" />
               <Pin Id="VIExeHOSO4TNlhKWRTpnW5" Name="Style Sheet" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="DT7Sfa9vAewOowsqU7DNQA" Bounds="706,-30" />
+            <ControlPoint Id="DT7Sfa9vAewOowsqU7DNQA" Bounds="716,16" />
             <Node Bounds="74,246,386,185" Id="CYqpQfjtWvrM2UXOluBQqC">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -275,20 +270,27 @@
               <ControlPoint Id="U8RaRHwkU0lP17hFHB6VUa" Bounds="88,415" Alignment="Bottom" />
               <ControlPoint Id="LHY1xtGvkHAOyqt0QD2X9n" Bounds="144,253" Alignment="Top" />
             </Node>
-            <Node Bounds="632,69,89,26" Id="F2V76K0gRxjMj3Mq3kBhXy">
+            <Node Bounds="674,84,89,26" Id="F2V76K0gRxjMj3Mq3kBhXy">
               <p:NodeReference LastCategoryFullName="Elementa.TextField.TextFieldManager" LastSymbolSource="Elementa.TextField.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GetComponents" />
-                <CategoryReference Kind="ClassType" Name="TextFieldManager" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="JbzUgxAxwVSPyUFXiZaWDM" Name="Input" Kind="StateInputPin" />
               <Pin Id="Vmp1124n7Q4LQL9r886xne" Name="Output" Kind="StateOutputPin" />
               <Pin Id="IL8Gke6UPPjNTrR4fTKSMH" Name="Components" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="H91bqiSjb19PiBb3hZn6Ai" Bounds="862,93" />
+            <Pad Id="JtiTB6yxStJQcleXtxgKxv" Comment="Display Tex" Bounds="494,142,113,21" ShowValueBox="true" isIOBox="true" />
           </Canvas>
           <Patch Id="SDVXBemq1ihQce0mQSsyan" Name="Create" />
           <Patch Id="PRFUi6lDnh5MgYMP3qVYTu" Name="Update" ManuallySortedPins="true">
             <Pin Id="Qp2yedh7h8dOrymYqsmNQ6" Name="Manager" Kind="InputPin" Bounds="220,27" />
+            <Pin Id="KanmBJQrkMJPLRbhIUUpyv" Name="Style Element Name" Kind="InputPin" Bounds="1103,261" DefaultValue="TextField">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="DuVjJzgjinLPtb5Cbfj6A4" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <ProcessDefinition Id="VZKb2NDOX88OFWDDSjySSY" HasStateOut="true">
@@ -307,7 +309,6 @@
           <Link Id="MxI4HhvpcKeND50OluYk1d" Ids="RrbtnKy5g7pONCljXFO8K1,KW8dZtfjsCiMZ8UhSvFB6K" />
           <Link Id="PVE1u6DC8nEOaFss6tL7uA" Ids="Rb4jNNpOFUeN212vEdPfrB,TxugFxLZnCiPoyA2pHum8V" />
           <Link Id="A4PHvEDibxXNvMC4yU76jk" Ids="Qp2yedh7h8dOrymYqsmNQ6,Rb4jNNpOFUeN212vEdPfrB" IsHidden="true" />
-          <Link Id="AOYFUjI4B3ZOOZ88lwnPyr" Ids="MrezaOZmYNdLM5uh0MSvF6,J6ITykmcnPCMIQakQwVYUo" />
           <Link Id="SROBFkrhUtlNYzYEm1J5BX" Ids="Qp2yedh7h8dOrymYqsmNQ6,DT7Sfa9vAewOowsqU7DNQA" IsHidden="true" />
           <Link Id="O1dtIglJLzzPBY6EmvfjAV" Ids="DT7Sfa9vAewOowsqU7DNQA,BGSTXkzrxxPMvKsB9sDFTV" />
           <Link Id="OqTClDiubuiNBOqNXKY6xc" Ids="PEyusCrNJhWNUgYznhOl5S,EV5gSw1qbBdMJI4gIRdVvH" />
@@ -346,14 +347,17 @@
           <Link Id="E5AJKUK82yQNAkpfbmhpkh" Ids="JlWUo6hGlU2ONHfLo849C1,JbzUgxAxwVSPyUFXiZaWDM" />
           <Link Id="JLNBDABuW58PqpVFRQgi1X" Ids="VIExeHOSO4TNlhKWRTpnW5,P3vGv3eleRZNDWN7FZ5amy" />
           <Link Id="MKsv8nkPwhjNDpRQsDA8US" Ids="IL8Gke6UPPjNTrR4fTKSMH,UFFXXKaW9ehM4okUlBYY5s" />
+          <Link Id="UAwtARhGcKnQM3FPAeSLuu" Ids="KanmBJQrkMJPLRbhIUUpyv,H91bqiSjb19PiBb3hZn6Ai" IsHidden="true" />
+          <Link Id="C9Ii3Cd3XFjNNBikpgajK8" Ids="H91bqiSjb19PiBb3hZn6Ai,J6ITykmcnPCMIQakQwVYUo" />
+          <Link Id="KK1Z0ASlbeiLw3JysA6EfG" Ids="Mfb3KuCTEm8Oxnxg7DD4bd,JtiTB6yxStJQcleXtxgKxv" />
         </Patch>
       </Node>
       <!--
 
-    ************************ TextFieldLogic ************************
+    ************************ TextFieldLogic (Internal) ************************
 
 -->
-      <Node Name="TextFieldLogic" Bounds="484,360" Id="UzMBbkXSfhwPMyXk4rUmVN">
+      <Node Name="TextFieldLogic (Internal)" Bounds="484,360" Id="UzMBbkXSfhwPMyXk4rUmVN">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <FullNameCategoryReference ID="Primitive" />
@@ -362,10 +366,10 @@
           <Canvas Id="Asf6F66NzZ9OjImNo1023H" CanvasType="Group">
             <!--
 
-    ************************ IdleTextFieldState ************************
+    ************************ IdleTextFieldState (Internal) ************************
 
 -->
-            <Node Name="IdleTextFieldState" Bounds="568,145" Id="QWIqc6JcqVSMbR1sQsh6kP">
+            <Node Name="IdleTextFieldState (Internal)" Bounds="568,145" Id="QWIqc6JcqVSMbR1sQsh6kP">
               <p:NodeReference>
                 <Choice Kind="ClassDefinition" Name="Class" />
                 <FullNameCategoryReference ID="Primitive" />
@@ -423,8 +427,8 @@
                   <Node Bounds="449,223,85,26" Id="TOhrgKL8gXrPJfNPEL0LyH">
                     <p:NodeReference LastCategoryFullName="UIElements.TextField.TextFieldManager" LastSymbolSource="UIElements.TextField.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                       <Choice Kind="OperationCallFlag" Name="GetGlobalBounds" />
+                      <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="QO8GO9Afn80L9IRz7sRBGr" Name="Input" Kind="StateInputPin" />
                     <Pin Id="LxPWN48Un7EPE7S9pUFSjZ" Name="Output" Kind="StateOutputPin" />
@@ -464,7 +468,7 @@
                         <p:NodeReference LastCategoryFullName="UIElements.TextField.TextFieldLogic.TypingTextFieldState" LastSymbolSource="UIElements.TextField.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
-                          <CategoryReference Kind="ClassType" Name="TypingTextFieldState" NeedsToBeDirectParent="true">
+                          <CategoryReference Kind="Category" Name="TypingTextFieldState" NeedsToBeDirectParent="true">
                             <p:OuterCategoryReference Kind="Category" Name="TextFieldLogic" NeedsToBeDirectParent="true" />
                           </CategoryReference>
                         </p:NodeReference>
@@ -496,7 +500,7 @@
                     <p:NodeReference LastCategoryFullName="Elementa.TextField.TextFieldManager" LastSymbolSource="Elementa.TextField.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetComponents" />
-                      <CategoryReference Kind="ClassType" Name="TextFieldManager" NeedsToBeDirectParent="true" />
+                      <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="TqnKxymnz7MOwBpMzmhevq" Name="Input" Kind="StateInputPin" />
                     <Pin Id="MvPfnGP73HiQFTcG2CPJwj" Name="Output" Kind="StateOutputPin" />
@@ -521,7 +525,7 @@
                     <p:NodeReference LastCategoryFullName="Elementa.TextField.TextFieldManager" LastSymbolSource="Elementa.TextField.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetComponents" />
-                      <CategoryReference Kind="ClassType" Name="TextFieldManager" NeedsToBeDirectParent="true" />
+                      <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="CUydLjnAxyZL7rViy1kHoo" Name="Input" Kind="StateInputPin" />
                     <Pin Id="LbAmeL37V2gOSF8vaLoej9" Name="Output" Kind="StateOutputPin" />
@@ -541,7 +545,7 @@
                         <p:NodeReference LastCategoryFullName="Elementa.TextField.TextFieldManager" LastSymbolSource="Elementa.TextField.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="GetValueProperties" />
-                          <CategoryReference Kind="ClassType" Name="TextFieldManager" NeedsToBeDirectParent="true" />
+                          <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                         </p:NodeReference>
                         <Pin Id="L25Sv3hj1v9M2niF82gMMO" Name="Input" Kind="StateInputPin" />
                         <Pin Id="SDOSV8x9aD2Pt2SnnDIeQH" Name="Output" Kind="StateOutputPin" />
@@ -676,10 +680,10 @@
             </Node>
             <!--
 
-    ************************ TypingTextFieldState ************************
+    ************************ TypingTextFieldState (Internal) ************************
 
 -->
-            <Node Name="TypingTextFieldState" Bounds="568,200" Id="BsRksoQqECSNXdAmbRB3qr">
+            <Node Name="TypingTextFieldState (Internal)" Bounds="568,200" Id="BsRksoQqECSNXdAmbRB3qr">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
@@ -811,7 +815,7 @@
                       <Choice Kind="TypeFlag" Name="Keys" />
                     </p:TypeAnnotation>
                   </Pad>
-                  <Pad Id="F1QmtJWIha3OAyQ2AwxEvh" SlotId="C9x7G6ZjhW9NlePk2P3mpY" Bounds="944,686" />
+                  <Pad Id="F1QmtJWIha3OAyQ2AwxEvh" SlotId="C9x7G6ZjhW9NlePk2P3mpY" Bounds="923,666" />
                   <Pad Id="Qi1Oyjv5v2qOzjkC9XmE1L" SlotId="C9x7G6ZjhW9NlePk2P3mpY" Bounds="595,92" />
                   <Node Bounds="770,625,30,19" Id="KLIyPmflAB6MYBtNcpFHe6">
                     <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
@@ -943,7 +947,7 @@
                     <Pin Id="FCc86oik5DqPn0lSMoDBmc" Name="Output" Kind="StateOutputPin" />
                   </Node>
                   <Pad Id="Hf1dizFC83fMqiKGoOrFe8" SlotId="DZaIlTl51QpLQMC9SDaneE" Bounds="286,637" />
-                  <Node Bounds="769,821,275,269" Id="MhztTdhWCqUPEjlkoTxGmW">
+                  <Node Bounds="769,734,275,157" Id="MhztTdhWCqUPEjlkoTxGmW">
                     <p:NodeReference LastCategoryFullName="Elementa.Core.StatePattern" LastSymbolSource="Elementa.Core.vl">
                       <Choice Kind="OperationCallFlag" Name="GoToState" />
                       <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
@@ -951,14 +955,14 @@
                     <Patch Id="R4fBI01ualOLJ27AglSgFn" Name="State Create" ManuallySortedPins="true">
                       <Pin Id="E6vWYoCqAevM5S6XWCpwq6" Name="Arg" Kind="InputPin" />
                       <Pin Id="DsWq5rl0kAtPWagzxR4CuQ" Name="Result" Kind="OutputPin" />
-                      <ControlPoint Id="UhOH59tQXSmNXXNXtlXw94" Bounds="783,829" />
-                      <ControlPoint Id="Gx9fyNHtGPrMHjjhmR5a2V" Bounds="783,1083" />
-                      <Node Bounds="781,1026,85,26" Id="Npu74ca9eVINWnRH0D7m9j">
+                      <ControlPoint Id="UhOH59tQXSmNXXNXtlXw94" Bounds="781,742" />
+                      <ControlPoint Id="Gx9fyNHtGPrMHjjhmR5a2V" Bounds="783,884" />
+                      <Node Bounds="781,827,85,26" Id="Npu74ca9eVINWnRH0D7m9j">
                         <p:NodeReference LastCategoryFullName="UIElements.TextField.TextFieldLogic.IdleTextFieldState" LastSymbolSource="UIElements.TextField.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
                           <CategoryReference Kind="Category" Name="IdleTextFieldState" NeedsToBeDirectParent="true" />
-                          <CategoryReference Kind="ClassType" Name="IdleTextFieldState" NeedsToBeDirectParent="true">
+                          <CategoryReference Kind="Category" Name="IdleTextFieldState" NeedsToBeDirectParent="true">
                             <p:OuterCategoryReference Kind="Category" Name="TextFieldLogic" NeedsToBeDirectParent="true" />
                           </CategoryReference>
                         </p:NodeReference>
@@ -966,7 +970,7 @@
                         <Pin Id="QI1otzlBVwtQQfgAEzCjnc" Name="Manager" Kind="InputPin" />
                         <Pin Id="GQuGGnttRMaLfmP3uIEVoN" Name="Output" Kind="StateOutputPin" />
                       </Node>
-                      <Node Bounds="959,1008,72,26" Id="RRbsyyteKpOQHIAnlvmrSA">
+                      <Node Bounds="959,809,73,26" Id="RRbsyyteKpOQHIAnlvmrSA">
                         <p:NodeReference LastCategoryFullName="UIElements.Properties.StringProperties" LastSymbolSource="UIElements.Properties.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="SetValue" />
@@ -981,7 +985,7 @@
                         <Pin Id="AMetHuAlZvoNxdmeZEfMtP" Name="Value" Kind="InputPin" />
                         <Pin Id="O0Is4j8KYcNQQhxzfSdZXb" Name="Output" Kind="StateOutputPin" />
                       </Node>
-                      <Node Bounds="862,968,103,26" Id="MkYSGBy7FndPbhsweFzxDf">
+                      <Node Bounds="862,769,103,26" Id="MkYSGBy7FndPbhsweFzxDf">
                         <p:NodeReference LastCategoryFullName="UIElements.Slider.Manager" LastSymbolSource="UIElements.Slider.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="GetValueProperties" />
@@ -1124,11 +1128,10 @@
                   <Pad Id="COYcE8ZZzyWNf0nu3zsSQe" SlotId="MX2sK6E9WiaMK5hN9r8lOi" Bounds="117,867">
                     <p:ValueBoxSettings />
                   </Pad>
-                  <Pad Id="PqynEtSP4DeN4OCcO3MPih" SlotId="MX2sK6E9WiaMK5hN9r8lOi" Bounds="1032,746">
+                  <Pad Id="PqynEtSP4DeN4OCcO3MPih" SlotId="MX2sK6E9WiaMK5hN9r8lOi" Bounds="868,695">
                     <p:ValueBoxSettings />
                   </Pad>
-                  <Pad Id="D047lR7cDwwQRXWGIUSn1g" SlotId="DZaIlTl51QpLQMC9SDaneE" Bounds="1330,747" />
-                  <Pad Id="QBc9stz8m3vOOSInqKc9VS" SlotId="B9XPhsLrN3mONs0WGmpVct" Bounds="1314,773" />
+                  <Pad Id="D047lR7cDwwQRXWGIUSn1g" SlotId="DZaIlTl51QpLQMC9SDaneE" Bounds="1362,621" />
                   <Node Bounds="1322,562,85,19" Id="LLXPmC3tzfqQRD0IxcAKAx">
                     <p:NodeReference LastCategoryFullName="Elementa.Core.Device.Utils" LastSymbolSource="Elementa.Core.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1143,7 +1146,7 @@
                       <Choice Kind="TypeFlag" Name="Keys" />
                     </p:TypeAnnotation>
                   </Pad>
-                  <Node Bounds="1290,799,45,19" Id="Ing2RGshtaMQH1z89A6ioy">
+                  <Node Bounds="1322,673,45,19" Id="Ing2RGshtaMQH1z89A6ioy">
                     <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="Switch" />
@@ -1231,7 +1234,7 @@
                     <p:NodeReference LastCategoryFullName="Elementa.TextField.TextFieldManager" LastSymbolSource="Elementa.TextField.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetComponents" />
-                      <CategoryReference Kind="ClassType" Name="TextFieldManager" NeedsToBeDirectParent="true" />
+                      <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="MX8G3FPK5wCLcDnp8fDhEC" Name="Input" Kind="StateInputPin" />
                     <Pin Id="KILZJvgasbENUqtiebBt0b" Name="Output" Kind="StateOutputPin" />
@@ -1264,12 +1267,14 @@
                     <p:NodeReference LastCategoryFullName="Elementa.TextField.TextFieldManager" LastSymbolSource="Elementa.TextField.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetComponents" />
-                      <CategoryReference Kind="ClassType" Name="TextFieldManager" NeedsToBeDirectParent="true" />
+                      <CategoryReference Kind="Category" Name="TextFieldManager" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="NVDDzRm6U61Lp13tFyTN3y" Name="Input" Kind="StateInputPin" />
                     <Pin Id="KoZ7O9XroVWOuwDYgAJF8A" Name="Output" Kind="StateOutputPin" />
                     <Pin Id="FPNkdWfknikOinJVuQPUAK" Name="Components" Kind="OutputPin" />
                   </Node>
+                  <Pad Id="GTa93VN7i6jMy77S0e7LvN" Comment="" Bounds="408,931,35,15" ShowValueBox="true" isIOBox="true" />
+                  <Pad Id="E5viImvaiefMvDPg4ecxtx" Comment="" Bounds="285,963,35,35" ShowValueBox="true" isIOBox="true" />
                 </Canvas>
                 <Patch Id="COSE2ijn7lyMP1tJBB6gYA" Name="Create">
                   <Pin Id="R0kN5033zjINZkVieNsknJ" Name="Manager" Kind="InputPin" />
@@ -1383,7 +1388,6 @@
                 <Link Id="N9k4nwA9OdvLAlCAoUJSrT" Ids="EdAWQ1P4WFoMpYMOyPz7wi,BXrUJesDNguNmCzc5teg3b" />
                 <Link Id="QrUVtzCqb0YNx7UMwLqDbK" Ids="IA1QlBfaBc0QDDJvZoptg7,UizQVGcbnVqNd2zCCt97tQ" />
                 <Link Id="K0saKdhsbBQQFmuQweqLaG" Ids="D047lR7cDwwQRXWGIUSn1g,MwOliQFp4WPN9IpwoCzKFo" />
-                <Link Id="TvbmcVHxymGLFoZCSKWXHK" Ids="QBc9stz8m3vOOSInqKc9VS,BVXJ70UN4oZL0gMk2yWVpD" />
                 <Link Id="BJReZbt5gDhMMxKGuqKhQW" Ids="DX3YHlo33jLOXcUbORzmPI,AMetHuAlZvoNxdmeZEfMtP" />
                 <Link Id="EAwPB95TwF9NMSBAtXOzUd" Ids="PqynEtSP4DeN4OCcO3MPih,UfLLwGiK6ssLV2uUkKRLmY" />
                 <Link Id="MVfsiZ86YGqLpfe1XfHR8F" Ids="S6V5bRGSAFpMVg0npzTtH7,AieT4D4hBsFMwImhxs9gj4" />
@@ -1409,6 +1413,9 @@
                 <Link Id="O7SXzzc3YMWLGTAAnA90TG" Ids="KILZJvgasbENUqtiebBt0b,KoYG13fktm0MkDz8lbdzad" />
                 <Link Id="SPXNo0k5tx3MNFjZDpJR0X" Ids="FPNkdWfknikOinJVuQPUAK,NvsvFkBNu4RL0KoriG3zBq" />
                 <Link Id="ERBHlkHOJ9aOlHpiEakygb" Ids="AtLFtJNx4jMLR4iQgEURw3,NVDDzRm6U61Lp13tFyTN3y" />
+                <Link Id="PKdFxt0ALXnO9q3i7pqFgu" Ids="QJTosjwobCGP2cLIKqssqG,GTa93VN7i6jMy77S0e7LvN" />
+                <Link Id="L9O0oCVX8QZNJrLHPpwF0f" Ids="VRMMpPubZnPPM1yFjYEQno,E5viImvaiefMvDPg4ecxtx" />
+                <Link Id="CCTu30SmZ4kNNciOqgUTXP" Ids="G3R5aBWQhUsLdtkkeDfzav,BVXJ70UN4oZL0gMk2yWVpD" />
               </Patch>
             </Node>
             <ControlPoint Id="EPm0GfUZ4aLLKLlWWBehEl" Bounds="196,117" />
@@ -1424,10 +1431,10 @@
                   <p:NodeReference LastCategoryFullName="UIElements.TextField.TextFieldLogic.IdleTextFieldState" LastSymbolSource="UIElements.TextField.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
-                    <CategoryReference Kind="Category" Name="IdleTextFieldState" NeedsToBeDirectParent="true" />
                     <CategoryReference Kind="ClassType" Name="IdleTextFieldState" NeedsToBeDirectParent="true">
                       <p:OuterCategoryReference Kind="Category" Name="TextFieldLogic" NeedsToBeDirectParent="true" />
                     </CategoryReference>
+                    <CategoryReference Kind="Category" Name="IdleTextFieldState" NeedsToBeDirectParent="true" />
                   </p:NodeReference>
                   <Pin Id="Q2s692oyeSANpcKLSG0xIX" Name="State Reference" Kind="InputPin" />
                   <Pin Id="UN3IEGeeN1MQPUwI5aIfXZ" Name="Manager" Kind="InputPin" />
@@ -1466,10 +1473,10 @@
               <p:NodeReference LastCategoryFullName="UIElements.TextField.TextFieldLogic.TypingTextFieldState" LastSymbolSource="UIElements.TextField.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Update" />
-                <CategoryReference Kind="Category" Name="TypingTextFieldState" NeedsToBeDirectParent="true" />
                 <CategoryReference Kind="ClassType" Name="TypingTextFieldState" NeedsToBeDirectParent="true">
                   <p:OuterCategoryReference Kind="Category" Name="TextFieldLogic" NeedsToBeDirectParent="true" />
                 </CategoryReference>
+                <CategoryReference Kind="Category" Name="TypingTextFieldState" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="V5XIzNge2udMVhDRi6Apdq" Name="Input" Kind="StateInputPin" />
               <Pin Id="KXpoWAzCYqeOgXtfb4LdQK" Name="Apply" Kind="InputPin" />
@@ -1510,6 +1517,7 @@
             <Pad Id="Ihu35aPDsh7NzHpzep7iQB" SlotId="KvUrpk1K9ASQH42yssrvWP" Bounds="310,502">
               <p:ValueBoxSettings />
             </Pad>
+            <Pad Id="CJumvTPj8Q4PstFqBAuY3a" Comment="Success" Bounds="578,389,35,35" ShowValueBox="true" isIOBox="true" />
           </Canvas>
           <Patch Id="DaClwvRYjPlOot5x2FPWKA" Name="Create" />
           <Patch Id="VFLkQQM9qT1P509cyQLtec" Name="Update">
@@ -1551,6 +1559,7 @@
           <Link Id="KFGIG8TzBXULL9tCVeVnpP" Ids="SDQr4oD8WliPb4ikZfGacA,PrdPsNVjqCKNyRuBwDk1bu" />
           <Link Id="B2cwP6cGp8IQKQyrtamD9l" Ids="PrdPsNVjqCKNyRuBwDk1bu,OX6eK4bZRz9O3e43bJsqA0" IsHidden="true" />
           <Link Id="H0DuzQv0f4sNNhF6HJqLtA" Ids="Ihu35aPDsh7NzHpzep7iQB,IKrQzHDSi61OmzddVjRerL" />
+          <Link Id="P2vuBrMHhquP6PPZvvWf1D" Ids="A9uh1p894ICLaNdHyNXDei,CJumvTPj8Q4PstFqBAuY3a" />
         </Patch>
       </Node>
       <!--
@@ -1584,9 +1593,10 @@
             <Node Bounds="505,714,74,19" AutoConnect="true" Id="MPO2J3BCdatPi4wKK7vU52">
               <p:NodeReference LastCategoryFullName="Elementa.TextField" LastSymbolSource="Elementa.TextField.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="TextFieldDrawer" />
+                <Choice Kind="ProcessNode" Name="TextFieldDrawer" />
               </p:NodeReference>
               <Pin Id="ROw81zv8tCtM2SJv9wkjAm" Name="Manager" Kind="InputPin" />
+              <Pin Id="HqFZDkQhLegMYAfLG5TxGP" Name="Style Element Name" Kind="InputPin" />
               <Pin Id="DiE8EiBFKaxLKt2KXDRJJr" Name="Layer" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="BnUPij5dpieNee70Mthglk" Bounds="533,497" />
@@ -1812,10 +1822,10 @@
       </Node>
       <!--
 
-    ************************ TextFieldManager ************************
+    ************************ TextFieldManager (Internal) ************************
 
 -->
-      <Node Name="TextFieldManager" Bounds="484,299" Id="Ca6glcbJsWYMUWxadzicFZ">
+      <Node Name="TextFieldManager (Internal)" Bounds="484,299" Id="Ca6glcbJsWYMUWxadzicFZ">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <FullNameCategoryReference ID="Primitive" />
@@ -2008,6 +2018,171 @@
           <Link Id="IsGQ4oQweaCOX15dT4xdza" Ids="DjKdzLBOSvkLMUCb2wnDvD,FKAn2wx3GcUOwXAwaXnfG3" />
           <Link Id="J4Ex7knh7RcMNMNWycec6p" Ids="AuBurIZtq4gNXj3Onhjkl2,HHGjEbmQbUFQMaPH3FnF4K" IsHidden="true" />
           <Link Id="CbRSbAC5nfLNHgmHfLHuJX" Ids="HHGjEbmQbUFQMaPH3FnF4K,DjKdzLBOSvkLMUCb2wnDvD" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ TextFieldMonitor ************************
+
+-->
+      <Node Name="TextFieldMonitor" Bounds="412,508" Id="Fx46wpFx8bkM7sstfhesfj">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:Interfaces>
+          <TypeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="Elementa.Core.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="IElementum" />
+          </TypeReference>
+        </p:Interfaces>
+        <Patch Id="J9bJJVjK5N3OW9yQTpCssm">
+          <Canvas Id="STB1CjcvhHwQbPfDWcp8DF" CanvasType="Group">
+            <Node Bounds="354,710,90,19" AutoConnect="true" Id="EIae1UbbYFhMW9sKo5Gg8H">
+              <p:NodeReference LastCategoryFullName="Elementa.TextField" LastSymbolSource="Elementa.TextField.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="TextFieldDrawer" />
+              </p:NodeReference>
+              <Pin Id="SaSSa1Fm5SLMTfFfhKAvHC" Name="Manager" Kind="InputPin" />
+              <Pin Id="T7OQNkyFuLvOnriY7JlNDL" Name="Style Element Name" Kind="InputPin" />
+              <Pin Id="EOxrQYotslJLxw849CUPwf" Name="Layer" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="DsEXhkJ2Uw0NYkjopFOuqt" Bounds="531,497" />
+            <ControlPoint Id="HO44r7BNQYuOvxM51zywYP" Bounds="443,606" />
+            <ControlPoint Id="TIOaBVYsF7nN6qrULlNu9h" Bounds="499,305" />
+            <Node Bounds="553,344,57,19" Id="Kk7NcR9g6VbNsIyRYv2zqg">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="Iz6t0ZEXBBWMP0n5n0ASHs" Name="Value" Kind="InputPin" />
+              <Pin Id="NYAXGqlYrJYNI3TvcXcDPn" Name="Result" Kind="OutputPin" />
+              <Pin Id="QFGh7kx0w7UONVlCml11FU" Name="Unchanged" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="441,433,174,19" Id="DpXxJXEt2C7OA279FRwxRz">
+              <p:NodeReference LastCategoryFullName="Elementa.Properties" LastSymbolSource="Elementa.Properties.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="StringProperties" />
+              </p:NodeReference>
+              <Pin Id="Mltu5E1CY9dOnQ41ecIbHR" Name="Push To Observable" Kind="InputPin" />
+              <Pin Id="Ag8kbncLDIBOMCGUIsmwp1" Name="Value" Kind="InputPin" />
+              <Pin Id="OIJXtj3DjY1OwQfoenUohJ" Name="SetValue" Kind="InputPin" />
+              <Pin Id="IwtHGBCgV5lPIyZGcgesoK" Name="Default Value" Kind="InputPin" />
+              <Pin Id="DFWoYyS32mTNg4xEjK4lCc" Name="Output" Kind="OutputPin" />
+              <Pin Id="LHMmQ0eTTVcM3p26xV1SiH" Name="Default Value" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="RZZa7jIblsCQH6B0WaCX1I" Bounds="619,497" />
+            <Node Bounds="353,558,357,19" Id="RFHtKexBwZ2NelI1qNN8zR">
+              <p:NodeReference LastCategoryFullName="Elementa.TextField" LastSymbolSource="Elementa.TextField.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="TextFieldManager" />
+              </p:NodeReference>
+              <Pin Id="D1P4eqRmN91PCy8XN5DLsQ" Name="Local Bounds" Kind="InputPin" />
+              <Pin Id="LQSMzyPV4ruQAaEB0oZWCG" Name="Value Properties" Kind="InputPin" />
+              <Pin Id="CuEI4djBPOfLPO1WSDuRZo" Name="Style Sheet" Kind="InputPin" />
+              <Pin Id="MaMdLMUYYG1LHIxlWEoBlE" Name="Global Bounds" Kind="InputPin" />
+              <Pin Id="LD8MuRI0tNuMgDwzJ3LGaF" Name="Components" Kind="InputPin" />
+              <Pin Id="SRuO2u5HXcTNL2KDcvc1GK" Name="Output" Kind="OutputPin" />
+              <Pin Id="H7UTMOzcCyMOKofjLr33p7" Name="Local Bounds" Kind="OutputPin" />
+              <Pin Id="GhJhOq5av18QKqaki7wuv6" Name="Global Bounds" Kind="OutputPin" />
+              <Pin Id="VZhtcn7qd48NZEHvC5X3Kx" Name="Dirty Layout" Kind="OutputPin" />
+              <Pin Id="FGvsEkTQMgsPR0hDuW05Kw" Name="Components" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="EcA7XwTJ6ygQGteTFATXmo" Bounds="355,497" />
+            <ControlPoint Id="AjNJLOlJSezM5x86AP5ZSg" Bounds="532,608" />
+            <ControlPoint Id="AFojgdc9yHRMqeGuhyZVgp" Bounds="619,612" />
+            <ControlPoint Id="UUJbs8B9DpgQchJtaRqoCT" Bounds="707,615" />
+            <ControlPoint Id="HRZlwcU1sQlPn8sVaMNQ8f" Bounds="728,497" />
+            <ControlPoint Id="KGst8Gws1xzLNtwL6t0mSS" Bounds="612,393" />
+            <Pad Id="EvGnesEYUxZMkNa4dZOYUE" Comment="Push To Observable" Bounds="381,363,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="DA289PVjSu9Oayw54DaJas" Comment="Style Element Name" Bounds="440,679,117,18" ShowValueBox="true" isIOBox="true" Value="TextFieldMonitor">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+          </Canvas>
+          <Patch Id="UGOuqYhhvxhMoBUPP8kXZm" Name="Create" ParticipatingElements="RELcZ3WxBlbL8qWoQjCrzy" />
+          <Patch Id="JCphfVFAbk7OjO45wirsl1" Name="Update" ManuallySortedPins="true">
+            <Pin Id="KfnIg8iWicMLvT1VJ8BNIi" Name="Bounds" Kind="InputPin" Bounds="512,465" />
+            <Pin Id="DgnYSBvZiycMNl0f3R3OIZ" Name="Value" Kind="InputPin" Bounds="586,255" />
+            <Pin Id="DWK4oh7KdjfQOgoAXVSc9Z" Name="Component" Kind="InputPin" IsPinGroup="true">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Spread" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="Q4XWL7rE7J3Ny458azpik6" Name="Default Value" Kind="InputPin" Bounds="665,378" DefaultValue="text" Visibility="Optional">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <Patch Id="NfSgXEUjJoTMQCOEULhsYG" Name="SetGlobalBounds">
+            <Pin Id="PP8RM68DEFbLBZ9f5eDhUH" Name="Global Bounds" Kind="InputPin" />
+          </Patch>
+          <Patch Id="FXIRUGpr6q9MC5aFmtSEVx" Name="GetLayer">
+            <Pin Id="Vh007xlqi2ILG7pqgazkg4" Name="Layer" Kind="OutputPin" />
+          </Patch>
+          <Patch Id="DqdkJntnNlrPpwsMsaU25R" Name="SetStyleSheet">
+            <Pin Id="HJF7wAii4HgNY3bVBfuBp2" Name="Style Sheet" Kind="InputPin" />
+          </Patch>
+          <Patch Id="QePHvRjAQLSP83508UT7tP" Name="GetLocalBounds">
+            <Pin Id="L8O7SyoQG7kMob6Ac9ckVb" Name="Local Bounds" Kind="OutputPin" />
+          </Patch>
+          <Patch Id="HhuaFUegcNVPNGNmeRL2dM" Name="ProcessNotification">
+            <Pin Id="TrckMGNucyVN4EhNQD5EF8" Name="Notification" Kind="InputPin" />
+            <Pin Id="RME8mA5wU3aPc6OXaiEJWz" Name="Caller Info" Kind="InputPin" />
+            <Pin Id="Dj8QywfvyjMOAKxlVZuTNM" Name="Handled" Kind="OutputPin" />
+          </Patch>
+          <ProcessDefinition Id="N3W1CPO7jKjL4eVLLodrtT" HasStateOut="true">
+            <Fragment Id="R1Xv0naKZcmM6DTqL3tpZb" Patch="UGOuqYhhvxhMoBUPP8kXZm" Enabled="true" />
+            <Fragment Id="Plx1cVwUDxlQHtgbyGzjZY" Patch="NfSgXEUjJoTMQCOEULhsYG" />
+            <Fragment Id="LR4kDm6rDgwMbUMvSUm6uA" Patch="JCphfVFAbk7OjO45wirsl1" Enabled="true" />
+            <Fragment Id="CTztK152p7bMwTO5Fh9lK7" Patch="DqdkJntnNlrPpwsMsaU25R" />
+            <Fragment Id="VR4oeaDUoL1MI8xpDTjtal" Patch="FXIRUGpr6q9MC5aFmtSEVx" />
+            <Fragment Id="D10BRkPIs8nPCbp7BnbwqN" Patch="HhuaFUegcNVPNGNmeRL2dM" />
+            <Fragment Id="PPwD1ZEocZqOAilmMhHjWs" Patch="QePHvRjAQLSP83508UT7tP" />
+            <Fragment Id="DrPHlrhkz2YOHNN9lg0kSr" Patch="JLxzSwPc1N8NRZGX4X6kgR" />
+            <Fragment Id="JdUPghLHDFyL0zFMD9dydR" Patch="O23kpo2Yxr6MpKZc2ByLYD" />
+            <Fragment Id="Hm7z3kAF59ANajuMwcURs7" Patch="GNxtcnk7WYXNVZqyDRmSSy" />
+          </ProcessDefinition>
+          <Link Id="Qh52LfDuwtFPWr08FcjdgQ" Ids="DgnYSBvZiycMNl0f3R3OIZ,TIOaBVYsF7nN6qrULlNu9h" IsHidden="true" />
+          <Link Id="AwXWLFF2QyxO8eb2OA0hYV" Ids="TIOaBVYsF7nN6qrULlNu9h,Iz6t0ZEXBBWMP0n5n0ASHs" />
+          <Link Id="KjgRmJcyJ2GMIJHSw92UeJ" Ids="TIOaBVYsF7nN6qrULlNu9h,Ag8kbncLDIBOMCGUIsmwp1" />
+          <Link Id="RELcZ3WxBlbL8qWoQjCrzy" Ids="DFWoYyS32mTNg4xEjK4lCc,LQSMzyPV4ruQAaEB0oZWCG" />
+          <Link Id="RUxFLlBoqVSMTTaeQkNLan" Ids="SRuO2u5HXcTNL2KDcvc1GK,SaSSa1Fm5SLMTfFfhKAvHC" />
+          <Link Id="U8gkkacMEZCOjidMV0RC1K" Ids="DsEXhkJ2Uw0NYkjopFOuqt,CuEI4djBPOfLPO1WSDuRZo" />
+          <Link Id="Vi4fpCPViQWK9jwgSYr031" Ids="RZZa7jIblsCQH6B0WaCX1I,MaMdLMUYYG1LHIxlWEoBlE" />
+          <Link Id="LnTpflzmxxAMwNGvoWcAU7" Ids="H7UTMOzcCyMOKofjLr33p7,HO44r7BNQYuOvxM51zywYP" />
+          <Link Id="LAkLj12FMJVNpnUZFamph7" Ids="EcA7XwTJ6ygQGteTFATXmo,D1P4eqRmN91PCy8XN5DLsQ" />
+          <Link Id="Onat9iM09wVMt58nE6Qm52" Ids="KfnIg8iWicMLvT1VJ8BNIi,EcA7XwTJ6ygQGteTFATXmo" IsHidden="true" />
+          <Link Id="Gw7IpPhPm4oN9q2YjdAO5T" Ids="PP8RM68DEFbLBZ9f5eDhUH,RZZa7jIblsCQH6B0WaCX1I" IsHidden="true" />
+          <Link Id="RwhkeRwjnWNM7oidZ9ylhw" Ids="HO44r7BNQYuOvxM51zywYP,L8O7SyoQG7kMob6Ac9ckVb" IsHidden="true" />
+          <Link Id="IPMjWU5GnwkNqncXFyISVc" Ids="GhJhOq5av18QKqaki7wuv6,AjNJLOlJSezM5x86AP5ZSg" />
+          <Link Id="A0p7vj6y4ScP5O0SlT0cjO" Ids="AjNJLOlJSezM5x86AP5ZSg,E1KMYTf19F5NLk4yEzdbYi" IsHidden="true" />
+          <Patch Id="JLxzSwPc1N8NRZGX4X6kgR" Name="GetGlobalBounds">
+            <Pin Id="E1KMYTf19F5NLk4yEzdbYi" Name="Global Bounds" Kind="OutputPin" />
+          </Patch>
+          <Link Id="VDaQRcG3hBcLHhLqyeYlgf" Ids="HJF7wAii4HgNY3bVBfuBp2,DsEXhkJ2Uw0NYkjopFOuqt" IsHidden="true" />
+          <Link Id="TLax2MtNmb4O59PzMZm9Bj" Ids="VZhtcn7qd48NZEHvC5X3Kx,AFojgdc9yHRMqeGuhyZVgp" />
+          <Link Id="TJEuOFjYFklOwkbxBXjRPn" Ids="AFojgdc9yHRMqeGuhyZVgp,MrdqX8R8ZSULqsWL5rmqLz" IsHidden="true" />
+          <Patch Id="O23kpo2Yxr6MpKZc2ByLYD" Name="GetDirtyLayout">
+            <Pin Id="MrdqX8R8ZSULqsWL5rmqLz" Name="Dirty Layout" Kind="OutputPin" />
+          </Patch>
+          <Patch Id="GNxtcnk7WYXNVZqyDRmSSy" Name="GetComponents">
+            <Pin Id="NTJK5OdnGyALGYZKJwOWoz" MergeId="212458" Name="Components" Kind="OutputPin" />
+          </Patch>
+          <Link Id="Aw0eTyREo2oLberB2T1OaP" Ids="UUJbs8B9DpgQchJtaRqoCT,NTJK5OdnGyALGYZKJwOWoz" IsHidden="true" />
+          <Link Id="PpQRXsYlIldLOSS8qgu2mp" Ids="FGvsEkTQMgsPR0hDuW05Kw,UUJbs8B9DpgQchJtaRqoCT" />
+          <Link Id="DYsJun6QNPsONpbbM77ZyE" Ids="DWK4oh7KdjfQOgoAXVSc9Z,HRZlwcU1sQlPn8sVaMNQ8f" IsHidden="true" />
+          <Link Id="MXvzSkwWfpKOh9wUoRheE5" Ids="KGst8Gws1xzLNtwL6t0mSS,IwtHGBCgV5lPIyZGcgesoK" />
+          <Link Id="Ng9iIbqWZzAOidSHXmjxxA" Ids="Q4XWL7rE7J3Ny458azpik6,KGst8Gws1xzLNtwL6t0mSS" IsHidden="true" />
+          <Link Id="V1dOXDtYbvDOrguB07yzpR" Ids="NYAXGqlYrJYNI3TvcXcDPn,OIJXtj3DjY1OwQfoenUohJ" />
+          <Link Id="SbriIsi6mkrP2MDqkBl3CY" Ids="EvGnesEYUxZMkNa4dZOYUE,Mltu5E1CY9dOnQ41ecIbHR" />
+          <Link Id="MsaCRXYeR6KNYjnPSPiM6o" Ids="HRZlwcU1sQlPn8sVaMNQ8f,LD8MuRI0tNuMgDwzJ3LGaF" />
+          <Link Id="RSB6iiSetQ8NU6R1JOuUJM" Ids="DA289PVjSu9Oayw54DaJas,T7OQNkyFuLvOnriY7JlNDL" />
         </Patch>
       </Node>
     </Canvas>

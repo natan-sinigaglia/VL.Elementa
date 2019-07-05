@@ -106,11 +106,6 @@
               <Pin Id="MZXIr4FaUf9MBp6ybTzbqM" Name="Style" Kind="OutputPin" />
               <Pin Id="DSvF6iuoSr4PJ1LQ9j2RU3" Name="Styles Spread" Kind="OutputPin" />
             </Node>
-            <Pad Id="HohiHkOq9KRMOPMieC9yV5" Comment="" Bounds="1033,487,35,15" ShowValueBox="true" isIOBox="true" Value="Integer">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pad>
             <Node Bounds="741,638,207,176" Id="Uh8Nzci53iSPjFaaErSqNl">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -222,6 +217,7 @@
               <Pin Id="AMN3urbSVuKPt8x05BTVPI" Name="Output" Kind="StateOutputPin" />
               <Pin Id="UOG13hEWQ7HMOLAI3CLVod" Name="Components" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="EgfNnSAlBKGMhHxzKTdotI" Bounds="1031,467" />
           </Canvas>
           <Patch Id="TvvQqDexey5MEtJnQqRlfL" Name="Create" />
           <ProcessDefinition Id="HPN7TDsr6lcQHzgC3xC29c">
@@ -231,6 +227,11 @@
           <Link Id="IhNmzxucWiPP1JdXF1yhUA" Ids="COw9o3rZ5HxOFdujOJvrKp,BWdfNWuK3DiL57AWZZTp7b" IsHidden="true" />
           <Patch Id="LYAKExO5lPTOAWxrWBPCVU" Name="Update">
             <Pin Id="COw9o3rZ5HxOFdujOJvrKp" Name="Manager" Kind="InputPin" />
+            <Pin Id="CWEB62VQaT8NhDw5bnVUvj" Name="Style Element Name" Kind="InputPin" Bounds="1103,261" DefaultValue="Integer">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="SqMiKIJoIJrOQofzJjS10e" Name="Layer" Kind="OutputPin" Bounds="455,1002" />
           </Patch>
           <Link Id="EpgUXyYfKVGOFWaT1Z8mVE" Ids="J5Y2LMstoUxLRq7SYLDxJs,B9II9F3MpgxO6wUaKIBhaZ" />
@@ -244,7 +245,6 @@
           <Link Id="PkdrwgIe7JZPIlmSvnNTqa" Ids="DxjJO0nQTCNOzPtrBJl4Hm,VwKP4wMEDpmLzjIOv47du1" />
           <Link Id="DYXZy8CgJGJNsckhAVbEFL" Ids="VA6hltuku0RMN6KXSc08N6,Ub5i10ddZiDPJbc4sasxCv" />
           <Link Id="VodbGggK54fPnrRzcT4ctO" Ids="FMG2eJ9cUwDM06WrwyYlW9,BUt95Lsm5m6MqHxQ2hn5DD" />
-          <Link Id="RtPggLdd1pEQFVWoGeGua5" Ids="HohiHkOq9KRMOPMieC9yV5,AysceLVsZYALwpSrNXlSd0" />
           <Link Id="N1dYB3FRtesPQ843IdpCwN" Ids="MZXIr4FaUf9MBp6ybTzbqM,HfWOHjvgCYgNGbyTTSeDNj" />
           <Link Id="L0MGxLOqv2NMf3WObWekp3" Ids="J5Y2LMstoUxLRq7SYLDxJs,ItDNxAasj4wLl9nsCnOgJf" />
           <Link Id="Fg6DKYIWaEULKHJcoA0X5w" Ids="HFpKRZFxa5mPJZqvwD4FG9,OPMKWusKxJjLVDGPbrFju6" />
@@ -271,6 +271,8 @@
           <Link Id="JK4NVOVVpc2ORDlxl9GP1n" Ids="LEbrFN193o2PHgWKl8Ky8a,RxiV9IbgO4IQTW10vShS9n" />
           <Link Id="QwuVQGbFRLWLSsIyy326Gi" Ids="UOG13hEWQ7HMOLAI3CLVod,JweHKy7bLzvL3kplTWK87K" />
           <Link Id="KPdZV7xSrPXLRw1stSDLe8" Ids="CUiK6GMlimtMjpMCzJNjjV,AiLsCknBM0RPZ0UNqBZ2Lv" />
+          <Link Id="Am5WhzZ2lcsOnW81FQonZp" Ids="CWEB62VQaT8NhDw5bnVUvj,EgfNnSAlBKGMhHxzKTdotI" IsHidden="true" />
+          <Link Id="NXSridfXttYOTTZ3YoQSAv" Ids="EgfNnSAlBKGMhHxzKTdotI,AysceLVsZYALwpSrNXlSd0" />
         </Patch>
       </Node>
       <!--
@@ -298,7 +300,7 @@
                   <p:NodeReference LastCategoryFullName="Elementa.Integer.IntegerLogic.IdleIntegerState" LastSymbolSource="Elementa.Integer.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
-                    <CategoryReference Kind="ClassType" Name="IdleIntegerState" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="Category" Name="IdleIntegerState" NeedsToBeDirectParent="true" />
                   </p:NodeReference>
                   <Pin Id="OmDb56CriKMNVkj1MLCBsd" Name="State Reference" Kind="InputPin" />
                   <Pin Id="NxnEoRSwhJSO4s6MKkdMOz" Name="Manager" Kind="InputPin" />
@@ -337,7 +339,7 @@
               <p:NodeReference LastCategoryFullName="Elementa.Integer.IntegerLogic.TypingIntegerState" LastSymbolSource="Elementa.Integer.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Update" />
-                <CategoryReference Kind="ClassType" Name="TypingIntegerState" NeedsToBeDirectParent="true" />
+                <CategoryReference Kind="Category" Name="TypingIntegerState" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="TxjfQxXjtHxOxFZaN1oBfj" Name="Input" Kind="StateInputPin" />
               <Pin Id="BSd81UVLUykPThOVy3umvT" Name="Apply" Kind="InputPin" />
@@ -361,10 +363,10 @@
             </Pad>
             <!--
 
-    ************************ DraggingIntegerState ************************
+    ************************ DraggingIntegerState (Internal) ************************
 
 -->
-            <Node Name="DraggingIntegerState" Bounds="645,190" Id="U08QUM6KrwyLG4TdawVwkv">
+            <Node Name="DraggingIntegerState (Internal)" Bounds="645,190" Id="U08QUM6KrwyLG4TdawVwkv">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
@@ -445,7 +447,7 @@
                         <p:NodeReference LastCategoryFullName="Elementa.Integer.IntegerLogic.IdleIntegerState" LastSymbolSource="Elementa.Integer.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
-                          <CategoryReference Kind="ClassType" Name="IdleIntegerState" NeedsToBeDirectParent="true" />
+                          <CategoryReference Kind="Category" Name="IdleIntegerState" NeedsToBeDirectParent="true" />
                         </p:NodeReference>
                         <Pin Id="Me5wqHTJZWINiP39WJIU8T" Name="State Reference" Kind="InputPin" />
                         <Pin Id="LMlLHhswRjpNfLCDdFuCVs" Name="Manager" Kind="InputPin" />
@@ -787,10 +789,10 @@
             </Node>
             <!--
 
-    ************************ IdleIntegerState ************************
+    ************************ IdleIntegerState (Internal) ************************
 
 -->
-            <Node Name="IdleIntegerState" Bounds="645,147" Id="Lw5WyH7H7Z7NrHRfkQEDjP">
+            <Node Name="IdleIntegerState (Internal)" Bounds="645,147" Id="Lw5WyH7H7Z7NrHRfkQEDjP">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
@@ -1201,10 +1203,10 @@
             </Node>
             <!--
 
-    ************************ TypingIntegerState ************************
+    ************************ TypingIntegerState (Internal) ************************
 
 -->
-            <Node Name="TypingIntegerState" Bounds="645,233" Id="RXnRlsA8VnkLTfahMKEtA0">
+            <Node Name="TypingIntegerState (Internal)" Bounds="645,233" Id="RXnRlsA8VnkLTfahMKEtA0">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                 <Choice Kind="ClassDefinition" Name="Class" />
               </p:NodeReference>
@@ -1536,7 +1538,7 @@
                         <p:NodeReference LastCategoryFullName="Elementa.Integer.IntegerLogic.IdleIntegerState" LastSymbolSource="Elementa.Integer.vl">
                           <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                           <Choice Kind="OperationCallFlag" Name="Create" />
-                          <CategoryReference Kind="ClassType" Name="IdleIntegerState" NeedsToBeDirectParent="true" />
+                          <CategoryReference Kind="Category" Name="IdleIntegerState" NeedsToBeDirectParent="true" />
                         </p:NodeReference>
                         <Pin Id="N94Xg0I1EmlPB7Ln3y4jrL" Name="State Reference" Kind="InputPin" />
                         <Pin Id="PvmjtbQWuUEP83L35Dyuc7" Name="Manager" Kind="InputPin" />
@@ -1960,6 +1962,7 @@
                 <Choice Kind="ProcessNode" Name="IntegerDrawer" />
               </p:NodeReference>
               <Pin Id="BnqiDezvCrjOGO1RMWLjdw" Name="Manager" Kind="InputPin" />
+              <Pin Id="OGKXtIuE9gYPKgI8JInjph" Name="Style Element Name" Kind="InputPin" />
               <Pin Id="EeWD2CaMSEELhuQPMFZOhF" Name="Layer" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="QEw1wLdEF7dP2eeQaVXUYc" Bounds="526,452" />
@@ -2465,6 +2468,7 @@
                 <Choice Kind="ProcessNode" Name="IntegerDrawer" />
               </p:NodeReference>
               <Pin Id="UIbcOdjiacaQJFXiDRtrox" Name="Manager" Kind="InputPin" />
+              <Pin Id="E1aQpERzke3OGSWpIbxuao" Name="Style Element Name" Kind="InputPin" />
               <Pin Id="IdeFOb1346gQUU4Jlu4Jg3" Name="Layer" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="LaDvrmIgP1zPkuvlTfXPqI" Bounds="526,452" />
@@ -2530,17 +2534,14 @@
             <ControlPoint Id="BucxzQBwV2WNZYBcGKWPFI" Bounds="446,605" />
             <ControlPoint Id="By1PF1L5eskNY08rjQjnXT" Bounds="709,611" />
             <ControlPoint Id="RujV8uhEKJ7PKFFEQdjv2F" Bounds="757,485" />
-            <Node Bounds="752,513,115,19" Id="CvBYEtd7OsTNJNfNyWq3gV">
-              <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="AddBasicComponents" />
-              </p:NodeReference>
-              <Pin Id="AiwBXRjNVZEPqT50RDYcFX" Name="Input" Kind="InputPin" />
-              <Pin Id="GKTIQd4gTpmOz6UGcD3MqX" Name="Output" Kind="OutputPin" />
-            </Node>
             <Pad Id="TQ20l6NFsICNFNnztUkf0u" Comment="Push To Observable" Bounds="293,290,35,35" ShowValueBox="true" isIOBox="true" Value="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="VAAzb621NNuN6PizX0tdzz" Comment="Style Element Name" Bounds="430,683,137,17" ShowValueBox="true" isIOBox="true" Value="IntegerMonitor">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
           </Canvas>
@@ -2636,10 +2637,10 @@
           <Link Id="LwS0ukVVmEOPQR1Sj7pHBF" Ids="By1PF1L5eskNY08rjQjnXT,Ll2qgx3p1vLQYSE73qdYVY" IsHidden="true" />
           <Link Id="JglTgpcagjFMawXNRLKE92" Ids="B0wP7r3so0fLOJDQbC5Hmc,By1PF1L5eskNY08rjQjnXT" />
           <Link Id="M5JRM6LUgzZODFjbEWMOFQ" Ids="N8Q4C8h1gqzPQkEcmfxdDa,RujV8uhEKJ7PKFFEQdjv2F" IsHidden="true" />
-          <Link Id="A0CyDsM6KDwO7bgzvWmTMD" Ids="RujV8uhEKJ7PKFFEQdjv2F,AiwBXRjNVZEPqT50RDYcFX" />
-          <Link Id="LijQY7EuITaN0kWCzMthDU" Ids="GKTIQd4gTpmOz6UGcD3MqX,LkVJ4HjkbNFLqynlIn9qkT" />
           <Link Id="JnTLtribNvMLNGgyKcUUs6" Ids="J8ngh7SRXi8PiZIxc1azY3,Nco1yjByEhfMJs4ILuXKXx" />
           <Link Id="HCiaRJMU7RFMMbS3uqet5R" Ids="TQ20l6NFsICNFNnztUkf0u,JHYQTMraYgHPl8IP3mzkl1" />
+          <Link Id="OASZ60bMcEQMrL12rg91Mp" Ids="VAAzb621NNuN6PizX0tdzz,E1aQpERzke3OGSWpIbxuao" />
+          <Link Id="MCErTp0tLVRPYtHQryZTNX" Ids="RujV8uhEKJ7PKFFEQdjv2F,LkVJ4HjkbNFLqynlIn9qkT" />
         </Patch>
       </Node>
     </Canvas>
