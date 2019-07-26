@@ -17,4 +17,9 @@ namespace Elementa
         Idle, Hovered, Selected, Focused, Preview
     }
 
+    public enum Label_Placement
+    {
+        Down, Right, Up, Left
+    }
+
 }
