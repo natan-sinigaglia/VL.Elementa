@@ -22,4 +22,9 @@ namespace Elementa
         Down, Right, Up, Left
     }
 
+    public enum ComponentType
+    {
+        Interactive, Hoverable, Focusable, Selectable, Previewable, Typeable, Taggable, Stylable, Taskable, Moveable, Resizeable
+    }
+
 }
