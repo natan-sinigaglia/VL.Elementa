@@ -4,7 +4,14 @@ using System.Text;
 
 namespace Elementa.Attributes
 {
+    [AttributeUsage(AttributeTargets.Class)]
+    public class SuppressAllAttribute : Attribute
+    {
+    }
     public class ExposeAttribute : Attribute
+    {
+    }
+    public class SuppressAttribute : Attribute
     {
     }
 
