@@ -27,4 +27,19 @@ namespace Elementa
         Interactive, Hoverable, Focusable, Selectable, Previewable, Typeable, Taggable, Stylable, Taskable, Moveable, Resizeable
     }
 
+    public enum KnownWidget
+    {
+        Bang, Press, Toggle, Integer, IntegerUpDown, Value, Slider, Rotary, Vector2D, Slider2D, Range, Vector3D, Vector4D, Color, TextField, Dropdown, NavigateToButton
+    }
+
+    public enum WidgetOrientation
+    {
+        Horizontal, Vertical
+    }
+
+    public enum GroupExposureKind
+    {
+        Flat, Nested, Stacked
+    }
+
 }
