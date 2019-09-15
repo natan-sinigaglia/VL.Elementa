@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="AGbnBo3oqoDPwftvVYoovB" LanguageVersion="2019.1.0-0598-gab8ee7b9e7" Version="0.128">
+<Document xmlns:p="property" Id="AGbnBo3oqoDPwftvVYoovB" LanguageVersion="2019.1.0-0667-gac4859edde" Version="0.128">
   <NugetDependency Id="UyEMuXTVd4eNwveXr1VWLZ" Location="VL.CoreLib" Version="2019.1.0-573" />
   <Patch Id="HyGSxfYJxD3O1jxUcqHiVS">
     <Canvas Id="BlS3Syv4nHPO1g09p91sa5" DefaultCategory="Elementa.Widgets" CanvasType="FullCategory">
@@ -425,12 +425,12 @@
             <Node Bounds="468,210,75,19" Id="M8lvFiRoRXmPVb3hzyXHCG">
               <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="Switch" />
-                <CategoryReference Kind="Category" Name="Control" NeedsToBeDirectParent="true" />
+                <Choice Kind="OperationNode" Name="Switch (Boolean)" />
+                <FullNameCategoryReference ID="Control" />
               </p:NodeReference>
               <Pin Id="CVGW0zXAYgeLUrxv3ChkZc" Name="Condition" Kind="InputPin" />
-              <Pin Id="B0bnAwTpGDUPrwzTyw4XxU" Name="False" Kind="InputPin" />
-              <Pin Id="NEeLKmBLN2KP3oMJdRHvu4" Name="True" Kind="InputPin" />
+              <Pin Id="B0bnAwTpGDUPrwzTyw4XxU" Name="Input" Kind="InputPin" />
+              <Pin Id="NEeLKmBLN2KP3oMJdRHvu4" Name="Input 2" Kind="InputPin" />
               <Pin Id="EDVw461omUIOYPKHqOP5mW" Name="Output" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="KcbUH1ZFyQePNHTXzwKvYB" Bounds="634,241" />
@@ -1122,11 +1122,7 @@
                   <Pin Id="LRvnxzFSDAZPUpAb4o4thg" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Pin Id="I2CFt4UeIQ6QLna7FeqaLv" Name="Arg 1" Kind="InputPin" />
-                <Pin Id="BvFdmByU0x9QXIjY2GYGTP" Name="Result" Kind="OutputPin">
-                  <p:TypeAnnotation>
-                    <Choice Kind="TypeFlag" Name="IElementum" />
-                  </p:TypeAnnotation>
-                </Pin>
+                <Pin Id="BvFdmByU0x9QXIjY2GYGTP" Name="Result" Kind="OutputPin" />
               </Patch>
               <Pin Id="RaESYJQTFUMO8Jj7cl7xvD" Name="Reset" Kind="InputPin" />
               <Pin Id="D9SV9dgiWL7QX1nbPALSaz" Name="StateRef" Kind="OutputPin" />
@@ -1552,7 +1548,16 @@
             <Pin Id="HRNUURvJeZ2M3Fy2PTbcfT" Name="Enabled" Kind="InputPin" />
           </Patch>
           <Slot Id="Vz6Fe72LKONPtHeNDu7tIN" Name="State" />
-          <Slot Id="DuanvQ9hZggO1pgAzFxZU3" Name="State Reference" />
+          <Slot Id="DuanvQ9hZggO1pgAzFxZU3" Name="State Reference">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="Reference" />
+              <p:TypeArguments>
+                <TypeReference>
+                  <Choice Kind="TypeFlag" Name="IElementum" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Slot>
           <Link Id="NnvnbYJs59qQFiGyAiWcXN" Ids="DAZ6eHPcjESOU8Nr8YwIaV,Lq6ilOOLVDyNk2LMpCmwAj" IsHidden="true" />
           <Link Id="TQx8HH1bBk6N3c2Dbf7urs" Ids="I2CFt4UeIQ6QLna7FeqaLv,IrPZeqfSHpWL6IAkFVM2oJ" IsHidden="true" />
           <Link Id="FqaaaLT0JF3LURkrEGaCza" Ids="AL8bVZkIjM6M3LXEHn7Hgq,BvFdmByU0x9QXIjY2GYGTP" IsHidden="true" />
