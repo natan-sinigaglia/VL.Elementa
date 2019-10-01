@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="PteB4SGIz2HLEHnWfsTNYi" LanguageVersion="2019.1.0-0654-gaf14329ad1" Version="0.128">
+<Document xmlns:p="property" Id="PteB4SGIz2HLEHnWfsTNYi" LanguageVersion="2019.1.0-0767-g6a9ccb8b3f" Version="0.128">
   <NugetDependency Id="DWHBR0yKpKpLovCZjpRCvi" Location="VL.CoreLib" Version="2019.1.0-598" />
   <Patch Id="JuVa7E7lhYwLnM2ef56WNK">
     <Canvas Id="CJIv5mf1hOYM9876oFNSeL" DefaultCategory="Elementa.Editor" CanvasType="FullCategory">
@@ -33,6 +33,7 @@
                   <Choice Kind="TypeFlag" Name="CommonSpace" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="IStAgqLn32lMOFA6y2Wx5f" Name="VSync" Kind="InputPin" />
               <Pin Id="JlFjxI5GCZNNd8eATAinRE" Name="Enabled" Kind="InputPin" />
               <Pin Id="RSg6JPPAPoFLa3YHN3ioAh" Name="Form" Kind="OutputPin" />
               <Pin Id="QXLRd3EihTbOXTiYQYnZJj" Name="ClientBounds" Kind="OutputPin" />
@@ -388,13 +389,16 @@
                       </p:NodeReference>
                       <Pin Id="H1X3GaKt0OdPUlZuFRRXGk" Name="Input" Kind="InputPin" />
                       <Pin Id="V8helVzh60FN15ogS4tnYp" Name="Input 2" Kind="InputPin" />
-                      <Pin Id="AQ6bGDanjC5OP4WW21Nvd4" Name="Bounds" Kind="InputPin" />
+                      <Pin Id="Mc1wICSBchBMOxTa1KR5oE" Name="Position" Kind="InputPin" />
+                      <Pin Id="SX7xYQWVWG9M6y6qhk8Gp6" Name="Size" Kind="InputPin" />
                       <Pin Id="J1s7zklH3bEPRRu7MiAatd" Name="Spacing" Kind="InputPin" DefaultValue="0.09999999">
                         <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="TypeFlag" Name="Float32" />
                         </p:TypeAnnotation>
                       </Pin>
+                      <Pin Id="F2fJAdq2oT5OVaW3OIBcH5" Name="Components" Kind="InputPin" />
                       <Pin Id="Df5P5q0mB4dOS35I8qZ7VA" Name="Output" Kind="OutputPin" />
+                      <Pin Id="AQ6bGDanjC5OP4WW21Nvd4" Name="Bounds" Kind="InputPin" />
                     </Node>
                     <Node Bounds="52,645,96,19" Id="BOpAsw187D5Oz5T6DiINjI">
                       <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
@@ -530,14 +534,15 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="Kxi72OknEH4OoKdsXxva0K" Name="Input" Kind="InputPin" />
-              <Pin Id="FwJo9IBWttRObUOxqHxSNW" Name="Bounds" Kind="InputPin" />
+              <Pin Id="SvvPL3MQKnLMcGtg4SQ2b2" Name="Position" Kind="InputPin" />
+              <Pin Id="RpKvcY3tvMXPX4fPjmw3BA" Name="Size" Kind="InputPin" />
               <Pin Id="GehlU57G7GAQJwpxaIJFUD" Name="Spacing" Kind="InputPin" DefaultValue="0.09999999">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="UlHVgdM5YQvOa1PiGpH7T3" Name="Transformation" Kind="InputPin" />
               <Pin Id="O76EEfbf5OsO0CjsHeKN7n" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="FwJo9IBWttRObUOxqHxSNW" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="113,84,48,19" Id="N3syTZGeTpDN04NKmY68HS">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -2426,14 +2431,15 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="BaRzPVQLEUUNYsPMXKmEVH" Name="Input" Kind="InputPin" />
-              <Pin Id="FnT8qAhByxbP038kA3fO3R" Name="Bounds" Kind="InputPin" />
+              <Pin Id="G49S0Ye7yalPJ8GV3K0x5n" Name="Position" Kind="InputPin" />
+              <Pin Id="NZKBmQCLtPoMTVQ0eMsYCZ" Name="Size" Kind="InputPin" />
               <Pin Id="Mz3YCuzpDCfMjEeEHhSqks" Name="Spacing" Kind="InputPin" DefaultValue="0.15">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="MILPJOuOR0DLNjYN2dyfKd" Name="Transformation" Kind="InputPin" />
               <Pin Id="GpVBsJj1L6gNOYFeUrem2A" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="FnT8qAhByxbP038kA3fO3R" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="747,79,48,19" Id="EPjSUGuK54JPET20TGCaRG">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -2928,7 +2934,8 @@
                 <Choice Kind="ProcessAppFlag" Name="FitY (Spectral)" />
               </p:NodeReference>
               <Pin Id="T0HEe37bf7KMzJYQcfByGW" Name="Input" Kind="InputPin" />
-              <Pin Id="OO2tVrM7IL9OhmbBM2xqHJ" Name="Bounds" Kind="InputPin" />
+              <Pin Id="OcqQVcu0ya7OUkEb38RvpG" Name="Position" Kind="InputPin" />
+              <Pin Id="RqOy3Nyfsy4OFeJeJXSPEL" Name="Size" Kind="InputPin" />
               <Pin Id="RtDwgrQ9lYvPYNrhjLccJu" Name="Spacing" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
@@ -2940,6 +2947,7 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="G54D4VgGRuoLgfWnl7SKuw" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="OO2tVrM7IL9OhmbBM2xqHJ" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="666,271,36,19" Id="OJ3Cy5ae9BAPYEyHXAYqKO">
               <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
@@ -4309,14 +4317,15 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="BFGC4qXCOlBNWzjnAkePBx" Name="Input" Kind="InputPin" />
-              <Pin Id="UJ3ZXMGdCITMsEnxjbQerz" Name="Bounds" Kind="InputPin" />
+              <Pin Id="L2JeCLiiPLrNdTjRUGqoJi" Name="Position" Kind="InputPin" />
+              <Pin Id="DYgM91hMOLUQWhfh9fw34c" Name="Size" Kind="InputPin" />
               <Pin Id="PKspZYQYNx2LVaLxhWfsI8" Name="Spacing" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="NEeY75mRADOPE1ZAbozO5j" Name="Transformation" Kind="InputPin" />
               <Pin Id="VBqNMukZvBcLaOm29mK4L7" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UJ3ZXMGdCITMsEnxjbQerz" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="139,84,48,19" Id="AfANiCam8dkO3RJ5MN1j4Q">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -4484,14 +4493,15 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="OG6vhAZSFaoNY4FhtVQCwo" Name="Input" Kind="InputPin" />
-              <Pin Id="PKN1DGAQIlxP8c7Qrx8XT9" Name="Bounds" Kind="InputPin" />
+              <Pin Id="T1Exag3fgeGQLxUY5ygl7D" Name="Position" Kind="InputPin" />
+              <Pin Id="Cv7z7VOa78cMrg4jYLat0S" Name="Size" Kind="InputPin" />
               <Pin Id="DZSuvD9Au3SL24LCr7MFYr" Name="Spacing" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="NN4144LrJVxLGRt1fObFKW" Name="Transformation" Kind="InputPin" />
               <Pin Id="LIlSwJt2XYbN9NQoAn3VEV" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="PKN1DGAQIlxP8c7Qrx8XT9" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="388,92,48,19" Id="SnidBaen1y0LR7pU4vnvWe">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -4982,7 +4992,8 @@
                 <Choice Kind="ProcessAppFlag" Name="FitY (Spectral)" />
               </p:NodeReference>
               <Pin Id="MRksPkahyr9M45zW6vMg7k" Name="Input" Kind="InputPin" />
-              <Pin Id="S7gba5UszTcPSbqaOPdjk3" Name="Bounds" Kind="InputPin" />
+              <Pin Id="CJn9b1k2XsPNcKsYHrzkyE" Name="Position" Kind="InputPin" />
+              <Pin Id="EySDXEUKmpVMIYIWFn8lV8" Name="Size" Kind="InputPin" />
               <Pin Id="GONBFvwf2bEPQeujRoQC8y" Name="Spacing" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
@@ -4990,6 +5001,7 @@
               </Pin>
               <Pin Id="AJjzuXEZjRKMrG5sQ64zIr" Name="Bounds Clip" Kind="InputPin" />
               <Pin Id="RJyiED7Nc5mNjM94XIYRxB" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="S7gba5UszTcPSbqaOPdjk3" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="273,155,36,19" Id="NsQCvNcYkjXLoVm0kv6Ts7">
               <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
@@ -6627,7 +6639,8 @@
                 <Choice Kind="ProcessAppFlag" Name="FitY (Spectral)" />
               </p:NodeReference>
               <Pin Id="VfmIdN3sBriLKDOihQejTi" Name="Input" Kind="InputPin" />
-              <Pin Id="OOelQFbdHrWP5ZeoSsGumA" Name="Bounds" Kind="InputPin" />
+              <Pin Id="F21dLgvh9AsNYdezaLFOsv" Name="Position" Kind="InputPin" />
+              <Pin Id="DqUuQqAGztAMEf0hjWKfdw" Name="Size" Kind="InputPin" />
               <Pin Id="Pk9HKwajGsFQV1J9CwIK7y" Name="Spacing" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
@@ -6635,6 +6648,7 @@
               </Pin>
               <Pin Id="Ip9AoAR38AAMEvPg6HvxuG" Name="Bounds Clip" Kind="InputPin" />
               <Pin Id="KSmTstuGyIBNqav67yDIcD" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="OOelQFbdHrWP5ZeoSsGumA" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="666,271,36,19" Id="LDEucjZH47nPFwAd0znZii">
               <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
@@ -6896,6 +6910,7 @@
                     <Choice Kind="TypeFlag" Name="CommonSpace" />
                   </p:TypeAnnotation>
                 </Pin>
+                <Pin Id="Ogsy19PDCoXNIaFaBLtgdO" Name="VSync" Kind="InputPin" />
                 <Pin Id="LUPZuohzRzuO8Fd4LsCHjg" Name="Enabled" Kind="InputPin" />
                 <Pin Id="EKe4ZJzbI4dOs7Ej46e5e2" Name="Form" Kind="OutputPin" />
                 <Pin Id="RdMlu0uOBeQQAxbVG8PPnA" Name="ClientBounds" Kind="OutputPin" />
@@ -7185,11 +7200,11 @@
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="StackX" />
                       <CategoryReference Kind="Category" Name="Layout" NeedsToBeDirectParent="true" />
-                      <PinReference Kind="InputPin" Name="Bounds" />
                     </p:NodeReference>
                     <Pin Id="DQiPYAHIsgqQcqheTefSJi" Name="Input" Kind="InputPin" />
                     <Pin Id="EVbWFZsjOqfONT69bOIYwb" Name="Input 2" Kind="InputPin" />
-                    <Pin Id="A9PaI1F1Ys0MZYBStLdjGJ" Name="Bounds" Kind="InputPin" />
+                    <Pin Id="ThdOA8ot1cONkxHva41TKG" Name="Position" Kind="InputPin" />
+                    <Pin Id="CrKnqgUybhoOemRcC308Lx" Name="Size" Kind="InputPin" />
                     <Pin Id="AIbKlvTK8hcLRofxjHoTQ7" Name="Spacing" Kind="InputPin" DefaultValue="0.01">
                       <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                         <Choice Kind="TypeFlag" Name="Float32" />
@@ -7218,7 +7233,8 @@
                           <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
                         </p:NodeReference>
                         <Pin Id="Tvt85m3dKdON6SHE1A9AIm" Name="Input" Kind="InputPin" />
-                        <Pin Id="DrLUcvOJ6PNN5z8upxv9R8" Name="Bounds" Kind="InputPin" />
+                        <Pin Id="TkKbHTvIt5wMy9zxwQYJaR" Name="Position" Kind="InputPin" />
+                        <Pin Id="N18LuMS2u8SOwADTq4r3yi" Name="Size" Kind="InputPin" />
                         <Pin Id="Iz9lR5z9VUyPJCsf3cjME3" Name="Spacing" Kind="InputPin" />
                         <Pin Id="PxTuv8gZp2bQW8OVs9gsyv" Name="Output" Kind="StateOutputPin" />
                       </Node>
@@ -7274,22 +7290,6 @@
                       </p:TypeAnnotation>
                     </ControlPoint>
                   </Node>
-                  <Node Bounds="738,669,85,19" Id="KhkuaUNJeBCNnKL6N8uqUr">
-                    <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="Elementa.Core.vl">
-                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="ProcessAppFlag" Name="Bounds" />
-                    </p:NodeReference>
-                    <Pin Id="DJ2NABHwMkQOlv9gbae6AR" Name="Position" Kind="InputPin" />
-                    <Pin Id="As1TrvfFgwGPqzQNdR6kpf" Name="Size" Kind="InputPin" />
-                    <Pin Id="A2YpIgDsdrcMAnbENzPkDm" Name="Flexibility" Kind="InputPin">
-                      <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-                        <Choice Kind="TypeFlag" Name="Vector2" />
-                      </p:TypeAnnotation>
-                    </Pin>
-                    <Pin Id="HFeWvclGTbNM2o1SQ9r6yf" Name="Min Size" Kind="InputPin" />
-                    <Pin Id="M6K8Hnm6oyjLCUSV3ECIXk" Name="Max Size" Kind="InputPin" />
-                    <Pin Id="GI40VqiSVSJLdCckdoMgMW" Name="Output" Kind="StateOutputPin" />
-                  </Node>
                 </Patch>
                 <ControlPoint Id="UYdjosnoyysO0neaRXtUFB" Bounds="620,1056" Alignment="Bottom">
                   <p:TypeAnnotation>
@@ -7343,7 +7343,7 @@
               <Node Bounds="1032,433,64,19" Id="ImWQtyRAlv8PWVO0Q4z8sZ">
                 <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="Interactive" />
+                  <Choice Kind="ProcessNode" Name="Interactive" />
                 </p:NodeReference>
                 <Pin Id="VzkQUgVsgUGOMXPMrY2b1d" Name="Output" Kind="StateOutputPin" />
               </Node>
@@ -7467,10 +7467,7 @@
             <Link Id="KzBMFAxtswPLegjZmcKNmO" Ids="E8Ujjirt6tzOUIYspFa87E,EVbWFZsjOqfONT69bOIYwb" />
             <Link Id="STYw3KOXwxALZSQihD1Sii" Ids="Seg0CiLqah9LZ9CcI4cdj9,RJ5v0ZiQQY3Pd4Fmz3Lhfd" />
             <Link Id="R434cox5mWOPDS9b3edRqZ" Ids="OCmKTQb6XV1NWSiyP7pU9O,HKAtHhGuu7uOt1RJdM6N79" />
-            <Link Id="ND2BXHS8zw6MvwQuf8ZBvH" Ids="OCmKTQb6XV1NWSiyP7pU9O,DJ2NABHwMkQOlv9gbae6AR" />
             <Link Id="SHBwpPuk2aBL3Oa8vjHiiJ" Ids="M6hycXhLKiTQHhR1SxZNIO,UYdjosnoyysO0neaRXtUFB" />
-            <Link Id="GgT0UCEQNKuMAHOK6EYWct" Ids="GI40VqiSVSJLdCckdoMgMW,DrLUcvOJ6PNN5z8upxv9R8" />
-            <Link Id="IkCUM0TooyUOgKfxtVFRsM" Ids="GI40VqiSVSJLdCckdoMgMW,A9PaI1F1Ys0MZYBStLdjGJ" />
             <Link Id="RHJwEInVWI8PotK81ZNHS4" Ids="C6RRzlPrOYBP20i4Y0038y,A8Vfx3yilTlNrDUDYZZs7e" />
             <Link Id="CawkW5qDdkwMrBf5C3YLNN" Ids="T6e8ToxAwC7L3giyE0L1yC,MAdDtl6g38lOvAcaHf22ox" />
             <Link Id="DzbSbZxQ067M25BkfwFphw" Ids="T6e8ToxAwC7L3giyE0L1yC,GZCINokpApeMP4bABRUO3e" />
@@ -7496,6 +7493,8 @@
             <Link Id="JszJAQthkq8MYMoVzkiCKJ" Ids="AgKMc1OcoVyPL68HrZ0zli,Mg2lE7nwq8FMOEdhHXFjND" />
             <Link Id="KShiMvrDKu9PrhYrHLwMvz" Ids="Ah8WHZe7f2IPgqszFQJe8G,LLNgmwJtbdoQRZRvQ1IPrD" />
             <Link Id="MzKTulomQaEQLFThFU9zOj" Ids="TbyNRDVwJckM2IFbbmX0rQ,VagyGRfuQVNLTCw4hw3z7I" />
+            <Link Id="RKEH1ND9oymPd4j9m2IE8V" Ids="OCmKTQb6XV1NWSiyP7pU9O,ThdOA8ot1cONkxHva41TKG" />
+            <Link Id="BwtcKCcSGoTPp0L5IjtmIE" Ids="OCmKTQb6XV1NWSiyP7pU9O,TkKbHTvIt5wMy9zxwQYJaR" />
           </Patch>
         </Node>
         <!--
@@ -7753,6 +7752,8 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="Nad4aVJqxOFN8gQVF6unVf" Name="Input" Kind="InputPin" />
+              <Pin Id="LQacNc7QQljO3LhHyoVpF0" Name="Position" Kind="InputPin" />
+              <Pin Id="TUMr0VwQy2MM6WqiU4HwY1" Name="Size" Kind="InputPin" />
               <Pin Id="JZ5GQ5GG0FyOClO1743bJt" Name="Spacing" Kind="InputPin" DefaultValue="0.15">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
@@ -7781,6 +7782,7 @@
                   <Choice Kind="TypeFlag" Name="CommonSpace" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="CyYa8pfsaeuNRp8tI640uP" Name="VSync" Kind="InputPin" />
               <Pin Id="BJzWwdejQ1MMXyQox9Tzvf" Name="Enabled" Kind="InputPin" />
               <Pin Id="RRNsriKNxDXMgc3ZJu5t6s" Name="Form" Kind="OutputPin" />
               <Pin Id="QNSVzAxGkvvMl1doeX9dsK" Name="ClientBounds" Kind="OutputPin" />
@@ -10634,6 +10636,8 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="Gf4OX8wA3hvMXKGTYDfYHr" Name="Input" Kind="InputPin" />
+              <Pin Id="Mok3coxiVB4LtG8SlmgYvZ" Name="Position" Kind="InputPin" />
+              <Pin Id="HeFvbHevyC2MUgx90bDVNf" Name="Size" Kind="InputPin" />
               <Pin Id="SiEnyvCg0uROslzQDfAxqu" Name="Spacing" Kind="InputPin" DefaultValue="0.15">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
@@ -10662,6 +10666,7 @@
                   <Choice Kind="TypeFlag" Name="CommonSpace" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="VX3fjFOf05nMx8k04I1vtS" Name="VSync" Kind="InputPin" />
               <Pin Id="QbglKI4fTB5QSCTYFzCfma" Name="Enabled" Kind="InputPin" />
               <Pin Id="VNp6fopP5z5MJcjEEZp6hH" Name="Form" Kind="OutputPin" />
               <Pin Id="F7osMhqypG5OOCbBKomBnL" Name="ClientBounds" Kind="OutputPin" />
@@ -11914,13 +11919,16 @@
                       </p:NodeReference>
                       <Pin Id="GdduEq6BDDlPsEWQqqPuUe" Name="Input" Kind="InputPin" />
                       <Pin Id="NayeaAif88oOSpbVOaxsAX" Name="Input 2" Kind="InputPin" />
-                      <Pin Id="GgSre9ftfLyNOkcWmT33Nn" Name="Bounds" Kind="InputPin" />
+                      <Pin Id="JZEFiLnivfROHtiel2hFBl" Name="Position" Kind="InputPin" />
+                      <Pin Id="Ua1RBZKvpHrNBT9KjylgjP" Name="Size" Kind="InputPin" />
                       <Pin Id="MUJPelWuYGkLr3uZ1QYewm" Name="Spacing" Kind="InputPin" DefaultValue="0.09999999">
                         <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="TypeFlag" Name="Float32" />
                         </p:TypeAnnotation>
                       </Pin>
+                      <Pin Id="O9D2q1dHXm5LUNdDdJpJ0L" Name="Components" Kind="InputPin" />
                       <Pin Id="DohtES7Rod6PESPo7U9aJu" Name="Output" Kind="OutputPin" />
+                      <Pin Id="GgSre9ftfLyNOkcWmT33Nn" Name="Bounds" Kind="InputPin" />
                     </Node>
                     <Node Bounds="52,645,96,19" Id="IHHvGm3lD4eP8YUM5GgMPZ">
                       <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
@@ -12069,14 +12077,15 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="JNEXSImTrHoQGgAIyeUNiF" Name="Input" Kind="InputPin" />
-              <Pin Id="J33dsDHVQhhPacfCMZBGAc" Name="Bounds" Kind="InputPin" />
+              <Pin Id="MJWs9t7csl0LBMLwmVTkwN" Name="Position" Kind="InputPin" />
+              <Pin Id="HgeVhC4GRAtL0pc4XatKD9" Name="Size" Kind="InputPin" />
               <Pin Id="KTrFvD1SsQUOOz0jzxzshu" Name="Spacing" Kind="InputPin" DefaultValue="0.09999999">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="CuQn8WJMPdVPoUROWSFJAe" Name="Transformation" Kind="InputPin" />
               <Pin Id="SUVMtP9l7mePGFOwmiW2Nd" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="J33dsDHVQhhPacfCMZBGAc" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="111,33,48,19" Id="G1B8rN2NJY9MpYypneCJlz">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -12353,7 +12362,8 @@
                 <Choice Kind="ProcessAppFlag" Name="FitY (Spectral)" />
               </p:NodeReference>
               <Pin Id="JTJeWoJQ4LqOYMyJPUBOxB" Name="Input" Kind="InputPin" />
-              <Pin Id="Bq2TMSyEGxRNyo6HIBgKg3" Name="Bounds" Kind="InputPin" />
+              <Pin Id="EVtRNByWqfRPo1w6YYyZhg" Name="Position" Kind="InputPin" />
+              <Pin Id="SroVN8MCooMMiddqtuv0vK" Name="Size" Kind="InputPin" />
               <Pin Id="G4hWyzrTLLyPTxjE4fr9If" Name="Spacing" Kind="InputPin">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
@@ -12361,6 +12371,7 @@
               </Pin>
               <Pin Id="HGzD2WxwHJ0LXAOi9lL3Fg" Name="Bounds Clip" Kind="InputPin" />
               <Pin Id="DQuVWtt8NsbPRnTr3RDDcK" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Bq2TMSyEGxRNyo6HIBgKg3" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="666,271,36,19" Id="AAdzIFMtkGELNEWJdradOn">
               <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
@@ -12712,14 +12723,15 @@
                 <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
               </p:NodeReference>
               <Pin Id="UFYTkOv0g4gMfKkxFWB6ht" Name="Input" Kind="InputPin" />
-              <Pin Id="MTXnz2BYwPPOjqWhAfmNt4" Name="Bounds" Kind="InputPin" />
+              <Pin Id="DJZQMm5ADzVMUWcBiGp1Kd" Name="Position" Kind="InputPin" />
+              <Pin Id="QaZn59x87U4N1ogUUvBd35" Name="Size" Kind="InputPin" />
               <Pin Id="RljHG9Jv2YlN8WuHhlzfPr" Name="Spacing" Kind="InputPin" DefaultValue="0.15">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="LmhhgsiwWmdNtfb0fds3EO" Name="Transformation" Kind="InputPin" />
               <Pin Id="SBVV8m6AYa8O7GS7mYEy94" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="MTXnz2BYwPPOjqWhAfmNt4" Name="Bounds" Kind="InputPin" />
             </Node>
             <Node Bounds="747,79,48,19" Id="JZyXjcxP7MXPk5MpEPEMEi">
               <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
