@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="MW7sisvXfOrNyczgFPQjr5" LanguageVersion="2019.1.0-0713-gfc1df09ee7" Version="0.128">
+<Document xmlns:p="property" Id="MW7sisvXfOrNyczgFPQjr5" LanguageVersion="2019.1.0-0767-g6a9ccb8b3f" Version="0.128">
   <NugetDependency Id="IKrUbEIQCEIPxrOOb1tHCQ" Location="VL.CoreLib" Version="2019.1.0-573" />
   <Patch Id="Csf6QKC4FdUOl5Na0bMLYS">
     <Canvas Id="B5CkbKP5EnWNabFo6xeEFC" DefaultCategory="Elementa.Widgets" CanvasType="FullCategory">
@@ -1017,6 +1017,7 @@
                     <Pin Id="Jbh1FzI7RlDPE8af50CFMX" Name="Input" Kind="StateInputPin" />
                     <Pin Id="Tit58tdYCBYN0VCaXfbmkA" Name="Output" Kind="StateOutputPin" />
                     <Pin Id="EglTBJb8k7FNyDxDFRfrZX" Name="Position In World" Kind="OutputPin" />
+                    <Pin Id="B2Q0pRaXGEsPNEwda1d74N" Name="Position In World Difference" Kind="OutputPin" />
                   </Node>
                   <Pad Id="Fu77NUSF3JEMZUiNCqsWab" SlotId="A6jSL5OB81EQMYZkpik91C" Bounds="282,548">
                     <p:ValueBoxSettings />
@@ -1419,6 +1420,7 @@
                     <Pin Id="TNDu8cnuHC2NL03uM07bTM" Name="Input" Kind="StateInputPin" />
                     <Pin Id="OAgxenGt17WM0G7V8leNVk" Name="Output" Kind="StateOutputPin" />
                     <Pin Id="Piitxd1JFttOc46HQjMzry" Name="Position In World" Kind="OutputPin" />
+                    <Pin Id="BREWEJOa2i9LzkoXGUqIaP" Name="Position In World Difference" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1017,928,99,19" Id="FXeinkLv25xOF5htAM4fvx">
                     <p:NodeReference LastCategoryFullName="2D.Collision" LastSymbolSource="CoreLibBasics.vl">
@@ -2017,9 +2019,11 @@
             <Node Bounds="784,432,115,19" Id="C0aIuvJkKdRMpLa1KZRB4L">
               <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessNode" Name="AddBasicComponents" />
+                <Choice Kind="ProcessNode" Name="AddBasicInteractiveComponents" />
               </p:NodeReference>
               <Pin Id="S2BVmdtiHtgQXDRjoTK0hw" Name="Input" Kind="InputPin" />
+              <Pin Id="Em0EzPRaPURMYUiBOf0PWT" Name="Allow Selection Start" Kind="InputPin" />
+              <Pin Id="DsfEaO9GAk0PZ2rdSe85Mb" Name="Selection Filter Tags" Kind="InputPin" />
               <Pin Id="JimCDCMJ77ZLWhoObIOQ18" Name="Output" Kind="OutputPin" />
             </Node>
             <Pad Id="UQvtDzbT53ZNpZV3K6GUbL" SlotId="Vw6410ynCvzLL01KAcns3y" Bounds="656,54" />
@@ -2335,11 +2339,11 @@
             <ControlPoint Id="CV0XG3p3z3sMa64AbSCT00" Bounds="1052,459" />
             <Pad Id="VebrdsM66uOP8yf4oCwxjY" SlotId="CJREGeKlgnbNDFke1khPJL" Bounds="1051,405" />
             <ControlPoint Id="Sm96ZmI46VKLk98s8VaCWP" Bounds="1051,348" />
-            <ControlPoint Id="NeVN9kQJTEJLnDiqxltaGw" Bounds="1329,395" />
-            <Node Bounds="1159,435,173,19" Id="OPhw7HqD21rMXrrCvYPz4J">
+            <ControlPoint Id="NeVN9kQJTEJLnDiqxltaGw" Bounds="1287,397" />
+            <Node Bounds="1159,435,123,19" Id="OPhw7HqD21rMXrrCvYPz4J">
               <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="SetMoveableComponentTransform" />
+                <Choice Kind="OperationNode" Name="SetComponentTransform" />
               </p:NodeReference>
               <Pin Id="KYSjmFqxRjLPGzgy1e5L97" Name="Components" Kind="InputPin" />
               <Pin Id="K3qbi1j6hY1MbOYMwS50EN" Name="Transform" Kind="InputPin" />
