@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2019.1.0-0767-g6a9ccb8b3f" Version="0.128">
+<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2019.1.0-0827-g397c3356f1" Version="0.128">
   <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2019.1.0-287" />
   <Patch Id="U2OktPJIft6LmRYDfHRaRo">
     <Canvas Id="OnAcnjd8HswONAJUfjLtjR" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -150,8 +150,7 @@
             <Pin Id="EsCFS84RcqvL1wpGxM2iXz" Name="Mouse State" Kind="OutputPin" />
             <Pin Id="PY3NnSUpKArMnPVty2c3IT" Name="Layout Rebuild" Kind="OutputPin" />
             <Pin Id="Fyl4Xjod5zOO8Qdlb3Sp1B" Name="Keyboard State" Kind="OutputPin" />
-            <Pin Id="J3j8Wq6mdREPMEoGP8jC0O" Name="Selected Elementa" Kind="OutputPin" />
-            <Pin Id="BY4LzYDmnWcLo6TjR7UXJ6" Name="Stream" Kind="OutputPin" />
+            <Pin Id="JA9qnG2R1bMLRU9TH8E70d" Name="Component Processor Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="788,306,65,19" Id="EXQP8jhiMILMoPbbG0yMAL">
             <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.Color.vl">
@@ -309,9 +308,21 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="E8hYGWdIPgAMRCYZ8k9d2U" Name="Input" Kind="InputPin" />
-            <Pin Id="FoZP4w0fscNPAEikCTKfTs" Name="Text" Kind="InputPin" />
+            <Pin Id="BQ6ibhd3yLhNXtDssxQr8O" Name="Spacing" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="Nrx02jUxuj9MYGqP5Iydul" Name="Position" Kind="InputPin" />
             <Pin Id="LolwyRE8VuUMJOw06wDk8q" Name="Size" Kind="InputPin" />
-            <Pin Id="V3FmoykQY7lQYrO9xKZyCN" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="PxVWtSdnSaWOYRlAorNN8D" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="FoZP4w0fscNPAEikCTKfTs" Name="Text" Kind="InputPin" />
+            <Pin Id="JvH56EFiS6wL4depOSKB4N" Name="Style Element" Kind="InputPin" />
+            <Pin Id="QLHXiA9wPf4OYd9l03jGdR" Name="Left / Down" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="PEZA0dFJRO5PDd0rC5EkuO" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="GE1KVypULyIOhENQFuAc5V" Comment="Text" Bounds="355,412,49,15" ShowValueBox="true" isIOBox="true" Value="Bang">
@@ -325,9 +336,25 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="IQxLjLoE8t3LGwDqjYwueJ" Name="Input" Kind="InputPin" />
+            <Pin Id="FzoLCJZDcGMPASkoAsm6Wl" Name="Spacing" Kind="InputPin" />
+            <Pin Id="LU5OWpLHFeaMytKfKUrSHP" Name="Position" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="LnrtMsq81XhOML5WFQivAd" Name="Size" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="FUqcabygO9GMRgAEoLOcO0" Name="Flexibility" Kind="InputPin" />
             <Pin Id="Klsnl3yluHDQIlQjYc0BXJ" Name="Text" Kind="InputPin" />
-            <Pin Id="LnrtMsq81XhOML5WFQivAd" Name="Size" Kind="InputPin" />
-            <Pin Id="L8icjXftliONvt7hadn8MG" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="QWNCPz7Hy0JQS0fSzPw6TR" Name="Style Element" Kind="InputPin" />
+            <Pin Id="C2fFCm9xJS9NoWCDQDpTJR" Name="Left / Down" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="B2mtQq5ZRUhLx0IQnlxctC" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="UMeo2TZUDEyOrKDWuf3D8W" Comment="Text" Bounds="586,397,49,15" ShowValueBox="true" isIOBox="true" Value="Press">
@@ -341,9 +368,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="UMAv0zZQorNOPFki3KN5Ma" Name="Input" Kind="InputPin" />
-            <Pin Id="DihK1DFv78bP53L1h5F7jm" Name="Text" Kind="InputPin" />
+            <Pin Id="OZRbH5cNy6DLRyiABzBqXV" Name="Spacing" Kind="InputPin" />
+            <Pin Id="R7m8OkLAK3bL3RTVve27U2" Name="Position" Kind="InputPin" />
             <Pin Id="JXiF7grR8UbLGhpMOpCLpU" Name="Size" Kind="InputPin" />
-            <Pin Id="SjpRoqhk6ZcOI90zRJK1Ux" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="MwijS4Io1uKPa1dpXTQpO7" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="DihK1DFv78bP53L1h5F7jm" Name="Text" Kind="InputPin" />
+            <Pin Id="D8NPhgav9BsOeeiF3KyC5D" Name="Style Element" Kind="InputPin" />
+            <Pin Id="JXSSk3jURuyQSrAwaPZYbw" Name="Left / Down" Kind="InputPin" />
             <Pin Id="UYG8KB2iMSMOaCm8esYxs7" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="Th2Nwn1OZN9LHApkRxKsCM" Comment="Text" Bounds="817,397,49,15" ShowValueBox="true" isIOBox="true" Value="Color">
@@ -357,9 +388,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="C10jUgKRy1MPTh8LT7NgjE" Name="Input" Kind="InputPin" />
-            <Pin Id="BIFP2RO6c5TNpBJG8Gggrr" Name="Text" Kind="InputPin" />
+            <Pin Id="ViVr5ZKF0mxNYYhkfgSvsW" Name="Spacing" Kind="InputPin" />
+            <Pin Id="AUU0XTaav3HN4hO2SRmXMK" Name="Position" Kind="InputPin" />
             <Pin Id="OqqfmcnaR5QO76RRyLO9ph" Name="Size" Kind="InputPin" />
-            <Pin Id="C0mxOXzS3frORZPuObumWZ" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="DdJT19p157MPkqep6RSe8w" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="BIFP2RO6c5TNpBJG8Gggrr" Name="Text" Kind="InputPin" />
+            <Pin Id="K0BEF45IgRSMsMDdVv724I" Name="Style Element" Kind="InputPin" />
+            <Pin Id="QerJnf5MQKNOBuY9sqwoJm" Name="Left / Down" Kind="InputPin" />
             <Pin Id="SmhBMTMucF3QdyDvoxEiqr" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="AHHNt2rqPXcM9ueQ6bPJAX" Comment="Text" Bounds="1048,401,78,15" ShowValueBox="true" isIOBox="true" Value="Text Field">
@@ -373,9 +408,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="FFxuopfsgNsMyFJ64S4Cpm" Name="Input" Kind="InputPin" />
-            <Pin Id="IWL3wupAuuZNdu20kb2GL8" Name="Text" Kind="InputPin" />
+            <Pin Id="KLTWhnDOoCMN0imTPWJQKB" Name="Spacing" Kind="InputPin" />
+            <Pin Id="CKasfYu73jlNbxhZfX0h4O" Name="Position" Kind="InputPin" />
             <Pin Id="QRlHJFlkmFkL8mTiRLVlDA" Name="Size" Kind="InputPin" />
-            <Pin Id="CZK8VwNOZNZMOIvprFpe41" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="GFQiytw833cNbdxJEgqA7w" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="IWL3wupAuuZNdu20kb2GL8" Name="Text" Kind="InputPin" />
+            <Pin Id="MqGzuKFRbeTMoCJxx1bFFK" Name="Style Element" Kind="InputPin" />
+            <Pin Id="MM58bZaXrx9NSRvdEgSAaE" Name="Left / Down" Kind="InputPin" />
             <Pin Id="ASI6lfiKRkaP4T6rgsjzZQ" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="VZ7w2q2mfmlM7VJ6K62hTe" Comment="Text" Bounds="1279,412,78,15" ShowValueBox="true" isIOBox="true" Value="Slider">
@@ -389,9 +428,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="DkEqWgC7ugOPYx9H9NcxYX" Name="Input" Kind="InputPin" />
-            <Pin Id="M1s04orqiFlNKf3KNz5g6c" Name="Text" Kind="InputPin" />
+            <Pin Id="I9ubZ2f1bjbOhoa4WBoUX4" Name="Spacing" Kind="InputPin" />
+            <Pin Id="VfgCWYob3eHL9CcdfCwlha" Name="Position" Kind="InputPin" />
             <Pin Id="CnyN9HVqXALLIViKHBZny8" Name="Size" Kind="InputPin" />
-            <Pin Id="PIlkKTXBOGMP380UfWjll1" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="P4fiXtAQYFOPEPXlXiXBtf" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="M1s04orqiFlNKf3KNz5g6c" Name="Text" Kind="InputPin" />
+            <Pin Id="LCD4NKItePZQYRSpRwwjAp" Name="Style Element" Kind="InputPin" />
+            <Pin Id="Fvlq0KWq0PMO7Ult7rdzZf" Name="Left / Down" Kind="InputPin" />
             <Pin Id="Lw5HkLOgLVILZ8PoQr0M0f" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="Jr1wRpXIcSlNMhNJGqp2Im" Comment="Text" Bounds="1511,397,78,15" ShowValueBox="true" isIOBox="true" Value="Value">
@@ -405,9 +448,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="P5SnL3cUpuBPnnHsLRmnRs" Name="Input" Kind="InputPin" />
-            <Pin Id="FkfayljB6u0LEO8FCCewvU" Name="Text" Kind="InputPin" />
+            <Pin Id="SE2UoOko6t7LS2yc5yZ3oS" Name="Spacing" Kind="InputPin" />
+            <Pin Id="Fqyfaaq7GsCMjTvJFmZeRY" Name="Position" Kind="InputPin" />
             <Pin Id="Rdiq2he0emBLMBamMwCKOJ" Name="Size" Kind="InputPin" />
-            <Pin Id="ALZMFhEpfXgOqhrRP9C5f9" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="ObfkEj9ls29LtXgcQ5XoM8" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="FkfayljB6u0LEO8FCCewvU" Name="Text" Kind="InputPin" />
+            <Pin Id="UUboG0sqAPvMxaDUEbsyok" Name="Style Element" Kind="InputPin" />
+            <Pin Id="D17J3vphIuVP6xso182Hdm" Name="Left / Down" Kind="InputPin" />
             <Pin Id="AuEc5VWaLtLPKpqIGhIG7u" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="S5RVve6eW8zPheWWQCzsmA" Comment="Text" Bounds="1742,412,78,15" ShowValueBox="true" isIOBox="true" Value="Integer">
@@ -421,9 +468,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="AUbjddB9ToCO0Ev70vczYt" Name="Input" Kind="InputPin" />
-            <Pin Id="CIsqIIndhViMlz9DwMWgZE" Name="Text" Kind="InputPin" />
+            <Pin Id="CZbAMzhlNGeN1cLl19Mbs4" Name="Spacing" Kind="InputPin" />
+            <Pin Id="KIACSeJNCeWOWX0I8w8U7k" Name="Position" Kind="InputPin" />
             <Pin Id="Q9iTAO0HyLSOXRZ1L7FuZf" Name="Size" Kind="InputPin" />
-            <Pin Id="TGoyNvLtWFQQPAFxMVRDJ8" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="B5FSDsrlUI7PVZrnVFZP2o" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="CIsqIIndhViMlz9DwMWgZE" Name="Text" Kind="InputPin" />
+            <Pin Id="INjiVeQXB7vLrk0aHBXJoV" Name="Style Element" Kind="InputPin" />
+            <Pin Id="Fh7GG4HQuloLgNd9rl6Hk0" Name="Left / Down" Kind="InputPin" />
             <Pin Id="TnFQidhMbNhOM1bF4rVGiF" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="HIhLcztodVHOZfYYdXbtpT" Comment="Text" Bounds="1973,412,78,15" ShowValueBox="true" isIOBox="true" Value="Vector2D">
@@ -437,9 +488,17 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="NTEG4EkdbpZO3muDiqRgdP" Name="Input" Kind="InputPin" />
-            <Pin Id="RfbmbkbiznnPngVLz8LtKg" Name="Text" Kind="InputPin" />
+            <Pin Id="Gkijga2p1EjNxJu3Od6Vvn" Name="Spacing" Kind="InputPin" />
+            <Pin Id="T4BtDpMzzhzMu7xIlZfZWS" Name="Position" Kind="InputPin" />
             <Pin Id="D7zTEP38dv7LBkgnsZH6KH" Name="Size" Kind="InputPin" />
-            <Pin Id="P4HyO4yWFqbMcF7WjEMmLf" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="EjRb5dY1nf0PZ5hzUCJP1L" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="RfbmbkbiznnPngVLz8LtKg" Name="Text" Kind="InputPin" />
+            <Pin Id="I0uQmZ3atruNzK1pmhLlR8" Name="Style Element" Kind="InputPin" />
+            <Pin Id="FVfGuvW1udsOYlon4FjYk4" Name="Left / Down" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="TCGM0RKol3dLN5SkTVa8Rn" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="Evs3kuXYBw6OWM4VKA7Ngw" Comment="Text" Bounds="2203,412,66,15" ShowValueBox="true" isIOBox="true" Value="Vector3D">
@@ -453,9 +512,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="HyWtvEW2Ze3QcCi7KPdgUk" Name="Input" Kind="InputPin" />
-            <Pin Id="BDPTlE80GgOPiEEurME43k" Name="Text" Kind="InputPin" />
+            <Pin Id="JEECmstjQBLQa8IPNDRvFv" Name="Spacing" Kind="InputPin" />
+            <Pin Id="CQtBQ9WV2w8Ob6f732Rrba" Name="Position" Kind="InputPin" />
             <Pin Id="MGkI3oZbWShPzlqXFLhkeG" Name="Size" Kind="InputPin" />
-            <Pin Id="Ra8EuAsofcGNv23oyhAioz" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="Mn63JFH28ByM6gSXq4FAIU" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="BDPTlE80GgOPiEEurME43k" Name="Text" Kind="InputPin" />
+            <Pin Id="SyXHIhvbpl5MrIw9ZYnq8J" Name="Style Element" Kind="InputPin" />
+            <Pin Id="O5pKV6j1ELKQDylYenlPNW" Name="Left / Down" Kind="InputPin" />
             <Pin Id="MAy09EaTc6CNmkjkPayBBa" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="OCv80yDWFQXOCqEDZwv2x6" Comment="Text" Bounds="2435,428,57,15" ShowValueBox="true" isIOBox="true" Value="Vector4D">
@@ -469,9 +532,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="EwvmZHJvIbeLsbwB3upUM3" Name="Input" Kind="InputPin" />
-            <Pin Id="FK9XqD6CiKrLeqFdScv67s" Name="Text" Kind="InputPin" />
+            <Pin Id="NAz2xpyvGSNQFE2sm2xSHX" Name="Spacing" Kind="InputPin" />
+            <Pin Id="H8qjJzpkTuDOone25vXSsc" Name="Position" Kind="InputPin" />
             <Pin Id="Gc2Zt0aHNm5OzlXYHkiVgp" Name="Size" Kind="InputPin" />
-            <Pin Id="C9ploOwt3MtMQaQGQ84IYJ" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="FoCw3f8Um4dMZCSNyfDs0V" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="FK9XqD6CiKrLeqFdScv67s" Name="Text" Kind="InputPin" />
+            <Pin Id="MZChM1Pk5j9PsfkXhdpaXq" Name="Style Element" Kind="InputPin" />
+            <Pin Id="DdXyeaQmUL9PtGVEhbNmhb" Name="Left / Down" Kind="InputPin" />
             <Pin Id="RKAZvp98J6LLGMTCdqmxPv" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="KgeCQIspe3IMJyoPM1ulr1" Comment="Text" Bounds="2665,429,60,15" ShowValueBox="true" isIOBox="true" Value="Slider2D">
@@ -485,9 +552,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="UTAfqsZNldHPJzGsbQznjy" Name="Input" Kind="InputPin" />
-            <Pin Id="FqhNsBb2c3tMQ6FUpSW1Eh" Name="Text" Kind="InputPin" />
+            <Pin Id="PAyOqzTN1OvQHbpIPbEHgk" Name="Spacing" Kind="InputPin" />
+            <Pin Id="OAE0DAOCw5kQNJGLsrXeHP" Name="Position" Kind="InputPin" />
             <Pin Id="CxGFpfsnyIjMonbAfSU3mG" Name="Size" Kind="InputPin" />
-            <Pin Id="NAoOjOMMS0GPLvEtkKPr5h" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="AZfJdDLhjG8PVMws2jvLE9" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="FqhNsBb2c3tMQ6FUpSW1Eh" Name="Text" Kind="InputPin" />
+            <Pin Id="A40gKV3CrqwLQwp2jJKufQ" Name="Style Element" Kind="InputPin" />
+            <Pin Id="EIiBf1YBItrLVoUtZTLI2Q" Name="Left / Down" Kind="InputPin" />
             <Pin Id="HvMbz6wB0fDQV8R0zY0hAk" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="ORw4VvX0BIlMhUec1evEM1" Comment="Text" Bounds="2896,407,83,20" ShowValueBox="true" isIOBox="true" Value="IntegerUpDown">
@@ -501,9 +572,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="SmcKfIrOS1pPzrKLQnTusn" Name="Input" Kind="InputPin" />
-            <Pin Id="O4C5u54gSnwL6szNwhj9X0" Name="Text" Kind="InputPin" />
+            <Pin Id="GH11o1TewF5L5zEZ0nRmm2" Name="Spacing" Kind="InputPin" />
+            <Pin Id="SYuKjGkndTzPYRAj63tV07" Name="Position" Kind="InputPin" />
             <Pin Id="MukGIbwKeGLQJgQprfOChR" Name="Size" Kind="InputPin" />
-            <Pin Id="GiLiS2B6Ox0N42ovfAMpxF" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="KshG9AIYurnMXIrWiQLzus" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="O4C5u54gSnwL6szNwhj9X0" Name="Text" Kind="InputPin" />
+            <Pin Id="J9VUYNwevdSPE0ljU5zNgc" Name="Style Element" Kind="InputPin" />
+            <Pin Id="EOfYTZiLDHcNMevsxgYyCj" Name="Left / Down" Kind="InputPin" />
             <Pin Id="GRiLo1QC9WyOneH9pvJhqJ" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="T0DzMFDFbYhPSqBQYEaYhN" Comment="" Bounds="2951,294,35,15" ShowValueBox="true" isIOBox="true" Value="50">
@@ -538,9 +613,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="KwfB5OFmBZZOtk1YcVQWtk" Name="Input" Kind="InputPin" />
-            <Pin Id="Er4eA2uiyzOOJlwiYXFsDo" Name="Text" Kind="InputPin" />
+            <Pin Id="IlitUleRFtQNhLdqiEjtyb" Name="Spacing" Kind="InputPin" />
+            <Pin Id="TOb4bGIrQHuML19FrTCXFL" Name="Position" Kind="InputPin" />
             <Pin Id="LeGUod1XBRoNlRyVMNhrDo" Name="Size" Kind="InputPin" />
-            <Pin Id="E9VlrFyJEDNNepZqgRaopG" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="V6sglT3yCGFPsFaizYajbQ" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="Er4eA2uiyzOOJlwiYXFsDo" Name="Text" Kind="InputPin" />
+            <Pin Id="MklMOHlSBcUMLSPXHtFWI1" Name="Style Element" Kind="InputPin" />
+            <Pin Id="DOq6b9K0T5MMnDmfIKTyYK" Name="Left / Down" Kind="InputPin" />
             <Pin Id="ADbCLF6JwdCLcxCuf2XxkQ" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="F0iIFzUt50YLI5Gi6g5j2d" Comment="" Bounds="3198,356,20,15" ShowValueBox="true" isIOBox="true" />
@@ -682,9 +761,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="VAII2OuiLjVLzYhZ0XuYkh" Name="Input" Kind="InputPin" />
-            <Pin Id="MPUIlWSxL51OgaSALld9WA" Name="Text" Kind="InputPin" />
+            <Pin Id="EMrzbgrI1byMftaGN5oYHD" Name="Spacing" Kind="InputPin" />
+            <Pin Id="Bybisnz1O7jOrPcp5C3Fy4" Name="Position" Kind="InputPin" />
             <Pin Id="JhTRTKODapiMGzr72mweFl" Name="Size" Kind="InputPin" />
-            <Pin Id="TonqmoVgclQQH5coUwWDD1" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="HjuWbkwIaQBOt7olOvW5vS" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="MPUIlWSxL51OgaSALld9WA" Name="Text" Kind="InputPin" />
+            <Pin Id="FQCgfzmCnc7POuFFIH7XTQ" Name="Style Element" Kind="InputPin" />
+            <Pin Id="UF2q8HRbzI3MKrcnE4njIx" Name="Left / Down" Kind="InputPin" />
             <Pin Id="Al1ERlwf60bNal1IwGNsRf" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="IwEt97TOJAGOxVsAMQ4u7n" Comment="Text" Bounds="3820,416,83,20" ShowValueBox="true" isIOBox="true" Value="RadioGroup">
@@ -698,9 +781,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="S312iiXtQseMUP1Ktb4wiL" Name="Input" Kind="InputPin" />
-            <Pin Id="EFuzORG6xx8OOYuHIbyNbU" Name="Text" Kind="InputPin" />
+            <Pin Id="GV53wLoTPMaP2jgHF1VnOC" Name="Spacing" Kind="InputPin" />
+            <Pin Id="Cpxbltw9IQJN6pQKEym4KG" Name="Position" Kind="InputPin" />
             <Pin Id="FLy9vfpKBPINJku7mbWrru" Name="Size" Kind="InputPin" />
-            <Pin Id="S0xm4ogq2PZLEYcssueukF" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="HsmrCcSie60Oj0IaYYMeuo" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="EFuzORG6xx8OOYuHIbyNbU" Name="Text" Kind="InputPin" />
+            <Pin Id="UP9ayWO6pYCQZi7KXAs3Uj" Name="Style Element" Kind="InputPin" />
+            <Pin Id="PWm3aHCOPmEPqQwGuxuKnT" Name="Left / Down" Kind="InputPin" />
             <Pin Id="L4u16JFcNoSMWNdG5sS8Q2" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="3791,297,125,19" Id="C2D8pPqj1fLOjZQHceR9EE">
@@ -743,9 +830,17 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="IBwoD4SC9nLOYhSUhF2pjz" Name="Input" Kind="InputPin" />
-            <Pin Id="UDEcJoM8Bp6LEs8CxkYKjV" Name="Text" Kind="InputPin" />
+            <Pin Id="K39tMzJQPQAMUSaCdw9DDC" Name="Spacing" Kind="InputPin" />
+            <Pin Id="U1NwI9MiWo2QLrfvF4vU1y" Name="Position" Kind="InputPin" />
             <Pin Id="LOn0ooxpHedOjGpkldE2XM" Name="Size" Kind="InputPin" />
-            <Pin Id="VKZvXAV3OAyOL40yGVHNjZ" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="TzUEzSYH2LFLWyIOsWrzWk" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="UDEcJoM8Bp6LEs8CxkYKjV" Name="Text" Kind="InputPin" />
+            <Pin Id="Id8FXj8eeMzMEwelufT5T7" Name="Style Element" Kind="InputPin" />
+            <Pin Id="MAPVwUr7BzXPsI0NYPKNzJ" Name="Left / Down" Kind="InputPin" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="N62M8tctlUnLRs6H17hMLJ" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="4075,265,44,19" Id="NoM6M4EdarlO9prFaLufpM">
@@ -807,9 +902,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="TUzI7W5r4dlQMhlo7Zput9" Name="Input" Kind="InputPin" />
-            <Pin Id="M4HxciTxAmmOfcR7U7xXzg" Name="Text" Kind="InputPin" />
+            <Pin Id="BzXasJF8gvPMIxSb26oYl8" Name="Spacing" Kind="InputPin" />
+            <Pin Id="BAKRt3bWjkiNoYD6wdoYu9" Name="Position" Kind="InputPin" />
             <Pin Id="R2gacjuZ4bfLu6obSpctTD" Name="Size" Kind="InputPin" />
-            <Pin Id="Sc0S1Y7F9bJPZbqzfSvlMt" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="Tko4oyW3HTmP7a0RuQw98O" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="M4HxciTxAmmOfcR7U7xXzg" Name="Text" Kind="InputPin" />
+            <Pin Id="TCgb9hAWtwAPVAIzaOXtsk" Name="Style Element" Kind="InputPin" />
+            <Pin Id="E0aXuLv87TLPsS4iQ3YhOq" Name="Left / Down" Kind="InputPin" />
             <Pin Id="Vq6gSu5ZCHKPWW3NYskxaq" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="3392,329,46,19" Id="NKkD9cVRqv4NpbKNnpNLRm">
@@ -837,7 +936,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="VrCGmU45aRMNbObheaKMHm" Name="Bounds" Kind="InputPin" DefaultValue="1562, 470, 836, 736">
+            <Pin Id="VrCGmU45aRMNbObheaKMHm" Name="Bounds" Kind="InputPin" DefaultValue="1386, 101, 1088, 748">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -995,9 +1094,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="Ng0q1LTAEZhMCGTWVEqp4u" Name="Input" Kind="InputPin" />
-            <Pin Id="U0kLS9gCJszOGqJLoU2qW8" Name="Text" Kind="InputPin" />
+            <Pin Id="K2Zu6gugsRdOCn8JKiCnO4" Name="Spacing" Kind="InputPin" />
+            <Pin Id="EgHx29piywDPBlAppYdwf1" Name="Position" Kind="InputPin" />
             <Pin Id="EBQ83jIpmhWN0QrEvul0yq" Name="Size" Kind="InputPin" />
-            <Pin Id="K68s2RYIRvJNjzKsZRpz6g" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="EvGU7cg8H0vN3fAR65ZENL" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="U0kLS9gCJszOGqJLoU2qW8" Name="Text" Kind="InputPin" />
+            <Pin Id="SJ7OGEWwxK0NNDXssD99r5" Name="Style Element" Kind="InputPin" />
+            <Pin Id="TdKFct6YKFoMwFUHgc9Mth" Name="Left / Down" Kind="InputPin" />
             <Pin Id="T2TylEhtnVvP0lXeKJEril" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="B3xUYmzumsCMwt2hUMtK5l" Comment="Text" Bounds="5207,403,111,25" ShowValueBox="true" isIOBox="true" Value="Stylable Rectangle">
@@ -1011,9 +1114,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="HbHdL2SC0D1PX9PFePHZVG" Name="Input" Kind="InputPin" />
-            <Pin Id="VKuBF8czquPOyfzG1tbaA6" Name="Text" Kind="InputPin" />
+            <Pin Id="IEwaxw4pgy4L7wMYBv6IfX" Name="Spacing" Kind="InputPin" />
+            <Pin Id="MFYUetGpRhNMi651YAgATo" Name="Position" Kind="InputPin" />
             <Pin Id="G0b6WEFJas1MFDcabU0t0k" Name="Size" Kind="InputPin" />
-            <Pin Id="E1RMEDKAWbsPFhkaPy01yR" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="QNE9OShiwgCMmpH7sKDAgB" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="VKuBF8czquPOyfzG1tbaA6" Name="Text" Kind="InputPin" />
+            <Pin Id="OAhhYjWiH8sMS89CWfcc71" Name="Style Element" Kind="InputPin" />
+            <Pin Id="PwFEU6yhbhLNxjdjXmBTfr" Name="Left / Down" Kind="InputPin" />
             <Pin Id="AhO2cHyUOezNilHEDfeVTU" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="CfXfkq3Q1FRL9C2dtJLuwJ" Comment="Text" Bounds="5438,388,125,17" ShowValueBox="true" isIOBox="true" Value="Stylable RoundRectangle">
@@ -1027,9 +1134,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="LFhOkZtZW99OFAy2rjgIka" Name="Input" Kind="InputPin" />
-            <Pin Id="CN1ZhQgNKPfNYlLW1FGnAR" Name="Text" Kind="InputPin" />
+            <Pin Id="IU8wGBVhOKCPaT0VZ9CbOS" Name="Spacing" Kind="InputPin" />
+            <Pin Id="FqUmYjSm6TuOlgdMW74l7X" Name="Position" Kind="InputPin" />
             <Pin Id="BBzJqtsLvsWLl9sx9fPm5T" Name="Size" Kind="InputPin" />
-            <Pin Id="BbCPdMOzBPdOcQaT7sIITt" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="OOQvYNVziyHNeiONZ6wrgs" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="CN1ZhQgNKPfNYlLW1FGnAR" Name="Text" Kind="InputPin" />
+            <Pin Id="AK1HRNItq7fLkk4zQhhtSv" Name="Style Element" Kind="InputPin" />
+            <Pin Id="Mv55g8AxKTNNXfwJSARnfc" Name="Left / Down" Kind="InputPin" />
             <Pin Id="DaNY5fe5hNsO7ALtYx8l2t" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="OnMvU1K3OulMcSJwmIte10" Comment="Text" Bounds="5900,416,83,20" ShowValueBox="true" isIOBox="true" Value="Stylable Text">
@@ -1043,9 +1154,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="KSaijMCAhvJLhBxSJqYuA1" Name="Input" Kind="InputPin" />
-            <Pin Id="TIPLGYCyi2bM3DC3Z2Xlgg" Name="Text" Kind="InputPin" />
+            <Pin Id="JLkUrgToXd6Mvb0tQbdzr6" Name="Spacing" Kind="InputPin" />
+            <Pin Id="BnMfsW09BhnL2a9RGOqWVq" Name="Position" Kind="InputPin" />
             <Pin Id="GtdU93eCparMnPkLz5ThxP" Name="Size" Kind="InputPin" />
-            <Pin Id="IMTfwmvYak3Nk8WdsqVyG6" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="TsFKeVs95G4L8bvBAanOm7" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="TIPLGYCyi2bM3DC3Z2Xlgg" Name="Text" Kind="InputPin" />
+            <Pin Id="FSbgJTjxcuoMoGtGnX2IMv" Name="Style Element" Kind="InputPin" />
+            <Pin Id="HGtTN1GzlLiMjgsCQbRRda" Name="Left / Down" Kind="InputPin" />
             <Pin Id="Uuixwyqrw53NZ82AQVV4dq" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="H3SnHHShvEhMKIazqiSPNO" Comment="Text" Bounds="6131,412,111,32" ShowValueBox="true" isIOBox="true" Value="Stylable TextWithBackground">
@@ -1059,9 +1174,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="LC501edRZdSMhoi7Th5yZj" Name="Input" Kind="InputPin" />
-            <Pin Id="SuRzwGc4adfLiz5mdgGbXq" Name="Text" Kind="InputPin" />
+            <Pin Id="TPueLHgtFwWMA1HOde939g" Name="Spacing" Kind="InputPin" />
+            <Pin Id="LG8RRB2KwLnNSbM0IIxT5w" Name="Position" Kind="InputPin" />
             <Pin Id="DFI4dQ2QqzrM5jiRp1DN6N" Name="Size" Kind="InputPin" />
-            <Pin Id="JA1cTWdfpDQPKWtRAaOcmz" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="CBbD0PWOEnwOgKB23vkWwc" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="SuRzwGc4adfLiz5mdgGbXq" Name="Text" Kind="InputPin" />
+            <Pin Id="GEVkoHs6ChvMG5t4dw4qcJ" Name="Style Element" Kind="InputPin" />
+            <Pin Id="LHyIKgHb23HN5gQSObf3ly" Name="Left / Down" Kind="InputPin" />
             <Pin Id="D2FyYlsrl1WONaQj5NEXtM" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="Ap6CmefaEFpObraEZRPh5T" Comment="Text" Bounds="4979,413,83,20" ShowValueBox="true" isIOBox="true" Value="Stylable Oval">
@@ -1075,9 +1194,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="FQdjz6hXrFGQb6pJHKKiSD" Name="Input" Kind="InputPin" />
-            <Pin Id="LXKqBRBXYrKPvYf4k7Vyym" Name="Text" Kind="InputPin" />
+            <Pin Id="D6clbpPYuucOPf898ejhpq" Name="Spacing" Kind="InputPin" />
+            <Pin Id="NRIVpYs2Tl5M3skKesbjcF" Name="Position" Kind="InputPin" />
             <Pin Id="NJ67UylvdXrPrAdbBXrW6K" Name="Size" Kind="InputPin" />
-            <Pin Id="UcRbURzCoExMBZCLVad7fN" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="BoloHrlIDDOLorhRfjgXwj" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="LXKqBRBXYrKPvYf4k7Vyym" Name="Text" Kind="InputPin" />
+            <Pin Id="Itzth9k25PUOjJFtjgQUME" Name="Style Element" Kind="InputPin" />
+            <Pin Id="HG6DfLra7ClPHTs2Md17yW" Name="Left / Down" Kind="InputPin" />
             <Pin Id="AbqLn2WjOV2MGHnB3TxoJR" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="DqWAXBBRNkzPEqCIbzFqTe" Comment="Text" Bounds="5669,418,86,32" ShowValueBox="true" isIOBox="true" Value="Stylable Segment">
@@ -1091,9 +1214,13 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="Qqt92Lzm244NzvG9R9HKFc" Name="Input" Kind="InputPin" />
-            <Pin Id="U5LINU8hD46LU9Yv8CHcj2" Name="Text" Kind="InputPin" />
+            <Pin Id="UprjelgAs2jO5xd0sqtat6" Name="Spacing" Kind="InputPin" />
+            <Pin Id="P7lxjU6VfZFQHhIyh3sixv" Name="Position" Kind="InputPin" />
             <Pin Id="U7jVnfb1aWoMgydDu05Lor" Name="Size" Kind="InputPin" />
-            <Pin Id="V3sHQH6tigpOx2iCY1lEKH" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="FowrGLaXJ8NNu1OHOYBrUc" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="U5LINU8hD46LU9Yv8CHcj2" Name="Text" Kind="InputPin" />
+            <Pin Id="JwMP07ruSjtNNSaq8HA0Hm" Name="Style Element" Kind="InputPin" />
+            <Pin Id="T4gsF4BHNUgOpMOD3IRiyL" Name="Left / Down" Kind="InputPin" />
             <Pin Id="JRHak5p400rNypEvw9qzGO" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="4257,297,125,19" Id="A9TTUvzI1ovNPXjyu3H5Jx">
@@ -1121,12 +1248,20 @@
               <Choice Kind="ProcessNode" Name="Label" />
             </p:NodeReference>
             <Pin Id="TFTknmOWafsLZBgl9iuPiW" Name="Input" Kind="InputPin" />
-            <Pin Id="IcldNBzLM0FLc6yZqa0pGQ" Name="Text" Kind="InputPin" />
+            <Pin Id="GDj5cZGy76bLaXdAETvsYR" Name="Spacing" Kind="InputPin" />
+            <Pin Id="AlQGnxqLUQyLRHmbL4nbqw" Name="Position" Kind="InputPin" />
             <Pin Id="JlCWLtGgVWgNpVCzCGn8j5" Name="Size" Kind="InputPin" />
-            <Pin Id="IzY90difvazLZ4sBVgn04f" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="EY4XooCrN9MLU6PghgxraL" Name="Flexibility" Kind="InputPin" />
+            <Pin Id="IcldNBzLM0FLc6yZqa0pGQ" Name="Text" Kind="InputPin" />
+            <Pin Id="TtVuRoBuESBNfRJtL58VoR" Name="Style Element" Kind="InputPin" />
+            <Pin Id="ClQoyt149MCMR5Wm0XJiQP" Name="Left / Down" Kind="InputPin" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="TV2l2nH9N3eNdMKA5IM8mW" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="UbCGGXjGBPBPHxfSnxETmM" Comment="Size" Bounds="4288,56,35,28" ShowValueBox="true" isIOBox="true" Value="1, 2">
+          <Pad Id="UbCGGXjGBPBPHxfSnxETmM" Comment="Size" Bounds="4288,86,35,28" ShowValueBox="true" isIOBox="true" Value="1, 2">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
@@ -1150,7 +1285,7 @@
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="UqC5uZO5q0TQNDV35T0oKG" Comment="Flexibility" Bounds="4319,109,35,28" ShowValueBox="true" isIOBox="true" Value="1, 0">
+          <Pad Id="UqC5uZO5q0TQNDV35T0oKG" Comment="Flexibility" Bounds="4319,139,35,28" ShowValueBox="true" isIOBox="true" Value="1, 0">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
@@ -1174,18 +1309,31 @@
               <Choice Kind="ProcessAppFlag" Name="Label" />
             </p:NodeReference>
             <Pin Id="OmtrOU0Qu7NO1CymZURkqb" Name="Input" Kind="InputPin" />
+            <Pin Id="G17wdx1AZarMkvjpLCb9z1" Name="Spacing" Kind="InputPin" />
+            <Pin Id="QuWqcWLS2dRLJ6uoOHGrek" Name="Position" Kind="InputPin" />
+            <Pin Id="HTZfM7omILTQGDh8V0UvAe" Name="Size" Kind="InputPin" />
+            <Pin Id="GsC5vs4IQhQLvdcTb1IT8f" Name="Flexibility" Kind="InputPin" />
             <Pin Id="FuWM3BwQl8LMi5Xm7pLNWD" Name="Text" Kind="InputPin" DefaultValue="Path Dialog">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="HTZfM7omILTQGDh8V0UvAe" Name="Size" Kind="InputPin" />
-            <Pin Id="NbtHjhSgsaKL608RGJpRyD" Name="Label Placement" Kind="InputPin" />
+            <Pin Id="Tci3XAQpL6fM7MB1YS5kzN" Name="Style Element" Kind="InputPin" />
+            <Pin Id="Bu9AsMukBIUQSW8q2rnT5L" Name="Left / Down" Kind="InputPin" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="Oa48HwgziKnMSba5VF8mqX" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="ScFqHofJa3rPZhnXhxHtgC" Comment="Text" Bounds="4508,446,60,15" ShowValueBox="true" isIOBox="true" Value="Path Dialog">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HrHkE8GMTexL7p0BXVZZbv" Comment="Position" Bounds="4020,180,35,28" ShowValueBox="true" isIOBox="true" Value="0, 0">
+            <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
         </Canvas>
@@ -1263,7 +1411,6 @@
         <Link Id="TUr2UGO6G5NQZpRfAiixQT" Ids="N2lAQowE7KTO4wzAEfSmIp,HyWtvEW2Ze3QcCi7KPdgUk" />
         <Link Id="EOksmYaLIFpMoqr3OxWhQ5" Ids="OnozVPCE2jUNoO6KcNsXUP,EwvmZHJvIbeLsbwB3upUM3" />
         <Link Id="CtrH47UacBCPkRKO8HdIHO" Ids="DtigWAjYJ6tOD76cSSB6wU,UTAfqsZNldHPJzGsbQznjy" />
-        <Link Id="DHx67rrfyOBNJxSoVYfmVD" Ids="KVo0SqmacIWMRm9iqhdP6s,CZ2toJlF15cPEfFIkhvVkM" />
         <Link Id="Dg3d1yViWVcQcTVwkSiAcj" Ids="GRiLo1QC9WyOneH9pvJhqJ,N39hC9eVvEDNYoLM3jBBRN" />
         <Link Id="L9UmZTyNqEQNVrcmI2IFwB" Ids="HvMbz6wB0fDQV8R0zY0hAk,EoagwcbDC2VMcm3wABivh1" />
         <Link Id="Do3o167xrm6NzhOY5ZgtXh" Ids="Er47H6TyxHtOVBRE7DGQaZ,MPUIlWSxL51OgaSALld9WA" />
@@ -1325,6 +1472,8 @@
         <Link Id="AEDwqS2mbBsQZ1daszep5I" Ids="Oa48HwgziKnMSba5VF8mqX,Fs5sGPfuoCFNfdhoVuVJ1x" />
         <Link Id="MTwyHd6MQXXMmjQxWoeDJk" Ids="ScFqHofJa3rPZhnXhxHtgC,FuWM3BwQl8LMi5Xm7pLNWD" />
         <Link Id="HTvNOBayqC4PTLmIrrgKYE" Ids="D20AUOLzCxPNWh7NgJSUYp,LIuBCmrHykQPVpCNRp7KVA" />
+        <Link Id="UjmjUJR3ghYMfk0c3Fq8Fu" Ids="HrHkE8GMTexL7p0BXVZZbv,QfA4biL0mheQNZZpuIm15u" />
+        <Link Id="VAqoH4qMrv5L9Tw6k7faml" Ids="KVo0SqmacIWMRm9iqhdP6s,CZ2toJlF15cPEfFIkhvVkM" />
       </Patch>
     </Node>
   </Patch>
