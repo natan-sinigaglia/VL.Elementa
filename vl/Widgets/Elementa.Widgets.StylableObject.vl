@@ -111,7 +111,7 @@
               <ControlPoint Id="QVYyzkrcYcWMPA8Bl2DQL7" Bounds="232,589" Alignment="Bottom" />
               <ControlPoint Id="DH4KLhW5V0fMXjrulKYAb8" Bounds="232,534" Alignment="Top" />
             </Node>
-            <ControlPoint Id="IoHNYdQTYwFMoG6mbWBHi0" Bounds="797,11" />
+            <ControlPoint Id="IoHNYdQTYwFMoG6mbWBHi0" Bounds="797,-59" />
             <ControlPoint Id="Ge81wdOdahRM6xLHUfAwjw" Bounds="798,118" />
             <Pad Id="Alj6z5PCa7ULH3xCb9HS3l" SlotId="IrxnCDNQwW8PKYCDh7LPxO" Bounds="797,64" />
             <Pad Id="HnEri3LccDvOSR7ioNEMrK" SlotId="IrxnCDNQwW8PKYCDh7LPxO" Bounds="584,384" />
@@ -167,6 +167,7 @@
                   <Pin Id="T8NSFbZgYWiNJeBFhQ5ZdT" Name="Input" Kind="StateInputPin" />
                   <Pin Id="HIBUqJuGX5PPvfgmbnUnGy" Name="Rectangle" Kind="InputPin" />
                   <Pin Id="PJjzADX9PaRQd54AKuOVBQ" Name="Style" Kind="InputPin" />
+                  <Pin Id="PMVzfYMaer2LwubafEfUrd" Name="Components" Kind="InputPin" />
                   <Pin Id="GS40kmfoc9cOsMatQj597u" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="IUF2ks56fzuOD5eMXDtrch" Name="Layer" Kind="OutputPin" />
                 </Node>
@@ -195,6 +196,8 @@
               <Pin Id="Q3LIaFpBp6sMNKWJYYD9rY" Name="Transform" Kind="InputPin" />
             </Node>
             <ControlPoint Id="UopEAfZVNASLTkLi5oArqN" Bounds="328,260" />
+            <ControlPoint Id="ODV7Tz8S9mROSEOIAVCHio" Bounds="933,-29" />
+            <Pad Id="UzGHrfbG1bOOhMLibbyQo7" SlotId="IrxnCDNQwW8PKYCDh7LPxO" Bounds="559,736" />
           </Canvas>
           <Patch Id="S8b5LtGGM24PhPPVSO5K09" Name="Create (Internal)" />
           <Patch Id="Jn5WskBR73GQaFBdCIXQIX" Name="Update (Internal)">
@@ -206,6 +209,7 @@
                 <Choice Kind="TypeFlag" Name="Spread" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="C3s0r5s4hlzM5MCNpVYc6Y" Name="Add Hoverable" Kind="InputPin" Bounds="933,-29" Visibility="Optional" />
           </Patch>
           <Patch Id="EK1AX8rWuaDPOe8UAUbSVW" Name="SetGlobalBounds (Internal)">
             <Pin Id="S2cSYXVwS15MGrOKkxXRYL" Name="Global Bounds" Kind="InputPin" />
@@ -330,6 +334,9 @@
           <Patch Id="Mv949razyS5OOEYFj7cri2" Name="SetDirtyLayout (Internal)">
             <Pin Id="Jenj3ymlKcZL4h5R7V7klI" Name="Dirty Layout" Kind="InputPin" />
           </Patch>
+          <Link Id="H7VzrJn4qHfLvjEeHpQPuv" Ids="ODV7Tz8S9mROSEOIAVCHio,F9tVz2dwzbgN4URw9evizT" />
+          <Link Id="ROdkQgvkX6OP531o6ihxU7" Ids="C3s0r5s4hlzM5MCNpVYc6Y,ODV7Tz8S9mROSEOIAVCHio" IsHidden="true" />
+          <Link Id="RN1aJjahr6fPhlbn0ptH4H" Ids="UzGHrfbG1bOOhMLibbyQo7,PMVzfYMaer2LwubafEfUrd" />
         </Patch>
       </Node>
       <!--
@@ -418,6 +425,7 @@
           <Patch Id="D1zicVjKmF0QYxnG4B7x1j" Name="Update">
             <Pin Id="POfQxcEs9sMQCNQ8C1XxbR" Name="Rectangle" Kind="InputPin" Bounds="58,236" />
             <Pin Id="Kv7YwFHSlzSLXpFwL2wgiV" Name="Style" Kind="InputPin" Bounds="234,319" />
+            <Pin Id="K5icFl2HcxvNr5Z1kciHtC" Name="Components" Kind="InputPin" />
             <Pin Id="DltOxdHDwOvL24n0mNEf6q" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <ProcessDefinition Id="JtJHl9ieMPqORreDOHi4io" HasStateOut="true" IsHidden="true">
@@ -456,6 +464,7 @@
             <ControlPoint Id="APzspiHysXnL5Gi7x5qg4g" Bounds="465,409" />
             <ControlPoint Id="VO4NHB2MnSoLnpU9aMmmPO" Bounds="584,409" />
             <ControlPoint Id="RqpESUBpmo8Oj6AtjUKlDR" Bounds="465,491" />
+            <ControlPoint Id="M6zrnZ0GBAVOx77M9CyxwE" Bounds="702,410" />
           </Canvas>
           <ProcessDefinition Id="UmBhVJEzNsgLnsAqfkIEZq" IsHidden="true">
             <Fragment Id="LgwSAg3uBNgLeOBU3Q1RhR" Patch="Dz72pBZQLD0MHj4qAP33lu" Enabled="true" />
@@ -471,6 +480,19 @@
                 <Choice Kind="TypeFlag" Name="Style" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="JOvYtHWpCDQMmm1pQVD1xW" Name="Components" Kind="InputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Dictionary" />
+                <p:TypeArguments>
+                  <TypeReference>
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </TypeReference>
+                  <TypeReference>
+                    <Choice Kind="TypeFlag" Name="IComponent" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="QEDx0kotbDRObwzMh18zm2" Name="Layer" Kind="OutputPin" Bounds="251,571">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="Layer" />
@@ -480,6 +502,7 @@
           <Link Id="PsIeutDB8V6NsZ8vMd7AJ0" Ids="FEP98zw1h7INL1NSKJm8ud,APzspiHysXnL5Gi7x5qg4g" IsHidden="true" />
           <Link Id="JSlMTtzIUtJLjqb2CjIIDw" Ids="RCXkI9yXCzkOHVLMMwnPFg,VO4NHB2MnSoLnpU9aMmmPO" IsHidden="true" />
           <Link Id="OnTsgZwJlVCMi8FEw4boHM" Ids="RqpESUBpmo8Oj6AtjUKlDR,QEDx0kotbDRObwzMh18zm2" IsHidden="true" />
+          <Link Id="KHJ2NhGoEMXQc63iMCBms6" Ids="JOvYtHWpCDQMmm1pQVD1xW,M6zrnZ0GBAVOx77M9CyxwE" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -579,6 +602,7 @@
           <Patch Id="MlWdH3H06VSOs2IJg7gk4F" Name="Update">
             <Pin Id="BqfCyTtRCspPMpVYeoF54r" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
             <Pin Id="OarGjzOzb6pPIffLBTmC3a" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="NCAyyfMjpq1OYdrBEHYpxP" Name="Components" Kind="InputPin" />
             <Pin Id="PiIwp1qDH92PvhASF4euL3" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <Link Id="NecAdCD0jJAQAOpvyvLGPS" Ids="DsVYXj8mgYEM86PSUyVceK,PiIwp1qDH92PvhASF4euL3" IsHidden="true" />
@@ -694,6 +718,7 @@
           <Patch Id="JYQuakztLBULWe22Iwa4QA" Name="Update">
             <Pin Id="DvvCnbEpJcCOelOlN8XShe" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
             <Pin Id="QM2VZqn17poOB0qCJGW0JU" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="JI9dq6AWdTpOlZpxMLTqj2" Name="Components" Kind="InputPin" />
             <Pin Id="RSZQe87qwqDOs0FE5TqCad" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <Link Id="MWTWOcruD50LTT3TDyBHzV" Ids="Pm4at9j07RSOJOETgesXb8,RSZQe87qwqDOs0FE5TqCad" IsHidden="true" />
@@ -804,6 +829,7 @@
           <Patch Id="OK6eqOCtT71MiGqfZw9BTf" Name="Update">
             <Pin Id="Ql7xBejsatoMeEa0uLVtmA" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
             <Pin Id="CdmG1605VKJPdKvfnov33P" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="TGZbagrxqjFN3JiKH9SaRA" Name="Components" Kind="InputPin" />
             <Pin Id="B5Xzl0Mt9PSPNKkIRK2cMl" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <Link Id="CmgrHTgNLfgL3bPC9SG784" Ids="QEfPR9cPzdNMVd0tahi2d9,B5Xzl0Mt9PSPNKkIRK2cMl" IsHidden="true" />
@@ -949,6 +975,7 @@
           <Patch Id="UYGhqz1McRmL8iOPXGNR1M" Name="Update">
             <Pin Id="UWskdtbH7RrOBp8QzKUfG0" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
             <Pin Id="OWHnOtPhq7OOwTrQEK1G9H" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="UY6aXAQnbqmMsKYojMTgSZ" Name="Components" Kind="InputPin" />
             <Pin Id="D4lSPggvcvpLQuAJw32axh" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <Link Id="CmsGlWOXQu3OxwUubqrU9Q" Ids="F3qgNeaBMMZPFcD0sDjgbc,D4lSPggvcvpLQuAJw32axh" IsHidden="true" />
@@ -1063,6 +1090,7 @@
           <Patch Id="IWMIecYk0hdQZjfMFR8KjI" Name="Update">
             <Pin Id="EvLfBlb4fPSOFxHSv5ugrj" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
             <Pin Id="GjuckvUZXNyOZkLz998yDF" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="OTMlNte4I1XOFQDNQIOthj" Name="Components" Kind="InputPin" />
             <Pin Id="EH08HCfTBmxOhlmA6DUvEA" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <Link Id="BYz0veQbODsPQa3AKUGKuI" Ids="KfvjxmzQFa4PZ0gWthvvYK,EH08HCfTBmxOhlmA6DUvEA" IsHidden="true" />
@@ -1212,6 +1240,7 @@
           <Patch Id="MVcxb3AnNpDL6vHGj7j3VZ" Name="Update">
             <Pin Id="UPwHE8ndmAmLTvdZI5V2Ge" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
             <Pin Id="TwmbwuMskv1NJsKBtoxERV" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="D1Zh8AWAyXIQGmtAO5r8eO" Name="Components" Kind="InputPin" />
             <Pin Id="ScdyS3qfDIHLSeKBKb2sW5" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <Link Id="UztfZll8IKyPpmtUYBuosS" Ids="Vdt5IiJdAeUNnQgTS0zkW9,ScdyS3qfDIHLSeKBKb2sW5" IsHidden="true" />
@@ -1282,6 +1311,7 @@
               <Pin Id="D2fegDeMjnrPQ2OWC3YSLc" Name="Bounds" Kind="InputPin" />
               <Pin Id="FphR1Ztifi0QLbosDoGKof" Name="Style Element" Kind="InputPin" />
               <Pin Id="AI1M0HNyzM5Ns6OmSLZFwx" Name="Components" Kind="InputPin" />
+              <Pin Id="FCMN7yslqIZLYBeSz5QJ3p" Name="Add Hoverable" Kind="InputPin" />
               <Pin Id="CvLsy8McgYRMi5F4akSWLP" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="FGrtpce3AUILacUcVtcVZN" Bounds="391,469" />
@@ -1304,6 +1334,7 @@
             <ControlPoint Id="RHZQ6lfl84nQSJOKAguFYT" Bounds="338,208" />
             <ControlPoint Id="HVJUiImsmAxNQx8CVQutZ9" Bounds="357,228" />
             <ControlPoint Id="V0Z8bFGVjHxMEf5IHr0vXZ" Bounds="379,247" />
+            <ControlPoint Id="Rjenq1EvdG7MILwj5PcKzb" Bounds="537,315" />
           </Canvas>
           <Patch Id="SZyTnmyIVGmL7K1BwEm1B6" Name="Create" />
           <ProcessDefinition Id="TcU3VkCkQTuQLINkkzgZo9">
@@ -1338,6 +1369,7 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="R4SW4tprJ33Lq05ticAUAe" Name="Style Element" Kind="InputPin" />
+            <Pin Id="CZq0BpJeXhuOUtYh0o5jOh" Name="Add Hoverable" Kind="InputPin" Bounds="537,315" Visibility="Optional" />
             <Pin Id="OGiZrkpAfi6LlMjcWfemrg" Name="Output" Kind="OutputPin" />
           </Patch>
           <Link Id="BbsZLrFxJrQLzJYx9zCO0q" Ids="UP6fNGLV1KAPzt6zecxlc8,TXH2WXbwo07Mbagf8zsq5s" />
@@ -1351,6 +1383,8 @@
           <Link Id="GA6TRN3r5ArOHYyxy8mKjV" Ids="V0Z8bFGVjHxMEf5IHr0vXZ,CmbrMspJfSlLw7YYVXuTVx" />
           <Link Id="DFwGVg6ncqLMnwXKDlfIyw" Ids="Mpjh0euwV09OrKiq2NjS7Z,V0Z8bFGVjHxMEf5IHr0vXZ" IsHidden="true" />
           <Link Id="LirlwNxzsNVOPt98WaRlZR" Ids="KUEZpgO8ZyMNABd5aULXHo,D2fegDeMjnrPQ2OWC3YSLc" />
+          <Link Id="Nzcjwa8x1QfMWM6xliRcZ9" Ids="Rjenq1EvdG7MILwj5PcKzb,FCMN7yslqIZLYBeSz5QJ3p" />
+          <Link Id="BsCF6MUsDkcOoj9UJxQMgp" Ids="CZq0BpJeXhuOUtYh0o5jOh,Rjenq1EvdG7MILwj5PcKzb" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -1385,6 +1419,7 @@
               <Pin Id="MDorPHzswzFO3Nqb9PKmmJ" Name="Bounds" Kind="InputPin" />
               <Pin Id="D00QwbYzMOsLHXHFUhLltZ" Name="Style Element" Kind="InputPin" />
               <Pin Id="Ryw3gX5PlYlO5vQEUklWES" Name="Components" Kind="InputPin" />
+              <Pin Id="Ughteg9DTuZQRbSJ9Ify9G" Name="Add Hoverable" Kind="InputPin" />
               <Pin Id="RPduEg6sKw4PkdRXWFYlN6" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="MAzOiI94ldcNQyf9vZfCqI" Bounds="391,469" />
@@ -1491,6 +1526,7 @@
               <Pin Id="PGU47MNHqwnNjVIKMDw6xR" Name="Bounds" Kind="InputPin" />
               <Pin Id="Q5o9VA2mDaANqFJUQrgIac" Name="Style Element" Kind="InputPin" />
               <Pin Id="ESGU8KZ88UJMqqUxWwY1Vu" Name="Components" Kind="InputPin" />
+              <Pin Id="JDOXOIKffRENNhfj5O3Wpm" Name="Add Hoverable" Kind="InputPin" />
               <Pin Id="JoeDbOSYFzBPTG82zA5ank" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="CSrAOwN0bI6N6OY8rLolND" Bounds="391,469" />
@@ -1593,6 +1629,7 @@
               <Pin Id="AfioS3UTxJNN217FObMgUv" Name="Bounds" Kind="InputPin" />
               <Pin Id="BcEDIOXx487NzE4SaZynhl" Name="Style Element" Kind="InputPin" />
               <Pin Id="OmVWuCeNyHZNWzcKQpWxRn" Name="Components" Kind="InputPin" />
+              <Pin Id="FRanESRumPyPdT5U4GKmZ7" Name="Add Hoverable" Kind="InputPin" />
               <Pin Id="FpUH8lMsU0fMTqpgjvSBpq" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="AfEpuVHpMvyPUgAzQm3In5" Bounds="391,469" />
@@ -1699,6 +1736,7 @@
               <Pin Id="AbuSmEKeolINTuYKr4JEv2" Name="Bounds" Kind="InputPin" />
               <Pin Id="Msmdhk4DvYZLxTsTXsygj0" Name="Style Element" Kind="InputPin" />
               <Pin Id="HpXV29YRpiKO6vJVZ5lkhp" Name="Components" Kind="InputPin" />
+              <Pin Id="PEpoOR6uKGZPJsTPcqOScg" Name="Add Hoverable" Kind="InputPin" />
               <Pin Id="UYU2EKrE6QwMNCilSsHhgd" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="NShFHpzf1M3LKov0hLVX7N" Bounds="391,469" />
@@ -1818,6 +1856,7 @@
               <Pin Id="SDolpytvUIwP9XQeBHlSEM" Name="Bounds" Kind="InputPin" />
               <Pin Id="VhyKMxzF8OJL88nLepMkqL" Name="Style Element" Kind="InputPin" />
               <Pin Id="EPMai8kmZ9PPSwEIxPK8Tz" Name="Components" Kind="InputPin" />
+              <Pin Id="JKQm5P1UibgM3AXM0rii5o" Name="Add Hoverable" Kind="InputPin" />
               <Pin Id="Fb3DKWkPjHDLTDtlD9iXrZ" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="PAmD1X1cGkhMcQMOcsxOL0" Bounds="391,469" />
@@ -1926,6 +1965,7 @@
               <Pin Id="PepFfWHf2m8MmDK49Le8cz" Name="Bounds" Kind="InputPin" />
               <Pin Id="NjpLgigJRMpNFfwCL0pGba" Name="Style Element" Kind="InputPin" />
               <Pin Id="Bcsk2QcjgK2LXemUZjW50Z" Name="Components" Kind="InputPin" />
+              <Pin Id="I4UrrhyVjyMN8mI60MU3t8" Name="Add Hoverable" Kind="InputPin" />
               <Pin Id="D3oSVuxhazEOmSRxXxMDzW" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="C01Ix37ELuOPq6eONIzM4l" Bounds="391,469" />
@@ -2165,6 +2205,7 @@
           <Patch Id="K35LUQtuS2NLsZXDuS3XYy" Name="Update">
             <Pin Id="RKmLFSKNt9VMMAwXRpbtZi" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
             <Pin Id="JxTSlp4ZxPGNZ9BFRefabE" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="SQ4bLPUSVMDNDdb1kpMqPi" Name="Components" Kind="InputPin" />
             <Pin Id="NhVKk55bYFdQIb5KBZKM8H" Name="Layer" Kind="OutputPin" Bounds="251,571" />
           </Patch>
           <Link Id="Su5GTKMx6r8OOap9t6vLGq" Ids="DkGAuKzF0JHMpnXDnY0NLZ,NhVKk55bYFdQIb5KBZKM8H" IsHidden="true" />
