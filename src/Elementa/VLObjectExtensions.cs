@@ -285,7 +285,7 @@ namespace Elementa
 
             if (TryParseValueIndexer(expression, out var propertyName, out var index))
             {
-                if (TryGetValueByExpression(instance, propertyName, default(ISpread), out ISpread spread))
+                if (TryGetValueByExpression(instance, propertyName, default(ISpread), out ISpread spread) && spread.Count > index)
                 {
                     var item = spread.GetItem(index);
                     if (item is T)
