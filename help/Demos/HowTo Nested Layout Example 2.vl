@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2019.1.0-0713-gfc1df09ee7" Version="0.128">
+<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2019.1.0-0930-g60a3dd6ea9" Version="0.128">
   <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2019.1.0-287" />
   <Patch Id="U2OktPJIft6LmRYDfHRaRo">
     <Canvas Id="OnAcnjd8HswONAJUfjLtjR" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="Kh9yBi3OEd5MvWP8UR1lL8" Name="Bounds" Kind="InputPin" DefaultValue="1411, 65, 448, 636">
+            <Pin Id="Kh9yBi3OEd5MvWP8UR1lL8" Name="Bounds" Kind="InputPin" DefaultValue="1328, 31, 732, 660">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -31,6 +31,11 @@
             <Pin Id="ApcUYAbpjR8L5MIjRAaGKo" Name="Space" Kind="InputPin" DefaultValue="DIPTopLeft">
               <p:TypeAnnotation LastCategoryFullName="VL.Skia" LastSymbolSource="VL.Skia.dll">
                 <Choice Kind="TypeFlag" Name="CommonSpace" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="TTj9Lw30CVbOFVoq4mLqma" Name="VSync" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="BYks0LGwsdZN4pSVmGOEkk" Name="Enabled" Kind="InputPin" />
@@ -49,11 +54,10 @@
             <Pin Id="Nh1cULrufgvQG5wfLnUu07" Name="Style Sheet" Kind="InputPin" />
             <Pin Id="NrIiLokpjQpMFeueDRAJTN" Name="Enable Selection" Kind="InputPin" />
             <Pin Id="SRxLkZyiEDUMtwYM8XbYSW" Name="Output" Kind="OutputPin" />
-            <Pin Id="LNp6fFdn4LMOHrbIWGa96q" Name="Mouse State" Kind="OutputPin" />
             <Pin Id="TSYSUuferN7OLRu4HrlpKi" Name="Layout Rebuild" Kind="OutputPin" />
+            <Pin Id="LNp6fFdn4LMOHrbIWGa96q" Name="Mouse State" Kind="OutputPin" />
             <Pin Id="OnkL2qbUWhpQNYAB9T7OmD" Name="Keyboard State" Kind="OutputPin" />
-            <Pin Id="QVOmuU9skRsQE7O746tr4j" Name="Selected Elementa" Kind="OutputPin" />
-            <Pin Id="NmIKmVwm7wKMM5UeBbW5su" Name="Stream" Kind="OutputPin" />
+            <Pin Id="OZJaZ9kh831Om1J2p2EHJD" Name="Component Processor Context" Kind="OutputPin" />
           </Node>
           <Pad Id="LmoiutWltKVMERsmOXZ4t8" Comment="Flexibility" Bounds="1442,640,35,28" ShowValueBox="true" isIOBox="true" Value="0, 1">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
@@ -82,6 +86,8 @@
             <Pin Id="HCC5Eog7kZGNJSpmMExuJ8" Name="Helper Enable" Kind="InputPin" />
             <Pin Id="BTaAhliEoACNaaQXyzhC8F" Name="Helper Paint" Kind="InputPin" />
             <Pin Id="HjORbckCOdWQPdkINGGst3" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="DBsTZXdCYJcNEhJs0vMUt2" Name="Dirty Layout" Kind="OutputPin" />
+            <Pin Id="IZ6MoNsRCXZPkJjlmTbxZs" Name="Dirty Graph" Kind="OutputPin" />
           </Node>
           <Node Bounds="1288,356,201,170" Id="AwCEre8NL4tM4O7pahMOsq">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -211,6 +217,8 @@
                 <Pin Id="JyCac41Yo2FLsLGnXJEfe6" Name="Helper Enable" Kind="InputPin" />
                 <Pin Id="VfAAFPIFAW6OqykkJzJ0K7" Name="Helper Paint" Kind="InputPin" />
                 <Pin Id="DftXK5Y42HlQZA43S0w2a9" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="V7WqBmiyBuMLVOZUoxzpb8" Name="Dirty Layout" Kind="OutputPin" />
+                <Pin Id="HUx5LIKuLCxQVryygTD03S" Name="Dirty Graph" Kind="OutputPin" />
               </Node>
               <Node Bounds="681,417,89,86" Id="SptFM8LyvBqOgvLUtcl1jp">
                 <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -302,8 +310,9 @@
             </Pin>
             <Pin Id="Fs4TCy2LzPVORBVyrZB1JV" Name="Helper Enable" Kind="InputPin" />
             <Pin Id="FRTPexmxxX8PIkcpOKVypY" Name="Helper Paint" Kind="InputPin" />
-            <Pin Id="OdV7KMmKwYqNTGSy0fZfjb" Name="Transformation" Kind="InputPin" />
             <Pin Id="DXedHNcxHuwMcdTAit59x6" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="A0xvGDiJXSeLs3CbeSJU3Y" Name="Dirty Layout" Kind="OutputPin" />
+            <Pin Id="VvW3OOTSt4rPnMciYOAgbA" Name="Dirty Graph" Kind="OutputPin" />
           </Node>
           <Pad Id="JfX9gJLSmZdOo2gCpyyrya" Comment="Helper Enable" Bounds="772,900,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -333,6 +342,8 @@
             <Pin Id="QjgPuv63wGGLDT5KJiGs6X" Name="Helper Enable" Kind="InputPin" />
             <Pin Id="KqCnT9FnPR2N3MJfpdbnNW" Name="Helper Paint" Kind="InputPin" />
             <Pin Id="N57KpiWAPn9NDiYXBhHBOy" Name="Output" Kind="OutputPin" />
+            <Pin Id="KXqJQNNOPLfOXdLH6tzQkx" Name="Dirty Layout" Kind="OutputPin" />
+            <Pin Id="FrzZfMsNbkEMO627jaMq3E" Name="Dirty Graph" Kind="OutputPin" />
           </Node>
           <Pad Id="Rt26tJI2dDoMeE1m72Ylkl" Comment="Size" Bounds="1407,605,35,28" ShowValueBox="true" isIOBox="true" Value="1.5, 0">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
@@ -358,6 +369,8 @@
             <Pin Id="PGRqvdDj6daL6DP2Vt1t74" Name="Helper Paint" Kind="InputPin" />
             <Pin Id="R3m6PnZ7yL5MHJFsumI3OW" Name="Bounds Clip" Kind="InputPin" />
             <Pin Id="DQTqD7L3dvcLVh5f41nGzY" Name="Output" Kind="OutputPin" />
+            <Pin Id="SzskUBmroLYPuJTW3H4E3b" Name="Dirty Layout" Kind="OutputPin" />
+            <Pin Id="RM7Z2M5Fh9OOn4C2Bwcjcs" Name="Dirty Graph" Kind="OutputPin" />
           </Node>
           <Pad Id="ExXegnoARBqNc61JopsxkV" Comment="Helper Enable" Bounds="973,574,56,15" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -417,8 +430,9 @@
             </Pin>
             <Pin Id="Dgu3pZfPpjRNyZD44bgc34" Name="Helper Enable" Kind="InputPin" />
             <Pin Id="HmEwm9IPXABPibPEdoiLwU" Name="Helper Paint" Kind="InputPin" />
-            <Pin Id="FsVthRjN9QJM04kQ8HwAOn" Name="Transformation" Kind="InputPin" />
             <Pin Id="FzHQHDKi5zfPvQe7pPSNJx" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="Nm16QVjGAH7PlSfo2J93w4" Name="Dirty Layout" Kind="OutputPin" />
+            <Pin Id="G9xXogAJOogOYggpYt3T8l" Name="Dirty Graph" Kind="OutputPin" />
           </Node>
           <Node Bounds="190,727,89,86" Id="IFAqAgOOCwoOWNOpVWCqOn">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
