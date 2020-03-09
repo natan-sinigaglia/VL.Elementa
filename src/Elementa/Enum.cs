@@ -41,5 +41,24 @@ namespace Elementa
     {
         Flat, Nested, Stacked
     }
+    public enum Layout_Orientation
+    {
+        Horizontal, Vertical
+    }
+
+    public enum Layout_Mode
+    {
+        None, Stack, Distribute
+    }
+
+    public enum Layout_VerticalAlignment
+    {
+        None, Left, Center, Right
+    }
+
+    public enum Layout_HorizontalAlignment
+    {
+        None, Top, Middle, Bottom
+    }
 
 }
