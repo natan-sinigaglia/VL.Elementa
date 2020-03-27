@@ -241,10 +241,11 @@
               <Pin Id="IQrem6YRja0O4bUL7xtZJv" Name="Max" Kind="InputPin" />
               <Pin Id="GoK2TrHIpdNQFzZjRdvnK9" Name="Value" Kind="InputPin" />
               <Pin Id="SaMqkEcSyPuPQTyIWrERJv" Name="Push To Observable" Kind="InputPin" />
-              <Pin Id="MbeNe4n6FrqOsGU7bJdw22" Name="SetValue" Kind="InputPin" />
               <Pin Id="JMt8I9XSmrFOxjqjtDXQtV" Name="Output" Kind="StateOutputPin" />
               <Pin Id="TUd3n31t0dxMqZl3b1GZvu" Name="Value" Kind="OutputPin" />
+              <Pin Id="H7JFjOHNrhZPBbMqg1zzhu" Name="Value Observable" Kind="OutputPin" />
               <Pin Id="C7klc3P7LaVNyR9wC0gRIt" Name="Value Observable" Kind="OutputPin" />
+              <Pin Id="MbeNe4n6FrqOsGU7bJdw22" Name="SetValue" Kind="InputPin" />
             </Node>
             <ControlPoint Id="KeZKUXftZ2pMkDEctWS7o2" Bounds="1290,-147" />
             <ControlPoint Id="Tdcw0J9EM73MfhiPsyRdzQ" Bounds="1372,-145" />
@@ -401,33 +402,12 @@
             </Node>
             <ControlPoint Id="NChmRsSvpVqQPO0PIPYcJT" Bounds="1165,716" />
             <ControlPoint Id="TK8PnEc5qk3PRowHbtdMx1" Bounds="1618,-149" />
-            <Node Bounds="1924,63,71,19" Id="KiLCSMdwabLPAYO5YqF2t5">
+            <Node Bounds="1897,70,71,19" Id="KiLCSMdwabLPAYO5YqF2t5">
               <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Attributable" />
               </p:NodeReference>
-              <Pin Id="LECdZd89DiIQFy6d2uCkUx" Name="Attributes" Kind="InputPin" />
               <Pin Id="KCQ4MaNMNUFQWzWgsfD8Yr" Name="Output" Kind="StateOutputPin" />
-            </Node>
-            <Pad Id="AldMrYcI4dpLl20bGYt2PZ" SlotId="FZqOjZzZHREMjNEBfuNy0R" Bounds="1926,110" />
-            <Node Bounds="1924,25,53,26" Id="Sll2WilYi9lLhHhfelv5AT">
-              <p:NodeReference LastCategoryFullName="Collections.Dictionary" LastSymbolSource="VL.Collections.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="SetItem" />
-                <CategoryReference Kind="RecordType" Name="Dictionary" NeedsToBeDirectParent="true" />
-              </p:NodeReference>
-              <Pin Id="MT7jYKLlo1HOBhUIfvo4FJ" Name="Input" Kind="StateInputPin" />
-              <Pin Id="I6fVpM9E6emOrGg78ZEmjQ" Name="Key" Kind="InputPin" DefaultValue="Hovered Element Index">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="String" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="QSGvf7nqX1ZOQJFZogLxri" Name="Value" Kind="InputPin" DefaultValue="0">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="String" />
-                </p:TypeAnnotation>
-              </Pin>
-              <Pin Id="PAapeQP9xWkLH82xVNGw9F" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="1770,135,65,79" Id="VbiLSZKswixLeItkpN9NLc">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -454,6 +434,20 @@
               </Patch>
               <ControlPoint Id="McNStmv2fY9OHVm68Gp8B8" Bounds="1784,142" Alignment="Top" />
               <ControlPoint Id="NDGihiXMhPVMeDuQ9qlARJ" Bounds="1784,209" Alignment="Bottom" />
+            </Node>
+            <Node Bounds="1897,105,71,26" Id="Hsp1hLJjtLVNrne5QkuFfm">
+              <p:NodeReference LastCategoryFullName="Elementa.Core.Component.Attributable" LastSymbolSource="Elementa.Core.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="SetAttribute" />
+              </p:NodeReference>
+              <Pin Id="FYsDAItCjWkP3bBkqM5Yp6" Name="Input" Kind="StateInputPin" />
+              <Pin Id="JmbKDscFAiyMdmzKX4Oua6" Name="Key" Kind="InputPin" DefaultValue="Hovered Element Index">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="U8uKZktEI0jMYztGjua01o" Name="Value" Kind="InputPin" />
+              <Pin Id="I9mNw7EbTalNUjNQ5D1dj0" Name="Output" Kind="StateOutputPin" />
             </Node>
           </Canvas>
           <Slot Id="RC3pI1QBhciL7SYjbS5go2" Name="Logic" />
@@ -522,7 +516,7 @@
           <Link Id="BMog31EzltFP6Pks6CAt1j" Ids="P8r0peY7qvVNrrEqbFDyIt,SxyJsxvzXJGOT1BONb22Yq" />
           <Link Id="V6u2pXTd8jxQGQIsxjRV7Y" Ids="QS6pVPNXAqeOLZYbsR5AZQ,P8r0peY7qvVNrrEqbFDyIt" IsHidden="true" />
           <Link Id="AkpeTLggIgBMLUzKsz9UZw" Ids="FminRvklWcvLUiIVjXBSZA,JlPlJme2FAHPeFViSMkERy" />
-          <Patch Id="DwbIPPsFGTaMToyZbA4Pq2" Name="Create (Internal)" ParticipatingElements="FcCghx3gAwfPj7TAiWSwP4,IPsJhyHPTzsLFDDKLXbRiu,Sll2WilYi9lLhHhfelv5AT" />
+          <Patch Id="DwbIPPsFGTaMToyZbA4Pq2" Name="Create (Internal)" ParticipatingElements="FcCghx3gAwfPj7TAiWSwP4" />
           <Patch Id="RfD4Krraa5YPLcYorTbS2S" Name="Update (Internal)" ParticipatingElements="BMog31EzltFP6Pks6CAt1j" ManuallySortedPins="true">
             <Pin Id="CZd2iMpUk0rL1snmGJXRX6" Name="Position" Kind="InputPin" Bounds="323,389" />
             <Pin Id="NrR243F8EsHMU4agdxULfK" Name="Size" Kind="InputPin" Bounds="344,427" DefaultValue="0.75, 0.3">
@@ -604,14 +598,12 @@
           <Link Id="GDpl0iJrLCrLjYMGxEUysW" Ids="DVSg13qn8CbMdRNnLybuEo,MbeNe4n6FrqOsGU7bJdw22" />
           <Link Id="KPGxBcqZXHnLlpNOgKIY5J" Ids="TK8PnEc5qk3PRowHbtdMx1,SaMqkEcSyPuPQTyIWrERJv" />
           <Link Id="GhXqgQicU8xNBDx7r9lPZu" Ids="Q6FzuPxObyBMglgW5U7txM,TK8PnEc5qk3PRowHbtdMx1" IsHidden="true" />
-          <Slot Id="FZqOjZzZHREMjNEBfuNy0R" Name="Attributable" />
-          <Link Id="IPsJhyHPTzsLFDDKLXbRiu" Ids="KCQ4MaNMNUFQWzWgsfD8Yr,AldMrYcI4dpLl20bGYt2PZ" />
-          <Link Id="ClegldR4pG8PJ6l1gzOeIC" Ids="PAapeQP9xWkLH82xVNGw9F,LECdZd89DiIQFy6d2uCkUx" />
           <Link Id="IYDRVNaOX0KLLySRSq8VqC" Ids="I3ScKSTFq7MPVLRkBr9371,McNStmv2fY9OHVm68Gp8B8" />
           <Link Id="LhtAtNMV8fjOSVVjdsYWcw" Ids="McNStmv2fY9OHVm68Gp8B8,DHaqf6bV29dNMely4LzZml" />
           <Link Id="CaNzb9Wb0JjLsRZ8OMCyCn" Ids="GyduVOn87RzPN1nHOOLRui,NDGihiXMhPVMeDuQ9qlARJ" />
           <Link Id="Cvc6vP5T48BOUUltOUJi5b" Ids="NDGihiXMhPVMeDuQ9qlARJ,Kf2pjPtz0s6LXkEaY5aJKp" />
-          <Link Id="K0efffSAoE2Ory70ej1DM0" Ids="AldMrYcI4dpLl20bGYt2PZ,GHuoSFOwymRMZpAViyUPmA" />
+          <Link Id="VQVHpt9WWwVMOH3ojqKsy5" Ids="KCQ4MaNMNUFQWzWgsfD8Yr,FYsDAItCjWkP3bBkqM5Yp6" />
+          <Link Id="UT6uqjpFmE3LHMN901Dq4e" Ids="I9mNw7EbTalNUjNQ5D1dj0,GHuoSFOwymRMZpAViyUPmA" />
         </Patch>
       </Node>
       <!--
@@ -746,6 +738,8 @@
                       <CategoryReference Kind="Category" Name="Primitive" />
                     </p:NodeReference>
                     <Pin Id="GOBzAWDjskAMZUBf7yywvp" Name="Condition" Kind="InputPin" />
+                    <ControlPoint Id="NSFWtDojNX9MwDmnI9Xc8r" Bounds="565,893" Alignment="Top" />
+                    <ControlPoint Id="S1FcHyuOFiDPvZzToEvv4F" Bounds="565,1034" Alignment="Bottom" />
                     <Patch Id="LtvNkNyiQpwNz40pLf4hST" ManuallySortedPins="true">
                       <Patch Id="Tpsd3dKyv5IPhtcuXhmc49" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="FvFnWaGGSlaNka8R9aAnnF" Name="Then" ManuallySortedPins="true" />
@@ -775,17 +769,14 @@
                           <CategoryReference Kind="InterfaceTypeFlag" Name="IValuePropertyT" NeedsToBeDirectParent="true" />
                         </p:NodeReference>
                         <Pin Id="KaknjnM7PbzNEj5Fd81ral" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="FLCFyGiVucVPPPKWu0BsWQ" Name="Output" Kind="StateOutputPin" />
                         <Pin Id="DM1Lpvwsdu2QKmaU9afuMn" Name="Value" Kind="InputPin" DefaultValue="100">
                           <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                             <Choice Kind="TypeFlag" Name="Integer32" />
                           </p:TypeAnnotation>
                         </Pin>
-                        <Pin Id="LOAGw8Ae3ooMYx43EcM25Z" Name="Push To Observable" Kind="InputPin" />
-                        <Pin Id="FLCFyGiVucVPPPKWu0BsWQ" Name="Output" Kind="StateOutputPin" />
                       </Node>
                     </Patch>
-                    <ControlPoint Id="NSFWtDojNX9MwDmnI9Xc8r" Bounds="565,893" Alignment="Top" />
-                    <ControlPoint Id="S1FcHyuOFiDPvZzToEvv4F" Bounds="565,1034" Alignment="Bottom" />
                   </Node>
                   <Node Bounds="730,882,143,164" Id="FS0w3lur5TbN7Y9Y8G4rwD">
                     <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -794,6 +785,8 @@
                       <CategoryReference Kind="Category" Name="Primitive" />
                     </p:NodeReference>
                     <Pin Id="IqWKC7OuOzqLly6oz6EbQI" Name="Condition" Kind="InputPin" />
+                    <ControlPoint Id="VoJlyXNpplGOKT5CCdxFIt" Bounds="744,889" Alignment="Top" />
+                    <ControlPoint Id="DoKXl9x3M4RMwWzGySkY2s" Bounds="744,1040" Alignment="Bottom" />
                     <Patch Id="P5X1oEC9pm8LzMRkwh0wY8" ManuallySortedPins="true">
                       <Patch Id="FwyBU1dxX88PCUUaMMvZ8N" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="N391UVDZGs4NqbtHeqiULH" Name="Then" ManuallySortedPins="true" />
@@ -823,17 +816,14 @@
                           <CategoryReference Kind="InterfaceTypeFlag" Name="IValuePropertyT" NeedsToBeDirectParent="true" />
                         </p:NodeReference>
                         <Pin Id="P2izZ23ZotgLqY0m1ZjiKU" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="Or2sOyCm1ubNCuxWTaCY8Q" Name="Output" Kind="StateOutputPin" />
                         <Pin Id="HaANb6ChBArMMzZZsGvCYK" Name="Value" Kind="InputPin" DefaultValue="-100">
                           <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                             <Choice Kind="TypeFlag" Name="Integer32" />
                           </p:TypeAnnotation>
                         </Pin>
-                        <Pin Id="QRaNW57S3eiLaCgTCClwbV" Name="Push To Observable" Kind="InputPin" />
-                        <Pin Id="Or2sOyCm1ubNCuxWTaCY8Q" Name="Output" Kind="StateOutputPin" />
                       </Node>
                     </Patch>
-                    <ControlPoint Id="VoJlyXNpplGOKT5CCdxFIt" Bounds="744,889" Alignment="Top" />
-                    <ControlPoint Id="DoKXl9x3M4RMwWzGySkY2s" Bounds="744,1040" Alignment="Bottom" />
                   </Node>
                   <Node Bounds="534,480,172,88" Id="FYJ4ijzl0qkPva42Czf3Oc">
                     <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -902,9 +892,8 @@
                           <CategoryReference Kind="InterfaceTypeFlag" Name="IValuePropertyT" NeedsToBeDirectParent="true" />
                         </p:NodeReference>
                         <Pin Id="RoxpsR7XUryL5MdS0deUfC" Name="Input" Kind="StateInputPin" />
-                        <Pin Id="LRgGlLkbhKSOmBxZnApvbJ" Name="Value" Kind="InputPin" />
-                        <Pin Id="R21wHtYJZW9Psgcgk98R2s" Name="Push To Observable" Kind="InputPin" />
                         <Pin Id="Lwo3rq8veCKNyG5h3uEZ74" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="LRgGlLkbhKSOmBxZnApvbJ" Name="Value" Kind="InputPin" />
                       </Node>
                     </Patch>
                   </Node>
@@ -1077,9 +1066,9 @@
                     <Pin Id="BQLR684gCVoOcWUuRtnOFw" Name="Value Property" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="914,815,73,26" Id="MSuqF3R2WRTMfexpbzTyyR">
-                    <p:NodeReference LastCategoryFullName="Elementa.Core.IValuePropertyT" LastSymbolSource="Elementa.Core.vl">
+                    <p:NodeReference>
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="OperationCallFlag" Name="GetDefault" />
+                      <Choice Kind="OperationCallFlag" Name="GetDefaultT" />
                       <CategoryReference Kind="InterfaceTypeFlag" Name="IValuePropertyT" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="RVolszpXU97ORbDSCQMap1" Name="Input" Kind="StateInputPin" />
@@ -1290,10 +1279,9 @@
                       <CategoryReference Kind="InterfaceTypeFlag" Name="IValuePropertyT" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="Qc3sAvrcUQuOFNQmruIHqJ" Name="Input" Kind="StateInputPin" />
-                    <Pin Id="VkjbBlxxelsMGLhnWb8eGh" Name="Value" Kind="InputPin" />
-                    <Pin Id="IpkoQ7NOPZCPew3OyPwIG8" Name="Push To Observable" Kind="InputPin" />
-                    <Pin Id="AToKmfm0ajGMj7NdKiftPS" Name="Apply" Kind="InputPin" />
                     <Pin Id="LVD0Mv7R1EsO6g1uTp2HLL" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="AToKmfm0ajGMj7NdKiftPS" Name="Apply" Kind="InputPin" />
+                    <Pin Id="VkjbBlxxelsMGLhnWb8eGh" Name="Value" Kind="InputPin" />
                   </Node>
                   <Node Bounds="896,936,57,19" Id="Us9BvP4vLn8P46IedivNHu">
                     <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
@@ -1827,13 +1815,8 @@
                           <CategoryReference Kind="InterfaceTypeFlag" Name="IValuePropertyT" NeedsToBeDirectParent="true" />
                         </p:NodeReference>
                         <Pin Id="LAIgtIt37pbO1fofp2I1oF" Name="Input" Kind="StateInputPin" />
-                        <Pin Id="JWw7SaaOeULOgZsW3dvxGD" Name="Value" Kind="InputPin" />
-                        <Pin Id="H6MdDBrkxTzQZfiTszmPrP" Name="Push To Observable" Kind="InputPin">
-                          <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                            <Choice Kind="TypeFlag" Name="Boolean" />
-                          </p:TypeAnnotation>
-                        </Pin>
                         <Pin Id="UbwgJuRmZvcMCKYc0qutdg" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="JWw7SaaOeULOgZsW3dvxGD" Name="Value" Kind="InputPin" />
                       </Node>
                       <Node Bounds="1482,1167,55,19" Id="HPtuHj3B8z6LdY6tZKWzW3">
                         <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
@@ -2056,10 +2039,9 @@
                       <CategoryReference Kind="InterfaceTypeFlag" Name="IValuePropertyT" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="R7p06PxZsHCNoGV5tkuVFJ" Name="Input" Kind="StateInputPin" />
-                    <Pin Id="TS3c2kbI95ZOECkPtmcjq1" Name="Value" Kind="InputPin" />
-                    <Pin Id="IF2bSkGLuxtPdSLbhzQDlj" Name="Push To Observable" Kind="InputPin" />
                     <Pin Id="EuAk4HjOf1RONMOrFEVuuU" Name="Output" Kind="StateOutputPin" />
                     <Pin Id="ETlGHmULHuYOo6jpssgwR2" Name="Apply" Kind="InputPin" />
+                    <Pin Id="TS3c2kbI95ZOECkPtmcjq1" Name="Value" Kind="InputPin" />
                   </Node>
                   <Node Bounds="735,1087,55,19" Id="T13kxglgk6fNFigq8EyJsU">
                     <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
