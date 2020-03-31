@@ -47855,12 +47855,13 @@
                 </Pad>
                 <ControlPoint Id="NmQXvsn7gakOlfLHa7D76v" Bounds="392,298" />
                 <Node Bounds="571,273" Id="MNZL3TUulAJQMWfHR12Mps">
-                  <p:NodeReference LastCategoryFullName="Primitive.Delegates.Delegate (0 -&gt; 1)" LastSymbolSource="CoreLibBasics.vl">
+                  <p:NodeReference LastCategoryFullName="Primitive.Delegates.Delegate (1 -&gt; 1)" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Invoke" />
-                    <CategoryReference Kind="FuncType" Name="Delegate (0 -&gt; 1)" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="FuncType" Name="Delegate (1 -&gt; 1)" NeedsToBeDirectParent="true" />
                   </p:NodeReference>
                   <Pin Id="L4LeXU18GSmPeIL3ndiyR0" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="S8vEyuej2kqLoZLFhwWy76" Name="Arg" Kind="InputPin" />
                   <Pin Id="MYTDW1HldyQQPwf8WYoBsk" Name="Result" Kind="OutputPin" />
                 </Node>
                 <ControlPoint Id="CagWA5Ca6JCNxLalGlN1dA" Bounds="573,238" />
@@ -47871,6 +47872,7 @@
                 <ControlPoint Id="G1ZdYcF8QrrL0DEcIlXljU" Bounds="816,386" />
                 <ControlPoint Id="KCzgbvBN7oqMWQAJzqdS1o" Bounds="657,386" />
                 <ControlPoint Id="NzQKikq0AiRNt0wp7akqJ8" Bounds="962,386" />
+                <ControlPoint Id="HqZgEQuIghwQGiWvGoZFhv" Bounds="647,239" />
               </Canvas>
               <Patch Id="MDCPZNQKTNHLAyGMNIUV89" Name="Create" />
               <ProcessDefinition Id="KWY1AlKAcmoN2gm0YviwkO" HasStateOut="true">
@@ -47891,6 +47893,11 @@
               <Link Id="HENIs9rUf7ZPBWhhtp5X0o" Ids="PFs3EUNoIfYLbUjTAuqOxM,CagWA5Ca6JCNxLalGlN1dA" IsHidden="true" />
               <Patch Id="OviKIQ9Eoc2PIzt68CHGks" Name="Update">
                 <Pin Id="PFs3EUNoIfYLbUjTAuqOxM" Name="Input" Kind="InputPin" />
+                <Pin Id="OzXjyhtk5w7L6dGxT38ID3" Name="Global Bounds" Kind="InputPin" Bounds="668,227">
+                  <p:TypeAnnotation>
+                    <Choice Kind="TypeFlag" Name="Rectangle" />
+                  </p:TypeAnnotation>
+                </Pin>
               </Patch>
               <Slot Id="MapNg1ZY7G9Oy92FqDM9V8" Name="Rectangles">
                 <p:TypeAnnotation>
@@ -47905,7 +47912,7 @@
               <Link Id="D5uV5lhB8RZMmSBbmIg8bi" Ids="MYTDW1HldyQQPwf8WYoBsk,BQUk6C7EusTMVDMO95a4Fq" />
               <Link Id="SOiajdbviq6QOg8v2jUN0w" Ids="BQUk6C7EusTMVDMO95a4Fq,MXnBmsAcbZuPRHky2YqXY9" />
               <Link Id="TLBi8sYf3qyO3c1RSSV9aN" Ids="MXnBmsAcbZuPRHky2YqXY9,If1MzKSa2XINSMz5JHKJXH" IsHidden="true" />
-              <Patch Id="M8kyHUucCUuPyZC2S8U7g0" Name="GetRectangles">
+              <Patch Id="M8kyHUucCUuPyZC2S8U7g0" Name="GetRectangles (Internal)">
                 <Pin Id="If1MzKSa2XINSMz5JHKJXH" Name="Rectangles" Kind="OutputPin" />
               </Patch>
               <Slot Id="DBhAzzefnq8PIKo42Yo5iu" Name="Interacting Element Index">
@@ -47915,12 +47922,12 @@
               </Slot>
               <Link Id="BPqjpmjZfq2Lv3P7YM81p7" Ids="DwsoxpcvoJNMlHzsa3PLl9,NYLj3lkvoVqMVlhuNY7aWQ" />
               <Link Id="FNafBa4xO4PNvlreLJYMP2" Ids="ImzlkczCj8OPDcm7AfP1sd,DwsoxpcvoJNMlHzsa3PLl9" IsHidden="true" />
-              <Patch Id="AG1UQ6obimrNLOg17bcAy3" Name="SetInteractingElementIndex">
+              <Patch Id="AG1UQ6obimrNLOg17bcAy3" Name="SetInteractingElementIndex (Internal)">
                 <Pin Id="ImzlkczCj8OPDcm7AfP1sd" Name="Interacting Element Index" Kind="InputPin" />
               </Patch>
               <Link Id="EmAHTSopy22LUr02XtXsgR" Ids="NYLj3lkvoVqMVlhuNY7aWQ,G1ZdYcF8QrrL0DEcIlXljU" />
               <Link Id="AwbnyJmQWNILEvkXaEHymu" Ids="G1ZdYcF8QrrL0DEcIlXljU,IHVnTeK6R4iP0dGwUAG6V0" IsHidden="true" />
-              <Patch Id="NuCG1wIzlnZLsgVQlz6j0I" Name="GetInteractingElementIndex">
+              <Patch Id="NuCG1wIzlnZLsgVQlz6j0I" Name="GetInteractingElementIndex (Internal)">
                 <Pin Id="IHVnTeK6R4iP0dGwUAG6V0" Name="Interacting Element Index" Kind="OutputPin" />
               </Patch>
               <Link Id="SQoJ2ouSHovQMuen7K58Jc" Ids="BQUk6C7EusTMVDMO95a4Fq,KCzgbvBN7oqMWQAJzqdS1o" />
@@ -47931,6 +47938,8 @@
               </Patch>
               <Link Id="DZ10M2IJNS7OLhBr1LIadL" Ids="NYLj3lkvoVqMVlhuNY7aWQ,NzQKikq0AiRNt0wp7akqJ8" />
               <Link Id="Irg5NvdD5slLGZIbaV5gCI" Ids="NzQKikq0AiRNt0wp7akqJ8,U86LIdtNtZ4Pht8mmAhQWY" IsHidden="true" />
+              <Link Id="FVgdiN4jVNIMZhgAW29db3" Ids="HqZgEQuIghwQGiWvGoZFhv,S8vEyuej2kqLoZLFhwWy76" />
+              <Link Id="OgJB9pyzHc4QYKYiiylwKn" Ids="OzXjyhtk5w7L6dGxT38ID3,HqZgEQuIghwQGiWvGoZFhv" IsHidden="true" />
             </Patch>
           </Node>
           <!--
@@ -48044,6 +48053,46 @@
           <Overlay Id="G7D7cUMYgHPOxj5qqvF384" Name="Subdividable" Bounds="4961,515,405,816">
             <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
           </Overlay>
+          <!--
+
+    ************************ SetInteractingElementIndex (Advanced) ************************
+
+-->
+          <Node Name="SetInteractingElementIndex (Advanced)" Bounds="5036,1135,289,151" Id="IauESInEIWDLYi506bPBmE">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+              <Choice Kind="OperationDefinition" Name="Operation" />
+            </p:NodeReference>
+            <Patch Id="IAcoWVSKZE2LPjUzLEBi6A">
+              <Node Bounds="5048,1172,142,19" Id="E4IJNnuNGLuMk1Sc1YvspE">
+                <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="GetSubdividableComponent" />
+                </p:NodeReference>
+                <Pin Id="NFaWqdMk1MNN8ArgIwqH8m" Name="Components" Kind="InputPin" />
+                <Pin Id="LrbByVibPecLp0iWuF5RLp" Name="Result" Kind="OutputPin" />
+                <Pin Id="Ut8OFDH7t6SNSbdAnT9F72" Name="Found" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="L3sUWX6q6SWMqcin0vmvOX" Bounds="5050,1153" />
+              <Link Id="D3o1pHdJQjmNg2Ajjdz6qM" Ids="L3sUWX6q6SWMqcin0vmvOX,NFaWqdMk1MNN8ArgIwqH8m" />
+              <Pin Id="SQGKZd7kjz3NtGPFc98eHb" Name="Components" Kind="InputPin" Bounds="5146,1166" />
+              <Link Id="Sl8zOw3w3KVLnrOQs5Rr3Y" Ids="SQGKZd7kjz3NtGPFc98eHb,L3sUWX6q6SWMqcin0vmvOX" IsHidden="true" />
+              <Node Bounds="5048,1240,140,26" Id="MwXEVSwVkegPniOWyTbq7A">
+                <p:NodeReference LastCategoryFullName="Elementa.Core.Component.Subdividable" LastSymbolSource="Elementa.Core.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="SetInteractingElementIndex" />
+                  <CategoryReference Kind="ClassType" Name="Subdividable" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="DPsor3W6AgaLBkvTIEughf" Name="Input" Kind="StateInputPin" />
+                <Pin Id="VUcc1WiOjOlNmWj8OAUnLo" Name="Interacting Element Index" Kind="InputPin" />
+                <Pin Id="AZNe3cWGu2NOFxAjlId4Au" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Link Id="NGpVnBnpnFnQLehvL6vUcG" Ids="LrbByVibPecLp0iWuF5RLp,DPsor3W6AgaLBkvTIEughf" />
+              <ControlPoint Id="DpuskP53VxdN1SM5QQzCJC" Bounds="5185,1212" />
+              <Link Id="ESaEZvftNI2LQQns5v7WY3" Ids="DpuskP53VxdN1SM5QQzCJC,VUcc1WiOjOlNmWj8OAUnLo" />
+              <Pin Id="MCM7BeEanViPhYoJeeFPGQ" Name="Interacting Element Index" Kind="InputPin" Bounds="5186,1217" />
+              <Link Id="MyCLd5tuDynPpDd9Mlo8zF" Ids="MCM7BeEanViPhYoJeeFPGQ,DpuskP53VxdN1SM5QQzCJC" IsHidden="true" />
+            </Patch>
+          </Node>
         </Canvas>
         <Overlay Id="UegtxRdL7VuMY6eS0OGlvn" Name="Widget Property" Bounds="1571,42,235,356">
           <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
