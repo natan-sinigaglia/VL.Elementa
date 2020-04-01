@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.1.0-0040-e815cb7f36" Version="0.128">
-  <NugetDependency Id="Bx4nGhFSlx7OEGH3hH1ytr" Location="VL.CoreLib" Version="2020.1.0-0040-ge815cb7f36" />
+<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.1.0-0044-720b6d4fe8" Version="0.128">
+  <NugetDependency Id="Bx4nGhFSlx7OEGH3hH1ytr" Location="VL.CoreLib" Version="2020.1.0-0044-g720b6d4fe8" />
   <Patch Id="M42lugPQdWSN4Vlxe0moaV">
     <Canvas Id="A02gPGbHulbL0imDA69yuH" DefaultCategory="Elementa.Core" CanvasType="FullCategory">
       <Canvas Id="V5R9OHUXVmbMKT7ccF4E0h" Name="Layout" Position="105,209">
@@ -17030,7 +17030,11 @@
               <Pin Id="OkjPLphsoDYOEjMmXqiSpO" Name="Bounds" Kind="InputPin" Bounds="482,378" />
               <Pin Id="AcPxo5xqTw6LBUgnYIWSsP" Name="Bounds Alignment" Kind="InputPin" Bounds="620,424" Visibility="Optional" />
               <Pin Id="PkyzpHl89Y5OWciiOpx4q1" Name="Components" Kind="InputPin" Bounds="641,444" Visibility="Optional" />
-              <Pin Id="VixEfEXzeC4LDD11AYtPTQ" Name="Clip Elementa Layer" Kind="InputPin" Bounds="292,271" Visibility="Optional" />
+              <Pin Id="VixEfEXzeC4LDD11AYtPTQ" Name="Clip Elementa Layer" Kind="InputPin" Bounds="292,271" DefaultValue="False" Visibility="Optional">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
               <Pin Id="MJh5QbtuCTeNFwJz3hh94b" Name="Horizontal Alignment" Kind="InputPin" Bounds="223,127" />
               <Pin Id="H4X2YERT7J8ObhVeK243kR" Name="Vertical Alignment" Kind="InputPin" Bounds="244,150" />
               <Pin Id="EbRrE4bAifRMhrKFzYfT2O" Name="Bounds Alignment Enabled" Kind="InputPin" Bounds="260,178" DefaultValue="False" Visibility="Optional">
@@ -49046,12 +49050,40 @@
                 <Pin Id="Bj0fFiqMFe1PRU9rTRFz5C" Name="Output" Kind="StateOutputPin" />
               </Node>
               <ControlPoint Id="IalTaKIq7zVO97UyNvn3ea" Bounds="36,182" />
+              <!--
+
+    ************************ CreateDefault ************************
+
+-->
+              <Node Name="CreateDefault" Bounds="481,92,69,78" Id="RuHQUP6K7UXPVQFUHc4jmm">
+                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                </p:NodeReference>
+                <Patch Id="VMlG9o7NXWUMgFGHFbf3iV" IsGeneric="true">
+                  <Pin Id="QrTejFPy9PxMMXu7qG4rid" Name="Output" Kind="OutputPin">
+                    <p:TypeAnnotation>
+                      <Choice Kind="TypeFlag" Name="IValuePropertyT" />
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <ControlPoint Id="Sz5nZuDyYucN9YpwUgckVB" Bounds="495,153" />
+                  <Link Id="O5po08MUFGdL7QAOwuypPS" Ids="Sz5nZuDyYucN9YpwUgckVB,QrTejFPy9PxMMXu7qG4rid" IsHidden="true" />
+                  <Node Bounds="494,115,16,19" Id="NzIoNhcaeb7Phw3NAnzqE6">
+                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <Choice Kind="OperationCallFlag" Name="NULL" />
+                    </p:NodeReference>
+                    <Pin Id="OyTymHAlGfuQRZbRVeRXxC" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Link Id="DKkMLPKCNXMMxGdK9U6zQO" Ids="OyTymHAlGfuQRZbRVeRXxC,Sz5nZuDyYucN9YpwUgckVB" />
+                </Patch>
+              </Node>
             </Canvas>
             <ProcessDefinition Id="PfaWwTl2mKBMUgyGKxJLzM" IsHidden="true">
-              <Fragment Id="IRFRhQrCQwIOoOQZaHB5H3" Patch="NJI5KwIgiNhLPK4Qv8fJhG" Enabled="true" />
+              <Fragment Id="L3ipSOBqoCvQN0IvNRxA4C" Patch="RuHQUP6K7UXPVQFUHc4jmm" Enabled="true" />
               <Fragment Id="AkrLfu3Fk9lNMYEiEARYV1" Patch="V7YUxB6OqFbNfFvepQQZMQ" Enabled="true" />
               <Fragment Id="JFBdQHcEPgFQGIPYSx3B6C" Patch="Dv9kxQ7nCnXPd5I7WhdyOr" Enabled="true" />
               <Fragment Id="SGuSv8bntLuL4S3dXkwvr9" Patch="KSQecv6yqSOP9ildsxTr4d" Enabled="true" />
+              <Fragment Id="IRFRhQrCQwIOoOQZaHB5H3" Patch="NJI5KwIgiNhLPK4Qv8fJhG" Enabled="true" />
             </ProcessDefinition>
             <Patch Id="NJI5KwIgiNhLPK4Qv8fJhG" Name="GetValueT">
               <Pin Id="TBtrUGCh5OoOhHkUsHuLoM" MergeId="646634" Name="Value" Kind="OutputPin" />
@@ -50510,9 +50542,9 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="LDAahjGK2vhLbh44CyvuSw" Location="VL.Skia" Version="2020.1.0-0040-ge815cb7f36" />
+  <NugetDependency Id="LDAahjGK2vhLbh44CyvuSw" Location="VL.Skia" Version="2020.1.0-0044-g720b6d4fe8" />
   <PlatformDependency Id="EuJ4QAxyhNaPJLaa2aqpgx" Location="../src/Elementa/bin/Release/netstandard2.0/Elementa.dll" IsForward="true" />
   <PlatformDependency Id="GudWbSxOZsgLAO9sOwwdAC" Location="mscorlib" />
   <PlatformDependency Id="NzpLrzaflNMMJ4qL4XHryg" Location="System.Windows.Forms" />
-  <NugetDependency Id="Cg5jGlHBZlmMO6vMkIBkPb" Location="VL.IO.OSC" Version="2020.1.0-0040-ge815cb7f36" />
+  <NugetDependency Id="Cg5jGlHBZlmMO6vMkIBkPb" Location="VL.IO.OSC" Version="2020.1.0-0044-g720b6d4fe8" />
 </Document>
