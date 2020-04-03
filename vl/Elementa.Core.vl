@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.1.0-0044-720b6d4fe8" Version="0.128">
-  <NugetDependency Id="Bx4nGhFSlx7OEGH3hH1ytr" Location="VL.CoreLib" Version="2020.1.0-0044-g720b6d4fe8" />
+<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.1.0.52" Version="0.128">
+  <NugetDependency Id="Bx4nGhFSlx7OEGH3hH1ytr" Location="VL.CoreLib" Version="2020.1.0-0052-g13ae49929f" />
   <Patch Id="M42lugPQdWSN4Vlxe0moaV">
     <Canvas Id="A02gPGbHulbL0imDA69yuH" DefaultCategory="Elementa.Core" CanvasType="FullCategory">
       <Canvas Id="V5R9OHUXVmbMKT7ccF4E0h" Name="Layout" Position="105,209">
@@ -13521,7 +13521,7 @@
                   <Choice Kind="TypeFlag" Name="Spread" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="JUVOuDLE7oBOS2VzpQ8vCI" Name="Clip Elementa Layer" Kind="InputPin" DefaultValue="True" Visibility="Optional">
+              <Pin Id="JUVOuDLE7oBOS2VzpQ8vCI" Name="Clip Elementa Layer" Kind="InputPin" DefaultValue="False" Visibility="Optional">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
@@ -45828,10 +45828,10 @@
           </Node>
           <!--
 
-    ************************ GetStylableComponent (Advanced) ************************
+    ************************ GetStyleableComponent (Advanced) ************************
 
 -->
-          <Node Name="GetStylableComponent (Advanced)" Bounds="2945,692,256,153" Id="Rf5v7RZTMlDNyarJBdzF1G">
+          <Node Name="GetStyleableComponent (Advanced)" Bounds="2945,692,256,153" Id="Rf5v7RZTMlDNyarJBdzF1G">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="OperationDefinition" Name="Operation" />
             </p:NodeReference>
@@ -45887,10 +45887,10 @@
           </Node>
           <!--
 
-    ************************ GetStylableComponentElementID (Advanced) ************************
+    ************************ GetStyleableComponentElementID (Advanced) ************************
 
 -->
-          <Node Name="GetStylableComponentElementID (Advanced)" Bounds="2953,900,181,134" Id="Rx9EiS2rJknMTr4lTC1RxB">
+          <Node Name="GetStyleableComponentElementID (Advanced)" Bounds="2953,900,181,134" Id="Rx9EiS2rJknMTr4lTC1RxB">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="OperationDefinition" Name="Operation" />
             </p:NodeReference>
@@ -45903,7 +45903,8 @@
               <Link Id="BlPMQNlCQeoOcA0qe2C6fz" Ids="JUYFMpHwm7WQQPA6e0UYAi,ES6m4EA7ktnQC4z3nUGtGy" IsHidden="true" />
               <Node Bounds="2965,936,120,19" Id="A1ktKkmkkcoMr08UGBMY7Q">
                 <p:NodeReference LastCategoryFullName="Elementa.Core.Component" LastSymbolSource="Elementa.Core.vl">
-                  <Choice Kind="OperationCallFlag" Name="GetStylableComponent" />
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="GetStyleableComponent" />
                 </p:NodeReference>
                 <Pin Id="Bwg1PJ7EZRdObcbjaJ4Xpm" Name="Components" Kind="InputPin" />
                 <Pin Id="MtoFgz013sPK9WtruYS786" Name="Component" Kind="OutputPin" />
@@ -47935,12 +47936,12 @@
               </Slot>
               <Link Id="BPqjpmjZfq2Lv3P7YM81p7" Ids="DwsoxpcvoJNMlHzsa3PLl9,NYLj3lkvoVqMVlhuNY7aWQ" />
               <Link Id="FNafBa4xO4PNvlreLJYMP2" Ids="ImzlkczCj8OPDcm7AfP1sd,DwsoxpcvoJNMlHzsa3PLl9" IsHidden="true" />
-              <Patch Id="AG1UQ6obimrNLOg17bcAy3" Name="SetInteractingElementIndex (Internal)">
+              <Patch Id="AG1UQ6obimrNLOg17bcAy3" Name="SetInteractingElementIndex">
                 <Pin Id="ImzlkczCj8OPDcm7AfP1sd" Name="Interacting Element Index" Kind="InputPin" />
               </Patch>
               <Link Id="EmAHTSopy22LUr02XtXsgR" Ids="NYLj3lkvoVqMVlhuNY7aWQ,G1ZdYcF8QrrL0DEcIlXljU" />
               <Link Id="AwbnyJmQWNILEvkXaEHymu" Ids="G1ZdYcF8QrrL0DEcIlXljU,IHVnTeK6R4iP0dGwUAG6V0" IsHidden="true" />
-              <Patch Id="NuCG1wIzlnZLsgVQlz6j0I" Name="GetInteractingElementIndex (Internal)">
+              <Patch Id="NuCG1wIzlnZLsgVQlz6j0I" Name="GetInteractingElementIndex">
                 <Pin Id="IHVnTeK6R4iP0dGwUAG6V0" Name="Interacting Element Index" Kind="OutputPin" />
               </Patch>
               <Link Id="SQoJ2ouSHovQMuen7K58Jc" Ids="BQUk6C7EusTMVDMO95a4Fq,KCzgbvBN7oqMWQAJzqdS1o" />
@@ -48712,8 +48713,12 @@
             <Patch Id="K2TGTCF4U1TMmqmfunRpl8" Name="GetDefaultT">
               <Pin Id="Tn8gaEh4f3kMpZorNd1YFj" Name="Default" Kind="OutputPin" />
             </Patch>
-            <Patch Id="OWPeg1cleYAMik9hwKUztO" Name="SetValueToDefault" ParticipatingElements="RrSjej29YPmMzHFm68vPFA">
-              <Pin Id="Ufo1Z1vaFIDMDhT9YkoXDM" Name="Push To Observable" Kind="InputPin" />
+            <Patch Id="OWPeg1cleYAMik9hwKUztO" Name="SetValueTtoDefault" ParticipatingElements="RrSjej29YPmMzHFm68vPFA">
+              <Pin Id="Ufo1Z1vaFIDMDhT9YkoXDM" Name="Push To Observable" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
             </Patch>
             <Patch Id="CYTFJ58LqXKMujX8Wpp0s0" Name="ConstrainTypes (Internal)" ParticipatingElements="OgvUiT0X7G8M3e6zUl8ujk,CPG6FyDtJN1OuTGCYavbUM,Ltyn2p0rY2GOOpAVyTsau9" />
             <Patch Id="LkeIgbxUioBNUGBGrDm9Hr" Name="GetValue">
@@ -49077,6 +49082,7 @@
                   <Link Id="DKkMLPKCNXMMxGdK9U6zQO" Ids="OyTymHAlGfuQRZbRVeRXxC,Sz5nZuDyYucN9YpwUgckVB" />
                 </Patch>
               </Node>
+              <ControlPoint Id="VHKD6sgKwidN38hJ8WHl7x" Bounds="-145,68" />
             </Canvas>
             <ProcessDefinition Id="PfaWwTl2mKBMUgyGKxJLzM" IsHidden="true">
               <Fragment Id="L3ipSOBqoCvQN0IvNRxA4C" Patch="RuHQUP6K7UXPVQFUHc4jmm" Enabled="true" />
@@ -49084,6 +49090,7 @@
               <Fragment Id="JFBdQHcEPgFQGIPYSx3B6C" Patch="Dv9kxQ7nCnXPd5I7WhdyOr" Enabled="true" />
               <Fragment Id="SGuSv8bntLuL4S3dXkwvr9" Patch="KSQecv6yqSOP9ildsxTr4d" Enabled="true" />
               <Fragment Id="IRFRhQrCQwIOoOQZaHB5H3" Patch="NJI5KwIgiNhLPK4Qv8fJhG" Enabled="true" />
+              <Fragment Id="UsNSTdCniHLNiO0j9HwL4w" Patch="U1mzFz9UDG0MReU6DLW8vX" />
             </ProcessDefinition>
             <Patch Id="NJI5KwIgiNhLPK4Qv8fJhG" Name="GetValueT">
               <Pin Id="TBtrUGCh5OoOhHkUsHuLoM" MergeId="646634" Name="Value" Kind="OutputPin" />
@@ -49112,6 +49119,14 @@
             </Patch>
             <Link Id="Afy7aAXTc5uO5tesJGxBeR" Ids="IalTaKIq7zVO97UyNvn3ea,UkbCD1Tx0fpOpOfKqfAqd9" IsHidden="true" />
             <Link Id="QBhnhA7Wg6AOxT2zQw91su" Ids="QtLK4cMOoouP5zxjWbKRwi,IalTaKIq7zVO97UyNvn3ea" />
+            <Patch Id="U1mzFz9UDG0MReU6DLW8vX" Name="SetValueTtoDefault">
+              <Pin Id="UBDP0yLntHoMTkPRdtwVnn" MergeId="325490" Name="Push To Observable" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
+            <Link Id="Ae2YMmsn9GbL6xT57zfNK2" Ids="UBDP0yLntHoMTkPRdtwVnn,VHKD6sgKwidN38hJ8WHl7x" IsHidden="true" />
           </Patch>
         </Node>
         <!--
@@ -50542,9 +50557,9 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="LDAahjGK2vhLbh44CyvuSw" Location="VL.Skia" Version="2020.1.0-0044-g720b6d4fe8" />
+  <NugetDependency Id="LDAahjGK2vhLbh44CyvuSw" Location="VL.Skia" Version="2020.1.0-0052-g13ae49929f" />
   <PlatformDependency Id="EuJ4QAxyhNaPJLaa2aqpgx" Location="../src/Elementa/bin/Release/netstandard2.0/Elementa.dll" IsForward="true" />
   <PlatformDependency Id="GudWbSxOZsgLAO9sOwwdAC" Location="mscorlib" />
   <PlatformDependency Id="NzpLrzaflNMMJ4qL4XHryg" Location="System.Windows.Forms" />
-  <NugetDependency Id="Cg5jGlHBZlmMO6vMkIBkPb" Location="VL.IO.OSC" Version="2020.1.0-0044-g720b6d4fe8" />
+  <NugetDependency Id="Cg5jGlHBZlmMO6vMkIBkPb" Location="VL.IO.OSC" Version="2020.1.0-0052-g13ae49929f" />
 </Document>
