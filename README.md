@@ -12,6 +12,7 @@ UI widgets library made in VL. Skia based rendering.
 - Widgets can now have custom drawers
 - Layout nodes (stack, columns, etc) now provide more options to play with, allowing more precise layout
 - A widget's value can now be overriden from the outside, allowing several widgets to share the same value
+- mapping between external ValueProperties of different types
 - New help patches explaining custom drawers, shared value properties and Moveable/Resizeable components
 
 ## Installing
@@ -19,7 +20,7 @@ UI widgets library made in VL. Skia based rendering.
 To use the latest stable version, go to Gamma's command line and type
 
 ```
-nuget install Elementa -prerelease
+nuget install Elementa
 ```
 
 ## Contributing
