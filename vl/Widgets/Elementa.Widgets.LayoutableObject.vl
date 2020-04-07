@@ -5,10 +5,10 @@
     <Canvas Id="T8EMqs3QXczPRlgNu8F5cg" DefaultCategory="Elementa.Widgets" CanvasType="FullCategory">
       <!--
 
-    ************************ StyleableObject (Advanced) ************************
+    ************************ LayoutableObject (Advanced) ************************
 
 -->
-      <Node Name="StyleableObject (Advanced)" Bounds="635,329" Id="PX0CFOLndozM3CaiVLJzvA">
+      <Node Name="LayoutableObject (Advanced)" Bounds="635,329" Id="PX0CFOLndozM3CaiVLJzvA">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <FullNameCategoryReference ID="Primitive" />
@@ -140,10 +140,10 @@
                 <Patch Id="Dk2WN0e4c1cN8YcG4fQArE" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="OBJ4RxoibFRPlh17Bu6uBx" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="230,811,227,26" Id="RWPCMoQ2SG4N4HXgtKwEWR">
-                  <p:NodeReference LastCategoryFullName="Elementa.Widgets.IStylableObject" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+                  <p:NodeReference LastCategoryFullName="Elementa.Widgets.ILayoutableObject" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="Update" />
-                    <CategoryReference Kind="Category" Name="IStyleableObject" NeedsToBeDirectParent="true" />
+                    <CategoryReference Kind="InterfaceTypeFlag" Name="ILayoutableObject" NeedsToBeDirectParent="true" />
                   </p:NodeReference>
                   <Pin Id="T8NSFbZgYWiNJeBFhQ5ZdT" Name="Input" Kind="StateInputPin" />
                   <Pin Id="HIBUqJuGX5PPvfgmbnUnGy" Name="Rectangle" Kind="InputPin" />
@@ -262,7 +262,7 @@
           <Link Id="FfUQsfMX1aBP8EXwIOLCHt" Ids="NnGOJuoksThLSGMyDsJTkG,T8NSFbZgYWiNJeBFhQ5ZdT" />
           <Slot Id="HNdgg9ky2NzLSaOwufqUEY" Name="IStylableObject">
             <p:TypeAnnotation>
-              <Choice Kind="TypeFlag" Name="IStyleableObject" />
+              <Choice Kind="TypeFlag" Name="ILayoutableObject" />
             </p:TypeAnnotation>
           </Slot>
           <Link Id="P8ACCrxy50nNzW5vPePGW8" Ids="GTr4XoOneOHQGHofzW1vTQ,BImE9s12GgJOP1Ck5ynxCU" />
@@ -330,8 +330,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="BtU7E1gJvg6NoQboLP0Gdy">
@@ -401,13 +401,6 @@
             <ControlPoint Id="QnN1uRuhnICPfl2qcGTxdh" Bounds="193,314" />
             <ControlPoint Id="NRum1r1JxfZOBrEwSyWIDo" Bounds="275,313" />
           </Canvas>
-          <Patch Id="CYe17NzPT8hN2Vlesmp6TX" Name="Create" />
-          <Patch Id="D1zicVjKmF0QYxnG4B7x1j" Name="Update">
-            <Pin Id="POfQxcEs9sMQCNQ8C1XxbR" Name="Rectangle" Kind="InputPin" Bounds="58,236" />
-            <Pin Id="Kv7YwFHSlzSLXpFwL2wgiV" Name="Style" Kind="InputPin" Bounds="234,319" />
-            <Pin Id="K5icFl2HcxvNr5Z1kciHtC" Name="Components" Kind="InputPin" />
-            <Pin Id="DltOxdHDwOvL24n0mNEf6q" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <ProcessDefinition Id="JtJHl9ieMPqORreDOHi4io" HasStateOut="true" IsHidden="true">
             <Fragment Id="RvwFm7tHA2CNmSEnf3bku0" Patch="CYe17NzPT8hN2Vlesmp6TX" Enabled="true" />
             <Fragment Id="PF1SAX3EZ7mN1MefHeFTBI" Patch="D1zicVjKmF0QYxnG4B7x1j" Enabled="true" />
@@ -428,14 +421,21 @@
           <Link Id="Keu7ILx9fShMYbDkDBUmYX" Ids="NRum1r1JxfZOBrEwSyWIDo,FhTriSWIOdjMi6owdTxx5z" />
           <Link Id="QWGAMmFmVKnQLa6dw5Tqvn" Ids="Kv7YwFHSlzSLXpFwL2wgiV,NRum1r1JxfZOBrEwSyWIDo" IsHidden="true" />
           <Link Id="O5SRUCVp7tzNU8yFhzjDBb" Ids="RLiNfbmbIkFNZxHoA59ulJ,GrB890HOzwWPSGT0Z97zf4" />
+          <Patch Id="CYe17NzPT8hN2Vlesmp6TX" Name="Create" />
+          <Patch Id="D1zicVjKmF0QYxnG4B7x1j" Name="Update">
+            <Pin Id="POfQxcEs9sMQCNQ8C1XxbR" Name="Rectangle" Kind="InputPin" Bounds="58,236" />
+            <Pin Id="Kv7YwFHSlzSLXpFwL2wgiV" Name="Style" Kind="InputPin" Bounds="234,319" />
+            <Pin Id="Vime8JVqKh6NMfXdX2JIJR" Name="Components" Kind="InputPin" />
+            <Pin Id="DltOxdHDwOvL24n0mNEf6q" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <!--
 
-    ************************ IStyleableObject (Advanced) ************************
+    ************************ ILayoutableObject (Advanced) ************************
 
 -->
-      <Node Name="IStyleableObject (Advanced)" Bounds="635,261" Id="GwfMqoDW7ieOYmrQNN9kuR">
+      <Node Name="ILayoutableObject (Advanced)" Bounds="635,261" Id="GwfMqoDW7ieOYmrQNN9kuR">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
           <Choice Kind="InterfaceDefinition" Name="Interface" />
         </p:NodeReference>
@@ -496,8 +496,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="DOLIR8m2MwKLULimrSIfxp">
@@ -572,19 +572,6 @@
             <ControlPoint Id="BtHbaXMyNwnOLTLUN4TJAS" Bounds="192,336" />
             <Pad Id="EidOuAlb4i2LsPCCmqGltY" SlotId="O3PxBp8Jpa6Lx5CLYdl0Cd" Bounds="487,280" />
           </Canvas>
-          <Patch Id="Q8QA2eYjbTaMYzbkpsT659" Name="Create">
-            <Pin Id="Ogd1mmdku0JOXqAzbtY9ZT" Name="Radius" Kind="InputPin" DefaultValue="0.09999999, 0.09999999">
-              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Vector2" />
-              </p:TypeAnnotation>
-            </Pin>
-          </Patch>
-          <Patch Id="MlWdH3H06VSOs2IJg7gk4F" Name="Update">
-            <Pin Id="BqfCyTtRCspPMpVYeoF54r" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
-            <Pin Id="OarGjzOzb6pPIffLBTmC3a" Name="Style" Kind="InputPin" Bounds="376,72" />
-            <Pin Id="NCAyyfMjpq1OYdrBEHYpxP" Name="Components" Kind="InputPin" />
-            <Pin Id="PiIwp1qDH92PvhASF4euL3" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <Link Id="NecAdCD0jJAQAOpvyvLGPS" Ids="DsVYXj8mgYEM86PSUyVceK,PiIwp1qDH92PvhASF4euL3" IsHidden="true" />
           <Link Id="U5XJt0Mb3BFMx6q536RnOY" Ids="PYM2yohccVOMQSL5mgPI1X,N38U8gnW6r6PZFMw03TpR5" />
           <Link Id="NueyF8zAgYAMkMpVrgiPMc" Ids="U5giv0sXEUbPkSSroYErar,BhQpwgQUcMTL9VyTGUdvaj" />
@@ -610,6 +597,19 @@
           <Link Id="LOv8Uf0Q6rWPrsAaK3M8kV" Ids="BtHbaXMyNwnOLTLUN4TJAS,BZdFuJWg9Q0OgW4q94E8Ef" />
           <Link Id="EX3Pcggvlj3QIGYQzNqZ45" Ids="BqfCyTtRCspPMpVYeoF54r,BtHbaXMyNwnOLTLUN4TJAS" IsHidden="true" />
           <Link Id="Rc1RgwA0b9xPD9cpKPE1Q3" Ids="FMONUHMofsGPSFcF9WF1ev,EidOuAlb4i2LsPCCmqGltY" />
+          <Patch Id="Q8QA2eYjbTaMYzbkpsT659" Name="Create">
+            <Pin Id="Ogd1mmdku0JOXqAzbtY9ZT" Name="Radius" Kind="InputPin" DefaultValue="0.09999999, 0.09999999">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <Patch Id="MlWdH3H06VSOs2IJg7gk4F" Name="Update">
+            <Pin Id="BqfCyTtRCspPMpVYeoF54r" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
+            <Pin Id="OarGjzOzb6pPIffLBTmC3a" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="D5zksSbLmS3Lp46KV7v5uM" Name="Components" Kind="InputPin" />
+            <Pin Id="PiIwp1qDH92PvhASF4euL3" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -623,8 +623,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="Fem2ED3MoYmPwgvBK7tcgl">
@@ -694,13 +694,6 @@
             <ControlPoint Id="BBLtdwD4bGwLjhlYbEJ6qk" Bounds="276,335" />
             <ControlPoint Id="DVt6RzB5VwkO4YDwBQK9wG" Bounds="192,336" />
           </Canvas>
-          <Patch Id="Aw5GdBHd6fwNpDwAkEHiDn" Name="Create" />
-          <Patch Id="JYQuakztLBULWe22Iwa4QA" Name="Update">
-            <Pin Id="DvvCnbEpJcCOelOlN8XShe" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
-            <Pin Id="QM2VZqn17poOB0qCJGW0JU" Name="Style" Kind="InputPin" Bounds="376,72" />
-            <Pin Id="JI9dq6AWdTpOlZpxMLTqj2" Name="Components" Kind="InputPin" />
-            <Pin Id="RSZQe87qwqDOs0FE5TqCad" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <Link Id="MWTWOcruD50LTT3TDyBHzV" Ids="Pm4at9j07RSOJOETgesXb8,RSZQe87qwqDOs0FE5TqCad" IsHidden="true" />
           <Link Id="QIiC6DQNMSBMGGtau0vaBH" Ids="CDnE8NJNpRDPFH8q0XCF77,UrzmW2NKClJOar5nfgX98F" />
           <Link Id="EelOBVfs0Z4QQbK04lunjP" Ids="VfWY4Fvj1uUO2oXdErHuOW,Hz5DzXYhGJkLkVXhMHdkxf" />
@@ -721,6 +714,13 @@
           <Link Id="FdbC4i6zVdnLzLH6j4MUso" Ids="QM2VZqn17poOB0qCJGW0JU,BBLtdwD4bGwLjhlYbEJ6qk" IsHidden="true" />
           <Link Id="TPMfzztGammOCh5csGhV7O" Ids="DVt6RzB5VwkO4YDwBQK9wG,AlzsKTEBvuVL5tmDLDM1hg" />
           <Link Id="Phcrlf4YDTDOgwqNJ0sA8I" Ids="DvvCnbEpJcCOelOlN8XShe,DVt6RzB5VwkO4YDwBQK9wG" IsHidden="true" />
+          <Patch Id="Aw5GdBHd6fwNpDwAkEHiDn" Name="Create" />
+          <Patch Id="JYQuakztLBULWe22Iwa4QA" Name="Update">
+            <Pin Id="DvvCnbEpJcCOelOlN8XShe" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
+            <Pin Id="QM2VZqn17poOB0qCJGW0JU" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="RgrcUG2JkzBOuhN7kNmtfd" Name="Components" Kind="InputPin" />
+            <Pin Id="RSZQe87qwqDOs0FE5TqCad" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -734,8 +734,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="Sbnz4X5wAbPNM3jxw0cIPZ">
@@ -805,13 +805,6 @@
             <ControlPoint Id="SB0KbUayxuRLLKsixByeul" Bounds="276,335" />
             <ControlPoint Id="Kkx05wOTPGOLXzazi2OjHt" Bounds="192,336" />
           </Canvas>
-          <Patch Id="CToUxkNrX0cQFQwOAGsnu3" Name="Create" />
-          <Patch Id="OK6eqOCtT71MiGqfZw9BTf" Name="Update">
-            <Pin Id="Ql7xBejsatoMeEa0uLVtmA" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
-            <Pin Id="CdmG1605VKJPdKvfnov33P" Name="Style" Kind="InputPin" Bounds="376,72" />
-            <Pin Id="TGZbagrxqjFN3JiKH9SaRA" Name="Components" Kind="InputPin" />
-            <Pin Id="B5Xzl0Mt9PSPNKkIRK2cMl" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <Link Id="CmgrHTgNLfgL3bPC9SG784" Ids="QEfPR9cPzdNMVd0tahi2d9,B5Xzl0Mt9PSPNKkIRK2cMl" IsHidden="true" />
           <Link Id="N9wUxG9fYCQMXpztD9bk8K" Ids="BTf8QFDdOF1QUSsoX9VxRh,K8BzIjW8FndMA8m2cLYRKF" />
           <Link Id="DmspDJFYG3tLYZqPfs3ETs" Ids="KB8LlZrTN3HOADPcI0yh9N,ERuMHZqWkt6Pz8319k1t8h" />
@@ -832,6 +825,13 @@
           <Link Id="Q130RLaQq8ZNSAb7OkGLUd" Ids="CdmG1605VKJPdKvfnov33P,SB0KbUayxuRLLKsixByeul" IsHidden="true" />
           <Link Id="GTda1HSJknVN8Vgbkgc034" Ids="Kkx05wOTPGOLXzazi2OjHt,HWToz07DpsoMqc6KHzLoqb" />
           <Link Id="QiNSM6zi77uPH6xGR3juaT" Ids="Ql7xBejsatoMeEa0uLVtmA,Kkx05wOTPGOLXzazi2OjHt" IsHidden="true" />
+          <Patch Id="CToUxkNrX0cQFQwOAGsnu3" Name="Create" />
+          <Patch Id="OK6eqOCtT71MiGqfZw9BTf" Name="Update">
+            <Pin Id="Ql7xBejsatoMeEa0uLVtmA" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
+            <Pin Id="CdmG1605VKJPdKvfnov33P" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="TI7MPXTLIzONkwAueeFkDs" Name="Components" Kind="InputPin" />
+            <Pin Id="B5Xzl0Mt9PSPNKkIRK2cMl" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -845,8 +845,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="GB5tAW2jl0UPGQyXQW52mF">
@@ -934,30 +934,6 @@
             <ControlPoint Id="SgPGL121Q6cMo0uTeS0vGU" Bounds="695,362" />
             <ControlPoint Id="HnFZnwkoKHwNev10UBBKxm" Bounds="758,362" />
           </Canvas>
-          <Patch Id="JRfeXRSGI4HMHytKTcSEY7" Name="Create">
-            <Pin Id="Ibn0VeBOEQ0PcqMCNkfgbO" Name="Phase" Kind="InputPin" />
-            <Pin Id="El0yBTCbu7gMQvQWEq8URG" Name="Cycles" Kind="InputPin" DefaultValue="1">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Float32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="CzEgMsfMjoCMvGg1AXpGAF" Name="Closed" Kind="InputPin" DefaultValue="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="T3gYgqyGDGcLPQKfKsP3Vx" Name="Count" Kind="InputPin" DefaultValue="5">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
-          </Patch>
-          <Patch Id="UYGhqz1McRmL8iOPXGNR1M" Name="Update">
-            <Pin Id="UWskdtbH7RrOBp8QzKUfG0" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
-            <Pin Id="OWHnOtPhq7OOwTrQEK1G9H" Name="Style" Kind="InputPin" Bounds="376,72" />
-            <Pin Id="UY6aXAQnbqmMsKYojMTgSZ" Name="Components" Kind="InputPin" />
-            <Pin Id="D4lSPggvcvpLQuAJw32axh" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <Link Id="CmsGlWOXQu3OxwUubqrU9Q" Ids="F3qgNeaBMMZPFcD0sDjgbc,D4lSPggvcvpLQuAJw32axh" IsHidden="true" />
           <Link Id="UMGXrbpsmr7NhYBqP3thn1" Ids="FELDIen7mqqPSR1qQXfvhE,Bd7x0BRIW0kQUyPERaqpOu" />
           <Link Id="Gd18rP8I6c0McrtzJwdTPP" Ids="MznIfe6oB1HQU4cVJXjpRk,BgBuGOLJJtbL35HNwA16iH" />
@@ -998,6 +974,30 @@
           <Link Id="OLrky3C1y7WLnKo3W9q2Di" Ids="CzEgMsfMjoCMvGg1AXpGAF,SgPGL121Q6cMo0uTeS0vGU" IsHidden="true" />
           <Link Id="UloIPS6UiqNNalbYezuNDY" Ids="HnFZnwkoKHwNev10UBBKxm,N9MNEeYamRhNNBsuW8XCCH" />
           <Link Id="BgrTkQ7iYTtMsBeCLnO8P0" Ids="T3gYgqyGDGcLPQKfKsP3Vx,HnFZnwkoKHwNev10UBBKxm" IsHidden="true" />
+          <Patch Id="JRfeXRSGI4HMHytKTcSEY7" Name="Create">
+            <Pin Id="Ibn0VeBOEQ0PcqMCNkfgbO" Name="Phase" Kind="InputPin" />
+            <Pin Id="El0yBTCbu7gMQvQWEq8URG" Name="Cycles" Kind="InputPin" DefaultValue="1">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="CzEgMsfMjoCMvGg1AXpGAF" Name="Closed" Kind="InputPin" DefaultValue="True">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="T3gYgqyGDGcLPQKfKsP3Vx" Name="Count" Kind="InputPin" DefaultValue="5">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <Patch Id="UYGhqz1McRmL8iOPXGNR1M" Name="Update">
+            <Pin Id="UWskdtbH7RrOBp8QzKUfG0" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
+            <Pin Id="OWHnOtPhq7OOwTrQEK1G9H" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="L8j4bQ52cd0Owike1Re5iD" Name="Components" Kind="InputPin" />
+            <Pin Id="D4lSPggvcvpLQuAJw32axh" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <Overlay Id="K6srYJOguNiOX20pDDjd2v" Name="Stylable Objects" Bounds="576,366,632,471">
@@ -1014,8 +1014,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="Ev4gW6uRnVCO8smwaEJ0kW">
@@ -1065,15 +1065,6 @@
             <Pad Id="OX4I59EGKenO26pRjePhhS" SlotId="UFniFyeSwqMMCT9LwAhjPP" Bounds="402,373" />
             <ControlPoint Id="ONQmUynT5LoNtq2PLgn3qE" Bounds="402,325" />
           </Canvas>
-          <Patch Id="JtGoSqzeTKTQSYOW4ZM1z3" Name="Create">
-            <Pin Id="OeE9zReXHL2ODAeibNbWoX" Name="Text" Kind="InputPin" />
-          </Patch>
-          <Patch Id="IWMIecYk0hdQZjfMFR8KjI" Name="Update">
-            <Pin Id="EvLfBlb4fPSOFxHSv5ugrj" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
-            <Pin Id="GjuckvUZXNyOZkLz998yDF" Name="Style" Kind="InputPin" Bounds="376,72" />
-            <Pin Id="OTMlNte4I1XOFQDNQIOthj" Name="Components" Kind="InputPin" />
-            <Pin Id="EH08HCfTBmxOhlmA6DUvEA" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <Link Id="BYz0veQbODsPQa3AKUGKuI" Ids="KfvjxmzQFa4PZ0gWthvvYK,EH08HCfTBmxOhlmA6DUvEA" IsHidden="true" />
           <Link Id="GOEKKpdTLnLLeSd223Yxr6" Ids="FQyfKGgsLA2M8AllDSBTXU,QMcg9iu3XgCLNO2zO4Priw" />
           <Link Id="F7ZG6mDZItXOxl4rVS8rJ9" Ids="KvR0xxmuTtEMN2g68p1NCl,KfvjxmzQFa4PZ0gWthvvYK" />
@@ -1093,6 +1084,15 @@
           <Link Id="JzAsZADNdskQUPoraYVa85" Ids="Pj1dpnQK9sbLoJySq3Lxeb,PvNPE1euzI5PcOLhNiLi62" />
           <Link Id="LOaQW5bUJHHNJdCrEm4vXi" Ids="DqRy6x4xeGJPDJWMbyWJ0J,RMVotigSmiKP9u1rW50KPq" />
           <Link Id="J68ynnZcmEnPoDGxLOCvwH" Ids="Fk4Bdzw8VrFOtNw0y8qwCg,KvR0xxmuTtEMN2g68p1NCl" />
+          <Patch Id="JtGoSqzeTKTQSYOW4ZM1z3" Name="Create">
+            <Pin Id="OeE9zReXHL2ODAeibNbWoX" Name="Text" Kind="InputPin" />
+          </Patch>
+          <Patch Id="IWMIecYk0hdQZjfMFR8KjI" Name="Update">
+            <Pin Id="EvLfBlb4fPSOFxHSv5ugrj" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
+            <Pin Id="GjuckvUZXNyOZkLz998yDF" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="JkBsr6VDyb6MCqRMwiQhSg" Name="Components" Kind="InputPin" />
+            <Pin Id="EH08HCfTBmxOhlmA6DUvEA" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -1106,8 +1106,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.StylableObject" LastSymbolSource="Elementa.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="CqM08AMlHKqLZjKI1cxt0S">
@@ -1215,16 +1215,6 @@
             <Pad Id="JK3bu0a8W0QPUZWHF4vMiO" SlotId="F3MGIdFHSSkP78VFVC0Ozm" Bounds="528,493" />
             <ControlPoint Id="KdUU5s3NYyGK9WIS7Lnvlg" Bounds="530,441" />
           </Canvas>
-          <Patch Id="AOcnYaJb6vBO86DydpDFy3" Name="Create">
-            <Pin Id="KXWokOXEfRbLocYVmZWvsq" Name="Text" Kind="InputPin" />
-            <Pin Id="V0rSCbZJjRvPtJR1OWgu0j" Name="Clip Text" Kind="InputPin" />
-          </Patch>
-          <Patch Id="MVcxb3AnNpDL6vHGj7j3VZ" Name="Update">
-            <Pin Id="UPwHE8ndmAmLTvdZI5V2Ge" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
-            <Pin Id="TwmbwuMskv1NJsKBtoxERV" Name="Style" Kind="InputPin" Bounds="376,72" />
-            <Pin Id="D1Zh8AWAyXIQGmtAO5r8eO" Name="Components" Kind="InputPin" />
-            <Pin Id="ScdyS3qfDIHLSeKBKb2sW5" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <Link Id="UztfZll8IKyPpmtUYBuosS" Ids="Vdt5IiJdAeUNnQgTS0zkW9,ScdyS3qfDIHLSeKBKb2sW5" IsHidden="true" />
           <Link Id="NXaFlrgJwekM4BXB3GX9pN" Ids="OkMiOjZiYiKMBBC0HvTI7M,MvoS1xrXZDKOscvoi8fvSm" />
           <Link Id="Miemed7KYTOLJXWTwFrWVZ" Ids="ETMykWPPGB9QBuS457hHTp,Vdt5IiJdAeUNnQgTS0zkW9" />
@@ -1260,23 +1250,33 @@
           <Link Id="HDqe58JumYGMmblVXCfmG1" Ids="JK3bu0a8W0QPUZWHF4vMiO,F6fS07AWof4L5Uzho0hmyX" />
           <Link Id="ExmRDKijhLWO3SQN0VTXFw" Ids="KdUU5s3NYyGK9WIS7Lnvlg,JK3bu0a8W0QPUZWHF4vMiO" />
           <Link Id="GFC9T5Laa5VLZ1yHX3cSXq" Ids="V0rSCbZJjRvPtJR1OWgu0j,KdUU5s3NYyGK9WIS7Lnvlg" IsHidden="true" />
+          <Patch Id="AOcnYaJb6vBO86DydpDFy3" Name="Create">
+            <Pin Id="KXWokOXEfRbLocYVmZWvsq" Name="Text" Kind="InputPin" />
+            <Pin Id="V0rSCbZJjRvPtJR1OWgu0j" Name="Clip Text" Kind="InputPin" />
+          </Patch>
+          <Patch Id="MVcxb3AnNpDL6vHGj7j3VZ" Name="Update">
+            <Pin Id="UPwHE8ndmAmLTvdZI5V2Ge" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
+            <Pin Id="TwmbwuMskv1NJsKBtoxERV" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="OI6lJEOl2aqO8A1kvI8YJv" Name="Components" Kind="InputPin" />
+            <Pin Id="ScdyS3qfDIHLSeKBKb2sW5" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <!--
 
-    ************************ StyleableRectangle ************************
+    ************************ Rectangle ************************
 
 -->
-      <Node Name="StyleableRectangle" Bounds="954,456" Id="IrDliULnp0VP3yuJWyh7jJ">
+      <Node Name="Rectangle" Bounds="954,456" Id="IrDliULnp0VP3yuJWyh7jJ">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="HIlvJf0xJrcMC4mvkF5EO6">
           <Canvas Id="GPZtsT5NGQILPOJXF1M1VV" CanvasType="Group">
             <Node Bounds="389,354,110,78" Id="GGqniXOunpsOQPU6BeL58K">
-              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StyleableObject" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableObject" />
               </p:NodeReference>
               <Patch Id="KV7YmqlDxIXPao8RIiAzNR" Name="Object Create Delegate" ManuallySortedPins="true">
                 <Pin Id="Cec2vlbIqMnMHeTrU8nerC" Name="Result" Kind="OutputPin" />
@@ -1379,19 +1379,19 @@
       </Node>
       <!--
 
-    ************************ StyleableRoundRectangle ************************
+    ************************ RoundRectangle ************************
 
 -->
-      <Node Name="StyleableRoundRectangle" Bounds="954,515" Id="SCJn9JEZnrtMHH3ic7AHzb">
+      <Node Name="RoundRectangle" Bounds="954,515" Id="SCJn9JEZnrtMHH3ic7AHzb">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="SQVdkCAEW0xP9ujmsZ94qC">
           <Canvas Id="DmNWTCd55kkLr0c3I5pLua" CanvasType="Group">
             <Node Bounds="389,354,110,78" Id="HAkz8yySZlkOUz3vToevir">
-              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StyleableObject" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableObject" />
               </p:NodeReference>
               <Patch Id="U1mLqiU6oaxQEZRqQalnDP" Name="Object Create Delegate" ManuallySortedPins="true">
                 <Pin Id="LMsAPc5fZU5MHtvTtmFZux" Name="Result" Kind="OutputPin" />
@@ -1495,19 +1495,19 @@
       </Node>
       <!--
 
-    ************************ StyleableCircle ************************
+    ************************ Circle ************************
 
 -->
-      <Node Name="StyleableCircle" Bounds="954,574" Id="OZn4PTVjtMVOs7OMSagZdS">
+      <Node Name="Circle" Bounds="954,574" Id="OZn4PTVjtMVOs7OMSagZdS">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="Kc69m5pwzOrMi68LeLoJvJ">
           <Canvas Id="PnTAwcW44FUMl2pKLPwNZu" CanvasType="Group">
             <Node Bounds="389,354,110,78" Id="OjDnDwhOYhFPytQ9VFZpNe">
-              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StyleableObject" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableObject" />
               </p:NodeReference>
               <Patch Id="CppHF2NwK9DQM6gy8fckaR" Name="Object Create Delegate" ManuallySortedPins="true">
                 <Pin Id="R9mClGsJPppNkfPhgcRGhn" Name="Result" Kind="OutputPin" />
@@ -1606,19 +1606,19 @@
       </Node>
       <!--
 
-    ************************ StyleableOval ************************
+    ************************ Oval ************************
 
 -->
-      <Node Name="StyleableOval" Bounds="954,633" Id="Ma9P2GKyIwzPys6bAccaXr">
+      <Node Name="Oval" Bounds="954,633" Id="Ma9P2GKyIwzPys6bAccaXr">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="CLplXVLC2JCOQieUPw7s86">
           <Canvas Id="EyAnu6rCsFBMsFpM3TvM3j" CanvasType="Group">
             <Node Bounds="389,354,110,78" Id="LAs7kee7Ci6PllfuYTOk1C">
-              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StyleableObject" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableObject" />
               </p:NodeReference>
               <Patch Id="IuSTDVnMWBIO1x0TSR1PCi" Name="Object Create Delegate" ManuallySortedPins="true">
                 <Pin Id="B0hOd6uEzDGOwYiX3RT3SS" Name="Result" Kind="OutputPin" />
@@ -1717,19 +1717,19 @@
       </Node>
       <!--
 
-    ************************ StyleableSegment ************************
+    ************************ Segment ************************
 
 -->
-      <Node Name="StyleableSegment" Bounds="954,692" Id="PLXFF9SUvcfPo47vgH1I1k">
+      <Node Name="Segment" Bounds="954,692" Id="PLXFF9SUvcfPo47vgH1I1k">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="BQBIVbB4uBhOCFtwKbh07y">
           <Canvas Id="DWb2oAP5gTBQJe5dHNDEtA" CanvasType="Group">
             <Node Bounds="389,354,110,78" Id="F3N5EKLemjvLEBuSSEXjd8">
-              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StyleableObject" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableObject" />
               </p:NodeReference>
               <Patch Id="KzjNjtW2AYrQbILh33LjIL" Name="Object Create Delegate" ManuallySortedPins="true">
                 <Pin Id="AeoK4Mb21MNL6fmuge7FRm" Name="Result" Kind="OutputPin" />
@@ -1848,19 +1848,19 @@
       </Node>
       <!--
 
-    ************************ StyleableText ************************
+    ************************ Text ************************
 
 -->
-      <Node Name="StyleableText" Bounds="954,751" Id="KxAZvl6nkPQPrQ30dgnlHN">
+      <Node Name="Text" Bounds="954,751" Id="KxAZvl6nkPQPrQ30dgnlHN">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="Vzjt2E8I7eYNZaj4jPHXii">
           <Canvas Id="THBh57ami9lL7TaCTd0xt7" CanvasType="Group">
             <Node Bounds="389,354,110,78" Id="KkiC1Ul3kmqPGWtxwOlmrB">
-              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StyleableObject" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableObject" />
               </p:NodeReference>
               <Patch Id="JdwI5FBCi2PP2a6LF7taxc" Name="Object Create Delegate" ManuallySortedPins="true">
                 <Pin Id="AC9cAA6LBMZMvKANVozhl7" Name="Result" Kind="OutputPin" />
@@ -1964,19 +1964,19 @@
       </Node>
       <!--
 
-    ************************ StyleableTextWithBackground ************************
+    ************************ TextWithBackground ************************
 
 -->
-      <Node Name="StyleableTextWithBackground" Bounds="954,810" Id="JMSB1l0w2nfMhZYBycGZHG">
+      <Node Name="TextWithBackground" Bounds="954,810" Id="JMSB1l0w2nfMhZYBycGZHG">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
         <Patch Id="GLkQD5L8JfzPzRWLrBr0Q2">
           <Canvas Id="A8IOvxDyIgiOp6kOf1sCAo" CanvasType="Group">
             <Node Bounds="389,354,110,78" Id="ThR5tOg3nFsLCpnbIINBov">
-              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
+              <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StyleableObject" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableObject" />
               </p:NodeReference>
               <Patch Id="PHC4GlxY4mFNbI0ycFGyYJ" Name="Object Create Delegate" ManuallySortedPins="true">
                 <Pin Id="EuKKzlKRqJ6PUTXckWeDy5" Name="Result" Kind="OutputPin" />
@@ -2098,8 +2098,8 @@
           <FullNameCategoryReference ID="Primitive" />
         </p:NodeReference>
         <p:Interfaces>
-          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
-            <Choice Kind="InterfaceTypeFlag" Name="IStyleableObject" />
+          <TypeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.LayoutableObject.vl">
+            <Choice Kind="InterfaceTypeFlag" Name="ILayoutableObject" />
           </TypeReference>
         </p:Interfaces>
         <Patch Id="GL3pJjjvDRMMTuXpXMG4Gw">
@@ -2242,15 +2242,6 @@
             <Pad Id="ShjDeZo7Ej8MNNm77ohLsR" SlotId="OHGAYd7Vo2oPg2h4A8DKEM" Bounds="411,403" />
             <ControlPoint Id="QIyWbxKJyW6NfPsM9PGCy9" Bounds="411,355" />
           </Canvas>
-          <Patch Id="TZ5ebB5edW9OXLPqIMQtY1" Name="Create">
-            <Pin Id="C6FKedSXdjYL4bRTLOuJwH" Name="Text" Kind="InputPin" />
-          </Patch>
-          <Patch Id="K35LUQtuS2NLsZXDuS3XYy" Name="Update">
-            <Pin Id="RKmLFSKNt9VMMAwXRpbtZi" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
-            <Pin Id="JxTSlp4ZxPGNZ9BFRefabE" Name="Style" Kind="InputPin" Bounds="376,72" />
-            <Pin Id="SQ4bLPUSVMDNDdb1kpMqPi" Name="Components" Kind="InputPin" />
-            <Pin Id="NhVKk55bYFdQIb5KBZKM8H" Name="Layer" Kind="OutputPin" Bounds="251,571" />
-          </Patch>
           <Link Id="Su5GTKMx6r8OOap9t6vLGq" Ids="DkGAuKzF0JHMpnXDnY0NLZ,NhVKk55bYFdQIb5KBZKM8H" IsHidden="true" />
           <Link Id="FYJXI9uNxhsOPTU62lX2yj" Ids="Af5lphtr23JMCjQc1kFqNB,NFC881CCIC6MsXNwsp7gwQ" />
           <Link Id="Nko5XBHfTN5MxFSQb7CRKa" Ids="BsUNAdSqchqPT6lgJ2OvvQ,DkGAuKzF0JHMpnXDnY0NLZ" />
@@ -2289,6 +2280,15 @@
           <Link Id="UvskiKxemBZPbnCessA9c7" Ids="MGSDGDcP0ndQaMhaL1ufse,VmrQw5jGDqtQYlMj1jL8CN" />
           <Link Id="CfwcmHVdHRFMis5CueOTqe" Ids="AO65orjd353Op0B1TwQ36P,LT6b7RUGoi3LmQhYfnJup6" />
           <Link Id="UrkJ0fse1tWNbCXRo0MFBc" Ids="NRexmLo0RW1LtEfjsZeckK,PTNeROE38iVPp5yl4BJlTj" />
+          <Patch Id="TZ5ebB5edW9OXLPqIMQtY1" Name="Create">
+            <Pin Id="C6FKedSXdjYL4bRTLOuJwH" Name="Text" Kind="InputPin" />
+          </Patch>
+          <Patch Id="K35LUQtuS2NLsZXDuS3XYy" Name="Update">
+            <Pin Id="RKmLFSKNt9VMMAwXRpbtZi" Name="Rectangle" Kind="InputPin" Bounds="192,319" />
+            <Pin Id="JxTSlp4ZxPGNZ9BFRefabE" Name="Style" Kind="InputPin" Bounds="376,72" />
+            <Pin Id="DQI7y24tfi7NFlEU2yqNuP" Name="Components" Kind="InputPin" />
+            <Pin Id="NhVKk55bYFdQIb5KBZKM8H" Name="Layer" Kind="OutputPin" Bounds="251,571" />
+          </Patch>
         </Patch>
       </Node>
       <!--
