@@ -14,17 +14,17 @@ namespace Elementa
 
     public enum Elementum_State
     {
-        Idle, Hovered, Selected, Focused, Preview
+        Idle, Hovered, Selected
     }
 
     public enum Label_Placement
     {
-        Down, Right, Up, Left
+        Left, Right, Top, Bottom
     }
 
     public enum ComponentType
     {
-        Interactive, Hoverable, Focusable, Selectable, Previewable, Typeable, Taggable, Styleable, Taskable, Moveable, Resizeable, Orientable, Attributable, Subdividable
+        Interactive, Hoverable, Selectable, Typeable, Taggable, Styleable, Taskable, Moveable, Resizeable, Orientable, Attributable, Subdividable
     }
 
     public enum KnownWidget
@@ -60,5 +60,4 @@ namespace Elementa
     {
         None, Top, Middle, Bottom
     }
-
 }
