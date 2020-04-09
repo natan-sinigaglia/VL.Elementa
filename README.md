@@ -1,11 +1,13 @@
-# Elementa
+# VL.Elementa
 
-UI widgets library made in VL. Skia based rendering.
+UI widgets library made in VL. 
+Skia based rendering.
 
 ## Changelog
 
 ### 2.0.0
 
+- Renamed the library to VL.Elementa
 - New widget architecture : value properties and widget manager are now generic
 - Style can be provided to a widget with the new Styleable component
 - Orientation, multi-components widgets and specific attributes are now handled by components (was in widget managers before)
@@ -20,7 +22,7 @@ UI widgets library made in VL. Skia based rendering.
 To use the latest stable version, go to Gamma's command line and type
 
 ```
-nuget install Elementa
+nuget install vl.elementa
 ```
 
 ## Contributing
