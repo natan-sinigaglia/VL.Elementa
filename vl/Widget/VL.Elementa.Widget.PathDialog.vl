@@ -2857,7 +2857,7 @@
         <Patch Id="IhINUdHSiY0LcTrCsYG7KN">
           <Canvas Id="KbLhTRHzhb6QJuMpzltSWB" CanvasType="Group">
             <Node Bounds="462,261,140,19" Id="MebZ9EnNzAuOZD6TeQC9Jp">
-              <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessNode" Name="PrecomputeStyles" />
               </p:NodeReference>
@@ -2866,7 +2866,7 @@
               <Pin Id="HMBfIHB2zSjLVAJjCF6Uyl" Name="Element" Kind="InputPin" />
               <Pin Id="EW49tqowTnOQYbrjjQ0Z3E" Name="Style" Kind="OutputPin" />
               <Pin Id="Up31dTSd2DjPD6S4ehspR5" Name="Text Editing Style" Kind="OutputPin" />
-              <Pin Id="HlYibtrNnRtOn7IQvDtb4s" Name="Styles Spread" Kind="OutputPin" />
+              <Pin Id="DzefJwNb6PJP4yEqw8eHk4" Name="Lookup" Kind="OutputPin" />
             </Node>
             <Node Bounds="378,169,156,26" Id="PzsHG3RlZUIMrfSRn9w98I">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Core.WidgetManager" LastSymbolSource="VL.Elementa.Core.vl">
@@ -2925,17 +2925,15 @@
                   <Pin Id="Fo0QT7QXJGHMUaPYpPhp0Y" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="281,367,105,26" Id="BwMjwTxZVvuMnMFmULkYnY">
-                  <p:NodeReference LastCategoryFullName="VL.Elementa.Style.StyleModel" LastSymbolSource="VL.Elementa.Core.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="GetBackground" />
+                    <Choice Kind="ProcessAppFlag" Name="GetBackgroundStyle" />
                   </p:NodeReference>
                   <Pin Id="Fhwx5dwiyWcOrRhTS9iWdm" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="BSCus9uLmTpNbaH6ZDNmIR" Name="Background_Fill_Enable" Kind="OutputPin" />
                   <Pin Id="ODQsMcVOR8ZMX5fKUBSNjA" Name="Background_Fill_Paint" Kind="OutputPin" />
-                  <Pin Id="LQ5b9iTRKg7PPJGjVT4gFA" Name="Background_Stroke_Enable" Kind="OutputPin" />
+                  <Pin Id="BSCus9uLmTpNbaH6ZDNmIR" Name="Background_Fill_Enable" Kind="OutputPin" />
                   <Pin Id="KXpZQPzRuysMCpfPXaxKMz" Name="Background_Stroke_Paint" Kind="OutputPin" />
-                  <Pin Id="BcwAAR5kE9aOn2PZ640hoc" Name="Background_Texture_Enable" Kind="OutputPin" />
-                  <Pin Id="PF4QzoQRNs7OY5vcgMCZNL" Name="Background_Texture" Kind="OutputPin" />
+                  <Pin Id="LQ5b9iTRKg7PPJGjVT4gFA" Name="Background_Stroke_Enable" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="169,491,336,19" Id="TCiT6WdTYSQPxfkBpjySc9">
                   <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
@@ -2975,16 +2973,16 @@
                   <Pin Id="HO7rXjH7Hn6LSpsUB7iB4a" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="494,367,85,26" Id="H4Je3uag0spMgZ0YTqz8hs">
-                  <p:NodeReference LastCategoryFullName="VL.Elementa.Style.StyleModel" LastSymbolSource="VL.Elementa.Core.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="GetForeground" />
+                    <Choice Kind="ProcessAppFlag" Name="GetForegroundStyle" />
                   </p:NodeReference>
                   <Pin Id="SiMPUnODydUMmTYsYGtWR3" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="PVwSI75CEZOQGNPDnyyh5R" Name="Foreground_Fill_Enable" Kind="OutputPin" />
                   <Pin Id="HlP7Q2wduXtP1j1rIhmWvi" Name="Foreground_Fill_Paint" Kind="OutputPin" />
                   <Pin Id="FtX7dak3JdVQNOrIoMPERH" Name="Foreground_Highlight_Paint" Kind="OutputPin" />
-                  <Pin Id="E5q8aOEcrziMA3vBkrkym9" Name="Foreground_Stroke_Enable" Kind="OutputPin" />
+                  <Pin Id="PVwSI75CEZOQGNPDnyyh5R" Name="Foreground_Fill_Enable" Kind="OutputPin" />
                   <Pin Id="M6kJRZZVGPCNYSTHODV5sX" Name="Foreground_Stroke_Paint" Kind="OutputPin" />
+                  <Pin Id="E5q8aOEcrziMA3vBkrkym9" Name="Foreground_Stroke_Enable" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="410,436,61,19" Id="Bm9aKIBVAzNMi7BAkvOgB8">
                   <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers" LastSymbolSource="VL.Skia.vl">
@@ -3038,6 +3036,9 @@
               <ControlPoint Id="GZNzFIjialMNa7Qyx7vJdm" Bounds="663,679" Alignment="Bottom" />
               <ControlPoint Id="AlJ7S2yHymoM76uuoLX57h" Bounds="722,350" Alignment="Top" />
               <ControlPoint Id="O9RiuT5ZLE4OlddcDn6ooy" Bounds="839,350" Alignment="Top" />
+              <ControlPoint Id="PKnn4myqHXJQJinkDNVrCm" Bounds="904,350" Alignment="Top" />
+              <ControlPoint Id="VipG987cPa2NAdtWOITB6A" Bounds="976,350" Alignment="Top" />
+              <ControlPoint Id="JbHqosL2kZpL9d1cH0WPf5" Bounds="870,346" Alignment="Top" />
               <Patch Id="S9MzVncZ8avPpbRUS2Q80E" ManuallySortedPins="true">
                 <Patch Id="QVEUbC7jhwEQdoa4nwcHox" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="IbfHWMHMT7iPfPTLu62MFr" Name="Then" ManuallySortedPins="true" />
@@ -3065,14 +3066,13 @@
                   <Pin Id="DGItzalzjlQPY77hYfcpsW" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="837,414,85,26" Id="Jr5RUL4cwwkLJ8aJdCBsBH">
-                  <p:NodeReference>
+                  <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <Choice Kind="OperationCallFlag" Name="GetText" />
-                    <CategoryReference Kind="Category" Name="StyleModel" NeedsToBeDirectParent="true" />
+                    <Choice Kind="ProcessAppFlag" Name="GetTextStyle" />
                   </p:NodeReference>
                   <Pin Id="USzLdZcSSqCMipPFFxw3Rj" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="C7p5NVDUyDTM7RymJ8ic8i" Name="Text_Enable" Kind="OutputPin" />
                   <Pin Id="NAYb6mt6W4ZNlDJXhQInyz" Name="Text_Paint" Kind="OutputPin" />
+                  <Pin Id="C7p5NVDUyDTM7RymJ8ic8i" Name="Text_Enable" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="720,448,65,19" Id="Qo3yu0h37xsOKgYyc1RpAJ">
                   <p:NodeReference LastCategoryFullName="Graphics.Skia.Text" LastSymbolSource="VL.Skia.vl">
@@ -3132,9 +3132,6 @@
                   <Pin Id="B9RuIr1Sz2HLWjvE6XDjiF" Name="Output" Kind="OutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="PKnn4myqHXJQJinkDNVrCm" Bounds="904,350" Alignment="Top" />
-              <ControlPoint Id="VipG987cPa2NAdtWOITB6A" Bounds="976,350" Alignment="Top" />
-              <ControlPoint Id="JbHqosL2kZpL9d1cH0WPf5" Bounds="870,346" Alignment="Top" />
             </Node>
             <Node Bounds="627,166,103,26" Id="QPpywI8oPKhM4q9WJ52Sm7">
               <p:NodeReference LastCategoryFullName="Elementa.Core.WidgetManager" LastSymbolSource="VL.Elementa.Core.vl">
