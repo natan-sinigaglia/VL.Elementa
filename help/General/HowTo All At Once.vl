@@ -127,6 +127,7 @@
             <Pin Id="CZ2toJlF15cPEfFIkhvVkM" Name="Input" Kind="InputPin" />
             <Pin Id="Gue9XO8DtSSQC4VVUFuCfR" Name="Transformation" Kind="InputPin" />
             <Pin Id="Mwg6ahA5SvIM6KEbZjVam1" Name="Force Layout Update" Kind="InputPin" />
+            <Pin Id="GZh5rrUK4fVPcy6PuiuqVE" Name="Base StyleSheet" Kind="InputPin" />
             <Pin Id="EitE8ChHi6aMN2KujVms8l" Name="Enable Selection" Kind="InputPin" />
             <Pin Id="AUZzdq1j3biLGCCeyJNLrl" Name="Output" Kind="OutputPin" />
             <Pin Id="PY3NnSUpKArMnPVty2c3IT" Name="Layout Rebuild" Kind="OutputPin" />
@@ -718,13 +719,17 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="VrCGmU45aRMNbObheaKMHm" Name="Bounds" Kind="InputPin" DefaultValue="1708, 52, 812, 746">
+            <Pin Id="VrCGmU45aRMNbObheaKMHm" Name="Bounds" Kind="InputPin" DefaultValue="1647, 48, 812, 746">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="It4625pJD4KMfCKA8TDJzz" Name="Input" Kind="InputPin" />
-            <Pin Id="UG62HHh2wZ7Mtcop7S42cD" Name="Color" Kind="InputPin" />
+            <Pin Id="UG62HHh2wZ7Mtcop7S42cD" Name="Color" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="RGBA" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="QtsWeLviDNWN1f7Vfsrr9Y" Name="Clear" Kind="InputPin" />
             <Pin Id="MOPVSgkE5ylNfX1ls1aytC" Name="Space" Kind="InputPin" DefaultValue="DIPTopLeft">
               <p:TypeAnnotation LastCategoryFullName="VL.Skia" LastSymbolSource="VL.Skia.dll">
@@ -1299,6 +1304,36 @@
             <Pin Id="KkE7u4k92x3P9XBhtEqqEH" Name="Input" Kind="StateInputPin" />
             <Pin Id="TvHLzyz271ANVuVV07lnnw" Name="Top Left" Kind="OutputPin" />
           </Node>
+          <Node Bounds="503,802,205,19" Id="U468Ou7FoBaORmmOZAgl9u">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Elementa" />
+              <CategoryReference Kind="Category" Name="Style" />
+              <Choice Kind="ProcessAppFlag" Name="DefaultStyleSheet" />
+            </p:NodeReference>
+            <Pin Id="OnncAHAQXBPN68sFqVaOkT" Name="Background_Fill_Enabled" Kind="InputPin" />
+            <Pin Id="RKoWMgmRmsvN6NFihxXXyM" Name="Background_Fill_Color" Kind="InputPin" />
+            <Pin Id="DugQUFlyCpzLABBgDasQ1B" Name="Background_Stroke_Enabled" Kind="InputPin" />
+            <Pin Id="AKOF3jZ6dJAPNWIg6eStQp" Name="Background_Stroke_Color" Kind="InputPin" />
+            <Pin Id="M3sbFESJgn2PpGjfZREJBE" Name="Foreground_Fill_Enabled" Kind="InputPin" />
+            <Pin Id="JTf8s0cA22fMuv5YsgBO7V" Name="Foreground_Fill_Color" Kind="InputPin" />
+            <Pin Id="VPm3XrlbXjYNh7dAZ8cvl2" Name="Foreground_Highlight_Color" Kind="InputPin" />
+            <Pin Id="PPjVX5JBGSsMnS4kT9RMEc" Name="Foreground_Stroke_Enabled" Kind="InputPin" />
+            <Pin Id="KJTvQkMMEwzMo30HrBvqvb" Name="Foreground_Stroke_Color" Kind="InputPin" />
+            <Pin Id="OOde3X1cEcfL63PpyORIbJ" Name="Text_Enabled" Kind="InputPin" />
+            <Pin Id="AE0r22vpK2qNofPJkdNnxR" Name="Text_Color" Kind="InputPin" />
+            <Pin Id="MSA0L2JbMedPR38YqcfPT8" Name="Style Sheet" Kind="OutputPin" />
+          </Node>
+          <Pad Id="PFX3YkIuU9aOOe3wuLMbIN" Comment="Foreground_Fill_Color" Bounds="602,768,136,15" ShowValueBox="true" isIOBox="true" Value="0.4345998, 0.5425122, 0.8199998, 1">
+            <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="RGBA" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="SztTQVjV5lALANF0sm0qvh" Comment="Background_Fill_Color" Bounds="526,730,136,15" ShowValueBox="true" isIOBox="true" Value="0.05999999, 0.05999999, 0.05999999, 1">
+            <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="RGBA" />
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="KdTKK5TpWjnPJ5vScQ5VCP" Name="Create" />
         <Patch Id="JqQ55xVIbp9PzgWa6c2UoC" Name="Update" />
@@ -1441,6 +1476,8 @@
         <Link Id="GINKq2dV1CQPiIhBkNmDzE" Ids="MuMbo9y2RoBM5M9zLmVv9L,SNjvhl62PD7Ou3nBTLM2tG" />
         <Link Id="Bi0BTQn2cgYMRgUfLdj4DS" Ids="MuMbo9y2RoBM5M9zLmVv9L,KkE7u4k92x3P9XBhtEqqEH" />
         <Link Id="AL75oyiVQeHM6xf3Yfmz1p" Ids="TvHLzyz271ANVuVV07lnnw,Qoz4PaglAxTP0Cpxlp6ilv" />
+        <Link Id="BnnCm6FpfOZLQtm0Fnk67F" Ids="PFX3YkIuU9aOOe3wuLMbIN,JTf8s0cA22fMuv5YsgBO7V" />
+        <Link Id="GUm6Ioya8QsMvoz4rtwFtU" Ids="SztTQVjV5lALANF0sm0qvh,RKoWMgmRmsvN6NFihxXXyM" />
       </Patch>
     </Node>
   </Patch>
