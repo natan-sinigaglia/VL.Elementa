@@ -24,7 +24,7 @@ namespace Elementa
 
     public enum ComponentType
     {
-        Interactive, Hoverable, Selectable, Typeable, Taggable, Styleable, Taskable, Moveable, Resizeable, Orientable, Attributable, Subdividable
+        Interactive, Hoverable, Selectable, Typeable, Taggable, Styleable, Taskable, Moveable, Resizeable, Orientable, Attributable, Subdividable, Cycleable
     }
 
     public enum KnownWidget

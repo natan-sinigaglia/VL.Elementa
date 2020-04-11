@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.1.0.53" Version="0.128">
+<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.1.0" Version="0.128">
   <NugetDependency Id="Bx4nGhFSlx7OEGH3hH1ytr" Location="VL.CoreLib" Version="2020.1.0" />
   <Patch Id="M42lugPQdWSN4Vlxe0moaV">
     <Canvas Id="A02gPGbHulbL0imDA69yuH" DefaultCategory="VL.Elementa.Core" CanvasType="FullCategory">
@@ -50404,6 +50404,99 @@
             </ProcessDefinition>
           </Patch>
         </Node>
+        <!--
+
+    ************************ Cycleable ************************
+
+-->
+        <Node Name="Cycleable" Bounds="5399,604" Id="BdY9nxCDqOTO1FAmKfO9MR">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ClassDefinition" Name="Class" />
+          </p:NodeReference>
+          <p:Interfaces>
+            <TypeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="InterfaceTypeFlag" Name="IComponent" />
+            </TypeReference>
+          </p:Interfaces>
+          <Patch Id="ELvfi5wujy1NP4IplSccu1">
+            <Canvas Id="NAL4kln85SVON032o3ZGb6" CanvasType="Group">
+              <Pad Id="VuIgjhus6ymONwXsip7bHd" Bounds="315,233,53,12" ShowValueBox="true" isIOBox="true" Value="Cycleable">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+              </Pad>
+              <ControlPoint Id="Fh7Q3QboGtgLJRSegf5Ibv" Bounds="315,265" />
+            </Canvas>
+            <ProcessDefinition Id="IHMMet8NzVrORxBbVWwd4N" HasStateOut="true">
+              <Fragment Id="Cd53LzoYgM7PDRgSHITDYH" Patch="HaXRmLmFyG7PoF9gWBkBNT" Enabled="true" />
+              <Fragment Id="FcoaWGk5OsqP0YOqwLiOe7" Patch="LBBPNHG7e7lNPeA0MGXgKk" />
+            </ProcessDefinition>
+            <Link Id="IKfBJWU5SvkNVJnElbtVzW" Ids="VuIgjhus6ymONwXsip7bHd,Fh7Q3QboGtgLJRSegf5Ibv" />
+            <Patch Id="HaXRmLmFyG7PoF9gWBkBNT" Name="Create" />
+            <Patch Id="LBBPNHG7e7lNPeA0MGXgKk" Name="GetName">
+              <Pin Id="BXx97Lmtxr6O15hSesb5Wk" Name="Name" Kind="OutputPin" />
+            </Patch>
+            <Link Id="PXSKdUeR92rQVnPkz3wYPL" Ids="Fh7Q3QboGtgLJRSegf5Ibv,BXx97Lmtxr6O15hSesb5Wk" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ GetCycleableComponent (Advanced) ************************
+
+-->
+        <Node Name="GetCycleableComponent (Advanced)" Bounds="5398,703,324,140" Id="R9DBfucglWdQHSbigbN3Mz">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="TB0MhSnRjYJMK6WLWYtDyC">
+            <Node Bounds="5410,749,117,19" Id="LPJlrJqcUpjPceegFn7yEU">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Utils" LastSymbolSource="VL.Elementa.Core.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="GetComponentOfType" />
+              </p:NodeReference>
+              <Pin Id="MFuyHUqQ9g5NnPGW9R6bGE" Name="Components" Kind="InputPin" />
+              <Pin Id="IDbKmtiU7YwPwzbnXdp9nT" Name="Component Type" Kind="InputPin" />
+              <Pin Id="SnkJFkB4x9rLu8QBiPFVfr" Name="Component" Kind="OutputPin" />
+              <Pin Id="CEkrTvmVj8VOW2u1UM4BSK" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="NZuM0lrVbKLMdIgkPdnyiR" Bounds="5412,729" />
+            <Link Id="AvqPubhKMLGOWHycwDk0QT" Ids="NZuM0lrVbKLMdIgkPdnyiR,MFuyHUqQ9g5NnPGW9R6bGE" />
+            <Pin Id="Ui0OMQt17RWP5rsT9PR3T0" Name="Components" Kind="InputPin" Bounds="5433,721" />
+            <Link Id="Qzwy1JKB2LIQH3SdZ1RU31" Ids="Ui0OMQt17RWP5rsT9PR3T0,NZuM0lrVbKLMdIgkPdnyiR" IsHidden="true" />
+            <Pad Id="Pg8eFMUnDWkPmRVQvnTaZM" Comment="Component Type" Bounds="5524,731,86,15" ShowValueBox="true" isIOBox="true" Value="Cycleable">
+              <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Core" LastSymbolSource="VL.Elementa.Core.vl">
+                <Choice Kind="TypeFlag" Name="ComponentType" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Link Id="OBVJ1uGxESHMITXA4CykSH" Ids="Pg8eFMUnDWkPmRVQvnTaZM,IDbKmtiU7YwPwzbnXdp9nT" />
+            <Node Bounds="5410,782,48,19" Id="NtCIwIXFgayQHIS73HgMyC">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="CastAs" />
+              </p:NodeReference>
+              <Pin Id="RtGsKg0xLH2P2HZWUvq2AS" Name="Input" Kind="StateInputPin" />
+              <Pin Id="TqThbdNP9u2PCVo49NW4Wz" Name="Default" Kind="InputPin" />
+              <Pin Id="OuvPie9MihQL6egdCSKznA" Name="Result" Kind="OutputPin" />
+              <Pin Id="IVnmrD5JnEMP62pE0haovS" Name="Success" Kind="OutputPin" />
+            </Node>
+            <Link Id="N8Vj7s8Uq86O11SARdAus1" Ids="SnkJFkB4x9rLu8QBiPFVfr,RtGsKg0xLH2P2HZWUvq2AS" />
+            <ControlPoint Id="DUm3n3h25fgMmdy2R3mO33" Bounds="5412,826" />
+            <Link Id="UE1ayW91LNKOEiRaORrhTS" Ids="OuvPie9MihQL6egdCSKznA,DUm3n3h25fgMmdy2R3mO33" />
+            <Pin Id="Q0XHSLDg2GmMlFURBDsEst" Name="Result" Kind="OutputPin" Bounds="5416,814">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Cycleable" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Link Id="QyGtIcxCJZZNBwsexArgNj" Ids="DUm3n3h25fgMmdy2R3mO33,Q0XHSLDg2GmMlFURBDsEst" IsHidden="true" />
+            <ControlPoint Id="RZLCm9DG3GVONZygWDPDmG" Bounds="5524,824" />
+            <Link Id="ONOVOUHjCOIQUo61DTGmiJ" Ids="CEkrTvmVj8VOW2u1UM4BSK,RZLCm9DG3GVONZygWDPDmG" />
+            <Pin Id="BLm0kpyVOj9MMRf6E4S0nH" Name="Found" Kind="OutputPin" Bounds="5539,824" />
+            <Link Id="IqWODTRYykTO6KI0DBnZJX" Ids="RZLCm9DG3GVONZygWDPDmG,BLm0kpyVOj9MMRf6E4S0nH" IsHidden="true" />
+          </Patch>
+        </Node>
+        <Overlay Id="Bhs3A3aMaQfNLW9b0AVhy8" Name="Cycleable" Bounds="5338,514,424,391">
+          <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
+        </Overlay>
       </Canvas>
       <!--
 
