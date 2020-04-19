@@ -20,6 +20,10 @@ Skia based rendering.
 - mapping between external ValueProperties of different types
 - New help patches explaining custom drawers, shared value properties and Moveable/Resizeable components
 
+### 1.0.0
+
+- First version of the architecture
+
 ## Installing
 
 To use the latest stable version, go to Gamma's command line and type
