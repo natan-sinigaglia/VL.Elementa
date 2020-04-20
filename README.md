@@ -3,6 +3,31 @@
 UI widgets library made in VL. 
 Skia based rendering.
 
+
+## Installing
+
+To use the latest stable version:
+- go to Gamma's Quad menu > Manage Nugets > Commandline and type:
+
+```
+nuget install vl.elementa
+```
+- press Enter and wait the ending of the installation process
+
+
+## Contributing to the development
+
+- Clone the repo
+- build the solution located in the `src` folder in `Release` mode. 
+- You can then start contributing to the lib.
+
+
+## Licencing
+MIT License - You're free to use VL.Elementa in your creative & commercial projects.
+
+[Natan Sinigaglia] / [http://natansinigaglia.com/]
+
+
 ## Changelog
 
 ### 2.0.0
@@ -23,15 +48,3 @@ Skia based rendering.
 ### 1.0.0
 
 - First version of the architecture
-
-## Installing
-
-To use the latest stable version, go to Gamma's command line and type
-
-```
-nuget install vl.elementa -pre
-```
-
-## Contributing
-
-- Clone the repo and build the solution located in the `src` folder in `Release` mode. You can then start contributing to the lib.
