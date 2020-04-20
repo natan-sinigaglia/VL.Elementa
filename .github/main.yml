@@ -1,0 +1,34 @@
+name: push_nuget
+
+# on push on master
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - README.md
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@master
+    
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+
+    - name: Setup Nuget.exe
+      uses: nuget/setup-nuget@v1
+      
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1.4.0
+  
+    - name: Build
+      run: msbuild src\Elementa\Elementa.csproj /t:Build /v:m /m /restore /p:Configuration=Release 
+    
+    - name: Nuget Pack
+      run: nuget pack ./deployment/Elementa.nuspec -Symbols -SymbolPackageFormat snupkg
+      
+    - name: Nuget Push
+      run: nuget push *.nupkg ${{ secrets.NUGET_KEY }} -src https://api.nuget.org/v3/index.json
