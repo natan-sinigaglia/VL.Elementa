@@ -8,11 +8,6 @@ trigger:
 pool:
   vmImage: 'vs2017-win2016'
 
-variables:
-  Major: '2'
-  Minor: '0'
-  Patch: '0'
-
 steps:
 - task: NuGetCommand@2
   inputs:
@@ -31,10 +26,6 @@ steps:
   inputs:
     command: pack
     packagesToPack: '**/*.nuspec'
-    versioningScheme: byPrereleaseNumber
-    majorVersion: '$(Major)'
-    minorVersion: '$(Minor)'
-    patchVersion: '$(Patch)'
 
 - task: NuGetCommand@2
   displayName: 'NuGet push'
