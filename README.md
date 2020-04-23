@@ -32,6 +32,7 @@ To use the latest stable version:
 ## Licencing
 
 MIT License - You're free to use VL.Elementa in your creative & commercial projects.
+
 [Natan Sinigaglia](http://natansinigaglia.com/)
 
 
