@@ -60,4 +60,15 @@ namespace Elementa
     {
         None, Top, Middle, Bottom
     }
+
+    public enum Axis_Constraint
+    {
+        NoConstraint, Horizontal, Vertical
+    }
+
+    public enum Handlers_Offset
+    {
+        Internal, OnEdge, External
+    }
+
 }
