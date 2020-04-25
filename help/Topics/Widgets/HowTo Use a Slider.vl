@@ -26,8 +26,8 @@
             <Pin Id="H1BGh0yoPixNB0oFQzst4q" Name="Input" Kind="InputPin" />
             <Pin Id="BeuhvBfhRECMTJHAuzisW7" Name="Base StyleSheet" Kind="InputPin" />
             <Pin Id="J4wt5eNONfqO00gfb1jPgr" Name="Output" Kind="OutputPin" />
-            <Pin Id="UImEiRwv77uMxYGtuEUv7S" Name="Layout Rebuild" Kind="OutputPin" />
             <Pin Id="HxRUtGRJPLeNvrcthcUq0d" Name="Dirty Graph" Kind="OutputPin" />
+            <Pin Id="T6UuYkXLt98PTg3ix9gE1v" Name="Rebuild Layout" Kind="OutputPin" />
           </Node>
           <Node Bounds="28,680,165,19" Id="QN43muRCtR1NglHh6whVhm">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
@@ -59,15 +59,6 @@
             <Pin Id="GpkAqadOXZ3OxnZIa8hj8W" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="Duye1H0ELv5LPbk7VxeuOh" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Pad Id="HqYmUROjcNELpw83fVCVMY" Bounds="50,139,192,26" ShowValueBox="true" isIOBox="true" Value="Slider">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">15</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
           <Node Bounds="67,444,48,19" Id="Plz2JIiMzWuLFE2S4OOa5g">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Slider.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -82,15 +73,15 @@
             <Pin Id="Os8ZuWOzhqMNU1VzaEfWoz" Name="Size" Kind="InputPin" />
             <Pin Id="TkXCFTH9MwUNgvbdug2dV1" Name="Value" Kind="InputPin" />
             <Pin Id="RNseNzkbnq3NVnQuWFiXws" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="NGLX78xu7g4LZRISwCDrLQ" Name="On Interaction" Kind="OutputPin" />
             <Pin Id="NnI1MrKhGB2OFZiEdlyAq6" Name="Value" Kind="OutputPin" />
-            <Pin Id="AT0ulq9yafaM2ctSwA8Lha" Name="Value Stream" Kind="OutputPin" />
           </Node>
           <Pad Id="N3tSRqy04YUMp0zdLfKcxV" Comment="Position" Bounds="68,269,35,28" ShowValueBox="true" isIOBox="true" Value="0.23, 0.64">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="BhsJWAk2TelM6IK7kvBE3U" Bounds="187,276,90,76" ShowValueBox="true" isIOBox="true" Value="Sets the position and size of the widget">
+          <Pad Id="BhsJWAk2TelM6IK7kvBE3U" Bounds="194,279,90,76" ShowValueBox="true" isIOBox="true" Value="Sets the position and size of the widget">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -99,7 +90,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="DzYtlNJiqg8OYwW0QzWsbU" Bounds="187,373,74,57" ShowValueBox="true" isIOBox="true" Value="Sets the value of the widget">
+          <Pad Id="DzYtlNJiqg8OYwW0QzWsbU" Bounds="194,376,74,57" ShowValueBox="true" isIOBox="true" Value="Sets the value of the widget">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -118,12 +109,13 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="312,591,205,19" Id="Dmd0jSLPrgrPw9cNRZQhxe">
+          <Node Bounds="372,591,205,19" Id="Dmd0jSLPrgrPw9cNRZQhxe">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Slider.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Slider" />
             </p:NodeReference>
-            <Pin Id="Psz1ZlMWDALPWaY1xp5oIv" Name="Position" Kind="InputPin" DefaultValue="0.14, 0.24">
+            <Pin Id="QJLkSNctWDDN8L4aMBGXDy" Name="Value Property Input" Kind="InputPin" />
+            <Pin Id="Psz1ZlMWDALPWaY1xp5oIv" Name="Position" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Vector2" />
               </p:TypeAnnotation>
@@ -131,24 +123,23 @@
             <Pin Id="OpnRuHVOKhfMy4osUb0OvW" Name="Size" Kind="InputPin" />
             <Pin Id="PONvQ7uTDYLPpIAjWIRJwA" Name="Anchor" Kind="InputPin" />
             <Pin Id="OT6J8q64BhoPVRddY5fqML" Name="Orientation" Kind="InputPin" />
-            <Pin Id="QJLkSNctWDDN8L4aMBGXDy" Name="Value Property Input" Kind="InputPin" />
+            <Pin Id="UIJzCUEgZdkMOLvnIVfOwb" Name="Enable Interaction" Kind="InputPin" />
             <Pin Id="QiVtfDUgwivNivHBmw1l9P" Name="Default" Kind="InputPin" />
             <Pin Id="VoXljhCdD1NQRJND3KnoUc" Name="Min" Kind="InputPin" />
             <Pin Id="OaqerJkmHKWOzxs5kZK9Ta" Name="Max" Kind="InputPin" />
             <Pin Id="BxIMdRggvzYMMqj1wd2Lnf" Name="Value" Kind="InputPin" />
             <Pin Id="LRRbdX6e4P3NZ7aDJVUDki" Name="Push Input Value To Observable" Kind="InputPin" />
-            <Pin Id="UIJzCUEgZdkMOLvnIVfOwb" Name="Enable Interaction" Kind="InputPin" />
             <Pin Id="Dtxe4KwpQzzMPmICshFHO7" Name="Output" Kind="StateOutputPin" />
             <Pin Id="Tb6stmDgBXBLzCUjAjaiS6" Name="Value Property Output" Kind="OutputPin" />
+            <Pin Id="Iza2aRpl3K3NI2eNoiuTML" Name="On Interaction" Kind="OutputPin" />
             <Pin Id="O95bTqKSBRUK9u1DhasdWb" Name="Value" Kind="OutputPin" />
-            <Pin Id="UDgai12ijrbPSW4RhiKHYk" Name="Value Stream" Kind="OutputPin" />
           </Node>
-          <Pad Id="GT77UvOehdnQTNlV7jPOFm" Comment="Anchor" Bounds="354,275,91,15" ShowValueBox="true" isIOBox="true" Value="TopLeft">
+          <Pad Id="GT77UvOehdnQTNlV7jPOFm" Comment="Anchor" Bounds="431,305,91,15" ShowValueBox="true" isIOBox="true" Value="TopLeft">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="RectangleAnchor" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="UZLOZN86wUeN6PONfWiGA5" Comment="Orientation" Bounds="374,307,76,15" ShowValueBox="true" isIOBox="true" Value="Horizontal">
+          <Pad Id="UZLOZN86wUeN6PONfWiGA5" Comment="Orientation" Bounds="451,342,76,15" ShowValueBox="true" isIOBox="true" Value="Horizontal">
             <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="TypeFlag" Name="Layout_Orientation" />
             </p:TypeAnnotation>
@@ -207,7 +198,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Taw0Ddtvid7MjZ7qGsUw3p" Comment="Value Property Input" Bounds="394,346,35,15" ShowValueBox="true" isIOBox="true">
+          <Pad Id="Taw0Ddtvid7MjZ7qGsUw3p" Comment="Value Property Input" Bounds="372,268,35,15" ShowValueBox="true" isIOBox="true">
             <p:TypeAnnotation LastCategoryFullName="Elementa.Core.ValueProperty" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="TypeFlag" Name="IValuePropertyT" />
               <p:TypeArguments>
@@ -217,49 +208,57 @@
               </p:TypeArguments>
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="H9zinaUpHfzQGOoL3UQbu7" Comment="Default" Bounds="415,394,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+          <Pad Id="H9zinaUpHfzQGOoL3UQbu7" Comment="Default" Bounds="493,416,35,15" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="KxtU2VmN4zwOcIfqL6fsdg" Comment="Min" Bounds="433,428,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+          <Pad Id="KxtU2VmN4zwOcIfqL6fsdg" Comment="Min" Bounds="513,453,35,15" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="TBQpxuiqTE5L0qyGRVLqI1" Comment="Max" Bounds="455,461,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+          <Pad Id="TBQpxuiqTE5L0qyGRVLqI1" Comment="Max" Bounds="534,490,35,15" ShowValueBox="true" isIOBox="true" Value="1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="TsjDIJPTHauMdTCWj0htMY" Comment="" Bounds="474,493,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+          <Pad Id="TsjDIJPTHauMdTCWj0htMY" Comment="" Bounds="554,527,35,15" ShowValueBox="true" isIOBox="true" Value="0">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="C8pppcsd1zILRQntuUVWTx" Comment="Push Input Value To Observable" Bounds="494,537,35,15" ShowValueBox="true" isIOBox="true" Value="False">
+          <Pad Id="C8pppcsd1zILRQntuUVWTx" Comment="Push Input Value To Observable" Bounds="574,564,35,15" ShowValueBox="true" isIOBox="true" Value="False">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="ILVqb0nbz0NPNCr261XsFd" Comment="Enable Interaction" Bounds="514,570,35,15" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="ILVqb0nbz0NPNCr261XsFd" Comment="Enable Interaction" Bounds="473,379,35,15" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="146,537" Id="HpkZDv5ADuuLTH4BiUjyko">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Toggle.vl">
+          <Overlay Id="O2lSW1L5AvdM5zivJM4gWh" Name="With all optional pins enabled" Bounds="324,211,597,494" />
+          <Node Bounds="89,509,65,19" Id="C0JdbRpKB5ZOIqAcwTzcSL">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Toggle" />
-              <CategoryReference Kind="Category" Name="Widget" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
             </p:NodeReference>
-            <Pin Id="PItznnEVt4NPY8KU4hPRqL" Name="Position" Kind="InputPin" />
-            <Pin Id="Rd8jtqn2pvDOoIm3CNuKwE" Name="Size" Kind="InputPin" />
-            <Pin Id="Q2GendtlTh1LrX3whqLIOn" Name="Value" Kind="InputPin" />
-            <Pin Id="SwLTTahtelyNSsTwS6YPyw" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="NP2p0tHADo7P3FMtxPGU1l" Name="Value" Kind="OutputPin" />
-            <Pin Id="K1oE8BhswpCQVgBzKh5Y0E" Name="On Interaction" Kind="OutputPin" />
+            <Pin Id="C2zd7cwjb6pOFkURW9WTg6" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="U6Z6YsBpDQbQNuU9M3fpdK" Name="Reset" Kind="InputPin" />
+            <Pin Id="PrWJr06lz2pLvcmcIEQNJP" Name="Value" Kind="OutputPin" />
+            <Pin Id="TPP9bdxPE55LOMiChFlNqW" Name="On Data" Kind="OutputPin" />
           </Node>
+          <Pad Id="GL1HdZz3vWiLXVEyA2wbsf" Comment="" Bounds="112,482,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="V5216DqNpkWPT2CdtaCnOC" Comment="" Bounds="91,547,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="BhMc53M2ELhLn22PprxnzJ" Comment="On Data" Bounds="151,547,35,15" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="SEyLzdwh507LonbDyXztAL" Name="Create" />
         <Patch Id="AgmKk3ReH1YM4lJdnXTDrX" Name="Update" />
@@ -281,9 +280,13 @@
         <Link Id="IN1Z7UnH5vEMj5xrGd72Z3" Ids="TsjDIJPTHauMdTCWj0htMY,BxIMdRggvzYMMqj1wd2Lnf" />
         <Link Id="Jla1DooL3MbQTxVqAPEZBJ" Ids="C8pppcsd1zILRQntuUVWTx,LRRbdX6e4P3NZ7aDJVUDki" />
         <Link Id="LYjTfYlhA9BQEX7uHMnRss" Ids="ILVqb0nbz0NPNCr261XsFd,UIJzCUEgZdkMOLvnIVfOwb" />
+        <Link Id="FDBcaEvN6cUQRGHnRxPYel" Ids="NGLX78xu7g4LZRISwCDrLQ,C2zd7cwjb6pOFkURW9WTg6" />
+        <Link Id="AyrcjePwNfhLjoy8JmpDzR" Ids="NnI1MrKhGB2OFZiEdlyAq6,GL1HdZz3vWiLXVEyA2wbsf" />
+        <Link Id="O5PdHk7JUocOptKzJ59syB" Ids="PrWJr06lz2pLvcmcIEQNJP,V5216DqNpkWPT2CdtaCnOC" />
+        <Link Id="KYPrJHK86LTQKPnDRPuXXS" Ids="TPP9bdxPE55LOMiChFlNqW,BhMc53M2ELhLn22PprxnzJ" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="PbFo6MJa84DLNbbEUx82fj" Location="VL.Skia" Version="2020.1.0" />
-  <NugetDependency Id="NN9I3gABWNPNYPFRk7wonL" Location="VL.Elementa" Version="0.0.0.0" />
+  <NugetDependency Id="NN9I3gABWNPNYPFRk7wonL" Location="VL.Elementa" Version="2.0.4" />
 </Document>
