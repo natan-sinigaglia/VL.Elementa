@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="LzMjUaykIQNQZVZRqZbfsT" LanguageVersion="2020.1.0.53" Version="0.128">
+<Document xmlns:p="property" Id="LzMjUaykIQNQZVZRqZbfsT" LanguageVersion="2020.1.0" Version="0.128">
   <NugetDependency Id="MEgvkgDAUyoM2xYNckjF6c" Location="VL.CoreLib" Version="2020.1.0" />
   <Patch Id="CKMkPQ9jcvFOud1V03wdaJ">
     <Canvas Id="TAihHTTd0iRMoz2I7RCUem" DefaultCategory="VL.Elementa.Widget" CanvasType="FullCategory">
@@ -71,7 +71,7 @@
                   <Pin Id="Jh2Iu0XE8lZQa6YUiLrwjv" Name="Apply" Kind="InputPin" />
                   <Pin Id="NyipaU9F1NlMaMUEHasxPi" Name="Output" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="664,410,85,26" Id="Pxp5Qvfqz6xNH3ol7zQejG">
+                <Node Bounds="664,410,16,26" Id="Pxp5Qvfqz6xNH3ol7zQejG">
                   <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="GetTextStyle" />
@@ -124,7 +124,11 @@
                     <Choice Kind="OperationCallFlag" Name="&gt;" />
                   </p:NodeReference>
                   <Pin Id="QDINe5LBMSyOaUicdYDXac" Name="Input" Kind="InputPin" />
-                  <Pin Id="GRApAvxII0dOlL0WFjzWk2" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="GRApAvxII0dOlL0WFjzWk2" Name="Input 2" Kind="InputPin">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="Integer32" />
+                    </p:TypeAnnotation>
+                  </Pin>
                   <Pin Id="OKGE0PF2btwO6I6aPgUvUh" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="600,487,45,19" Id="OfMWVUDSeKALz3niqgzbvP">
@@ -444,7 +448,6 @@
           <Link Id="AhvJAz5FzYkNHcIuvkijNm" Ids="HGqlSW9JJebOwO7wL2XM0M,QCbIASNNz27OhF4GspQMXy" />
           <Link Id="JEzK4rftEMsNLS6WDpRpTe" Ids="MmY4VYuId9zOPExvc4uveG,D2aO3Bue5odN760hFndKkn" />
           <Link Id="OySmQI1NdtKLMqTJ5SvlSc" Ids="MMmSK5tPs9XLMtHxrt0ukL,BhJ5QAjLILiMe1JD1ubCau" />
-          <Link Id="QURIf8APepbPbvqruqjsLJ" Ids="TgBY82giefZPNOnbeMAjol,VnjrFvDOPWUMrkuhA03Uvi" />
           <Patch Id="Ggk1A5Y7kXWLYVjMod8n3c" Name="Create (Internal)" />
           <Patch Id="SDHmfzfSJ7hPkF89juyeLI" Name="Update (Internal)" ManuallySortedPins="true" />
           <Patch Id="MZEiSUltmb6MqOY57ZO3KL" Name="GetDrawerLayer (Internal)">
@@ -487,6 +490,7 @@
           <Link Id="Spj35eGmVcCPAtfCO2rZAk" Ids="Cdmdcm8GoBTPBjUhZlVj8l,TlAmaDrcTALLnkKx9Cxz8C" />
           <Link Id="QLpGM04hmkAP3i4hC5RSC8" Ids="U7krjUvQxWGNbkc8fZ8O9O,RSmeNCn1rcTQF8RqQohL1U" />
           <Link Id="IBM1UzNasewLcxtM0ofBeo" Ids="BLse3sfaOTVMp0V03qB0Ee,NafEjShqiSiONnrlVbUveJ" />
+          <Link Id="QT8o0L7Fd8nN5HWzuV03VT" Ids="TgBY82giefZPNOnbeMAjol,VnjrFvDOPWUMrkuhA03Uvi" />
         </Patch>
       </Node>
       <!--
@@ -1616,7 +1620,7 @@
     ************************ TextField ************************
 
 -->
-      <Node Name="TextField" Bounds="156,201" Id="VpVW4XmTsC5Mg8AfcwUBe7">
+      <Node Name="TextField" Bounds="156,201" Id="VpVW4XmTsC5Mg8AfcwUBe7" Summary="An editable text-field" Tags="ui,text,field">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1954,24 +1958,6 @@
             <ControlPoint Id="QKcnDfnjlYqPbybX3e5AY5" Bounds="1241,567" />
             <ControlPoint Id="BNeKcYs18h8P8xmkWd5ooX" Bounds="1404,564" />
           </Canvas>
-          <ProcessDefinition Id="CcKQTESZshFLVz5rXAIn1c" HasStateOut="true">
-            <Fragment Id="JLDxxZcrBybNcoBNE9wk9M" Patch="I9KqMCAMG0zNlOE3dZaerR" Enabled="true" />
-            <Fragment Id="KH9NK6g9KVqP02wzR9QBWw" Patch="NgoiD25NkW6QPyrDYBvOk0" />
-            <Fragment Id="K8nbdS6BANHPNo7DgsJnw4" Patch="PSkx97aMv5lOw30JSHsdyQ" Enabled="true" />
-            <Fragment Id="CAxwfwNdjlcMaxGLOssaOA" Patch="SoOLyFELQHKNNheQ7Zl4YP" />
-            <Fragment Id="DZr0Qx9uQX0NK1DAlFfzZu" Patch="RF6fzUV2o2wQGInq4nhCfV" />
-            <Fragment Id="B4CwaTeIbpuMfmROOCjRON" Patch="EFczhtxBb8kLBVUZW5Pax1" />
-            <Fragment Id="DQQGOdIl4lyQMPrK7U4UsV" Patch="Avj7Xw70KDXMUy4OBva59L" />
-            <Fragment Id="Jm9D1MDZES0PdLGcNXCyqc" Patch="T4I7gIIVU0AQTjC05eViQC" />
-            <Fragment Id="VFn0ojuP9R0M9ajJhc2bEe" Patch="MrIv0UCLDWgPbM3Ugiuqvj" />
-            <Fragment Id="Uiy1sSmlB44P404bS6Imkd" Patch="HK7VHjsLYGkMD9xYhgFBQQ" Enabled="true" />
-            <Fragment Id="TEikEL529kbPp8WctVw83x" Patch="U8tmMuprhyuNCkZUcAfxX1" Enabled="true" />
-            <Fragment Id="BXclAqS2bZgNUpRHTHsblW" Patch="TobBdCbU4T2OyAIrICdjP7" />
-            <Fragment Id="DDQFjvBMrnhN4ha9enylpf" Patch="KegVLp4P4qVQO9eJ5xwUZ4" Enabled="true" />
-            <Fragment Id="Nif1q2n2SQlQRDztPQaWh2" Patch="PkCseoHIjAHLAHeGoucGHz" />
-            <Fragment Id="J8YPyXbloYwOiFF9GM6gSm" Patch="SGb4Ur2bpSjQA5o5jKCNLz" />
-            <Fragment Id="PBXktPa3gnILWQaLIJdv9F" Patch="Gj8D6V3ea5xOENGvIR2uaC" />
-          </ProcessDefinition>
           <Slot Id="LWeu9jzYbOpMy6op0siskB" Name="Logic" />
           <Link Id="TVGq6N69rxiNAurGELMuHJ" Ids="Ib6tZNBUuUiMu6Xcf3CATF,UdJNgHkxoVzLjxuilsBcc8" />
           <Link Id="UcLY9nRmyucMlhdhoQcnQS" Ids="TVaD6uTLHMlNIlX32cbwGN,CzJHd8wvgc3LDPt5XX1eSX" IsHidden="true" />
@@ -2051,14 +2037,7 @@
           <Link Id="ATcWC8ulrouMkorvjKWEvU" Ids="GtlwOrQy2P4Mf7vbvpj6YX,TOLcmbHfHbJOgMTDkzBzF7" />
           <Patch Id="I9KqMCAMG0zNlOE3dZaerR" Name="Create (Internal)" ParticipatingElements="TVGq6N69rxiNAurGELMuHJ" />
           <Patch Id="PSkx97aMv5lOw30JSHsdyQ" Name="Update (Internal)" ManuallySortedPins="true">
-            <Pin Id="JWCl7Mjm48bLFpdRBkKl0V" Name="Position" Kind="InputPin" Bounds="323,389" />
-            <Pin Id="Czy4B1Isxb6N8umASPvC1K" Name="Size" Kind="InputPin" Bounds="344,427" DefaultValue="1.2, 0.4">
-              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Vector2" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="KLpMaXoMpDqLLY59g5OG9v" Name="Anchor" Kind="InputPin" Bounds="881,125" Visibility="Optional" />
-            <Pin Id="ScmrBu1lvaUNVYRMx5V7bE" Name="Value Property Input" Kind="InputPin" Visibility="Optional">
+            <Pin Id="ScmrBu1lvaUNVYRMx5V7bE" Name="Value Property Input" Kind="InputPin" Visibility="Optional" Summary="An external value property to be controlled by this widget">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="IValuePropertyT" />
                 <p:TypeArguments>
@@ -2068,33 +2047,40 @@
                 </p:TypeArguments>
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="PdlryG6HUJiNNR04DlOZhA" Name="Default" Kind="InputPin" Bounds="803,152" DefaultValue="[text]" Visibility="Optional">
+            <Pin Id="JWCl7Mjm48bLFpdRBkKl0V" Name="Position" Kind="InputPin" Bounds="323,389" Summary="Sets the widget's position" />
+            <Pin Id="Czy4B1Isxb6N8umASPvC1K" Name="Size" Kind="InputPin" Bounds="344,427" DefaultValue="1.2, 0.4" Summary="Sets the widget's size">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="KLpMaXoMpDqLLY59g5OG9v" Name="Anchor" Kind="InputPin" Bounds="881,125" Visibility="Optional" Summary="Sets the widget's anchor" />
+            <Pin Id="TVaD6uTLHMlNIlX32cbwGN" Name="Enable Interaction" Kind="InputPin" Bounds="319,659" DefaultValue="True" Visibility="Optional" Summary="Enables user interaction. False makes the widget read-only">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="PdlryG6HUJiNNR04DlOZhA" Name="Default" Kind="InputPin" Bounds="803,152" DefaultValue="[text]" Visibility="Optional" Summary="Sets the widget's default value. Will be recalled when middle-clicking it.">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="IARFzMSX3BALxZ0qqeIXqK" Name="Value" Kind="InputPin" Bounds="586,255" />
-            <Pin Id="DoBs1I08v9sNscuS0hkgRK" Name="Push Input Value To Observable" Kind="InputPin" Bounds="405,183" DefaultValue="False" Visibility="Optional">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="TVaD6uTLHMlNIlX32cbwGN" Name="Enable Interaction" Kind="InputPin" Bounds="319,659" DefaultValue="True" Visibility="Optional">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="IARFzMSX3BALxZ0qqeIXqK" Name="Value" Kind="InputPin" Bounds="586,255" Summary="Sets the widget's value" />
             <Pin Id="HEC0rMdRIwAMFIegc3yl9D" Name="Return Carriage Letters Count" Kind="InputPin">
               <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="DoBs1I08v9sNscuS0hkgRK" Name="Push Input Value To Observable" Kind="InputPin" Bounds="405,183" DefaultValue="False" Visibility="Optional" Summary="If True, pushes the input value to the widget's On Interaction output.">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="AB1qryqPQJzLWP5jVD5Fvr" Name="Component" Kind="InputPin" IsPinGroup="true">
+            <Pin Id="AB1qryqPQJzLWP5jVD5Fvr" Name="Component" Kind="InputPin" IsPinGroup="true" Summary="A component to add to the widget.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="Spread" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="HbzxVnODah0L8qV7RiVZfG" Name="Value Property Output" Kind="OutputPin" Bounds="289,422" Visibility="Optional" />
+            <Pin Id="HbzxVnODah0L8qV7RiVZfG" Name="Value Property Output" Kind="OutputPin" Bounds="289,422" Visibility="Optional" Summary="The value property used by this widget" />
           </Patch>
           <Patch Id="NgoiD25NkW6QPyrDYBvOk0" Name="SetGlobalBounds (Internal)">
             <Pin Id="CFecsmcGnDiNLZFivxO3F6" Name="Global Bounds" Kind="InputPin" />
@@ -2120,10 +2106,10 @@
             <Pin Id="F05wF2smcXuQEYzSl7dX9Q" Name="Components" Kind="OutputPin" />
           </Patch>
           <Patch Id="HK7VHjsLYGkMD9xYhgFBQQ" Name="GetValue (Internal)">
-            <Pin Id="GwiXQwF8vS4LcnspDcIhIu" Name="Value " Kind="OutputPin" />
+            <Pin Id="GwiXQwF8vS4LcnspDcIhIu" Name="Value " Kind="OutputPin" Summary="Returns the widget's value" />
           </Patch>
           <Patch Id="U8tmMuprhyuNCkZUcAfxX1" Name="GetValueStream (Internal)">
-            <Pin Id="NKPa2U7QTojOvLHXz2hIbX" Name="Value Observable" Kind="OutputPin" />
+            <Pin Id="NKPa2U7QTojOvLHXz2hIbX" Name="On Interaction" Kind="OutputPin" Summary="Returns the widget's value as an Observable" />
           </Patch>
           <Patch Id="TobBdCbU4T2OyAIrICdjP7" Name="SetTransformation (Internal)">
             <Pin Id="Hp0EVDpKbkFNhyeG6BafNx" Name="Transformation" Kind="InputPin" />
@@ -2149,6 +2135,24 @@
           <Link Id="BEEaKPlH6r4QUnbo6pikjW" Ids="BeE4U39vFHELz8MfM3b6xY,BNeKcYs18h8P8xmkWd5ooX" IsHidden="true" />
           <Link Id="KazCiflIoQcQRiiPttR6FC" Ids="QKcnDfnjlYqPbybX3e5AY5,PaUEuOfLHDWL1QGxIJP4ZS" />
           <Link Id="BR3aSGI4YJ5OUcCu4ScMqh" Ids="BNeKcYs18h8P8xmkWd5ooX,Hr1bpabcBpGLY8hdkgTDnd" />
+          <ProcessDefinition Id="CcKQTESZshFLVz5rXAIn1c" HasStateOut="true">
+            <Fragment Id="JLDxxZcrBybNcoBNE9wk9M" Patch="I9KqMCAMG0zNlOE3dZaerR" Enabled="true" />
+            <Fragment Id="KH9NK6g9KVqP02wzR9QBWw" Patch="NgoiD25NkW6QPyrDYBvOk0" />
+            <Fragment Id="K8nbdS6BANHPNo7DgsJnw4" Patch="PSkx97aMv5lOw30JSHsdyQ" Enabled="true" />
+            <Fragment Id="CAxwfwNdjlcMaxGLOssaOA" Patch="SoOLyFELQHKNNheQ7Zl4YP" />
+            <Fragment Id="DZr0Qx9uQX0NK1DAlFfzZu" Patch="RF6fzUV2o2wQGInq4nhCfV" />
+            <Fragment Id="B4CwaTeIbpuMfmROOCjRON" Patch="EFczhtxBb8kLBVUZW5Pax1" />
+            <Fragment Id="DQQGOdIl4lyQMPrK7U4UsV" Patch="Avj7Xw70KDXMUy4OBva59L" />
+            <Fragment Id="Jm9D1MDZES0PdLGcNXCyqc" Patch="T4I7gIIVU0AQTjC05eViQC" />
+            <Fragment Id="VFn0ojuP9R0M9ajJhc2bEe" Patch="MrIv0UCLDWgPbM3Ugiuqvj" />
+            <Fragment Id="TEikEL529kbPp8WctVw83x" Patch="U8tmMuprhyuNCkZUcAfxX1" Enabled="true" />
+            <Fragment Id="Uiy1sSmlB44P404bS6Imkd" Patch="HK7VHjsLYGkMD9xYhgFBQQ" Enabled="true" />
+            <Fragment Id="BXclAqS2bZgNUpRHTHsblW" Patch="TobBdCbU4T2OyAIrICdjP7" />
+            <Fragment Id="DDQFjvBMrnhN4ha9enylpf" Patch="KegVLp4P4qVQO9eJ5xwUZ4" />
+            <Fragment Id="Nif1q2n2SQlQRDztPQaWh2" Patch="PkCseoHIjAHLAHeGoucGHz" />
+            <Fragment Id="J8YPyXbloYwOiFF9GM6gSm" Patch="SGb4Ur2bpSjQA5o5jKCNLz" />
+            <Fragment Id="PBXktPa3gnILWQaLIJdv9F" Patch="Gj8D6V3ea5xOENGvIR2uaC" />
+          </ProcessDefinition>
         </Patch>
       </Node>
       <!--
