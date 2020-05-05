@@ -60,6 +60,7 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - Added node and pin descriptions on all widgets
 - Reorganized help patches
 - Deleted TextFieldMultiline, which is now TextField
+- Some minor fixes
 
 ### 2.0.0
 
