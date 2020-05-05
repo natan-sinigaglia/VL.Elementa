@@ -39,6 +39,11 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 2.1.1
+
+- New Image node
+- Fixes in help patches
+
 ### 2.1.0
 
 - New Panel node
