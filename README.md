@@ -41,6 +41,20 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ### 2.1.0
 
+- New Panel node
+- New Folder node
+- New Style utility nodes
+- New Tooltip component
+- Added GetStyleSheet operation in IElementum
+- Added GetComponentsVersion in IElementum
+- Changed GetDirtyLayout and GetDirtyGraph operations in IElementum to GetLayoutVersion and GetGraphVersion
+- Introduced ElementaContext class: every widget have access to the graph resources
+- Added SetElementaContext and SetMe operations in IElementum
+- Introduced SetElementaContext and SetParent operations in IComponent: each component has now access to any resource of the graph and can easily edit its own parent widget
+- Different Layout/Graph/Components changes check system
+- Help patches now referencing the nuget instead of the vl file (SavingAs the patches doesn't break the reference)
+- Cleaned Root node architecture
+- New componentProcessors management
 - Individual help patches available for all widgets
 - Added node and pin descriptions on all widgets
 - Reorganized help patches
