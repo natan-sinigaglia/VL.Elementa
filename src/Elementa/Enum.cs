@@ -71,4 +71,21 @@ namespace Elementa
         Internal, OnEdge, External
     }
 
+    public enum StyleProperties
+    {
+        Background_Fill_Enabled,
+        Background_Fill_Color,
+        Background_Fill_Paint,
+        Background_Stroke_Enabled,
+        Background_Stroke_Color,
+        Foreground_Fill_Enabled,
+        Foreground_Fill_Color,
+        Foreground_Fill_Paint,
+        Foreground_Highlight_Color,
+        Foreground_Stroke_Enabled,
+        Foreground_Stroke_Color,
+        Text_Enabled,
+        Text_Paint,
+        Text_Color
+    }
 }
