@@ -54,6 +54,7 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - Different Layout/Graph/Components changes check system
 - Help patches now referencing the nuget instead of the vl file (SavingAs the patches doesn't break the reference)
 - Cleaned Root node architecture
+- fixed Moveable and Resizeable components behaviour in multi selection scenarios
 - New componentProcessors management
 - Individual help patches available for all widgets
 - Added node and pin descriptions on all widgets
