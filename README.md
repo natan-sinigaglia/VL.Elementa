@@ -39,11 +39,20 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 2.2.2
+
+- Panel fix
+
+### 2.2.1
+
+- Cleanup in the node browser
+- some fixes
+
 ### 2.2.0
 
 - New LayerElementum widget
 - New Drawable component
-- General performance improved
+- Drawing performance improved
 
 ### 2.1.1
 
