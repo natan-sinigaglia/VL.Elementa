@@ -39,6 +39,10 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 2.2.3
+
+- Another small fix in Panel
+
 ### 2.2.2
 
 - Panel fix
