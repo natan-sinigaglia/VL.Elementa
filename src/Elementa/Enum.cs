@@ -88,4 +88,11 @@ namespace Elementa
         Text_Paint,
         Text_Color
     }
+
+    public enum Style_InheritFrom
+    {
+        Parent, None, Default
+    }
+
+
 }
