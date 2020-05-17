@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="HTxLgtbSsbINUTlDAghkhX" LanguageVersion="2020.1.1.97" Version="0.128">
-  <NugetDependency Id="TPCSsyvYw4CNrPtbVa0tNe" Location="VL.CoreLib" Version="2020.1.1-0097-g82bdf128a1" />
+<Document xmlns:p="property" Id="HTxLgtbSsbINUTlDAghkhX" LanguageVersion="2020.1.1.108" Version="0.128">
+  <NugetDependency Id="TPCSsyvYw4CNrPtbVa0tNe" Location="VL.CoreLib" Version="2020.1.1" />
   <Patch Id="NWuLXoD3gU8QFXtbblSsYL">
     <Canvas Id="InUr892uURPO3hNiqiWcyy" DefaultCategory="VL.Elementa.Widget" CanvasType="FullCategory">
       <!--
@@ -1477,9 +1477,16 @@
                           <Choice Kind="ProcessAppFlag" Name="Styleable" />
                         </p:NodeReference>
                         <Pin Id="PQxo36LGMyBPmgrjqhK33I" Name="Style Sheet" Kind="InputPin" />
+                        <Pin Id="IqhszYNrToXOE8IEwYp5zS" Name="Force Computation" Kind="InputPin" />
                         <Pin Id="LYcpaShzzNkO6h3xsovVbk" Name="Inherit From" Kind="InputPin" />
                         <Pin Id="Gusvn4PwfVHLKJKeCnVWrB" Name="Custom Validation Rule" Kind="InputPin" />
+                        <Pin Id="SJumSJScb2iLFVqHmw0j0J" Name="Element" Kind="InputPin" />
+                        <Pin Id="DJ7RQE79HqxLJ4JdSgvOpT" Name="Classes" Kind="InputPin" />
+                        <Pin Id="UR68h7A3djsLdPK1Oc4tJx" Name="ID" Kind="InputPin" />
                         <Pin Id="P6nWnnBRj3HMTJ2rDHRbbl" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="HKip2i77uQZN2SPIEPDz6R" Name="StyleSheet" Kind="OutputPin" />
+                        <Pin Id="SQb1giWRSHyOnAA48tngWL" Name="Style" Kind="OutputPin" />
+                        <Pin Id="K1n0SUzaPwFLV9gtAj5ift" Name="State Names" Kind="OutputPin" />
                         <Pin Id="IulKgI2CdrbQFZFKsFIXUk" Name="Custom Selection Rule" Kind="InputPin" />
                       </Node>
                       <Node Bounds="1333,319" Id="CYBUfzK6qarNt72zOQa8h8">
@@ -1570,7 +1577,7 @@
                     </p:NodeReference>
                     <Pin Id="VmRwfGziy7QQMoSz8PNSsR" Name="Components Spread" Kind="InputPin" />
                     <Pin Id="NN8M573byhHO7TJJxaU9gU" Name="Force" Kind="InputPin" />
-                    <Pin Id="JWDdqzTI51EPx8ITQo2sAJ" Name="Parent" Kind="InputPin" />
+                    <Pin Id="IPOAdRCR9v3NvtrPEcWgxT" Name="Elementum" Kind="InputPin" />
                     <Pin Id="HYCX97SagEmMTGIkHqAnWf" Name="Elementa Context" Kind="InputPin" />
                     <Pin Id="Ki9HnK0UpMiLUE0EzbnTzd" Name="Output" Kind="OutputPin" />
                     <Pin Id="Jj8FwQ57bK5Ociy21a1N8V" Name="Has Changed" Kind="OutputPin" />
@@ -3923,12 +3930,6 @@
             </Pin>
             <Pin Id="FP49IXgV2rSLyVv9zFerU8" Name="Value Property Output" Kind="OutputPin" Bounds="478,511" Visibility="Optional" />
           </Patch>
-          <ProcessDefinition Id="AfNjIm9MsvJLvP9rgcHtSj">
-            <Fragment Id="J9283WYysjtLKHYRQV0uw0" Patch="Jid8k4Hmar3L7OPXQNWX0w" Enabled="true" />
-            <Fragment Id="PLxPeEgNPtMNq4zZMavHP6" Patch="Q9KM29TAS1UNmUTgctPUtJ" Enabled="true" />
-            <Fragment Id="Duzhwd8i8HYNHktMjfDdWO" Patch="Vc3oXAtALGeNNN70psNo9q" Enabled="true" />
-            <Fragment Id="Umc23tUpWkbLjogITqvCgJ" Patch="RWKtEiIRpesMQiQqtSwNgj" Enabled="true" />
-          </ProcessDefinition>
           <Link Id="RZ6kbHd8LR0QPvXhuQ3edb" Ids="E90822Lw0GXNdIxXw1YfTl,Dg7l3N8SRNNPjV3R56Bq8i" />
           <Link Id="TkRCXPZq8ZoLGomeuIepg9" Ids="DZumkHUd65XMqzQCefKcyV,E90822Lw0GXNdIxXw1YfTl" IsHidden="true" />
           <Link Id="CDxjmKe4kT2P2WjKdYTlYy" Ids="EJ5xDqykKZQNMGsEVqeAm4,ABewwysac2VL19Ahcj6lvo" />
@@ -3959,12 +3960,18 @@
           <Link Id="Dlpdxttlj1YNRl2wcwNRhY" Ids="KxPXLc3QPNwPmHXgez3WtK,PIPcFgXk1kwMN2i6OVRhIk" IsHidden="true" />
           <Link Id="SOTWQnLC6wFP8nhaqVgOhe" Ids="N6ff0Xpom0rL9ZMMkpqzhj,ADQumM68ErLPwbeNwCoNAv" />
           <Link Id="METCkWKbfwkOt2wJhd7XVg" Ids="ADQumM68ErLPwbeNwCoNAv,Tq8NipQnHCLMX7sNKLGRMf" IsHidden="true" />
-          <Patch Id="Vc3oXAtALGeNNN70psNo9q" Name="GetValue">
+          <Patch Id="Vc3oXAtALGeNNN70psNo9q" Name="GetValue (Internal)">
             <Pin Id="Tq8NipQnHCLMX7sNKLGRMf" Name="Value" Kind="OutputPin" />
           </Patch>
-          <Patch Id="RWKtEiIRpesMQiQqtSwNgj" Name="GetValueStream">
+          <Patch Id="RWKtEiIRpesMQiQqtSwNgj" Name="GetValueStream (Internal)">
             <Pin Id="PIPcFgXk1kwMN2i6OVRhIk" Name="On Interaction" Kind="OutputPin" />
           </Patch>
+          <ProcessDefinition Id="AfNjIm9MsvJLvP9rgcHtSj">
+            <Fragment Id="J9283WYysjtLKHYRQV0uw0" Patch="Jid8k4Hmar3L7OPXQNWX0w" Enabled="true" />
+            <Fragment Id="PLxPeEgNPtMNq4zZMavHP6" Patch="Q9KM29TAS1UNmUTgctPUtJ" Enabled="true" />
+            <Fragment Id="Umc23tUpWkbLjogITqvCgJ" Patch="RWKtEiIRpesMQiQqtSwNgj" Enabled="true" />
+            <Fragment Id="Duzhwd8i8HYNHktMjfDdWO" Patch="Vc3oXAtALGeNNN70psNo9q" Enabled="true" />
+          </ProcessDefinition>
         </Patch>
       </Node>
       <!--
@@ -4039,12 +4046,6 @@
             </Pin>
             <Pin Id="IaYoozZg5RbLzaFT2AC3K6" Name="Value Property Output" Kind="OutputPin" Bounds="624,496" Visibility="Optional" />
           </Patch>
-          <ProcessDefinition Id="VibwvwG7x2uPDh0BSVqhQH">
-            <Fragment Id="U3T1vbO0FhTPVG5c0jJXaD" Patch="QMVZeFBBrNLMoP3529NwtG" Enabled="true" />
-            <Fragment Id="E8SUpdUqvEEQXkBLRU9Ijc" Patch="FPoWLF6i94WMRMC295G4RZ" Enabled="true" />
-            <Fragment Id="B6C4701NovhMrswJ1UI1C4" Patch="GHHZK8PYOvFLmP9A59tF4D" Enabled="true" />
-            <Fragment Id="BupZazZXeiXQHPFktPWxdq" Patch="Ea7qhoKp0s6MZfe9hYdyJw" Enabled="true" />
-          </ProcessDefinition>
           <Link Id="Bkajx5UdUtVLbe5HYSsuvu" Ids="DLZfZ7VqU8MNVq754lQssB,OBp8DqsOJaBMz3anDHF5SQ" />
           <Link Id="LjwoZwYHLS5MTrSIlR1fHm" Ids="JAtvke6LikAP59TSYlqbBx,DLZfZ7VqU8MNVq754lQssB" IsHidden="true" />
           <Link Id="PPFyjEb2gnQMqEhTjFKuT6" Ids="GHhNJ4ZEw3JM6uPQAIbQvK,R0UndEwDwaMMIZ1O01pgxs" />
@@ -4071,12 +4072,18 @@
           <Link Id="C45GuMgMi6PLkjO6oiWpqt" Ids="KDE0LKfWiY3O0X1Rtv6ZoX,OKKVYcqbwLZPDdb1yewXtH" IsHidden="true" />
           <Link Id="ML05hK9Mt8aQUVUxsgQ35v" Ids="GbORgS6y3hXL81FIItwXFG,ENTudChT5YbOyeQ9FD8jQA" />
           <Link Id="Mxib5z8JKqiN0gGe6idRd9" Ids="ENTudChT5YbOyeQ9FD8jQA,RY1XNLeuR2hNVfhA3ETxaF" IsHidden="true" />
-          <Patch Id="GHHZK8PYOvFLmP9A59tF4D" Name="GetValue">
+          <Patch Id="GHHZK8PYOvFLmP9A59tF4D" Name="GetValue (Internal)">
             <Pin Id="RY1XNLeuR2hNVfhA3ETxaF" Name="Value" Kind="OutputPin" />
           </Patch>
-          <Patch Id="Ea7qhoKp0s6MZfe9hYdyJw" Name="GetValueStream">
+          <Patch Id="Ea7qhoKp0s6MZfe9hYdyJw" Name="GetValueStream (Internal)">
             <Pin Id="OKKVYcqbwLZPDdb1yewXtH" Name="Value Stream" Kind="OutputPin" />
           </Patch>
+          <ProcessDefinition Id="VibwvwG7x2uPDh0BSVqhQH">
+            <Fragment Id="U3T1vbO0FhTPVG5c0jJXaD" Patch="QMVZeFBBrNLMoP3529NwtG" Enabled="true" />
+            <Fragment Id="E8SUpdUqvEEQXkBLRU9Ijc" Patch="FPoWLF6i94WMRMC295G4RZ" Enabled="true" />
+            <Fragment Id="BupZazZXeiXQHPFktPWxdq" Patch="Ea7qhoKp0s6MZfe9hYdyJw" Enabled="true" />
+            <Fragment Id="B6C4701NovhMrswJ1UI1C4" Patch="GHHZK8PYOvFLmP9A59tF4D" Enabled="true" />
+          </ProcessDefinition>
         </Patch>
       </Node>
     </Canvas>
@@ -4101,7 +4108,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="GkgDLAB3bRqQGHqeWoymOF" Location="VL.Skia" Version="2020.1.1-0097-g82bdf128a1" />
+  <NugetDependency Id="GkgDLAB3bRqQGHqeWoymOF" Location="VL.Skia" Version="2020.1.1" />
   <PlatformDependency Id="M9Ql3qm6H4NQA8CroGyLIz" Location="mscorlib" />
   <DocumentDependency Id="NTiy2F8YA7lNc0Wl197C3i" Location="../VL.Elementa.Core.vl" />
   <DocumentDependency Id="TuipeCPlj6mOYv5PGDP8uI" Location="./VL.Elementa.Widget.Bang.vl" />
