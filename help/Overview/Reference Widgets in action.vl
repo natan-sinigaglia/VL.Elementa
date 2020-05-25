@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="E5MfU7bL5QMQSdsgrPLQKd" LanguageVersion="2020.1.0.53" Version="0.128">
-  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2020.1.0" />
+<Document xmlns:p="property" Id="E5MfU7bL5QMQSdsgrPLQKd" LanguageVersion="2020.1.1.108" Version="0.128">
+  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2020.1.1" />
   <Patch Id="U2OktPJIft6LmRYDfHRaRo">
     <Canvas Id="OnAcnjd8HswONAJUfjLtjR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -131,7 +131,9 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="EwSGJBZy6yeOjQeFWi1Z6a" Name="Base StyleSheet" Kind="InputPin" />
+            <Pin Id="FfKR0s7253OLoDbqfhAMXt" Name="StyleSheet" Kind="InputPin" />
+            <Pin Id="EL5AsUwX34RPywxeC6bkHQ" Name="Use Default StyleSheet as Base" Kind="InputPin" />
+            <Pin Id="V78cs2Xy4yyNN499aKyCja" Name="Force Style Update" Kind="InputPin" />
             <Pin Id="AUZzdq1j3biLGCCeyJNLrl" Name="Output" Kind="OutputPin" />
             <Pin Id="A0OXlcy2FvaLIQh8x1zhMu" Name="Dirty Graph" Kind="OutputPin" />
             <Pin Id="AGygBeZ7xFVNDSkNc0hEW6" Name="Rebuild Layout" Kind="OutputPin" />
@@ -728,7 +730,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="VrCGmU45aRMNbObheaKMHm" Name="Bounds" Kind="InputPin" DefaultValue="1468, 36, 978, 982">
+            <Pin Id="VrCGmU45aRMNbObheaKMHm" Name="Bounds" Kind="InputPin" DefaultValue="1036, 27, 978, 982">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -1251,33 +1253,13 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="625,642,145,19" Id="GNZGcuN8nGFOmAnMJdSgmK">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="PanelStyleSheet" />
-            </p:NodeReference>
-            <Pin Id="HnWgYLu1N2mN2WW7WRnKdG" Name="ID" Kind="InputPin" />
-            <Pin Id="EKE5hJr1DvqNGrLHAzYWAu" Name="Inheritance" Kind="InputPin" DefaultValue="False">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="JTTKHlZCYd8P4a9T5mZUjV" Name="Fill_Enabled" Kind="InputPin" />
-            <Pin Id="KTDu7lyD3qWL6rno7lKbrC" Name="Panel_Fill_Paint" Kind="InputPin" />
-            <Pin Id="Ib7vDEQ2ItqM3LYX3gxyqH" Name="Panel_Fill_Color" Kind="InputPin" />
-            <Pin Id="Bvxi3ox81fCOr2tRgYxjPH" Name="Stroke_Enable" Kind="InputPin" />
-            <Pin Id="UggFtEx9NsGPpuDctH9Fx5" Name="Stroke_Paint" Kind="InputPin" />
-            <Pin Id="V1y8NvmdXZGMW45qH5Kgtj" Name="Stroke_Color" Kind="InputPin" />
-            <Pin Id="KB0TNh14LDvODgSVAJaxVg" Name="Output" Kind="OutputPin" />
-          </Node>
           <Node Bounds="625,676,57,19" Id="UyZ4qdKNIhQMqIPAJcAnET">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Styleable" />
             </p:NodeReference>
-            <Pin Id="S6FXmjes57AMIAjJyH9GBS" Name="Style Sheet" Kind="InputPin" />
-            <Pin Id="LEmCVjLYkH1L2KLe8VZAf6" Name="Merge With Parent StyleSheet" Kind="InputPin" />
-            <Pin Id="DF3iYrpxchsM0V8He4zKSw" Name="ID" Kind="InputPin" />
+            <Pin Id="GmHblft1yzlLkSUZlR73Ct" Name="Merge Custom StyleSheet With Parent" Kind="InputPin" />
+            <Pin Id="Pb3Z4v4EisVMejqEzkeWKA" Name="Custom StyleSheet" Kind="InputPin" />
             <Pin Id="BWCA4hhyUXJMKgGY5fMYVG" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="625,709,39,19" Id="KBiKxEzQKLINZrVnNGGbt1">
@@ -1336,17 +1318,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="4955,170,86,19" Id="N0oCheFSweGLs42prQBTDv">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia.IO" LastSymbolSource="VL.Skia.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ImageReader" />
-            </p:NodeReference>
-            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
-            <Pin Id="BYMiQhhIJKHOiz98OnddKk" Name="Filename" Kind="InputPin" />
-            <Pin Id="E6FeCLo9ysdMXgyPnxT49u" Name="Load" Kind="InputPin" />
-            <Pin Id="MeHicQLUgLNM1YsgWRIAbI" Name="Output" Kind="OutputPin" />
-          </Node>
-          <Pad Id="RrTeSmOVvbKLubmUNhFeJY" Comment="" Bounds="4958,49,160,19" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Program Files\vvvv\vvvv_gamma_2020.1.0\lib\packs\VL.Skia.2020.1.0\help\Assets\Street.jpg">
+          <Pad Id="RrTeSmOVvbKLubmUNhFeJY" Comment="" Bounds="4958,49,324,17" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Program Files\vvvv\vvvv_gamma_2020.1.1\lib\packs\VL.Skia.2020.1.0\help\Assets\Street.jpg">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -2010,49 +1982,13 @@
             <Pin Id="RLNaFiCZriCNgYc011x8fA" Name="Input" Kind="StateInputPin" />
             <Pin Id="OngKfSHIiZBMIKJo6dEigg" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="8142,280,145,19" Id="KtMeRNH0uVNORwJ5206V9z">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="PanelStyleSheet" />
-            </p:NodeReference>
-            <Pin Id="LSMhXm8AKgePKbDDwtQ4fy" Name="ID" Kind="InputPin" />
-            <Pin Id="Ais3KnVuz70MKh72hTrmoB" Name="Inheritance" Kind="InputPin" />
-            <Pin Id="RQE15I4FnOqNWDEp0Dse26" Name="Fill_Enabled" Kind="InputPin" DefaultValue="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="NkRPXLTZ9ASM6Hr07h7Y9u" Name="Panel_Fill_Paint" Kind="InputPin" />
-            <Pin Id="QKmiBJ6wYjzOTZpZZYpKzP" Name="Panel_Fill_Color" Kind="InputPin" DefaultValue="0.01949998, 0.08359011, 0.13, 1">
-              <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="RGBA" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="KzUxl79SGvsM4EBpJJxuXw" Name="Stroke_Enable" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="MueUkoXrFppPkkigJ4KlYO" Name="Stroke_Paint" Kind="InputPin" />
-            <Pin Id="VFJQdSrgCW4Mph1H4ky7TS" Name="Stroke_Color" Kind="InputPin" DefaultValue="0.3499999, 0.3499999, 0.3499999, 1">
-              <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="RGBA" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="B9niRHTZaljQMDEHVnweCE" Name="Output" Kind="OutputPin" />
-          </Node>
           <Node Bounds="8142,312,57,19" Id="U2JnuWNWm20Nk80V6uEoIY">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Styleable" />
             </p:NodeReference>
-            <Pin Id="NXdS065rM2KQZxg51JIJSt" Name="Style Sheet" Kind="InputPin" />
-            <Pin Id="CtO3qEnX3NRMNExXPWq9Ys" Name="Merge With Parent StyleSheet" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="PQK63hVhgQDM51KLVQaRrc" Name="ID" Kind="InputPin" />
+            <Pin Id="OWpeAbBBoxiLXQ5pS7x3p8" Name="Merge Custom StyleSheet With Parent" Kind="InputPin" />
+            <Pin Id="KSFZK8Wb5mjNe1yiWJGepj" Name="Custom StyleSheet" Kind="InputPin" />
             <Pin Id="RGre4qCb5JuNR2PMYzirHj" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="QAIDM4REbSTOl6kIQM1U3p" Comment="Inheritance" Bounds="8164,242,35,35" ShowValueBox="true" isIOBox="true" Value="False">
@@ -2074,49 +2010,13 @@
             <Pin Id="A5cEGnbVSBWMNu2kgq2SHx" Name="Input" Kind="StateInputPin" />
             <Pin Id="KUR2ZVBUb9FOwXENDF6Kar" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="7483,294,145,19" Id="BjcL0bOqbZfOuMkaBwTCGY">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="PanelStyleSheet" />
-            </p:NodeReference>
-            <Pin Id="GcG5zSIY9KgNnuE0mrfOLK" Name="ID" Kind="InputPin" />
-            <Pin Id="UIqOU2K8TEJPQkkTJEAjMy" Name="Inheritance" Kind="InputPin" />
-            <Pin Id="C0W0vSIkcxXN6Ika2QnF5K" Name="Fill_Enabled" Kind="InputPin" DefaultValue="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="MXb0bn1MG7WPv3kWex1uwY" Name="Panel_Fill_Paint" Kind="InputPin" />
-            <Pin Id="HVUT0bbP5EVLkLOVln6uep" Name="Panel_Fill_Color" Kind="InputPin" DefaultValue="0.01949998, 0.13, 0.1233695, 1">
-              <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="RGBA" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="DgKhctf9V58MVwSbYi53F7" Name="Stroke_Enable" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="Q5QJ2lUTW5aN6sSWTxoqB2" Name="Stroke_Paint" Kind="InputPin" />
-            <Pin Id="TNjSpPKVUTAMNlrgbvr5HR" Name="Stroke_Color" Kind="InputPin" DefaultValue="0.3499999, 0.3499999, 0.3499999, 1">
-              <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="RGBA" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RjIU1aF4tUvLZP4h7UzCfr" Name="Output" Kind="OutputPin" />
-          </Node>
           <Node Bounds="7483,326,57,19" Id="SlMVgOZRBB2MJV44cSbRxP">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Styleable" />
             </p:NodeReference>
-            <Pin Id="GxLbak74whSNEZhkMNjyhz" Name="Style Sheet" Kind="InputPin" />
-            <Pin Id="MvNXQyLx1AHNzQoRRqtl19" Name="Merge With Parent StyleSheet" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="FVLkmzjDMDqL2u2WZjkHdp" Name="ID" Kind="InputPin" />
+            <Pin Id="NYQhC5q1ywDMBvhcOlf1BV" Name="Merge Custom StyleSheet With Parent" Kind="InputPin" />
+            <Pin Id="Q9ZzCz2t2szNafVjV52OcE" Name="Custom StyleSheet" Kind="InputPin" />
             <Pin Id="OfU0mH0MEwZPIyWd4PIdtU" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="MdN9GeCoQkuPRaCakylZYT" Comment="Inheritance" Bounds="7505,256,35,35" ShowValueBox="true" isIOBox="true" Value="False">
@@ -2389,6 +2289,14 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
+          <Node Bounds="4985,-20,16,19" Id="Se8ndH8dvHpPAFZjmJhCsf">
+            <p:NodeReference LastCategoryFullName="System.Application" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ApplicationPath" />
+            </p:NodeReference>
+            <Pin Id="KT2G7qxAbyxM6hvQEnIRN7" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="RpEGpwVVZISNgTLUZBzB9I" Comment="" Bounds="4986,13,147,28" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="KdTKK5TpWjnPJ5vScQ5VCP" Name="Create" />
         <Patch Id="JqQ55xVIbp9PzgWa6c2UoC" Name="Update" ParticipatingElements="QuJ1O5JBuqCQOImWkNLW7Q" />
@@ -2512,19 +2420,13 @@
         <Link Id="CMBLgeiKNbBN5RgTgB9N05" Ids="QTZ3CBjiII6LHHEkUfbt0C,CZ2toJlF15cPEfFIkhvVkM" />
         <Link Id="C7s03w8mCMPLh50NPU61Ke" Ids="K9bJFQD2XboMe29gUIQkoN,FeZUUjnKnYVP5ciFXNsI5A" />
         <Link Id="MEVPvqbIdJ6OPlLJ9CZPdU" Ids="LTi9FejrY2CPC1btvVeb0p,P8pG2GDg2KRLpAlKU50Ao4" />
-        <Link Id="Scz6DKHe6u1PglJgwEE1n4" Ids="KB0TNh14LDvODgSVAJaxVg,S6FXmjes57AMIAjJyH9GBS" />
         <Link Id="RIum7eLsZz1ONQedIJLJAY" Ids="BWCA4hhyUXJMKgGY5fMYVG,QRSbFbDe2kfQC6p0p1QTY5" />
-        <Link Id="Od69IUx99uGM6LyqmC4EZP" Ids="Ef1YPfKKnGJOjSNSlzQ58O,HnWgYLu1N2mN2WW7WRnKdG" />
-        <Link Id="IYTo8C3vEnKPg7xhwzBFzf" Ids="Ef1YPfKKnGJOjSNSlzQ58O,DF3iYrpxchsM0V8He4zKSw" />
         <Link Id="PObh0QgBkNTOIdxs9CfyaN" Ids="RsO02It2ntsOyFvMEqUrwm,NXcCxLsKgjAQMwEw3cWOZo" />
-        <Link Id="U9dHpJc7x93L6cm5FSxf2q" Ids="O0ZJHXdU7DNNT5vJhdl85t,V1y8NvmdXZGMW45qH5Kgtj" />
         <Link Id="MyNrsbmr72YNnYfqxgQHLF" Ids="Qfjfn7Lf7TvN8cUabUiWnN,DHaymVlqVImPeElNEDHF0b" />
         <Link Id="Ruge7YEqWNdON1JlS0ShkD" Ids="AcdEmRpAapGOANRDoAMZJu,MiRvDlWe03UMolnXsPDWkt" />
         <Link Id="J6DIkQWSNRkOnY0WypsBfW" Ids="AGygBeZ7xFVNDSkNc0hEW6,NqZTYPwZywIN4dBLoLfnP7" />
         <Link Id="QLVnnkl6OYAO7qfIsSHnZ3" Ids="LYOxexsQzSELDiyB2LXyTX,LqIqiVjxIKxPhvAWbdEYUE" />
         <Link Id="PVPww34jVFuMfK80JiPrhN" Ids="FwEexVZgAVELSJM7PiTaq4,FMjovrPqj0cOL7zxY59T0e" />
-        <Link Id="QEgrjd69YrrPIGe1j7Y2td" Ids="RrTeSmOVvbKLubmUNhFeJY,BYMiQhhIJKHOiz98OnddKk" />
-        <Link Id="QBXKq8a3lscPR5xGIPjwFS" Ids="NAa9IDDDtaKMpeK0vlGPXs,E6FeCLo9ysdMXgyPnxT49u" />
         <Link Id="EFY3mqhY8FNMYyvaJdY86y" Ids="IVYFYeA79BxLaL2SSvYJGY,Q9N2fmXJPghLCACN4ooix7" />
         <Link Id="CIKDjke8dZBOlV0MrdNVjI" Ids="Oa48HwgziKnMSba5VF8mqX,FEYq3L3YtOePnphCsOBDJr" />
         <Link Id="Qb6k09zkOjrPmudcYU4BMv" Ids="ADbCLF6JwdCLcxCuf2XxkQ,Fs5sGPfuoCFNfdhoVuVJ1x" />
@@ -2537,7 +2439,6 @@
         <Link Id="Lo5E9s44ml5MBXutMKNmqU" Ids="AufmT0xUBXFMtHu0kVjh4i,BVEXv0qln3fLdkehpjVk8A" />
         <Link Id="OOE9tjC1GqpP1zyJcSDc4L" Ids="FvL6MsiJoqdPmzB8tSwo94,R91gi2fcetgN3mihDLbMlM" />
         <Link Id="CqdCIduFgLBMFWREGloWsf" Ids="VVziEK2jKtuLsASCtX0adn,PnNF1yiPIc3Qap18ZAems1" />
-        <Link Id="J5ErvEM3Q65LuSyIV23ys4" Ids="MeHicQLUgLNM1YsgWRIAbI,I8RQRMVEEyzOb3oYgq7XNV" />
         <Link Id="LbjE1ErgiaCPTDz1Xl1lpy" Ids="NLO8lqSYNj2L9Ydaukdy0X,FegzElBN71COagCemX43AC" />
         <Link Id="B3TWMuNvkM6NX4y2mL4yZD" Ids="EsHtG7NL9ZnNVHRsg3FHCl,QnkGylzqfxxLe6hLxAMOSF" />
         <Link Id="L7uz3WRfvgzNFOWVpjOdIC" Ids="GgktHWBdx9ONLF1DADh7Qr,VY35rpw5hF1NhAJrs09fBT" />
@@ -2602,16 +2503,8 @@
         <Link Id="JYzXQ6w7jBaOOmI1Lg90TL" Ids="TVj8fHV215mMgIoGnxWyeR,PWiS0lGNBxMOC1cfmm7Ptg" />
         <Link Id="QeaL89bX770PyanBD2ZWWr" Ids="R2DCuNVCHIdLEprXLXKEWf,CdhCs0iaYVAQBQBlOBPWgT" />
         <Link Id="R2af9UjUZMmP1S6LZx07WQ" Ids="QCb6pluvxa3PkUMtqaKqlo,Tr4GaeKDkKDQA05Bt2fW3D" />
-        <Link Id="KzoA5Ur8f2kNQbOu3oxpmT" Ids="B9niRHTZaljQMDEHVnweCE,NXdS065rM2KQZxg51JIJSt" />
-        <Link Id="T8IISt6XoQGOLgLmKYwr12" Ids="QAIDM4REbSTOl6kIQM1U3p,Ais3KnVuz70MKh72hTrmoB" />
-        <Link Id="UxX6NtuLne9Nhd68qg2o5a" Ids="LA8v2OdBRUkLM3sZf5bsEg,LSMhXm8AKgePKbDDwtQ4fy" />
-        <Link Id="FBJS4L1FhIMP4Sc2ct2BqO" Ids="LA8v2OdBRUkLM3sZf5bsEg,PQK63hVhgQDM51KLVQaRrc" />
         <Link Id="D1mL0XbkQHkOem9MPeqXWm" Ids="RGre4qCb5JuNR2PMYzirHj,RLNaFiCZriCNgYc011x8fA" />
         <Link Id="MSPpuTdZ3DFPuG1IuvWCPG" Ids="OngKfSHIiZBMIKJo6dEigg,RCCZLDVL2rmNEGrVipUioU" />
-        <Link Id="IHEGTtWOXkeOQssfepLypw" Ids="RjIU1aF4tUvLZP4h7UzCfr,GxLbak74whSNEZhkMNjyhz" />
-        <Link Id="KM13F7RLgLDLxZ3qM97hWe" Ids="MdN9GeCoQkuPRaCakylZYT,UIqOU2K8TEJPQkkTJEAjMy" />
-        <Link Id="AaaoFMRHuIPQOsWeQU4dGw" Ids="H4sVfCGqtSpQAi7n1Mo6Z3,GcG5zSIY9KgNnuE0mrfOLK" />
-        <Link Id="AJvOLnzyCTjQbktFQNMuHz" Ids="H4sVfCGqtSpQAi7n1Mo6Z3,FVLkmzjDMDqL2u2WZjkHdp" />
         <Link Id="EPVTGfOKNq3N8Qhx6pLlNP" Ids="OfU0mH0MEwZPIyWd4PIdtU,A5cEGnbVSBWMNu2kgq2SHx" />
         <Link Id="LTbRKEJzMfXQW0g460Ixxv" Ids="KUR2ZVBUb9FOwXENDF6Kar,OEJb4oadrBpPaSBz6HthOY" />
         <Link Id="TOrtFcDGAdGLi689l02Zj6" Ids="KMMhXA2PbTaMesUd3yEDtk,VUM6qrIKODLNAR3yDgAPuX" />
@@ -2644,9 +2537,10 @@
         <Link Id="Kq6KGNybIMaLLBZMfW3rv3" Ids="D5irGzJcXGjQMwnlxHPCJa,BNyP4PLYyD3LdgM0VeQHsu" />
         <Link Id="DGOGBGTwFQhL2OZRKKAMcq" Ids="E6LYzU4PTftOr21ksntw0g,DFibyfnHfF3OQLXL9q2Z5B" />
         <Link Id="ST3tNwK26sJLD4cXfRkxli" Ids="DJIS2CChrZwNHeBAzHuibz,APsR54jXFlCMHow3ClFzzZ" />
+        <Link Id="VDG10wKuqxNQVEnACPLlcr" Ids="KT2G7qxAbyxM6hvQEnIRN7,RpEGpwVVZISNgTLUZBzB9I" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2020.1.0" />
+  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2020.1.1" />
   <NugetDependency Id="QUZWnzyJK1MOkGloTOFBPb" Location="VL.Elementa" Version="0.0.0.0" />
 </Document>
