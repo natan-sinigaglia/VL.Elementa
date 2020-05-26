@@ -73,19 +73,31 @@ namespace Elementa
 
     public enum StyleProperties
     {
-        Background_Fill_Enabled,
-        Background_Fill_Color,
-        Background_Fill_Paint,
+        Background_Enabled,
+        Background_Paint,
+        Background_Color,
+        Background_Padding,
         Background_Stroke_Enabled,
+        Background_Stroke_Paint,
         Background_Stroke_Color,
-        Foreground_Fill_Enabled,
-        Foreground_Fill_Color,
-        Foreground_Fill_Paint,
+
+        Foreground_Enabled,
+        Foreground_Paint,
+        Foreground_Color,
         Foreground_Highlight_Color,
+        Foreground_Padding,
         Foreground_Stroke_Enabled,
+        Foreground_Stroke_Paint,
         Foreground_Stroke_Color,
+
         Text_Enabled,
-        Text_Paint,
-        Text_Color
+        Text_FamilyName,
+        Text_Style,
+        Text_Size,
+        Text_Color,
+        Text_LineHeight,
+        Text_HorizonalAlignment,
+        Text_VerticalAlignment,
+        Text_Padding
     }
 }
