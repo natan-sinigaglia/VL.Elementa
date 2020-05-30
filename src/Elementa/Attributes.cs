@@ -114,4 +114,16 @@ namespace Elementa.Attributes
 
         public object StepSize { get; }
     }
+
+    public class DisplayTextAttribute : Attribute
+    {
+        public DisplayTextAttribute(String text)
+        {
+            Text = text;
+        }
+
+        public String Text { get; }
+
+    }
+
 }
