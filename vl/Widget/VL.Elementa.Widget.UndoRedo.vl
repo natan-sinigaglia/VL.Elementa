@@ -2,7 +2,7 @@
 <Document xmlns:p="property" Id="NBHXgdKdw5jP3vzS1rwwCh" LanguageVersion="2020.1.2.135" Version="0.128">
   <NugetDependency Id="FCFWoT6rjT8O6cxumqt5D2" Location="VL.CoreLib" Version="2020.1.2" />
   <Patch Id="UVx9E1cX5ewN9PQIL1SqU9">
-    <Canvas Id="NFwxIgBPdf6PbBG3NYMjK4" DefaultCategory="Main" CanvasType="FullCategory">
+    <Canvas Id="NFwxIgBPdf6PbBG3NYMjK4" DefaultCategory="VL.Elementa.Widget" CanvasType="FullCategory">
       <!--
 
     ************************ UndoRedo ************************
@@ -47,8 +47,8 @@
               <Pin Id="Q2Tje6DLDXYO4hVgDRdZ3n" Name="Input 3" Kind="InputPin" />
               <Pin Id="KmDVpOFoJEYPJZpq2wUcdq" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <ControlPoint Id="IILi2kY3rYBLZLR5fUQzCh" Bounds="203,814" />
-            <ControlPoint Id="BhHXKpoh6tjNA9fJuxY682" Bounds="449,814" />
+            <ControlPoint Id="IILi2kY3rYBLZLR5fUQzCh" Bounds="203,811" />
+            <ControlPoint Id="BhHXKpoh6tjNA9fJuxY682" Bounds="449,811" />
             <Node Bounds="108,250,97,26" Id="SVsEdtOZMquLB0hbID2BHV">
               <p:NodeReference LastCategoryFullName="Elementa.Core.Device.CallerInfo" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -192,15 +192,12 @@
               <Pin Id="A23pUqHDQ3WLkv7xmz31FZ" Name="Apply" Kind="InputPin" />
             </Node>
             <Pad Id="E9RPU3vR3vGMCrVHrtlie6" SlotId="LHrwz05hNqdPoXSeQHxQif" Bounds="449,668" />
+            <ControlPoint Id="PpokiT9KKavLlnQKYewMNe" Bounds="98,811" />
+            <ControlPoint Id="P4O3GmqcvrmPe5bZdM2JQq" Bounds="357,811" />
           </Canvas>
-          <!--
-
-    ************************  ************************
-
--->
-          <ProcessDefinition Id="Ki9KvjlV6uvM34R2BeNqJP" IsHidden="true">
-            <Fragment Id="NF8p9VnKb8OM8CM0RRHYGj" Patch="Cl1hqpkgYcAP3E3omX2Sls" />
-            <Fragment Id="HhKrZStDQLqNJdcWUmKnGv" Patch="JBeF9jQnl4DMdJPjTjUyPL" />
+          <ProcessDefinition Id="Ki9KvjlV6uvM34R2BeNqJP" HasStateOut="true">
+            <Fragment Id="NF8p9VnKb8OM8CM0RRHYGj" Patch="Cl1hqpkgYcAP3E3omX2Sls" Enabled="true" />
+            <Fragment Id="HhKrZStDQLqNJdcWUmKnGv" Patch="JBeF9jQnl4DMdJPjTjUyPL" Enabled="true" />
             <Fragment Id="IWtIRHDpu66PWbVrxxUkqH" Patch="MzUIDeUzcRUOlTMwqgdiVV" />
             <Fragment Id="MlevLDUeYwXQBHWhqw6FH2" Patch="ER5rttkhrBHL0xXpHyNrKY" />
           </ProcessDefinition>
@@ -246,6 +243,8 @@
           <Patch Id="JBeF9jQnl4DMdJPjTjUyPL" Name="Update (Internal)" ManuallySortedPins="true">
             <Pin Id="VI9Kpai2kRtMJ2Bfj5Zj5S" Name="Undo Observable" Kind="OutputPin" />
             <Pin Id="EFpswst0VyoLDwyLKkpY7K" Name="Redo Observable" Kind="OutputPin" />
+            <Pin Id="K3ab5EnKzMwO2tUgoeSa2S" Name="Undo Count" Kind="OutputPin" />
+            <Pin Id="FEAkF6divTsPINyZNT4LhD" Name="Redo Count" Kind="OutputPin" />
           </Patch>
           <Patch Id="MzUIDeUzcRUOlTMwqgdiVV" Name="ProcessNotification (Internal)">
             <Pin Id="PMyemfAoZa4NSN6pbtxYen" MergeId="1123777" Name="Notification" Kind="InputPin" />
@@ -280,6 +279,10 @@
           </Slot>
           <Link Id="RNWHKcDjUR7Nws0ATvsZnf" Ids="KmDVpOFoJEYPJZpq2wUcdq,A23pUqHDQ3WLkv7xmz31FZ" />
           <Link Id="L3ElR5N9giHLk4lsnO3KGH" Ids="E9RPU3vR3vGMCrVHrtlie6,Mk6RtQXAIMWNe0wgSGJs8S" />
+          <Link Id="FWhF1zuv6S8LpxTsbYoDuf" Ids="PpokiT9KKavLlnQKYewMNe,K3ab5EnKzMwO2tUgoeSa2S" IsHidden="true" />
+          <Link Id="FlLMMnYETvfMKIhaLCYbFz" Ids="N05qsPeed4xOctf7HBEpd5,PpokiT9KKavLlnQKYewMNe" />
+          <Link Id="CASQUTWuIO7PeNLIp6USbi" Ids="E9RPU3vR3vGMCrVHrtlie6,P4O3GmqcvrmPe5bZdM2JQq" />
+          <Link Id="C8XsQA6q8MkN102xrp1D6m" Ids="P4O3GmqcvrmPe5bZdM2JQq,FEAkF6divTsPINyZNT4LhD" IsHidden="true" />
         </Patch>
       </Node>
     </Canvas>
@@ -297,11 +300,6 @@
         <Canvas Id="TkTY6rqyJ90NjYRG5n4omZ" CanvasType="Group" />
         <Patch Id="Qbu7bIN9gbWN67Ec6yG7s3" Name="Create" />
         <Patch Id="EH3BPQS63s3OAmGQ4AA5DK" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="E8hL36vEYU6OMhQnmWBasd">
           <Fragment Id="FNYEfBifl1PNI9hctWYMIx" Patch="Qbu7bIN9gbWN67Ec6yG7s3" Enabled="true" />
           <Fragment Id="M3zm9WjK8MPP72HTtLq28N" Patch="EH3BPQS63s3OAmGQ4AA5DK" Enabled="true" />
