@@ -260,12 +260,12 @@
             <ControlPoint Id="EmaTNkMQxITMjdGSfyIzZ0" Bounds="515,88" />
             <ControlPoint Id="JA1lO2iJwKIPckTkdVORvY" Bounds="340,-291" />
             <Node Bounds="638,-113,150,19" Id="LB9nXsrOwKUOpoLJWpvCvV">
-              <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Typeable" LastSymbolSource="VL.Elementa.Core.vl">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Focusable" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="GetTypeableComponentValue" />
+                <Choice Kind="OperationCallFlag" Name="GetFocusableComponentValue" />
               </p:NodeReference>
               <Pin Id="DtFtqefvo9oLGzXDuAaq0E" Name="Components" Kind="InputPin" />
-              <Pin Id="VeWSVUXeyNgPgYGEgKIs1S" Name="Typing" Kind="OutputPin" />
+              <Pin Id="VeWSVUXeyNgPgYGEgKIs1S" Name="Focused" Kind="OutputPin" />
               <Pin Id="T3Ls6nvjO8TLBKgU6iNNXj" Name="Text Value" Kind="OutputPin" />
               <Pin Id="E4Wj2VvN6SdNK9IbxfOxNu" Name="Found" Kind="OutputPin" />
             </Node>
@@ -886,12 +886,12 @@
                     <Pin Id="GEvkGd55bh6LjRyntcGRUv" Name="Components" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="551,-103,149,19" Id="O51wCUMy3BALhz72sl3SOJ">
-                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Typeable" LastSymbolSource="VL.Elementa.Core.vl">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Focusable" LastSymbolSource="VL.Elementa.Core.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="OperationCallFlag" Name="SetTypeableComponentValue" />
+                      <Choice Kind="OperationCallFlag" Name="SetFocusableComponentValue" />
                     </p:NodeReference>
                     <Pin Id="DHUkdkkCRx0NrUi4n9JAQI" Name="Components" Kind="InputPin" />
-                    <Pin Id="I8RLzxaW07kQJUmAZsQSZ8" Name="Typing" Kind="InputPin" />
+                    <Pin Id="I8RLzxaW07kQJUmAZsQSZ8" Name="Focused" Kind="InputPin" />
                     <Pin Id="BnomYAj3daPOBoVi5UVvTe" Name="Text Value" Kind="InputPin" />
                     <Pin Id="OT98ehVBbuPMr3RfoDIouS" Name="Apply" Kind="InputPin" />
                     <Pin Id="OU6kjMp8MdbMaPXAKriiaq" Name="Found" Kind="OutputPin" />
@@ -1355,12 +1355,12 @@
                     <Pin Id="LRrCyhMVBYCOSa4CDvheSA" Name="Components" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="680,58,149,19" Id="R8gxqPebbTfQbEzmgg2DI0">
-                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Typeable" LastSymbolSource="VL.Elementa.Core.vl">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Focusable" LastSymbolSource="VL.Elementa.Core.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="OperationCallFlag" Name="SetTypeableComponentValue" />
+                      <Choice Kind="OperationCallFlag" Name="SetFocusableComponentValue" />
                     </p:NodeReference>
                     <Pin Id="UNCmU2Yl4X5OgjHQucmfWx" Name="Components" Kind="InputPin" />
-                    <Pin Id="QMUooSPxz3FOmbLGYu0bsO" Name="Typing" Kind="InputPin" />
+                    <Pin Id="QMUooSPxz3FOmbLGYu0bsO" Name="Focused" Kind="InputPin" />
                     <Pin Id="JODaBMLEL9IP62ONiAkVT1" Name="Text Value" Kind="InputPin" />
                     <Pin Id="VdMZSakMauYMDpSot0uecI" Name="Apply" Kind="InputPin" />
                     <Pin Id="LPOzU9OB54VMNrXmgaOYkD" Name="Found" Kind="OutputPin" />
@@ -2310,12 +2310,12 @@
                     <Pin Id="G3APUbhgAlkNuFVuLZz3VM" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="323,1376,149,19" Id="BwwZvDgEy0jMTO3UQ7j4aS">
-                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Typeable" LastSymbolSource="VL.Elementa.Core.vl">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Focusable" LastSymbolSource="VL.Elementa.Core.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                      <Choice Kind="OperationCallFlag" Name="SetTypeableComponentValue" />
+                      <Choice Kind="OperationCallFlag" Name="SetFocusableComponentValue" />
                     </p:NodeReference>
                     <Pin Id="D4GsiOi6YkbMeTYRIkZHVZ" Name="Components" Kind="InputPin" />
-                    <Pin Id="Dv65Qn83GCNOU24N4FVXWD" Name="Typing" Kind="InputPin" DefaultValue="True">
+                    <Pin Id="Dv65Qn83GCNOU24N4FVXWD" Name="Focused" Kind="InputPin" DefaultValue="True">
                       <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                         <Choice Kind="TypeFlag" Name="Boolean" />
                       </p:TypeAnnotation>
@@ -3088,8 +3088,9 @@
             <Node Bounds="1306,486,57,19" Id="VTnRkP3Vup5NTMnFUpBqJa">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="Typeable" />
+                <Choice Kind="ProcessAppFlag" Name="Focusable" />
               </p:NodeReference>
+              <Pin Id="AHPG9g1fFbVMU66IUkejRQ" Name="Go To Focus" Kind="InputPin" />
               <Pin Id="BxAanfN15WMLROdr9kbfkJ" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="924,602,135,19" Id="KIYGJO1rXKFMc1aFaqqNiQ">
