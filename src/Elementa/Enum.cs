@@ -48,7 +48,7 @@ namespace Elementa
 
     public enum Layout_Mode
     {
-        None, Stack, Distribute
+        None, Stack, Distribute, Allocate
     }
 
     public enum Layout_VerticalAlignment
