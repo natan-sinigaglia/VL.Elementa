@@ -28,6 +28,10 @@ To use the latest stable version:
 3. You can then start contributing to the lib.
 
 
+## Resources
+[Github Repository](https://github.com/vvvv-dottore/VL.Elementa)
+[Riot Chat Room](https://riot.im/app/#/room/#VL.Elementa:matrix.org)
+
 
 ## Licencing
 
