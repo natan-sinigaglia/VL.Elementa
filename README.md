@@ -43,6 +43,28 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 3.0.0
+
+
+- NEW Style system. there's no StyleSheet property anymore in IElementum interface (everything gets managed by the Styleable component, already implemented within every widget)
+- NEW css file parser (builds an Elementa StyleSheet)
+- NEW "Selector" utility library to validate conditions within an entity-component tree graph (used for the style system)
+- NEW ClientBounds, ElementaContextReceiver and UndoRedo utility widget nodes
+- NEW DisplayText optional input pin for Toggle, Bang, Press widgets
+- NEW sticky behaviour for slider widget (and all widgets that internally use slider behaviour)
+- NEW Formattable component
+- NEW Grid layout node
+- FIX in ToSkiaLayer (in Root): disabled skia rendering in the first frame to avoid UI flickering (due to frame delays in retrieving the bounds from renderer)
+- FIX in IntegerUpDown behaviour (wasn't updating Min and Max values in idle)
+- Refactoring of Layour nodes: proper cached mechanism that improves a lot performances and better modularization of the internal components
+- All widgets now come with a Spectral version (that expect a component spread as input, not using pingroup)
+- Styleable component now as advanced, not meant to be plugged to the widgets to customize their style
+- Taggable component reworked: now it simply contains an HashSet<Object>. it comes also as a (Spectral Advanced) version, with no pingroup.
+- Attributable component got refreshed as well: attributes come as Dictionary<String, Object> 
+- renamed Typeable component to Focusable
+- Rotary widget now internally made with a slider (since they share the same behaviour)
+
+
 ### 2.2.3
 
 - Another small fix in Panel
