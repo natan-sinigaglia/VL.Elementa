@@ -414,21 +414,6 @@
           <Link Id="LqgRBxKDGMYOaviyoaodwl" Ids="B2Q3YeAKjiNOsO9vV5kqrK,VE4A8WziPj4QZuxfM9IFcp" />
           <Link Id="CY70yOA53zgLtv3v5Me5Xu" Ids="VQdkPmfeoLCQD4pCwRdnf0,Kw9NONhAL0OPU9m7IcjSk3" />
           <Link Id="Hgj17eQTwGwM0Q8CpYnCV4" Ids="Gy0iuCE11GiMFWBkbJdgOw,OgIYXLy93YCN2NYAhm0nst" />
-          <Patch Id="CtVVvX2PquvLR7qfWwvmNt" Name="Create (Internal)" />
-          <Patch Id="NrVXye7IsUPO35o0JYof94" Name="Update (Internal)" />
-          <Patch Id="OpLze7Bed6BLjp5WuLif39" Name="GetDrawerLayer (Internal)">
-            <Pin Id="Hwwp6Whr7ODMOJAKBly1Zd" Name="Widget Manager" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="WidgetManager" />
-                <p:TypeArguments>
-                  <TypeReference>
-                    <Choice Kind="TypeFlag" Name="Boolean" />
-                  </TypeReference>
-                </p:TypeArguments>
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="UArM9R0emBBOPXaoJ8ewgl" Name="Layer" Kind="OutputPin" />
-          </Patch>
           <Link Id="Qlw8fSz3t4QOMW7mBwv7oP" Ids="Hwwp6Whr7ODMOJAKBly1Zd,FPbqBCJkPOwPuzmg0PnloK" IsHidden="true" />
           <Link Id="FAK5rIDQ9vDPMGuFtmusEK" Ids="HovTixdjpAKMzNbRaeMyNS,MyarE9RlKaQPkzljOflbdK" />
           <Link Id="OBI2Pl0zn5cPvhySXEyDKr" Ids="HovTixdjpAKMzNbRaeMyNS,KxDUL5wQK94Nkhjqx1oTvG" />
@@ -472,6 +457,21 @@
           <Link Id="L6Q7HNvCfFZPNAbR82ll6o" Ids="H0BMy7NVxRgQTXb3w0DNR8,J55WKRoLD0cLqi8DGXAKvd" />
           <Link Id="TQJ0iVuh2oCQXKza7L8AQh" Ids="HovTixdjpAKMzNbRaeMyNS,H0BMy7NVxRgQTXb3w0DNR8" />
           <Link Id="NMdNEvtuWtFNHazemcxPYx" Ids="BFxABmBEAw9OQDMxTDHsWx,BlLSZl2C2OgMmCTuvOV9gm" />
+          <Patch Id="CtVVvX2PquvLR7qfWwvmNt" Name="Create (Internal)" />
+          <Patch Id="NrVXye7IsUPO35o0JYof94" Name="Update (Internal)" />
+          <Patch Id="OpLze7Bed6BLjp5WuLif39" Name="GetDrawerLayer (Internal)">
+            <Pin Id="Hwwp6Whr7ODMOJAKBly1Zd" Name="Widget Manager" Kind="InputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="WidgetManager" />
+                <p:TypeArguments>
+                  <TypeReference>
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="UArM9R0emBBOPXaoJ8ewgl" Name="Layer" Kind="OutputPin" />
+          </Patch>
         </Patch>
       </Node>
       <!--
@@ -1128,10 +1128,6 @@
                 <Choice Kind="ProcessAppFlag" Name="GetDrawerComponent" />
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
               </p:NodeReference>
-              <Pin Id="GqWBWus0zpqLbIbdWu5j22" Name="Components" Kind="InputPin" />
-              <Pin Id="JyaCs8TQItZOfmFPGlEuQp" Name="Has Changed" Kind="OutputPin" />
-              <Pin Id="Fv7gF5mnjapNFDlD8NJBlV" Name="Not Found" Kind="OutputPin" />
-              <Pin Id="Lkg5khyZ1LNP8TbLEHhncC" Name="IWidgetDrawer" Kind="OutputPin" />
               <Patch Id="KOXKwsA17GSQSlVToSac0k" Name="Default Drawer Create" ManuallySortedPins="true">
                 <Pin Id="Kb0dCeJwlBnQB7PCrRwdOm" Name="Result" Kind="OutputPin">
                   <p:TypeAnnotation>
@@ -1148,6 +1144,10 @@
                   <Pin Id="HwyK0XyPoYJPLiKAr48xsC" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
+              <Pin Id="FIBYpLDm0v1Lz4YBJiIVVm" Name="Widget Manager" Kind="InputPin" />
+              <Pin Id="JyaCs8TQItZOfmFPGlEuQp" Name="Has Changed" Kind="OutputPin" />
+              <Pin Id="Fv7gF5mnjapNFDlD8NJBlV" Name="Not Found" Kind="OutputPin" />
+              <Pin Id="Lkg5khyZ1LNP8TbLEHhncC" Name="IWidgetDrawer" Kind="OutputPin" />
             </Node>
             <Node Bounds="345,993,68,26" Id="FpN3bZf5kvRMtZlHzNtfUL">
               <p:NodeReference>
@@ -1462,7 +1462,6 @@
           <Link Id="CjVEi26G1qTPWKm6lyZFe8" Ids="UD04UCVs2LPN7ZPPYsN4U2,TXLF99lBAopOunw56sqAH8" />
           <Link Id="AGMUSqwn2eeQQKzkKzM2nl" Ids="RGr4Vi3nIchN17pKodKuJx,Kb0dCeJwlBnQB7PCrRwdOm" IsHidden="true" />
           <Link Id="V0dVWicChuyQK4UMNrJZBi" Ids="HwyK0XyPoYJPLiKAr48xsC,RGr4Vi3nIchN17pKodKuJx" />
-          <Link Id="ONV3saTkX4FLTL4OjwQII6" Ids="UD04UCVs2LPN7ZPPYsN4U2,GqWBWus0zpqLbIbdWu5j22" />
           <Link Id="KiE5jOexEN1PDbDdmiKMtk" Ids="Lkg5khyZ1LNP8TbLEHhncC,TilWmj7jMR6NopC587fhGe" />
           <Link Id="I3de80gU8OUPpCQdelhYic" Ids="UD04UCVs2LPN7ZPPYsN4U2,OUuRJH4tOpvNqUiWg57je9" />
           <Link Id="CKRQQArjmdLPjj7PPMY6NQ" Ids="N7rRioeaIdLLK61YYli4qH,Lwnu5Eb4bI1NiOfY6XbAak" />
@@ -1546,7 +1545,7 @@
           <Patch Id="OBvWaSMnw4pP10jG3lZx0u" Name="SetGlobalBounds (Internal)">
             <Pin Id="SD4OhvE21KXMBIyZTL9KUI" Name="Global Bounds" Kind="InputPin" />
           </Patch>
-          <Patch Id="Q80U6xRvRdBPejAlw2aGY2" Name="GetLayer (Internal)" ParticipatingElements="ONV3saTkX4FLTL4OjwQII6">
+          <Patch Id="Q80U6xRvRdBPejAlw2aGY2" Name="GetLayer (Internal)">
             <Pin Id="G3EyPTeqQhTMEsg2ku0o1F" Name="Layer" Kind="OutputPin" />
           </Patch>
           <Patch Id="C3OA13RGNPxNhRqGvwKZBK" Name="GetLocalBounds (Internal)">
@@ -1664,6 +1663,7 @@
           <Link Id="F7UTg6u5G9MQMcggr02uBV" Ids="AqmWQagGvEGNRW86WDldo9,MYy9zcX38cTMPwkTapla9n" />
           <Link Id="IV9rVoxmQmxL7rSdtspuCU" Ids="E0OjVfY13wNQGGzMRmCmp9,GmO5QIYV6Y5PHcR9GHgReN" />
           <Link Id="Dm0Mr1pfnMKMab61Dfog7I" Ids="HxyOpGO91csPEzibaQ1C2r,EJx0GMojROyPZGtnQG3Xk2" />
+          <Link Id="M13xSvq2KATPsuOAMIymvf" Ids="UD04UCVs2LPN7ZPPYsN4U2,FIBYpLDm0v1Lz4YBJiIVVm" />
         </Patch>
       </Node>
       <!--
