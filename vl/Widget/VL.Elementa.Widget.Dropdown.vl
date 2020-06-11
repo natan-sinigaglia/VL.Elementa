@@ -674,7 +674,7 @@
           <Canvas Id="SzIc4VZD0r5PAui1r0A7Tm" CanvasType="Group">
             <ControlPoint Id="By4v46vHnThMJhlX3QD6uR" Bounds="196,117" />
             <Node Bounds="194,159,122,95" Id="MLZmhhKtZSyNj2Qq4JTjGI">
-              <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="VL.Elementa.Core.vl">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="ProcessAppFlag" Name="InitializeMachine" />
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
               </p:NodeReference>
@@ -741,7 +741,7 @@
                   </Node>
                   <ControlPoint Id="HXMV48ZMDAPOCBzcYkfXgh" Bounds="401,228" />
                   <Node Bounds="330,556,210,102" Id="A39ieIRlvExM9H9GDVOS1I">
-                    <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="VL.Elementa.Core.vl">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                       <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GoToState" />
                     </p:NodeReference>
@@ -967,7 +967,6 @@
                 <Patch Id="Vxx0509IG1FMTnADZz6C7L" Name="ProcessNotification">
                   <Pin Id="DNKvnYU1iQOP3p2MTtfHtz" Name="Notification" Kind="InputPin" />
                   <Pin Id="V0PmtB8AmkTMNzeBZCXMbl" Name="Caller Info" Kind="InputPin" />
-                  <Pin Id="Hpqv6hW9YCPPR7JaxoAU1I" Name="Handled" Kind="OutputPin" />
                 </Patch>
                 <Patch Id="IKoXHcZxwbzMP20lbajhi4" Name="Update" ManuallySortedPins="true" />
               </Patch>
@@ -994,7 +993,7 @@
                   <ControlPoint Id="RhnCRBfWRfaMSt9hr3CxYC" Bounds="1249,38" />
                   <Pad Id="J6NQ4ecFwHCOYqqsN7Q4kl" SlotId="DVDKFdQbtDMOSufaJEtywA" Bounds="1302,427" />
                   <Node Bounds="1219,469,239,100" Id="AGhY59EAiQCPINmJ8jElmj">
-                    <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="VL.Elementa.Core.vl">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                       <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GoToState" />
                     </p:NodeReference>
@@ -1269,7 +1268,6 @@
                 <Patch Id="CM83dquhVnxNowh7UDxiAE" Name="ProcessNotification">
                   <Pin Id="OMlKShsh37CNfmK1ISjIpp" Name="Notification" Kind="InputPin" />
                   <Pin Id="SRebbCw7YkPNi8QiyjgdVn" Name="Caller Info" Kind="InputPin" />
-                  <Pin Id="GfkwToQcS6UM8la7COWuk4" Name="Handled" Kind="OutputPin" />
                 </Patch>
               </Patch>
             </Node>
@@ -1345,7 +1343,7 @@
                     <Pin Id="LwyZotZli3kNObmY5iadz6" Name="Output" Kind="StateOutputPin" />
                   </Node>
                   <Node Bounds="277,867,142,100" Id="QAqAv1UASfbNDP7NfVNKxE">
-                    <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="VL.Elementa.Core.vl">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                       <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GoToState" />
                     </p:NodeReference>
@@ -1647,12 +1645,14 @@
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="BuildComponentsDictionary" />
                     </p:NodeReference>
-                    <Pin Id="VmRwfGziy7QQMoSz8PNSsR" Name="Components Spread" Kind="InputPin" />
-                    <Pin Id="NN8M573byhHO7TJJxaU9gU" Name="Force" Kind="InputPin" />
+                    <Pin Id="E2faVjPmHa7MTwDm75Qihz" Name="Internal Components" Kind="InputPin" />
+                    <Pin Id="RCdvgdn078oNdOCaPtwxqt" Name="External Components" Kind="InputPin" />
                     <Pin Id="BLxcCJEmu6WPkmwCeoBSYk" Name="Elementum" Kind="InputPin" />
-                    <Pin Id="HYCX97SagEmMTGIkHqAnWf" Name="Elementa Context" Kind="InputPin" />
+                    <Pin Id="NN8M573byhHO7TJJxaU9gU" Name="Force" Kind="InputPin" />
                     <Pin Id="Ki9HnK0UpMiLUE0EzbnTzd" Name="Output" Kind="OutputPin" />
                     <Pin Id="Jj8FwQ57bK5Ociy21a1N8V" Name="Has Changed" Kind="OutputPin" />
+                    <Pin Id="Qcu2kQQMRmtNkpXzkcWw1R" Name="Components Version" Kind="OutputPin" />
+                    <Pin Id="VmRwfGziy7QQMoSz8PNSsR" Name="Components Spread" Kind="InputPin" />
                   </Node>
                   <Pad Id="MODK5tkQgWZO6VTwUK0GTL" SlotId="Ia4Wc4XJGUzLuKrWH0tLu0" Bounds="223,88" />
                   <ControlPoint Id="F294Knw1bxENFfw9aGyMH0" Bounds="222,-60" />
@@ -1886,7 +1886,7 @@
                     <Pin Id="RgeB4l7OSL5MJ9gOFCak3R" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="815,1,57,19" Id="PtUinkYAipNQc1RYoaC3RX">
-                    <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="Styleable" />
                     </p:NodeReference>
@@ -2002,25 +2002,6 @@
                 <Link Id="S6uK2xsrxTeNZqtLGlKs8Y" Ids="LZJq1FdENHMPqp5KbshXBV,TPl5pgetc4KPdw1cG5mjlp" />
                 <Link Id="ITJMfuMMOwSQR6krG51cVk" Ids="E51pIDctQz7Ot07MlhwvLE,MytEXvUm77bNyDTcyck4ND" />
                 <Link Id="EczbvE5UtYQOGv3ZciywLQ" Ids="GlpGrAfRbC0NVYWN9ZIyEl,GSNobKNermEPKvs1sFpQXQ" />
-                <Patch Id="VL7dvpK5LArLAtL0X9fofg" Name="Create" ParticipatingElements="VSsIw2w0I32M4VH25CzzFx,QOkEmPisJgAMrhlI4dQaVG">
-                  <Pin Id="SWqUwmI0At9Lg4IGnK7GLz" Name="Manager" Kind="InputPin" Bounds="870,108" />
-                  <Pin Id="GlWFRtJmCkNNMTOHh8fXFB" Name="Parent Global State" Kind="InputPin" />
-                  <Pin Id="PM7r1uxTnA2NkguvSeC7W9" Name="State Reference" Kind="InputPin" />
-                </Patch>
-                <Patch Id="OdaMhuBtCdLLKbbL2CUZpo" Name="ProcessNotification">
-                  <Pin Id="DXwZRdEdMTMNGUx4ISDJJG" Name="Notification" Kind="InputPin" />
-                  <Pin Id="QHFJ4YYnoYOQXtgQWnOs1S" Name="Caller Info" Kind="InputPin" />
-                  <Pin Id="MXFMaZAh3hVLUrg93ErsPi" Name="Handled" Kind="OutputPin" />
-                </Patch>
-                <Patch Id="LO99b2JjpXgQXxB00SJKuo" Name="GetLayer" ParticipatingElements="KW5Gak9vUChNowQBfcEJKz,D67DLIAj86eOVAvNXNVTWd,DWUJKDw820cN4nHaWNHRKx,TGd4wXXPc8zLCxUPASXPKY">
-                  <Pin Id="G9yD7WOpYLlMdFBcKo9Otm" MergeId="157408" Name="Layer" Kind="OutputPin" />
-                </Patch>
-                <Patch Id="VLOQMIQARc5QXQkHMsh1sI" Name="GetChildren">
-                  <Pin Id="UA4IC4mcjXxMK7oV9vWMgU" Name="Children" Kind="OutputPin" />
-                </Patch>
-                <Patch Id="Rnvs2sjEDNBNpWKyIjJaNK" Name="GetComponents">
-                  <Pin Id="JHbK35mOSKEOeW7IQliO3e" MergeId="177209" Name="Components" Kind="OutputPin" />
-                </Patch>
                 <Link Id="H1wxS4FR8GiQH8SIdPZjVi" Ids="HTUMHSnpPu9MIlRa21CazV,H3qW6qnb3bJP9lNKZEZVFO" />
                 <Link Id="Gd0s8dxvsjtPWoAJ6t5VWi" Ids="H3qW6qnb3bJP9lNKZEZVFO,SlQlRdJyZf9LhSyOXp02X3" />
                 <Link Id="IXZXmdHQ8lOOLDaO8sKDvW" Ids="J8ePoGxdPpyLJA80tYHTu7,SPnGxU3sJ3JPiCgBdCq7XH" />
@@ -2033,24 +2014,12 @@
                 <Link Id="GEWx8hI4i8bLB09xTtkpJw" Ids="UUc2ZIMVI5GOpbZpDlPX0B,FkpBHwJRUsIMxB4CkiZsxG" />
                 <Link Id="DkVYlUMG7IhOFV0KAqoR57" Ids="UD9OHrJRCLxNLKKb0MEIt4,TtPNbFvzKM8LDC36QVQPJb" />
                 <Link Id="OqkKcTy5NIzN5WoWUfqSqs" Ids="GSNobKNermEPKvs1sFpQXQ,PdabSJqawDlQBUbKCxiVki" />
-                <Patch Id="DcLNpKHREgSOd8S0GQRLzt" Name="SetElementaContext (Internal)">
-                  <Pin Id="NvmbDG8Q9jbN9DBMMXbPjV" MergeId="350343" Name="Elementa Context" Kind="InputPin" />
-                </Patch>
-                <Patch Id="HNtR2SRRTHFLbgbRs1ihUk" Name="GetElementaContext (Internal)">
-                  <Pin Id="UrdnoE4sfoCQF5cOqOOJkT" MergeId="350358" Name="Elementa Context" Kind="OutputPin" />
-                </Patch>
                 <Slot Id="CiCHLVLeb3rNV2ojnQQn8q" Name="Elementa Context" />
                 <Slot Id="H6JLaQW060POEC0bX09vnb" Name="Me">
                   <p:TypeAnnotation>
                     <Choice Kind="TypeFlag" Name="IElementum" />
                   </p:TypeAnnotation>
                 </Slot>
-                <Patch Id="JmBHSPvvlVGLkyurjIq1lv" Name="SetMe (Internal)">
-                  <Pin Id="NNi2qCrjwfnNKDIlbfgV4j" MergeId="350434" Name="Me" Kind="InputPin" />
-                </Patch>
-                <Patch Id="K1RLFCYlSVPO7kmZrfMfpN" Name="GetMe (Internal)">
-                  <Pin Id="PrXepo4ezTUNi2rbILt49T" MergeId="350441" Name="Me" Kind="OutputPin" />
-                </Patch>
                 <Link Id="D8sQGR0F4k7NpoXNLLXdzJ" Ids="NvmbDG8Q9jbN9DBMMXbPjV,TlWY7ITv8oyNr3KKlB7V91" IsHidden="true" />
                 <Link Id="J3pD58sUWGaM4TeF7ML4gr" Ids="BAdaVouaDtBN3JcA8k8aRD,UrdnoE4sfoCQF5cOqOOJkT" IsHidden="true" />
                 <Link Id="QuUfClJjfcyLQSkT4NHFkq" Ids="TlWY7ITv8oyNr3KKlB7V91,AH16XjjrvNvLY8KyRb4lSN" />
@@ -2078,6 +2047,36 @@
                 <Link Id="G0OczWpKrFsQSdIXeZb9Gd" Ids="I4g3DjPzKQLOk3Wyu5XXja,E0FtsyS2YiBNLtNmBSFBfb" />
                 <Link Id="LKMvTXrj1rZNkvekP2n19H" Ids="RgeB4l7OSL5MJ9gOFCak3R,VmRwfGziy7QQMoSz8PNSsR" />
                 <Link Id="TBa2jYuMLcaPyZGJhZZlSi" Ids="H9dwZZBraIZMGvZsj1DjW8,LJWYHdDe16DLwjwGoSaawM" />
+                <Patch Id="VL7dvpK5LArLAtL0X9fofg" Name="Create" ParticipatingElements="VSsIw2w0I32M4VH25CzzFx,QOkEmPisJgAMrhlI4dQaVG">
+                  <Pin Id="SWqUwmI0At9Lg4IGnK7GLz" Name="Manager" Kind="InputPin" Bounds="870,108" />
+                  <Pin Id="GlWFRtJmCkNNMTOHh8fXFB" Name="Parent Global State" Kind="InputPin" />
+                  <Pin Id="PM7r1uxTnA2NkguvSeC7W9" Name="State Reference" Kind="InputPin" />
+                </Patch>
+                <Patch Id="OdaMhuBtCdLLKbbL2CUZpo" Name="ProcessNotification">
+                  <Pin Id="DXwZRdEdMTMNGUx4ISDJJG" Name="Notification" Kind="InputPin" />
+                  <Pin Id="QHFJ4YYnoYOQXtgQWnOs1S" Name="Caller Info" Kind="InputPin" />
+                </Patch>
+                <Patch Id="LO99b2JjpXgQXxB00SJKuo" Name="GetLayer" ParticipatingElements="KW5Gak9vUChNowQBfcEJKz,D67DLIAj86eOVAvNXNVTWd,DWUJKDw820cN4nHaWNHRKx,TGd4wXXPc8zLCxUPASXPKY">
+                  <Pin Id="G9yD7WOpYLlMdFBcKo9Otm" MergeId="157408" Name="Layer" Kind="OutputPin" />
+                </Patch>
+                <Patch Id="VLOQMIQARc5QXQkHMsh1sI" Name="GetChildren">
+                  <Pin Id="UA4IC4mcjXxMK7oV9vWMgU" Name="Children" Kind="OutputPin" />
+                </Patch>
+                <Patch Id="Rnvs2sjEDNBNpWKyIjJaNK" Name="GetComponents">
+                  <Pin Id="JHbK35mOSKEOeW7IQliO3e" MergeId="177209" Name="Components" Kind="OutputPin" />
+                </Patch>
+                <Patch Id="DcLNpKHREgSOd8S0GQRLzt" Name="SetElementaContext (Internal)">
+                  <Pin Id="NvmbDG8Q9jbN9DBMMXbPjV" MergeId="350343" Name="Elementa Context" Kind="InputPin" />
+                </Patch>
+                <Patch Id="HNtR2SRRTHFLbgbRs1ihUk" Name="GetElementaContext (Internal)">
+                  <Pin Id="UrdnoE4sfoCQF5cOqOOJkT" MergeId="350358" Name="Elementa Context" Kind="OutputPin" />
+                </Patch>
+                <Patch Id="JmBHSPvvlVGLkyurjIq1lv" Name="SetMe (Internal)">
+                  <Pin Id="NNi2qCrjwfnNKDIlbfgV4j" MergeId="350434" Name="Me" Kind="InputPin" />
+                </Patch>
+                <Patch Id="K1RLFCYlSVPO7kmZrfMfpN" Name="GetMe (Internal)">
+                  <Pin Id="PrXepo4ezTUNi2rbILt49T" MergeId="350441" Name="Me" Kind="OutputPin" />
+                </Patch>
               </Patch>
             </Node>
             <Node Bounds="658,396,56,19" Id="Ejg3OZvgcAAOA3Wu5rsEOf">
@@ -2559,7 +2558,7 @@
                   <Pin Id="UToR2etYzyOME3eaPbGldS" Name="Is Idle" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="372,374,105,19" Id="E6rOZkbFsBTPepRCtgZjbq">
-                  <p:NodeReference LastCategoryFullName="Elementa.Core.ValueProperty" LastSymbolSource="VL.Elementa.Core.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Elementa.Component.ValueProperty" LastSymbolSource="VL.Elementa.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="NumericValue" />
                   </p:NodeReference>
@@ -2633,7 +2632,7 @@
               <Pin Id="I6DvaA3MYDeLn7Xt7DeEdW" Name="Widget Manager" Kind="InputPin" />
             </Node>
             <Node Bounds="299,1078,130,89" Id="H4bIiJrG0v7MZOEVR0mYY6">
-              <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="VL.Elementa.Core.vl">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="ProcessAppFlag" Name="GetDrawerComponent" />
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
               </p:NodeReference>
@@ -2649,9 +2648,10 @@
                   <Pin Id="BubytOamnwXQWY5A4SSAdb" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
+              <Pin Id="BnDMft1lHUSOwsFXY48ksv" Name="Components" Kind="InputPin" />
+              <Pin Id="HSXSscEeJNnOir33Nrn5vS" Name="Output" Kind="OutputPin" />
+              <Pin Id="MzKyVKBUCHZNLXAcjnE8pS" Name="Found" Kind="OutputPin" />
               <Pin Id="VHwWIuwtoLnO8nas9AoIYB" Name="Widget Manager" Kind="InputPin" />
-              <Pin Id="KpHLa6VMQ29LYs9n5fz2VQ" Name="Has Changed" Kind="OutputPin" />
-              <Pin Id="QqKrYRTeoxmOzch9TeC38D" Name="Not Found" Kind="OutputPin" />
               <Pin Id="BTVEFiFzNJtOmvJKUgxxzU" Name="IWidgetDrawer" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="Jntuab71E14MQBwVWtvqFV" Bounds="278,591" />
@@ -2703,7 +2703,7 @@
             <Node Bounds="1180,589,65,19" Id="Sl9NhRZ7XnoMNdyLMp7RSW">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="Layoutable" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableLeaf" />
               </p:NodeReference>
               <Pin Id="BGzKa4m8xKcO8qNXoTwVa7" Name="Bounds" Kind="InputPin" />
               <Pin Id="CV2cWiVuKtfQNtRhcMhDvn" Name="Is Layoutable" Kind="InputPin" />
@@ -2737,7 +2737,7 @@
             <Pad Id="LJ8m7Zqs2OqOASBGwaxFqk" SlotId="RJkB68t8RrlPMd0cHTQnKP" Bounds="1028,912" />
             <ControlPoint Id="JurJwWTUhrDO7yVC3PJFQi" Bounds="1028,975" />
             <Node Bounds="1356,589,57,19" Id="KlItgR19NFXPEQrwNToXti">
-              <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Styleable" />
               </p:NodeReference>
@@ -3494,7 +3494,7 @@
                   <Pin Id="FzveKR5LQrNMVG72oxfZvC" Name="Is Idle" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="329,1053,105,19" Id="PcI9Cmwj76pMRIVzyvqikC">
-                  <p:NodeReference LastCategoryFullName="Elementa.Core.ValueProperty" LastSymbolSource="VL.Elementa.Core.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Elementa.Component.ValueProperty" LastSymbolSource="VL.Elementa.Core.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessAppFlag" Name="NumericValue" />
                   </p:NodeReference>
@@ -3565,7 +3565,7 @@
               <Pin Id="EkaGwlT4sTzQSQw62CGVSe" Name="Widget Manager" Kind="InputPin" />
             </Node>
             <Node Bounds="316,1819,130,90" Id="CTl1Nkzn2yUPHlXdY6KpmF">
-              <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="VL.Elementa.Core.vl">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="ProcessAppFlag" Name="GetDrawerComponent" />
                 <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
               </p:NodeReference>
@@ -3581,9 +3581,10 @@
                   <Pin Id="KGF7QFfGH8JOCRk89KC5bq" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
+              <Pin Id="Omr7eU52YfDPGJoOEfTiyu" Name="Components" Kind="InputPin" />
+              <Pin Id="KP9USMi4mmeNL2Y24PvTyx" Name="Output" Kind="OutputPin" />
+              <Pin Id="NE2iQ0ty0LHMXp1vA0kPLZ" Name="Found" Kind="OutputPin" />
               <Pin Id="KBEw32nLlrrNDRK7qmQlVd" Name="Widget Manager" Kind="InputPin" />
-              <Pin Id="Kxk5VQnRSR2OxSRbPIZ1ZA" Name="Has Changed" Kind="OutputPin" />
-              <Pin Id="AApXRzvXCfnMwz7mZMfZpZ" Name="Not Found" Kind="OutputPin" />
               <Pin Id="HS2rGJE44lXMTrHuZde9be" Name="IWidgetDrawer" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="Czlp4jyA7tyPwVi8Cl5zDE" Bounds="222,1213" />
@@ -3635,7 +3636,7 @@
             <Node Bounds="1156,1226,65,19" Id="T65WBPy87C9PLn6rDCF6LR">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="Layoutable" />
+                <Choice Kind="ProcessAppFlag" Name="LayoutableLeaf" />
               </p:NodeReference>
               <Pin Id="LURqcOFbV2uMgruBUQhAba" Name="Bounds" Kind="InputPin" />
               <Pin Id="BcJH5ib1YeWOVEd033cR4e" Name="Is Layoutable" Kind="InputPin" />
@@ -3659,7 +3660,7 @@
             <Pad Id="L41eqNNFkuKQXv2tugK9k4" SlotId="K2dhOzXqMSCOdrg9x8lEgi" Bounds="1042,1579" />
             <ControlPoint Id="F88gk8pfrCOPMmjC5ui7cm" Bounds="1042,1642" />
             <Node Bounds="1311,1226,57,19" Id="U39V85YvUSuMklzqJTT6JU">
-              <p:NodeReference LastCategoryFullName="VL.Elementa.Style" LastSymbolSource="VL.Elementa.Core.vl">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Styleable" />
               </p:NodeReference>
