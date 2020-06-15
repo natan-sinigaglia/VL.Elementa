@@ -219,6 +219,7 @@
               <Pin Id="GCULrY36HBGNbNBdrnEa4h" Name="Local Properties" Kind="OutputPin" />
               <Pin Id="GVxF50bzcWqLwm5Dw5UTPy" Name="Static Local Properties" Kind="OutputPin" />
               <Pin Id="SCb7PmfvEZwPfhf7pYz0KL" Name="Styleable Component Found" Kind="OutputPin" />
+              <Pin Id="JgF70STL0u6QZUWWIn93I5" Name="Styleable" Kind="OutputPin" />
             </Node>
             <Node Bounds="703,7,129,19" Id="QcZjqjKWXaTNB3UCOGJm6e">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Style.Utils" LastSymbolSource="VL.Elementa.Core.vl">
@@ -688,7 +689,11 @@
               <Pin Id="NbN8PCu7mEuPR3he2fwXLr" Name="Output" Kind="StateOutputPin" />
               <Pin Id="ABuTGCn6M4oP2UL0eFUh3L" Name="Value" Kind="OutputPin" />
               <Pin Id="MqKJxmHrz3TLDNeglS9ElY" Name="Value Observable" Kind="OutputPin" />
-              <Pin Id="R5TfkDBFPhDNMy9sCc7tZT" Name="SetValueT" Kind="InputPin" />
+              <Pin Id="R5TfkDBFPhDNMy9sCc7tZT" Name="SetValueT" Kind="InputPin" DefaultValue="False">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
             </Node>
             <Node Bounds="801,380,61,19" Id="SNCKOfjWPo0NRb4MKc8Mz5">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
@@ -721,8 +726,8 @@
               <Pin Id="HFy5UlWdzZQPyD3t1rOoOI" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="HV8DCPjxzC4QMZHa49bii4" Bounds="71,63" />
-            <ControlPoint Id="C27kMB83VALNy5J3yJhUOH" Bounds="213,60" />
-            <ControlPoint Id="EPepu9gPpDILQpZGVB4wEK" Bounds="260,60" />
+            <ControlPoint Id="C27kMB83VALNy5J3yJhUOH" Bounds="211,-3" />
+            <ControlPoint Id="EPepu9gPpDILQpZGVB4wEK" Bounds="258,-3" />
             <ControlPoint Id="RG77tPvW03LMfd7og2HX1y" Bounds="1103,415" />
             <Node Bounds="69,532,143,19" Id="MHWLUMj0qpeLuJh8XrkG7U">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Utils" LastSymbolSource="VL.Elementa.Core.vl">
@@ -1322,6 +1327,26 @@
             <ControlPoint Id="OrZy2RqlXtvMJCJvbWKdTo" Bounds="368,691" />
             <ControlPoint Id="JheWMw33YuEOfVXXGBPzZk" Bounds="100,661" />
             <ControlPoint Id="ITCHrnF16FiPt2AKscvuVV" Bounds="859,359" />
+            <ControlPoint Id="DatHtuLk6wtLQaG2frGD34" Bounds="382,38" />
+            <Node Bounds="314,73,30,19" Id="ThGFMZ8yYBgO2lrOXXp8qR">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="OR" />
+                <CategoryReference Kind="BooleanType" Name="Boolean" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="EIwzY8ah0w6Nm6V58KWgP3" Name="Input" Kind="StateInputPin" />
+              <Pin Id="J5q6ed1eQwiLWk4EXoHZDk" Name="Input 2" Kind="InputPin" />
+              <Pin Id="Td3mIj49BQwMXIWag3QGuV" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="285,38,57,19" Id="OhplOJy5V8wNlKIUpMuZcy">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="BUTAuGYffKcOFIahdPyNiI" Name="Value" Kind="InputPin" />
+              <Pin Id="Ng8MdvyZ4fzQT3MnZSK9Zo" Name="Result" Kind="OutputPin" />
+              <Pin Id="E0mVEUJZrLsQIAjS0ks7pj" Name="Unchanged" Kind="OutputPin" />
+            </Node>
           </Canvas>
           <Slot Id="SLjwSBoQkBUNrBSqGumsqG" Name="Parent">
             <p:TypeAnnotation>
@@ -1435,6 +1460,7 @@
                 </p:TypeArguments>
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="IccJyTzKbJrLWY1jiR71o5" Name="Set Value" Kind="InputPin" Bounds="360,79" />
           </Patch>
           <Link Id="P4njcIBvBqENbAMdfaFlJd" Ids="TqoncMfOK4LM7ZdigDcGQH,G2pVUKW3LmFNftOwa3gx8o" IsHidden="true" />
           <Link Id="R3x75jB5qUhMqyvU264MmA" Ids="DT338tEktKuNdnjnO7jxJW,Ov9izWjwqcqMmKQqeKTVRj" IsHidden="true" />
@@ -1521,6 +1547,11 @@
           <Link Id="RhOBxyCNuJwQRBm8bsEeCo" Ids="SyiSrB5uw46MBik5MOFJNJ,OAN16YsGjRSNCVOfJ1F9IR" />
           <Link Id="Jct8Zcrx6i6L6woeICJe4d" Ids="UoapIiO6ZvwLnG0S9w2fMV,VXwcRRMHUeTPe3zVhBt0oj" />
           <Link Id="GkBKKu0AIAvQXwQJX1lvsn" Ids="Hdt5RnTK1sRPDmXkIKPWkZ,HQ4kPMGvUDdN4yBgIAGrGf" />
+          <Link Id="LuhKnugC0nWMHTRUcFyQv0" Ids="IccJyTzKbJrLWY1jiR71o5,DatHtuLk6wtLQaG2frGD34" IsHidden="true" />
+          <Link Id="C6QPMxyWFiqQCtizXs1RSf" Ids="Td3mIj49BQwMXIWag3QGuV,R5TfkDBFPhDNMy9sCc7tZT" />
+          <Link Id="HZ2pBLl4PtuNS7SzdTDAvG" Ids="C27kMB83VALNy5J3yJhUOH,BUTAuGYffKcOFIahdPyNiI" />
+          <Link Id="VjpYsOuO9G0Ol0qoQARubL" Ids="Ng8MdvyZ4fzQT3MnZSK9Zo,EIwzY8ah0w6Nm6V58KWgP3" />
+          <Link Id="KGQgYKvFoyLMxnhUvnyyhT" Ids="DatHtuLk6wtLQaG2frGD34,J5q6ed1eQwiLWk4EXoHZDk" />
         </Patch>
       </Node>
       <!--
@@ -1548,6 +1579,7 @@
               <Pin Id="Ou2YX8qZMxeQY1FvwVq7BD" Name="Value" Kind="InputPin" />
               <Pin Id="BFZkmYXBPhrNXmu0dM5WwR" Name="Push Input To Observable" Kind="InputPin" />
               <Pin Id="Qq1byqOxLpYNx5i4JYhAye" Name="Components" Kind="InputPin" />
+              <Pin Id="H0ukOSUKYoGLR8DKtje216" Name="Set Value" Kind="InputPin" />
               <Pin Id="KMzS2H0HeROMeEHEBvciqy" Name="Output" Kind="StateOutputPin" />
               <Pin Id="RQknk4rWWm9MVndx7YyUIj" Name="Value Observable" Kind="OutputPin" />
               <Pin Id="SnBT7ULibGINYbKy3Ggh2Y" Name="Value" Kind="OutputPin" />
