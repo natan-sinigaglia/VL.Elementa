@@ -71,6 +71,12 @@ namespace Elementa
         Internal, OnEdge, External
     }
 
+    public enum ValueProperty_EditingMode
+    {
+        Absolute, Relative, Sticky
+    }
+
+
     public enum StyleProperties
     {
         Background_Enabled,
