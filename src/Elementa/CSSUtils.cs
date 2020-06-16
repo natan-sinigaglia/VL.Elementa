@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ExCSS;
-
-namespace Elementa
+﻿namespace Elementa
 {
     public static class CSSUtils
     {
