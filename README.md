@@ -54,6 +54,8 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - NEW sticky behaviour for slider widget (and all widgets that internally use slider behaviour)
 - NEW Formattable component
 - NEW Grid layout node
+- NEW Root architecture with pluggable component processors
+- NEW EditBehaviour options for some widgets: AbsoluteEditing/RelativeEditing/StickyEditing
 - FIX in ToSkiaLayer (in Root): disabled skia rendering in the first frame to avoid UI flickering (due to frame delays in retrieving the bounds from renderer)
 - FIX in IntegerUpDown behaviour (wasn't updating Min and Max values in idle)
 - Refactoring of Layour nodes: proper cached mechanism that improves a lot performances and better modularization of the internal components.
