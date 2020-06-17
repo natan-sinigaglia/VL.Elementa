@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="B1yiFhlVLR1MiRea1CO9EB" Name="Bounds" Kind="InputPin" DefaultValue="1792, 506, 664, 724">
+            <Pin Id="B1yiFhlVLR1MiRea1CO9EB" Name="Bounds" Kind="InputPin" DefaultValue="1882, 8, 664, 724">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -185,7 +185,11 @@
             <Pin Id="TJ6lPoxLswGNcouqbl9yRm" Name="Translate Constraint Type" Kind="InputPin" />
             <Pin Id="HzI9S3V2YM9MpLC7IliMup" Name="Axis Scaling Trigger Func" Kind="InputPin" />
             <Pin Id="Jg2w5VCabURLD7upZHRzcP" Name="Handler Left Enabled" Kind="InputPin" />
-            <Pin Id="OZkU1QkcLatLUqec0MDUBF" Name="Handler Right Enabled" Kind="InputPin" />
+            <Pin Id="OZkU1QkcLatLUqec0MDUBF" Name="Handler Right Enabled" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="ICFmyLSxyTqPTDWLXcj1XG" Name="Handler Top Enabled" Kind="InputPin" />
             <Pin Id="IODKEfwen74PF53Q3RGoI6" Name="Handler Bottom Enabled" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -242,6 +246,8 @@
             <Pin Id="JSqwaQKfpSaQabqDueZhBp" Name="Original Rectangle" Kind="OutputPin" />
             <Pin Id="O5iioNMrclaMkdWnk3Ye81" Name="Rectangle" Kind="OutputPin" />
             <Pin Id="FMXhxjZYuWRPhZkMXEJ8Ec" Name="Interaction Start" Kind="OutputPin" />
+            <Pin Id="PYolBHHD5p8P0CyWB7ao9Z" Name="Active Translation" Kind="OutputPin" />
+            <Pin Id="QqHoxKUQEObQJ93FRayjii" Name="Active Handlers" Kind="OutputPin" />
           </Node>
           <Pad Id="EI3G5offpagLOwjSPFlLma" Comment="Original Rectangle" Bounds="259,47,161,25" ShowValueBox="true" isIOBox="true" />
           <Pad Id="L2BnbhgHVQwQSA2an5xnG6" Comment="Rectangle" Bounds="298,-5,152,23" ShowValueBox="true" isIOBox="true" />
@@ -257,25 +263,39 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="PlMQgiwIHj0Ny6t6ujzQKu" Name="Translate Constraint Type" Kind="InputPin" />
-            <Pin Id="OK5V9p82k55LcOhL2SRHhE" Name="Axis Scaling Trigger Func" Kind="InputPin" />
-            <Pin Id="RpUk40IHq9OPNQOIBbSvRD" Name="Handler Left Enabled" Kind="InputPin" />
-            <Pin Id="Di9azfaahU6PScXtPH5kj3" Name="Handler Right Enabled" Kind="InputPin" />
-            <Pin Id="OTQ26PfP721OhTSHrUDRPu" Name="Handler Top Enabled" Kind="InputPin" />
-            <Pin Id="MCscWiVaa2HL4FsjPqXx6g" Name="Handler Bottom Enabled" Kind="InputPin" />
-            <Pin Id="BGhQTS0jmhIO4ubJd0vb8T" Name="Handler Thickness" Kind="InputPin" />
-            <Pin Id="DyN7tf19BYwMf0DprU3FHW" Name="Handler Rectangles Option" Kind="InputPin" DefaultValue="Internal">
+            <Pin Id="PlMQgiwIHj0Ny6t6ujzQKu" Name="Translate Constraint Type" Kind="InputPin" DefaultValue="Horizontal">
               <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
-                <Choice Kind="TypeFlag" Name="Handlers_Offset" />
+                <Choice Kind="TypeFlag" Name="Axis_Constraint" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="KoeAyR5s4T2P8BzSkTwSb9" Name="Helper Enabled" Kind="InputPin" DefaultValue="True">
+            <Pin Id="RpUk40IHq9OPNQOIBbSvRD" Name="Handler Left Enabled" Kind="InputPin" />
+            <Pin Id="Di9azfaahU6PScXtPH5kj3" Name="Handler Right Enabled" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="OTQ26PfP721OhTSHrUDRPu" Name="Handler Top Enabled" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="MCscWiVaa2HL4FsjPqXx6g" Name="Handler Bottom Enabled" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="TwilMKHE25TLfAXtGtYDGn" Name="Output" Kind="StateOutputPin" />
             <Pin Id="BM9VzmPhKPXNmpeY6rRKER" Name="Transformation Stream" Kind="OutputPin" />
+            <Pin Id="MXbNfxp4vnpQFaOLKxtFDo" Name="Handler Thickness" Kind="InputPin" DefaultValue="0.21">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="Bt8wfoWSDCoPTJEdd7hiWw" Name="Handler Rectangles Option" Kind="InputPin" DefaultValue="External">
+              <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+                <Choice Kind="TypeFlag" Name="Handlers_Offset" />
+              </p:TypeAnnotation>
+            </Pin>
           </Node>
           <Pad Id="U6oPNnnCJ9cLmizVYvlgf5" Comment="Position" Bounds="520,93,35,28" ShowValueBox="true" isIOBox="true" Value="0.33, 1.02">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
@@ -315,6 +335,63 @@
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
+          <Node Bounds="533,328" Id="MLqVPv41IDxQciWK50Nd1i">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GuidelinesComponent" />
+            </p:NodeReference>
+            <Pin Id="QjjwuiqkcZONFTe9Vh8FpB" Name="Left Guideline" Kind="InputPin" />
+            <Pin Id="NY5sdqvGCWvPYRYpfBVqzn" Name="Right Guideline" Kind="InputPin" />
+            <Pin Id="DGzLXVdZrg1LRPod8hihbu" Name="Top Guideline" Kind="InputPin" />
+            <Pin Id="ClpiE5Gk5FQOmjUkrCML0m" Name="Bottom Guideline" Kind="InputPin" />
+            <Pin Id="AX2bvmhZiMLO4bEldFsHhe" Name="Custom Horizontal Guidelines" Kind="InputPin" />
+            <Pin Id="UgPuLlRURrPNwHlu0Chx9h" Name="Custom Vertical Guidelines" Kind="InputPin" />
+            <Pin Id="P1WXUhBJ7qLLa3NqdIedZG" Name="Center Vertical" Kind="InputPin" />
+            <Pin Id="PPBrAT2vjLENgOoJ6iMv3c" Name="Center Horizontal" Kind="InputPin" />
+            <Pin Id="Dha3Y2oMyfbQNSWJbiWrvH" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="827,237,31,36" Id="UiK9ROl36X4L3ck8P9TONo">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <Pin Id="S6IGPa8v6GcQTXREcFEfFe" Name="Break" Kind="OutputPin" />
+            <Patch Id="EYyKSJlKC5ZMvWCA04UxLE" ManuallySortedPins="true">
+              <Patch Id="DFXDgZAzO25LCFoGMuXHwU" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="K9dWgVGfACJNMy4Fawb0g9" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="PhuFQtOGbRoOZalFVhcely" Name="Dispose" ManuallySortedPins="true" />
+            </Patch>
+            <ControlPoint Id="Djz2v6PKpzlLNg7xLfYX0c" Bounds="841,244" Alignment="Top" />
+            <ControlPoint Id="QpDOdNWVtNVNWlXYhlJjzt" Bounds="841,267" Alignment="Bottom">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </ControlPoint>
+          </Node>
+          <Node Bounds="839,286,69,19" Id="LniRLNY4356O1dtsCk1bzl">
+            <p:NodeReference LastCategoryFullName="3D.Vector4" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="FromValues" />
+              <CategoryReference Kind="Vector4Type" Name="Vector4" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="Q7TGJD5RtwEQHiurPVvATC" Name="Values" Kind="InputPin" />
+            <Pin Id="R5iRU9bd2kVO47ulpB0Wz0" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="845,194" Id="VVyNZXS1ObuNewOlfmqvxr">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Transformable" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Transformable" />
+              <Choice Kind="OperationCallFlag" Name="GetScaleSettings" />
+            </p:NodeReference>
+            <Pin Id="CxUutLbn16KP3v3BlRFufs" Name="Input" Kind="StateInputPin" />
+            <Pin Id="SdwtnLwupA1M7fxbTiaOcC" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="ReqQCDtdpGlQXwCZIkgSav" Name="Axis Scaling Trigger Func" Kind="OutputPin" />
+            <Pin Id="KJlCwjZTc60MWvava8Dhx3" Name="Handlers Enable" Kind="OutputPin" />
+            <Pin Id="Ds7zj4lhSGFQDK1JJPVFLg" Name="Handler Thickness" Kind="OutputPin" />
+            <Pin Id="CkDc6311FxTNTmr4m6VQKU" Name="Handler Shift Option Index" Kind="OutputPin" />
+          </Node>
+          <Pad Id="SN7KDLkTUQVOSlqqpfWtrJ" Comment="" Bounds="839,331,35,57" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="MZAfNd2IQPkLxXRG95L3CC" Name="Create" />
         <Patch Id="CTjZiLydaIYMiGySsx5fAq" Name="Update" />
@@ -347,6 +424,12 @@
         <Link Id="PIwN7DWm17bLSANVFNPRcP" Ids="Bs8YjmM5KNEOZREq7lSYtz,HCBFWBpibrRNAisXDGqDXH" />
         <Link Id="GMk4A3aNYfKLrOj27qNnBP" Ids="PXeO3KdUjpbQXp35OQTJh9,MYuqo71jVZUNffcqVtXwA6" />
         <Link Id="KRzHq21A4gRMNDv628DYiX" Ids="TwilMKHE25TLfAXtGtYDGn,TUeZuOGMIDtOAKUZSmfBPp" />
+        <Link Id="Gt1Dy4GVGWnPg4cfrkLeIY" Ids="Djz2v6PKpzlLNg7xLfYX0c,QpDOdNWVtNVNWlXYhlJjzt" />
+        <Link Id="KohDHt5awdfP5nvqJkuqQj" Ids="QpDOdNWVtNVNWlXYhlJjzt,Q7TGJD5RtwEQHiurPVvATC" />
+        <Link Id="JY070LeJipdODt4l6LOYbk" Ids="TwilMKHE25TLfAXtGtYDGn,CxUutLbn16KP3v3BlRFufs" />
+        <Link Id="P9PX2RwwpiJQAccS4yoBgL" Ids="KJlCwjZTc60MWvava8Dhx3,Djz2v6PKpzlLNg7xLfYX0c" />
+        <Link Id="TOBPnXEuUX8PXXJJp4xRKc" Ids="R5iRU9bd2kVO47ulpB0Wz0,SN7KDLkTUQVOSlqqpfWtrJ" />
+        <Link Id="OXCjvizHa5hLkBPZyy37dx" Ids="RpSVgInrjVJOBQLU3NIe98,Mk5FqLymlVTQUZmhDhGZCn" />
       </Patch>
     </Node>
   </Patch>
