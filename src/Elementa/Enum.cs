@@ -2,29 +2,24 @@
 
 namespace Elementa
 {
-    public enum Mouse_Event_Kind
+    public enum MouseEventKind
     {
         Down, Up, Pressed, Move, DoubleClick, IsLost
     }
 
-    public enum Keyboard_Event_Kind
+    public enum KeyboardEventKind
     {
         Down, Up, Pressed
     }
 
-    public enum Elementum_State
+    public enum ElementumState
     {
-        Idle, Hovered, Selected
+        Idle, Hovered, Selected, Focused
     }
 
-    public enum Label_Placement
+    public enum LabelPlacement
     {
         Left, Right, Top, Bottom
-    }
-
-    public enum ComponentType
-    {
-        Interactive, Hoverable, Selectable, Typeable, Taggable, Styleable, Taskable, Moveable, Resizeable, Orientable, Attributable, Subdividable, Cycleable
     }
 
     public enum KnownWidget
@@ -32,7 +27,7 @@ namespace Elementa
         Bang, Press, Toggle, Integer, IntegerUpDown, Value, Value64, Slider, Rotary, Vector2D, Slider2D, Range, Vector3D, Vector4D, Color, TextField, Dropdown, NavigateToButton
     }
 
-    public enum WidgetOrientation
+    public enum Orientation
     {
         Horizontal, Vertical
     }
@@ -41,37 +36,33 @@ namespace Elementa
     {
         Flat, Nested, Stacked
     }
-    public enum Layout_Orientation
-    {
-        Horizontal, Vertical
-    }
 
-    public enum Layout_Mode
+    public enum LayoutMode
     {
         None, Stack, Distribute, Allocate
     }
 
-    public enum Layout_VerticalAlignment
+    public enum VerticalAlignment
     {
         None, Left, Center, Right
     }
 
-    public enum Layout_HorizontalAlignment
+    public enum HorizontalAlignment
     {
         None, Top, Middle, Bottom
     }
 
-    public enum Axis_Constraint
+    public enum AxisConstraint
     {
         NoConstraint, Horizontal, Vertical
     }
 
-    public enum Handlers_Offset
+    public enum HandlersOffset
     {
         Internal, OnEdge, External
     }
 
-    public enum ValueProperty_EditingMode
+    public enum ValueEditingMode
     {
         Absolute, Relative, Sticky
     }

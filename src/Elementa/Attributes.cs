@@ -27,12 +27,12 @@ namespace Elementa.Attributes
 
     public class WidgetOrientationAttribute : Attribute
     {
-        public WidgetOrientationAttribute(WidgetOrientation widgetOrientation)
+        public WidgetOrientationAttribute(Orientation widgetOrientation)
         {
             WidgetOrientation = widgetOrientation;
         }
 
-        public WidgetOrientation WidgetOrientation { get; }
+        public Orientation WidgetOrientation { get; }
     }
 
     public class GroupExposureKindAttribute : Attribute
