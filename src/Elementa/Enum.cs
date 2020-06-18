@@ -57,6 +57,11 @@ namespace Elementa
         NoConstraint, Horizontal, Vertical
     }
 
+    public enum RectangleAlign
+    {
+        Left, Center, Right, Top, Middle, Bottom
+    }
+
     public enum HandlersOffset
     {
         Internal, OnEdge, External
