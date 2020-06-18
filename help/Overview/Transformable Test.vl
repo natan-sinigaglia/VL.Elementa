@@ -469,7 +469,7 @@
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="1093,71,260,170" Id="PxaDFzjtVwxLXPoUbvitb2">
+          <Node Bounds="1093,79,180,162" Id="PxaDFzjtVwxLXPoUbvitb2">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.LayerElementum.vl">
               <Choice Kind="ProcessAppFlag" Name="LayerElementum" />
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
@@ -478,13 +478,10 @@
             <Pin Id="FZpItrKjeelOlpNhgnhrC4" Name="Position" Kind="InputPin" />
             <Pin Id="DOBjlbsg17DLzHzoVrcVR4" Name="Size" Kind="InputPin" />
             <Pin Id="Ilvwcl6kCJvPPUu9tH8xbo" Name="Output" Kind="OutputPin" />
+            <Pin Id="SdKw3tfmzXGMyAbYR2qaRo" Name="Components" Kind="InputPin" />
+            <Pin Id="DsDGVaOtjmOOCooYGbrkZN" Name="Components 2" Kind="InputPin" />
             <Patch Id="BiZOE0wVssdN0GWnqrMrGl" ManuallySortedPins="true">
-              <Patch Id="MTOsFu9MxCbNgskIG2pt8K" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="VBz8K5h7npjLP1PbQshw3k" Name="Updator" ManuallySortedPins="true">
-                <Pin Id="SEQI3BsVct7NgGRKXvuFvK" Name="Input 1" Kind="InputPin" />
-                <Pin Id="IO9f8cKUKyIQA60475FLNh" Name="Output" Kind="OutputPin" />
-              </Patch>
-              <ControlPoint Id="F2eKFdZpEupN1FOJb3Zrhe" Bounds="1108,79" />
+              <ControlPoint Id="F2eKFdZpEupN1FOJb3Zrhe" Bounds="1110,87" />
               <ControlPoint Id="G4KnZCWa5V8NqlvY9ZOrel" Bounds="1110,234" />
               <Node Bounds="1107,173,125,19" Id="UFfFNsFEZWmMpGcG28Q8oB">
                 <p:NodeReference LastCategoryFullName="Elementa.Core.Utils.Skia" LastSymbolSource="VL.Elementa.Core.vl">
@@ -501,7 +498,7 @@
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
                 </Pin>
-                <Pin Id="Oado8kpC1F3Ohv3dlMwnfX" Name="Inner Radius" Kind="InputPin">
+                <Pin Id="Oado8kpC1F3Ohv3dlMwnfX" Name="Inner Radius" Kind="InputPin" DefaultValue="0.3">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
@@ -534,13 +531,12 @@
                 <Pin Id="FjCJ0NtpJ0mLFC8Wa4RkAt" Name="On New Cycle" Kind="OutputPin" />
                 <Pin Id="LZcM1MqwbEALvhLaHQfmxp" Name="Cycles" Kind="OutputPin" />
               </Node>
-              <Pad Id="TSCOYAGVi5zMU5fHeYfKym" Comment="Inner Radius" Bounds="1227,149,35,15" ShowValueBox="true" isIOBox="true" Value="0.53">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="Float32" />
-                </p:TypeAnnotation>
-              </Pad>
+              <Patch Id="MTOsFu9MxCbNgskIG2pt8K" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="VBz8K5h7npjLP1PbQshw3k" Name="Update" ManuallySortedPins="true">
+                <Pin Id="SEQI3BsVct7NgGRKXvuFvK" Name="Input 1" Kind="InputPin" />
+                <Pin Id="IO9f8cKUKyIQA60475FLNh" Name="Output" Kind="OutputPin" />
+              </Patch>
             </Patch>
-            <Pin Id="SdKw3tfmzXGMyAbYR2qaRo" Name="Components" Kind="InputPin" />
           </Node>
           <Node Bounds="1266,-12,205,19" Id="Jmi62V6axHbN4nAnHJQJuz">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
@@ -606,6 +602,16 @@
             </Pin>
             <Pin Id="IJ6k0EgRWIELZSY9MKwcID" Name="Output" Kind="OutputPin" />
           </Node>
+          <Node Bounds="1368,34,62,19" Id="UPGgK8MhUypMQ6fjoa7g9Q">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="ProcessAppFlag" Name="Selectable" />
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+            </p:NodeReference>
+            <Pin Id="E92ugtVkSBwL9hYoiNXWfM" Name="Is Selectable" Kind="InputPin" />
+            <Pin Id="CwpLdTG7noMQMSwhgItY5h" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="OkboNCMVZDWOYUKpjKWdzE" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="O57l5NrhGBwPmgeeLIOePz" Name="Selected" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="MZAfNd2IQPkLxXRG95L3CC" Name="Create" />
         <Patch Id="CTjZiLydaIYMiGySsx5fAq" Name="Update" />
@@ -657,6 +663,7 @@
         <Link Id="Rzvx8r4gmx4OMkDqNj5k0y" Ids="UkSGEirh85aNyfLD0Hh0MA,G4KnZCWa5V8NqlvY9ZOrel" />
         <Link Id="LctTBOw1kaSLAj8WGprGvP" Ids="PVDchGDMymBQdGkh6ATFW8,GEKo8JLWTt1P2gqjTDUzkR" />
         <Link Id="AkvAFwM8MMTPlhHSOWcQC8" Ids="IJ6k0EgRWIELZSY9MKwcID,LuZBCLpAeTLLeeolV3CWW6" />
+        <Link Id="Sm1ri4BFhghMp3MMvVCmZ2" Ids="OkboNCMVZDWOYUKpjKWdzE,DsDGVaOtjmOOCooYGbrkZN" />
       </Patch>
     </Node>
   </Patch>
