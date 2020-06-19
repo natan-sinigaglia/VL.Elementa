@@ -20,7 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="B1yiFhlVLR1MiRea1CO9EB" Name="Bounds" Kind="InputPin" DefaultValue="1752, 50, 774, 752">
+            <Pin Id="B1yiFhlVLR1MiRea1CO9EB" Name="Bounds" Kind="InputPin" DefaultValue="1776, 32, 774, 752">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -185,7 +185,6 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="TJ6lPoxLswGNcouqbl9yRm" Name="Translate Constraint Type" Kind="InputPin" />
-            <Pin Id="HzI9S3V2YM9MpLC7IliMup" Name="Axis Scaling Trigger Func" Kind="InputPin" />
             <Pin Id="Jg2w5VCabURLD7upZHRzcP" Name="Handler Left Enabled" Kind="InputPin" />
             <Pin Id="OZkU1QkcLatLUqec0MDUBF" Name="Handler Right Enabled" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -213,6 +212,7 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="IKFKCuj8HQ0MSeL5GFQlvi" Name="Snapping" Kind="InputPin" />
             <Pin Id="RpSVgInrjVJOBQLU3NIe98" Name="Output" Kind="StateOutputPin" />
             <Pin Id="LKLT2Lj7StlOzf8oOIndOc" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
@@ -248,6 +248,7 @@
             <Pin Id="AmxX6bzXwOMQRURTmJxf1p" Name="Input" Kind="StateInputPin" />
             <Pin Id="RFpa3puaBfKNPlPDIqBMjD" Name="Output" Kind="StateOutputPin" />
             <Pin Id="JSqwaQKfpSaQabqDueZhBp" Name="Original Rectangle" Kind="OutputPin" />
+            <Pin Id="Dnn9AEwItP4Nx8YRv4Q0kz" Name="Raw Rectangle" Kind="OutputPin" />
             <Pin Id="O5iioNMrclaMkdWnk3Ye81" Name="Rectangle" Kind="OutputPin" />
             <Pin Id="FMXhxjZYuWRPhZkMXEJ8Ec" Name="Interaction Start" Kind="OutputPin" />
             <Pin Id="PYolBHHD5p8P0CyWB7ao9Z" Name="Active Translation" Kind="OutputPin" />
@@ -288,8 +289,6 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="TwilMKHE25TLfAXtGtYDGn" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="BM9VzmPhKPXNmpeY6rRKER" Name="Transformation Stream" Kind="OutputPin" />
             <Pin Id="MXbNfxp4vnpQFaOLKxtFDo" Name="Handler Thickness" Kind="InputPin">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Float32" />
@@ -300,6 +299,9 @@
                 <Choice Kind="TypeFlag" Name="HandlersOffset" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="BaOPjnbtGa6Pwbkkct6717" Name="Snapping" Kind="InputPin" />
+            <Pin Id="TwilMKHE25TLfAXtGtYDGn" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="BM9VzmPhKPXNmpeY6rRKER" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
           <Pad Id="U6oPNnnCJ9cLmizVYvlgf5" Comment="Position" Bounds="520,93,35,28" ShowValueBox="true" isIOBox="true" Value="0.33, 1.02">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
@@ -372,6 +374,7 @@
             </Pin>
             <Pin Id="AX2bvmhZiMLO4bEldFsHhe" Name="Custom Horizontal Guides" Kind="InputPin" />
             <Pin Id="UgPuLlRURrPNwHlu0Chx9h" Name="Custom Vertical Guides" Kind="InputPin" />
+            <Pin Id="HlHiIkSCuhINv8QbrPJnBK" Name="Enabled" Kind="InputPin" />
             <Pin Id="Dha3Y2oMyfbQNSWJbiWrvH" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="458,428,45,19" Id="LLfKcejQ73dLXhIGgCQPYw">
@@ -1023,15 +1026,24 @@
             <Patch Id="TGe1DwHrI9CQcRKiuZ1oSv">
               <Canvas Id="LMP03p4sO23OfoOCPnWxB4" BordersChecked="false" CanvasType="Group" />
               <Patch Id="KqocXR9Vv0tNfF5oY2lVug" Name="Create" />
-              <!--
-
-    ************************  ************************
-
--->
               <ProcessDefinition Id="NxJF2PrNiSCLksbEUoAw5S" IsHidden="true">
                 <Fragment Id="PVPmSx0AhyJMkx9VFizSEf" Patch="KqocXR9Vv0tNfF5oY2lVug" Enabled="true" />
               </ProcessDefinition>
             </Patch>
+          </Node>
+          <Node Bounds="784,-149,35,19" Id="NYCjZJQ0nn0MCI97LsyXQu">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Snapping" />
+            </p:NodeReference>
+            <Pin Id="PoGUVlQ8EWnO6HGN2vUs5e" Name="Left Anchor" Kind="InputPin" />
+            <Pin Id="T54rEIEAOqnLq2dUkMOF4v" Name="Center Anchor" Kind="InputPin" />
+            <Pin Id="MxPUhaUCbTUM4J5x8k9c92" Name="Right Anchor" Kind="InputPin" />
+            <Pin Id="JIvgZUtmWOmPkJR0q66MmN" Name="Top Anchor" Kind="InputPin" />
+            <Pin Id="C0BZSilZrmZL9TlgnfqOix" Name="Middle Anchor" Kind="InputPin" />
+            <Pin Id="BXZ5CnNJfltMzWnQwPGmFf" Name="Bottom Anchor" Kind="InputPin" />
+            <Pin Id="Qbhgy6qhImaN4hEpuCd8he" Name="Custom Horizontal Snap Anchors" Kind="InputPin" />
+            <Pin Id="TeiRrESWbG0OgglcjU9pWP" Name="Output" Kind="StateOutputPin" />
           </Node>
         </Canvas>
         <Patch Id="MZAfNd2IQPkLxXRG95L3CC" Name="Create" />
@@ -1139,6 +1151,7 @@
         <Link Id="BLUQGNDAuvYQOjn78ZoYaq" Ids="NQNA5Y6VTscLGNkNkyDQFX,C0v7xZHdAAmM9kl0glaXM6" />
         <Link Id="OVkYRFK2vxiOLrLtv41bW1" Ids="Q4XcWZ0PkKkLl4gdTCRrPs,AX2bvmhZiMLO4bEldFsHhe" />
         <Link Id="AeR8GfXRSSZOL7x2JXT321" Ids="BOpfsCMD77pNVD3G5mt7Ih,NjNeAocIq6YPOXkrc6AUwT" />
+        <Link Id="CEJPSz0Ay4UQYVMKENAsSd" Ids="TeiRrESWbG0OgglcjU9pWP,BaOPjnbtGa6Pwbkkct6717" />
       </Patch>
     </Node>
   </Patch>
