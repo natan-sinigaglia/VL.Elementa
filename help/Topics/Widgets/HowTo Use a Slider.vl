@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="S9764P60NcmMPHN32kDbfJ" LanguageVersion="2020.1.3.147" Version="0.128">
-  <NugetDependency Id="Vvekh3wtIdkPqU3cMjdsAM" Location="VL.CoreLib" Version="2020.1.3" />
+<Document xmlns:p="property" Id="S9764P60NcmMPHN32kDbfJ" LanguageVersion="2020.1.4.167" Version="0.128">
+  <NugetDependency Id="Vvekh3wtIdkPqU3cMjdsAM" Location="VL.CoreLib" Version="2020.1.4" />
   <Patch Id="TYeGdrPNYSrLkrYgvfRG7s">
     <Canvas Id="BqRPHj8LnisMnBb2Bc2yY1" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -26,11 +26,10 @@
             <Pin Id="H1BGh0yoPixNB0oFQzst4q" Name="Input" Kind="InputPin" />
             <Pin Id="AQ8EwGzsGluP2iI6eW2lIQ" Name="StyleSheet" Kind="InputPin" />
             <Pin Id="A6nXIuqyPqSNTJuR4EhymZ" Name="Force Style Update" Kind="InputPin" />
-            <Pin Id="P2EunHjxCoNOFJ8jAfBTfx" Name="GetComponentsProcessor" Kind="InputPin" />
             <Pin Id="J4wt5eNONfqO00gfb1jPgr" Name="Output" Kind="OutputPin" />
+            <Pin Id="PnrWuA6evWOMjT9nXmxrgG" Name="Components Version" Kind="OutputPin" />
             <Pin Id="HxRUtGRJPLeNvrcthcUq0d" Name="Dirty Graph" Kind="OutputPin" />
-            <Pin Id="T6UuYkXLt98PTg3ix9gE1v" Name="Rebuild Layout" Kind="OutputPin" />
-            <Pin Id="NieEPNO3jerMNrdYmyQJ60" Name="Elementa Context" Kind="OutputPin" />
+            <Pin Id="AaDWtQdOPSUNdDQyi1pTXL" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="13,680,165,19" Id="QN43muRCtR1NglHh6whVhm">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
@@ -139,11 +138,6 @@
           <Pad Id="GT77UvOehdnQTNlV7jPOFm" Comment="Anchor" Bounds="381,271,91,15" ShowValueBox="true" isIOBox="true" Value="TopLeft">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="RectangleAnchor" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="UZLOZN86wUeN6PONfWiGA5" Comment="Orientation" Bounds="400,306,76,15" ShowValueBox="true" isIOBox="true" Value="Horizontal">
-            <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Core.vl">
-              <Choice Kind="TypeFlag" Name="Layout_Orientation" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="H9zinaUpHfzQGOoL3UQbu7" Comment="Default" Bounds="461,485,35,15" ShowValueBox="true" isIOBox="true" Value="0">
@@ -299,6 +293,11 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Pad Id="SxiCkZMHheULCmZBYArExK" Comment="Orientation" Bounds="400,309,76,15" ShowValueBox="true" isIOBox="true" Value="Horizontal">
+            <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="TypeFlag" Name="Orientation" />
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="SEyLzdwh507LonbDyXztAL" Name="Create" />
         <Patch Id="AgmKk3ReH1YM4lJdnXTDrX" Name="Update" />
@@ -312,7 +311,6 @@
         <Link Id="RIROkb5AVPaMQtz3wcJOnv" Ids="LymhiTawF3bNw89mTeRq0Q,Os8ZuWOzhqMNU1VzaEfWoz" />
         <Link Id="IeVTqrEhOh1LyrSPj98htJ" Ids="CgdbEqJFwglPCZ2CBevYhg,TkXCFTH9MwUNgvbdug2dV1" />
         <Link Id="EdhRzA3wTb9NgAvZnPdCdN" Ids="GT77UvOehdnQTNlV7jPOFm,PONvQ7uTDYLPpIAjWIRJwA" />
-        <Link Id="IjUHxt9TX4BPbeaQ5pT9Cm" Ids="UZLOZN86wUeN6PONfWiGA5,OT6J8q64BhoPVRddY5fqML" />
         <Link Id="EXhTYoURrOGOCuLKhhtqKF" Ids="H9zinaUpHfzQGOoL3UQbu7,QiVtfDUgwivNivHBmw1l9P" />
         <Link Id="SMR637MzupXN5fHoIbsMgI" Ids="KxtU2VmN4zwOcIfqL6fsdg,VoXljhCdD1NQRJND3KnoUc" />
         <Link Id="FtKYnXvcur8Lmr3ICc8KYN" Ids="TBQpxuiqTE5L0qyGRVLqI1,OaqerJkmHKWOzxs5kZK9Ta" />
@@ -323,9 +321,10 @@
         <Link Id="O5PdHk7JUocOptKzJ59syB" Ids="PrWJr06lz2pLvcmcIEQNJP,V5216DqNpkWPT2CdtaCnOC" />
         <Link Id="KYPrJHK86LTQKPnDRPuXXS" Ids="TPP9bdxPE55LOMiChFlNqW,BhMc53M2ELhLn22PprxnzJ" />
         <Link Id="ATqe2bkh2pqL05rbiepKS3" Ids="NWupTUgwCg5Mbf8AO6t7y6,R16U3eEO7GWQcOMvtoAZsU" />
+        <Link Id="CXmMwPr6tCYNF5q3jE1BGE" Ids="SxiCkZMHheULCmZBYArExK,OT6J8q64BhoPVRddY5fqML" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="PbFo6MJa84DLNbbEUx82fj" Location="VL.Skia" Version="2020.1.3" />
+  <NugetDependency Id="PbFo6MJa84DLNbbEUx82fj" Location="VL.Skia" Version="2020.1.4" />
   <NugetDependency Id="NN9I3gABWNPNYPFRk7wonL" Location="VL.Elementa" Version="2.0.4" />
 </Document>
