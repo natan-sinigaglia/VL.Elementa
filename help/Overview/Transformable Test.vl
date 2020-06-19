@@ -743,24 +743,6 @@
             <Pin Id="Mp33V3L5a2KPpp0w07JJOn" Name="Shader" Kind="InputPin" />
             <Pin Id="G6vUBo6gJeCLGBHVPZWhOh" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="341,883,185,19" Id="H1FOMnjFUT5OtF887IhYNM">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor" LastSymbolSource="VL.Elementa.Core.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="RectangleSnap" />
-              <PinReference Kind="InputPin" Name="Node Context" />
-            </p:NodeReference>
-            <Pin Id="CCptbrExbqfM6QuM5LhXJU" Name="Input" Kind="InputPin" />
-            <Pin Id="TQJuAhyrG74N1aRz4582TN" Name="Left Snap" Kind="InputPin" />
-            <Pin Id="PSBLCkS7K7HLgd36Wbj5ZE" Name="Center Snap" Kind="InputPin" />
-            <Pin Id="VfqwNIbEfctNm3QowVGLig" Name="Right Snap" Kind="InputPin" />
-            <Pin Id="RxW3Ruqs22bLj2bLjmVn9p" Name="Top Snap" Kind="InputPin" />
-            <Pin Id="GmkgqK1P6BMOBxFFQcOGLh" Name="Middle Snap" Kind="InputPin" />
-            <Pin Id="KUHtEKKaqKmLJTITwn9IGW" Name="Bottom Snap" Kind="InputPin" />
-            <Pin Id="QKMeOEiFbUJPDPqd14dSHV" Name="Horizontal Guides" Kind="InputPin" />
-            <Pin Id="Cw2DaMkcwTSNvPWidLulGm" Name="Vertical Guides" Kind="InputPin" />
-            <Pin Id="TbVpxwNvCuKNcRdkcwtpUl" Name="Snap Distance" Kind="InputPin" />
-            <Pin Id="Let3H5GgKjfP2QoAukX7Zj" Name="Output" Kind="OutputPin" />
-          </Node>
           <Node Bounds="450,1164,84,19" Id="RnOjnklk2nIQEpM5GMoRys">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -773,13 +755,14 @@
           <Node Bounds="422,1278,119,19" Id="JpozwHLUyohQWqknTSrFSg">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ComputeNewSnappers" />
+              <Choice Kind="ProcessAppFlag" Name="ComputeWidgetOrientedSnappers" />
             </p:NodeReference>
             <Pin Id="JDwOkrhKqd8QcGCWQziL7C" Name="Snappers" Kind="InputPin" />
             <Pin Id="Pip6dSz2wIaQHlXlXujMdX" Name="Values" Kind="InputPin" />
             <Pin Id="OMSW6yaznN3LdW217wOwq8" Name="Orientation" Kind="InputPin" />
-            <Pin Id="E0uO9TJ3B8DNb86ccDsSMI" Name="Guide Values" Kind="InputPin" />
             <Pin Id="Umq62YbHkwdM71Nte9RLSV" Name="Snap Distance" Kind="InputPin" />
+            <Pin Id="A47llxZPrktOklkKs3rlyy" Name="Elementum" Kind="InputPin" />
+            <Pin Id="Emi3rVHNXJXQVTKHPRzcoQ" Name="Guides" Kind="InputPin" />
             <Pin Id="EYMhDmHapjGN7tLrPh0RCb" Name="Snappers" Kind="OutputPin" />
           </Node>
           <Pad Id="CfU4BUsTK6xNpqOHE50LOo" Comment="Orientation" Bounds="481,1256,76,15" ShowValueBox="true" isIOBox="true" Value="Vertical">
@@ -790,13 +773,14 @@
           <Node Bounds="632,1278,119,19" Id="MkD4ZxvDLRKNDSB2FQqDF7">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="ComputeNewSnappers" />
+              <Choice Kind="ProcessAppFlag" Name="ComputeWidgetOrientedSnappers" />
             </p:NodeReference>
             <Pin Id="RBgruGtKNu1QdeNvhzA5AH" Name="Snappers" Kind="InputPin" />
             <Pin Id="D163j83ThZeLzaDb8B8jQL" Name="Values" Kind="InputPin" />
             <Pin Id="T7KVJH4jN9AOikX8NMM5c8" Name="Orientation" Kind="InputPin" />
-            <Pin Id="HnWjDsJuQVRMDYVWf63jJw" Name="Guide Values" Kind="InputPin" />
             <Pin Id="IFTzGwFlzV2LKS6UnnCdHh" Name="Snap Distance" Kind="InputPin" />
+            <Pin Id="GLOBDjObJiFQcAMCh81sEn" Name="Elementum" Kind="InputPin" />
+            <Pin Id="Gc115k0RRQxLonCp921LI9" Name="Guides" Kind="InputPin" />
             <Pin Id="Fq9oTZZzNKUN6YBltEuzFt" Name="Snappers" Kind="OutputPin" />
           </Node>
           <Pad Id="To6K6g9J1BuLKgHwtnRJj6" Comment="Orientation" Bounds="691,1256,76,15" ShowValueBox="true" isIOBox="true" Value="Horizontal">
@@ -824,9 +808,9 @@
             </p:NodeReference>
             <Patch Id="C8f9nX34o0DNweOl2H7yX7">
               <Node Bounds="897,1640,85,26" Id="UosuQCWjWxQL8L9rVvS6xX">
-                <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor.NewSnapper" LastSymbolSource="VL.Elementa.Core.vl">
+                <p:NodeReference>
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="ClassType" Name="NewSnapper" />
+                  <CategoryReference Kind="ClassType" Name="Snapper" />
                   <Choice Kind="OperationCallFlag" Name="GetDeltaVector" />
                 </p:NodeReference>
                 <Pin Id="SwQv8N5aRiiMZo75pUq9ax" Name="Input" Kind="StateInputPin" />
@@ -999,12 +983,12 @@
     ************************ AnchorLines ************************
 
 -->
-          <Node Name="AnchorLines" Bounds="933,185" Id="HF8Q8URv860L1cnl9pc4ij">
+          <Node Name="AnchorLines" Bounds="1123,30" Id="HF8Q8URv860L1cnl9pc4ij">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
               <Choice Kind="RecordDefinition" Name="Record" />
             </p:NodeReference>
             <Patch Id="TGe1DwHrI9CQcRKiuZ1oSv">
-              <Canvas Id="LMP03p4sO23OfoOCPnWxB4" BordersChecked="false" CanvasType="Group" />
+              <Canvas Id="LMP03p4sO23OfoOCPnWxB4" CanvasType="Group" />
               <Patch Id="KqocXR9Vv0tNfF5oY2lVug" Name="Create" />
               <ProcessDefinition Id="NxJF2PrNiSCLksbEUoAw5S" IsHidden="true">
                 <Fragment Id="PVPmSx0AhyJMkx9VFizSEf" Patch="KqocXR9Vv0tNfF5oY2lVug" Enabled="true" />
@@ -1023,9 +1007,12 @@
             <Pin Id="C0BZSilZrmZL9TlgnfqOix" Name="Middle Anchor" Kind="InputPin" />
             <Pin Id="BXZ5CnNJfltMzWnQwPGmFf" Name="Bottom Anchor" Kind="InputPin" />
             <Pin Id="Qbhgy6qhImaN4hEpuCd8he" Name="Custom Horizontal Snap Anchors" Kind="InputPin" />
+            <Pin Id="GJ8foR1VK6GMOj0bID0CIe" Name="Custom Vertical Snap Anchors" Kind="InputPin" />
+            <Pin Id="Dcqo1D7gLOuOd1QCmrpEcE" Name="Guides Filter" Kind="InputPin" />
+            <Pin Id="SX0ErMvjANKOzC9xG6soHk" Name="Snappers Filter" Kind="InputPin" />
             <Pin Id="TeiRrESWbG0OgglcjU9pWP" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Node Bounds="1100,203" Id="FgumUeow3VXN8HSeWricsK">
+          <Node Bounds="997,168,74,26" Id="FgumUeow3VXN8HSeWricsK">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Transformable" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="GetSnapping" />
@@ -1033,9 +1020,53 @@
             <Pin Id="C892zGfi2KkN8JjRe6HjCn" Name="Input" Kind="StateInputPin" />
             <Pin Id="AXgvhmPufmfMCylAtcm4gM" Name="Output" Kind="StateOutputPin" />
             <Pin Id="BGVnr94WUGNPMnyBJQi4AC" Name="Snapping" Kind="OutputPin" />
-            <Pin Id="CLXBDPVQRYCLTQsiXObnLu" Name="Enabled" Kind="OutputPin" />
+            <Pin Id="AtVLh8jv8BoNZeAYGttgfW" Name="Enabled" Kind="OutputPin" />
           </Node>
-          <Pad Id="MPGTqL2bpSdM1bpuSgoPEf" Comment="Enabled" Bounds="1168,254,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="LHP29HnSv28Li0ZH3vxcRH" Comment="Enabled" Bounds="1021,227,35,35" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="889,1210" Id="NN4bb58DXdjNUMw5kHmLl4">
+            <p:NodeReference>
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="Guide" />
+              <Choice Kind="OperationCallFlag" Name="Split" />
+            </p:NodeReference>
+            <Pin Id="G9MiQowwg23ODX1AwsPZi1" Name="Input" Kind="StateInputPin" />
+            <Pin Id="F9EnMbNSBQGLckVr5CANPC" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="H4mVm87JmobP54tmdIiqgn" Name="Position" Kind="OutputPin" />
+            <Pin Id="LO3kByqDiiAOgU2uoatJ7Z" Name="Label" Kind="OutputPin" />
+            <Pin Id="GbLqm6GNajrMOVHrQ0WZy6" Name="Elementum" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="934,1287" Id="R1r8Qc5A5y2P3Sn4hzmDFp">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SnapperOld" />
+            </p:NodeReference>
+            <Pin Id="D5bo3Pq334bOyJtoRgtU68" Name="Pos" Kind="InputPin" />
+            <Pin Id="UwfKxrq72PoNrjSYVYnidL" Name="Rectangle Align Kind" Kind="InputPin" />
+            <Pin Id="JwkxH5E4CbWO9JxtK0ipw1" Name="Elementum" Kind="InputPin" />
+            <Pin Id="FnZ3M73BwUiPxrGI08ESXx" Name="Snap Distance" Kind="InputPin" />
+            <Pin Id="DZpM1ipgkM4P34pNw4RzTJ" Name="Guides Pos" Kind="InputPin" />
+            <Pin Id="JmgG36KDyKFN0X9EEED36D" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="ES6yXsVy7BaLpPGOrqP4Nb" Name="Keep" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="874,-236,70,19" Id="QIMbE0wCZQRQYY9jSdxKsR">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GuideModel" />
+            </p:NodeReference>
+            <Pin Id="Uc8WcpEszb4MnTVw6vIwAK" Name="Position" Kind="InputPin" />
+            <Pin Id="C0gx5aSNRLiPbF7nGsQ2qW" Name="Label" Kind="InputPin" />
+            <Pin Id="RAuXAO9nLkKLTTKBqYxlr3" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="878,-186" Id="RfsshUc6bZYMBRv6k3ITYe">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Cons" />
+              <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="Bpvxxmk0qMdN9WSWAXdnxN" Name="Input" Kind="InputPin" />
+            <Pin Id="SLtI6iUsKpPLgtTm1AjvP8" Name="Input 2" Kind="InputPin" />
+            <Pin Id="DIUaquVLcx6NaV48Kdsh1N" Name="Result" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="MZAfNd2IQPkLxXRG95L3CC" Name="Create" />
         <Patch Id="CTjZiLydaIYMiGySsx5fAq" Name="Update" />
@@ -1104,16 +1135,10 @@
         <Link Id="BV23CA4aeZYNRBOVkXoI0I" Ids="GtRi2gZbremMjGH0rPYixL,HV2gBLopcsVMkpz9jYD1GQ" />
         <Link Id="H2GKELNj4EZLxU8EAsojkq" Ids="Tm5Mlzv7X9mNjEDOD1KX0P,DGyyavFpVqYMLR58fUUCf2" />
         <Link Id="U0UbBjm9xXVP3w5ZQYrF5d" Ids="G6vUBo6gJeCLGBHVPZWhOh,FBuKR371eKBQBFJOeggUls" />
-        <Link Id="Lbm7Gmtf2R5Lwk5sDl7TJD" Ids="CsMBD47dsS6PeOdejgRN34,CCptbrExbqfM6QuM5LhXJU" />
-        <Link Id="QHCza3wwbNOQNSN75TiKPv" Ids="MPIv4LLZewvPuH7k9nutsX,Cw2DaMkcwTSNvPWidLulGm" />
-        <Link Id="O6PSDTNB9E6MEoG5kGcy7H" Ids="NAHs1DOL2QlNeku85For3A,QKMeOEiFbUJPDPqd14dSHV" />
-        <Link Id="FMvxgGZPcYrQXLpRFD76XL" Ids="Ht9ATZC2vvYM3iAQDNWfv1,TbVpxwNvCuKNcRdkcwtpUl" />
         <Link Id="TyTSsW8h6F5LFtXur1NApC" Ids="CsMBD47dsS6PeOdejgRN34,Rm5vdGFaEC3P46QlzF2G1F" />
         <Link Id="DmXjftHIik8LMoZwDwUdMq" Ids="CfU4BUsTK6xNpqOHE50LOo,OMSW6yaznN3LdW217wOwq8" />
         <Link Id="Ls0S2hykUTBOLd8X67hIw8" Ids="To6K6g9J1BuLKgHwtnRJj6,T7KVJH4jN9AOikX8NMM5c8" />
         <Link Id="U3xz1qCOLYZMjRCpEMSNzH" Ids="N2ao5ZjQ5v3MXdI6x6rgKd,D163j83ThZeLzaDb8B8jQL" />
-        <Link Id="TUCMlVag6pxOiDIfoxYsee" Ids="MPIv4LLZewvPuH7k9nutsX,E0uO9TJ3B8DNb86ccDsSMI" />
-        <Link Id="BHr0HZv5bAPLwt3fG4OQjm" Ids="NAHs1DOL2QlNeku85For3A,HnWjDsJuQVRMDYVWf63jJw" />
         <Link Id="MfrwBE3pmwnMPjU4TJlGj4" Ids="Ht9ATZC2vvYM3iAQDNWfv1,Umq62YbHkwdM71Nte9RLSV" />
         <Link Id="GYHcBrXgnqrPL0UO6vYVqY" Ids="Ht9ATZC2vvYM3iAQDNWfv1,IFTzGwFlzV2LKS6UnnCdHh" />
         <Link Id="LiXoFZG8PWRLdiMrDItEuc" Ids="EYMhDmHapjGN7tLrPh0RCb,N3NsVvy6qpINOgLmJ9MvYP" />
@@ -1141,8 +1166,9 @@
         <Link Id="BcorizvhOrYLVPlToUWVzF" Ids="IQ1mJW963tGPv9UxKNQdUT,RxP5eWyo8l9NzKCYkIFSWX" />
         <Link Id="BLUQGNDAuvYQOjn78ZoYaq" Ids="NQNA5Y6VTscLGNkNkyDQFX,C0v7xZHdAAmM9kl0glaXM6" />
         <Link Id="AeR8GfXRSSZOL7x2JXT321" Ids="BOpfsCMD77pNVD3G5mt7Ih,NjNeAocIq6YPOXkrc6AUwT" />
-        <Link Id="M2UHGRx9cHePN318Mpmego" Ids="TwilMKHE25TLfAXtGtYDGn,C892zGfi2KkN8JjRe6HjCn" />
-        <Link Id="I4hcm0q0b5UPJ14sY1JMki" Ids="CLXBDPVQRYCLTQsiXObnLu,MPGTqL2bpSdM1bpuSgoPEf" />
+        <Link Id="I1ImhWw1Q6qM2rHCZPkNV0" Ids="TwilMKHE25TLfAXtGtYDGn,C892zGfi2KkN8JjRe6HjCn" />
+        <Link Id="NL9nVY9ZVuHOniacCyHUdX" Ids="AtVLh8jv8BoNZeAYGttgfW,LHP29HnSv28Li0ZH3vxcRH" />
+        <Link Id="UhQrA9BDaMbMQol3bZjYPH" Ids="RAuXAO9nLkKLTTKBqYxlr3,Bpvxxmk0qMdN9WSWAXdnxN" />
       </Patch>
     </Node>
   </Patch>
