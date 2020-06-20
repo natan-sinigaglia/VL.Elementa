@@ -2534,10 +2534,10 @@
             </Pin>
           </Patch>
           <Patch Id="NueLnCaWZ9wN84zkudL67S" Summary="Prompts a file browser dialog on left thatn can also be types" Name="Update (Internal)" ManuallySortedPins="true">
-            <Pin Id="KoPBM5jPQ9sNxdAUbZQwjs" Name="Position" Kind="InputPin" Bounds="399,598" />
-            <Pin Id="SOSjMWgdi5WMSjyOhHkiA8" Name="Size" Kind="InputPin" Bounds="427,614" />
-            <Pin Id="JxXH0yP1SvaM7fVYuzTUax" Name="Anchor" Kind="InputPin" Bounds="460,627" Visibility="Optional" />
-            <Pin Id="IQL3YDaK0tnL49nlzZc5Nn" Name="Enable Interaction" Kind="InputPin" Bounds="1194,628" Visibility="Optional" />
+            <Pin Id="KoPBM5jPQ9sNxdAUbZQwjs" Name="Position" Kind="InputPin" Bounds="399,598" Summary="Sets the widget's position." />
+            <Pin Id="SOSjMWgdi5WMSjyOhHkiA8" Name="Size" Kind="InputPin" Bounds="427,614" Summary="Sets the widget's size." />
+            <Pin Id="JxXH0yP1SvaM7fVYuzTUax" Name="Anchor" Kind="InputPin" Bounds="460,627" Visibility="Optional" Summary="Sets the widget's anchor." />
+            <Pin Id="IQL3YDaK0tnL49nlzZc5Nn" Name="Enable Interaction" Kind="InputPin" Bounds="1194,628" Visibility="Optional" Summary="Enables user interaction on the widget. False makes it read-only." />
             <Pin Id="OovyWRuvZZNQUuoUvrGyye" Name="Use Last Directory" Kind="InputPin" Bounds="648,452" DefaultValue="True" Visibility="Optional" Summary="When opening the file browser, start browsing from the last visited place">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
@@ -2563,24 +2563,24 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="LdNff0lCtfUNV3Eb8xqmL0" Name="Value" Kind="InputPin" Bounds="778,312" DefaultValue="" Summary="Sets the widget's value">
+            <Pin Id="LdNff0lCtfUNV3Eb8xqmL0" Name="Value" Kind="InputPin" Bounds="778,312" DefaultValue="" Summary="Sets the widget's value. Applies on change.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="Path" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="H2B5dGZG79vOgDLWs0S75I" Name="Set Value" Kind="InputPin" Bounds="548,511" Visibility="Optional" />
-            <Pin Id="HutqfTKcDZUP2ABBkT8sFn" Name="Push Input ValueTo Observable" Kind="InputPin" DefaultValue="False" Visibility="Optional" Summary="If True, pushes the input value to the On Interaction output pin">
+            <Pin Id="H2B5dGZG79vOgDLWs0S75I" Name="Set Value" Kind="InputPin" Bounds="548,511" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
+            <Pin Id="HutqfTKcDZUP2ABBkT8sFn" Name="Push Input ValueTo Observable" Kind="InputPin" DefaultValue="False" Visibility="Optional" Summary="If true, the On Interaction output will fire when the widget's value is changed from upstream.">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="P1Xt7EU5JkzLWG1M27cohd" Name="Components" Kind="InputPin" />
+            <Pin Id="P1Xt7EU5JkzLWG1M27cohd" Name="Components" Kind="InputPin" Summary="A component to add to the widget." />
           </Patch>
           <Patch Id="QbCDs2cPxfAMk9IT294eNd" Name="GetComponents (Internal)">
             <Pin Id="A2nPs4t8EDLLEv4skRLdZM" Name="Components" Kind="OutputPin" />
           </Patch>
           <Patch Id="PreDpzB05KrPEtQps9zNNa" Name="GetValue (Internal)" ParticipatingElements="Hrmn2iKK3N7OIYZsBwQUeA">
-            <Pin Id="DfLsmPZnufOOMOYbKM4TeM" Name="Value" Kind="OutputPin" />
+            <Pin Id="DfLsmPZnufOOMOYbKM4TeM" Name="Value" Kind="OutputPin" Summary="Returns the widget's value." />
           </Patch>
           <Patch Id="FA00fiQyl40N0mWfkhNYGA" Name="SetMe (Internal)">
             <Pin Id="CeKSxtB62OwM12Z1m5xOfW" Name="Me" Kind="InputPin" />
@@ -2654,7 +2654,7 @@
             <Pin Id="SLxPL6LITSsNHN7YN7tQmV" MergeId="367413" Name="Components Version" Kind="OutputPin" />
           </Patch>
           <Patch Id="GbCVthHqltJOrsbRK5clr2" Name="GetOnInteraction (Internal)">
-            <Pin Id="Mp8LhLZhAWTPt5sy21SZOO" MergeId="367450" Name="On Interaction" Kind="OutputPin" />
+            <Pin Id="Mp8LhLZhAWTPt5sy21SZOO" MergeId="367450" Name="On Interaction" Kind="OutputPin" Summary="Returns an observable that fires when the widget's value changes." />
           </Patch>
           <Link Id="It8sD8ZfMBIQZBNI4Uc6JP" Ids="OZjHjBuSPfbNuC8GhdPJgz,RS02i80K8zHNiOVQ0QrDne" />
           <Link Id="UuJAgR2lNpVQCvPxR7jKyL" Ids="P1Xt7EU5JkzLWG1M27cohd,OZjHjBuSPfbNuC8GhdPJgz" IsHidden="true" />
@@ -3206,7 +3206,7 @@
     ************************ PathDialog ************************
 
 -->
-      <Node Name="PathDialog" Bounds="295,296" Id="OOzuo9zQlCtM4QzFUfgTJt">
+      <Node Name="PathDialog" Bounds="295,296" Id="OOzuo9zQlCtM4QzFUfgTJt" Summary="Allows to browse for files or folders" Remarks="Many options are available, check the optional pins" Tags="ui,browser,folder,file">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -3253,12 +3253,12 @@
           </Canvas>
           <Patch Id="JrHLbuZYdnUNVs6yKUz7Gk" Name="Create" />
           <Patch Id="Iw1F3axWWvwMWzQr3yoAYh" Name="Update">
-            <Pin Id="VeXr1LkVEZzQWmfnjcI4wo" Name="Position" Kind="InputPin" Bounds="616,226" />
-            <Pin Id="FIAnBO9PsBFQRlfBJzZF45" Name="Size" Kind="InputPin" Bounds="629,203" />
-            <Pin Id="QsmKBzgYBt2Myq1ifL7O5o" Name="Anchor" Kind="InputPin" Bounds="647,292" Visibility="Optional" />
-            <Pin Id="AOe3DMBGlAVQYyrnNqis7P" Name="Enable Interaction" Kind="InputPin" Bounds="632,292" Visibility="Optional" />
-            <Pin Id="AJVgS6mI6EAM3oYQXHjqoM" Name="Push Input Value To Observable" Kind="InputPin" Bounds="729,400" Visibility="Optional" />
-            <Pin Id="IwrKyWGqT6YLRbpN2H8Ma7" Name="Component" Kind="InputPin" Bounds="742,431" IsPinGroup="true">
+            <Pin Id="VeXr1LkVEZzQWmfnjcI4wo" Name="Position" Kind="InputPin" Bounds="616,226" Summary="Sets the widget's position." />
+            <Pin Id="FIAnBO9PsBFQRlfBJzZF45" Name="Size" Kind="InputPin" Bounds="629,203" Summary="Sets the widget's size." />
+            <Pin Id="QsmKBzgYBt2Myq1ifL7O5o" Name="Anchor" Kind="InputPin" Bounds="647,292" Visibility="Optional" Summary="Sets the widget's anchor." />
+            <Pin Id="AOe3DMBGlAVQYyrnNqis7P" Name="Enable Interaction" Kind="InputPin" Bounds="632,292" Visibility="Optional" Summary="Enables user interaction on the widget. False makes it read-only." />
+            <Pin Id="AJVgS6mI6EAM3oYQXHjqoM" Name="Push Input Value To Observable" Kind="InputPin" Bounds="729,400" Visibility="Optional" Summary="If true, the On Interaction output will fire when the widget's value is changed from upstream." />
+            <Pin Id="IwrKyWGqT6YLRbpN2H8Ma7" Name="Component" Kind="InputPin" Bounds="742,431" IsPinGroup="true" Summary="A component to add to the widget.">
               <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
                 <Choice Kind="TypeFlag" Name="Spread" />
                 <p:TypeArguments>
@@ -3269,18 +3269,18 @@
               </p:TypeAnnotation>
               <p:DefaultValue />
             </Pin>
-            <Pin Id="Q4WzBeNnFnkPkQLB1mINkX" Name="Output" Kind="OutputPin" Bounds="135,491">
+            <Pin Id="Q4WzBeNnFnkPkQLB1mINkX" Name="Output" Kind="OutputPin" Bounds="135,491" Summary="The Elementum.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="IElementum" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="MFnRISMLyotLzCgDDhQdWM" Name="Use Last Directory" Kind="InputPin" Bounds="350,235" Visibility="Optional" />
-            <Pin Id="I7DmBrLvIx0NOz88v8y85g" Name="Initial Directory" Kind="InputPin" Bounds="364,265" Visibility="Optional" />
-            <Pin Id="JXe5B9qaKl1QYokg37qlsn" Name="Filter" Kind="InputPin" Bounds="373,291" Visibility="Optional" />
-            <Pin Id="CyZxt3DcNxEMN6VjCZ2Wqr" Name="Is Folder" Kind="InputPin" Bounds="385,323" Visibility="Optional" />
-            <Pin Id="OSaRvmdeKDLM3zccC19Pa8" Name="Default" Kind="InputPin" Bounds="337,294" Visibility="Optional" />
-            <Pin Id="Sitje2xoP5sQN0ZHRWy1DK" Name="Value" Kind="InputPin" Bounds="357,317" />
-            <Pin Id="VqNjBGjRYRnOc2zabWN4hn" Name="Set Value" Kind="InputPin" Bounds="373,327" Visibility="Optional" />
+            <Pin Id="MFnRISMLyotLzCgDDhQdWM" Name="Use Last Directory" Kind="InputPin" Bounds="350,235" Visibility="Optional" Summary="If true, the widget will remember last browsed directory when interacting with it" />
+            <Pin Id="I7DmBrLvIx0NOz88v8y85g" Name="Initial Directory" Kind="InputPin" Bounds="364,265" Visibility="Optional" Summary="The directory that shows up first when interacting with the widget. Useless if Use Last Directory is true." />
+            <Pin Id="JXe5B9qaKl1QYokg37qlsn" Name="Filter" Kind="InputPin" Bounds="373,291" Visibility="Optional" Summary="File filter" />
+            <Pin Id="CyZxt3DcNxEMN6VjCZ2Wqr" Name="Is Folder" Kind="InputPin" Bounds="385,323" Visibility="Optional" Summary="Allows to pick a folder rather than a file" />
+            <Pin Id="OSaRvmdeKDLM3zccC19Pa8" Name="Default" Kind="InputPin" Bounds="337,294" Visibility="Optional" Summary="Sets the widget's defaut value that will be recalled on middle-click." />
+            <Pin Id="Sitje2xoP5sQN0ZHRWy1DK" Name="Value" Kind="InputPin" Bounds="357,317" Summary="Sets the widget's value. Applies on change." />
+            <Pin Id="VqNjBGjRYRnOc2zabWN4hn" Name="Set Value" Kind="InputPin" Bounds="373,327" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
           </Patch>
           <ProcessDefinition Id="CIdFZYDPiiFPCYpiiBH0o9">
             <Fragment Id="MZKf2Iuc8WAM2x2JHGpHcr" Patch="JrHLbuZYdnUNVs6yKUz7Gk" Enabled="true" />
@@ -3300,7 +3300,7 @@
             <Pin Id="NQ58JDvvbnROmhCYuksg90" MergeId="301727" Name="Value " Kind="OutputPin" Summary="Returns the widget's value" />
           </Patch>
           <Patch Id="OpzlsOZyEF9NHiywuaEWet" Name="GetValueStream (Internal)">
-            <Pin Id="MQPaYkvabBDLZnPj4PoKtP" MergeId="301731" Name="On Interaction" Kind="OutputPin" Summary="Returns the widget's value as an Observable" />
+            <Pin Id="MQPaYkvabBDLZnPj4PoKtP" MergeId="301731" Name="On Interaction" Kind="OutputPin" Summary="Returns the widget's value as an Observable." />
           </Patch>
           <Link Id="SDqVSxvp49UMWyCoHiMHfH" Ids="Bf1cAdmCixyQFMYEIVhTBM,NQ58JDvvbnROmhCYuksg90" IsHidden="true" />
           <Link Id="IcjhhYH7ExBN9Sv3Yhwqoj" Ids="V6qAs7bHZT1PoDMZYKO2QC,MQPaYkvabBDLZnPj4PoKtP" IsHidden="true" />
