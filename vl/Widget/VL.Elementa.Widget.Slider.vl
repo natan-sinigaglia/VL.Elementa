@@ -3180,9 +3180,9 @@
             </Pin>
             <Pin Id="HDEf64wEaMUO0OYCbMpoJe" Name="Anchor" Kind="InputPin" Bounds="175,108" Visibility="Optional" Summary="The anchor of the widget" />
             <Pin Id="POTXgnDcHVoL8LO9E03X8A" Name="Orientation" Kind="InputPin" Bounds="1131,238" Visibility="Optional" Summary="The orientation of the widget" />
-            <Pin Id="AyT4SpsID3JLAaSWzUywLj" Name="Enable Interaction" Kind="InputPin" Visibility="Optional" />
-            <Pin Id="R0uDntuEPK8MgBx1RZLs89" Name="Go To Focus" Kind="InputPin" Bounds="401,263" Visibility="Optional" />
-            <Pin Id="GKciyvsx5S3QPUSNvkx4jZ" Name="Value Editing Mode" Kind="InputPin" />
+            <Pin Id="AyT4SpsID3JLAaSWzUywLj" Name="Enable Interaction" Kind="InputPin" Visibility="Optional" Summary="Enables user interaction on the widget. False makes it read-only." />
+            <Pin Id="R0uDntuEPK8MgBx1RZLs89" Name="Go To Focus" Kind="InputPin" Bounds="401,263" Visibility="Optional" Summary="Forces focus on the widget." />
+            <Pin Id="GKciyvsx5S3QPUSNvkx4jZ" Name="Value Editing Mode" Kind="InputPin" Summary="Defines how the widget reacts to mouse input." />
             <Pin Id="C6N3dJORUxfMgT9Omlor4g" Name="Default" Kind="InputPin" Visibility="Optional" Summary="The default value of the widget to be recalled when middle-clicking it" />
             <Pin Id="ATOF3mkLtuCLFeMqrL6dg3" Name="Min" Kind="InputPin" Bounds="635,308" Visibility="Optional" Summary="Widget's minimum value" />
             <Pin Id="MuCs4fLchTzLyhRI6saUjU" Name="Max" Kind="InputPin" Bounds="479,226" DefaultValue="1" Visibility="Optional" Summary="Widget's maximum value">
@@ -3191,7 +3191,7 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="RPrYzcLIxLtLZtgLvSuBxA" Name="Value" Kind="InputPin" Bounds="586,255" Summary="Input value" />
-            <Pin Id="Mq05DqLfDjROdUGR7KsWRa" Name="Set Value" Kind="InputPin" Bounds="803,259" Visibility="Optional" />
+            <Pin Id="Mq05DqLfDjROdUGR7KsWRa" Name="Set Value" Kind="InputPin" Bounds="803,259" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
             <Pin Id="HigrMGErVeEOzuDqBawiaE" Name="Push Input Value To Observable" Kind="InputPin" Bounds="405,183" DefaultValue="False" Visibility="Optional" Summary="Whether to push the input value to the On Interaction output">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
@@ -3210,7 +3210,7 @@
             <Pin Id="KSEmGtLcReXLlYOTiXd9tT" MergeId="151303" Name="Components" Kind="OutputPin" />
           </Patch>
           <Patch Id="BZaYBD5ZsckNZtMzlysv4M" Name="GetValue (Internal)">
-            <Pin Id="EJYeF6CINhzPkZdF6FGOix" Name="Value" Kind="OutputPin" Summary="Output value of the widget" />
+            <Pin Id="EJYeF6CINhzPkZdF6FGOix" Name="Value" Kind="OutputPin" Summary="Returns the widget's value." />
           </Patch>
           <Patch Id="EZLHzdQVBaHPvmlk4ODAqp" Name="SetContext (Internal)">
             <Pin Id="OfWlCbEwbjELv9d3tNdZkS" Name="Context" Kind="InputPin" />
@@ -3241,7 +3241,7 @@
           <Link Id="PtCtlkKtouFLjgCanqcTxM" Ids="QbfG95xaeexMAPdSPhoMBI,HOZ5cAEjAv4QFa8C1dbq4a" />
           <Link Id="P89qr3i8x3LPzdJRCE7l21" Ids="HOZ5cAEjAv4QFa8C1dbq4a,TWiVVt565KROvAdxDOhVTq" IsHidden="true" />
           <Patch Id="QIhajLosCwYMihHLsD2D4s" Name="GetOnInteraction (Internal)">
-            <Pin Id="TWiVVt565KROvAdxDOhVTq" Name="On Interaction" Kind="OutputPin" />
+            <Pin Id="TWiVVt565KROvAdxDOhVTq" Name="On Interaction" Kind="OutputPin" Summary="Returns the widget's value as an Observable." />
           </Patch>
           <Slot Id="OBh4CF6dzDkOrHrNTfXS8F" Name="Context" />
           <Link Id="Rg30Ethof8RLMr5uvaTLAz" Ids="Nlw7kqmOjnaLiRFFfum8Rm,NwPXLhwjmGzMzZYazDdW3B" />
@@ -4142,7 +4142,7 @@
     ************************ Slider ************************
 
 -->
-      <Node Name="Slider" Bounds="193,356" Id="J9XGTLavRGIMGgTqGDlmn9">
+      <Node Name="Slider" Bounds="193,356" Id="J9XGTLavRGIMGgTqGDlmn9" Summary="Outputs a float value by dragging" Tags="ui,float">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -4197,39 +4197,39 @@
           <Link Id="Jewihg8r7sKP7dmeD6ELte" Ids="BvPA5raMiflL4XP3wrPxW4,HSTyRqTPWZkN56HgZNcHOT" IsHidden="true" />
           <Patch Id="POpZuny8hSBLlWPjlKrVGQ" Name="Create" />
           <Patch Id="Va5v4BHnoZDO4oBv5qF3DF" Name="Update">
-            <Pin Id="HSTyRqTPWZkN56HgZNcHOT" Name="Output" Kind="OutputPin" Bounds="336,371">
+            <Pin Id="HSTyRqTPWZkN56HgZNcHOT" Name="Output" Kind="OutputPin" Bounds="336,371" Summary="The Elementum.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="IElementum" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="Dw7fZ6iOuWJO3DDHxjJEHc" Name="Position" Kind="InputPin" Bounds="356,262" />
-            <Pin Id="HuWbAyIU2BKPXy3ezqeaXe" Name="Component" Kind="InputPin" Bounds="556,286" IsPinGroup="true">
+            <Pin Id="Dw7fZ6iOuWJO3DDHxjJEHc" Name="Position" Kind="InputPin" Bounds="356,262" Summary="Sets the widget's position." />
+            <Pin Id="HuWbAyIU2BKPXy3ezqeaXe" Name="Component" Kind="InputPin" Bounds="556,286" IsPinGroup="true" Summary="A component to add to the widget.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="Spread" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="SkLYUz6FOlHLTH8JMogM4U" Name="Size" Kind="InputPin" Bounds="377,283" />
-            <Pin Id="D8MDDjWy64ZLd1YkFwrpn3" Name="Anchor" Kind="InputPin" Bounds="397,303" Visibility="Optional" />
-            <Pin Id="KqUbrF1jMFGLk6UVjXVJhs" Name="Orientation" Kind="InputPin" Bounds="417,323" Visibility="Optional" />
-            <Pin Id="OlgVvBmqxmYNVxkxB4fJXD" Name="Enable Interaction" Kind="InputPin" Bounds="438,341" Visibility="Optional" />
-            <Pin Id="Ag7xxNp8FFyOa1Hvneca84" Name="Default" Kind="InputPin" Bounds="457,368" Visibility="Optional" />
-            <Pin Id="IeFO26ZpcyuLlZ9nWeq15t" Name="Min" Kind="InputPin" Bounds="478,387" Visibility="Optional" />
-            <Pin Id="TkGBxDRFwFCOjF6K3EJ85o" Name="Max" Kind="InputPin" Bounds="497,405" Visibility="Optional" />
-            <Pin Id="PCsxE6NeRDvOrf9vryvoBH" Name="Value" Kind="InputPin" Bounds="517,426" />
-            <Pin Id="CmD1lo9RiLGNYskB0M55w0" Name="Push Input Value To Observable" Kind="InputPin" Bounds="538,449" Visibility="Optional" />
-            <Pin Id="CVfVj6VYqZJNRujtXYa5vN" Name="Go To Focus" Kind="InputPin" Bounds="308,321" Visibility="Optional" />
-            <Pin Id="LKzcrK0SVTvLI52aB0k2c3" Name="Dragging Behaviour" Kind="InputPin" Bounds="185,153" Visibility="Optional" />
-            <Pin Id="RBAT9KWa7iVPQEorsvBcwz" Name="Set Value" Kind="InputPin" Bounds="305,262" Visibility="Optional" />
+            <Pin Id="SkLYUz6FOlHLTH8JMogM4U" Name="Size" Kind="InputPin" Bounds="377,283" Summary="Sets the widget's size." />
+            <Pin Id="D8MDDjWy64ZLd1YkFwrpn3" Name="Anchor" Kind="InputPin" Bounds="397,303" Visibility="Optional" Summary="Sets the widget's anchor." />
+            <Pin Id="KqUbrF1jMFGLk6UVjXVJhs" Name="Orientation" Kind="InputPin" Bounds="417,323" Visibility="Optional" Summary="Sets the widget's orientation." />
+            <Pin Id="OlgVvBmqxmYNVxkxB4fJXD" Name="Enable Interaction" Kind="InputPin" Bounds="438,341" Visibility="Optional" Summary="Enables user interaction on the widget. False makes it read-only." />
+            <Pin Id="Ag7xxNp8FFyOa1Hvneca84" Name="Default" Kind="InputPin" Bounds="457,368" Visibility="Optional" Summary="Sets the widget's defaut value that will be recalled on middle-click." />
+            <Pin Id="IeFO26ZpcyuLlZ9nWeq15t" Name="Min" Kind="InputPin" Bounds="478,387" Visibility="Optional" Summary="Sets the widget's minimum value." />
+            <Pin Id="TkGBxDRFwFCOjF6K3EJ85o" Name="Max" Kind="InputPin" Bounds="497,405" Visibility="Optional" Summary="Sets the widget's maximum value." />
+            <Pin Id="PCsxE6NeRDvOrf9vryvoBH" Name="Value" Kind="InputPin" Bounds="517,426" Summary="Sets the widget's value. Applies on change." />
+            <Pin Id="CmD1lo9RiLGNYskB0M55w0" Name="Push Input Value To Observable" Kind="InputPin" Bounds="538,449" Visibility="Optional" Summary="If true, the On Interaction output will fire when the widget's value is changed from upstream." />
+            <Pin Id="CVfVj6VYqZJNRujtXYa5vN" Name="Go To Focus" Kind="InputPin" Bounds="308,321" Visibility="Optional" Summary="Forces focus on the widget." />
+            <Pin Id="LKzcrK0SVTvLI52aB0k2c3" Name="Dragging Behaviour" Kind="InputPin" Bounds="185,153" Visibility="Optional" Summary="Defines how the widget reacts to mouse input." />
+            <Pin Id="RBAT9KWa7iVPQEorsvBcwz" Name="Set Value" Kind="InputPin" Bounds="305,262" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
           </Patch>
           <Link Id="MggZJKUapLJQDKdRgGUbEP" Ids="Qr8kXBrMMZWMHLN6foRxy0,UgW9974ANl6Pbv4zpLg5i3" />
           <Link Id="HCvSjw1pSmINC5Bqjff8mC" Ids="Dw7fZ6iOuWJO3DDHxjJEHc,Qr8kXBrMMZWMHLN6foRxy0" IsHidden="true" />
           <Link Id="TdGmr4VyaJqL0oqXXFxzQP" Ids="HmhVyEhE3UfNHvDDHrX1gA,Af5wXVUSEeoPAnw96rhOHf" />
           <Link Id="QItjb5xqYY4NVR06Oo9Odg" Ids="HuWbAyIU2BKPXy3ezqeaXe,HmhVyEhE3UfNHvDDHrX1gA" IsHidden="true" />
           <Patch Id="D9BPppnmvPKLwIxBdni2hw" Name="GetValue (Internal)">
-            <Pin Id="G2Qmp1lSG06Psj3GGXT344" MergeId="306916" Name="Value" Kind="OutputPin" Summary="Output value of the widget" />
+            <Pin Id="G2Qmp1lSG06Psj3GGXT344" MergeId="306916" Name="Value" Kind="OutputPin" Summary="Returns the widget's value." />
           </Patch>
           <Patch Id="RsPeG0e6nKrL3MLmfbnDMd" Name="GetOnINteraction (Internal)">
-            <Pin Id="M1rCgyKk5pxLTBhvGjJFSo" MergeId="306910" Name="On Interaction" Kind="OutputPin" Summary="An observable carrying the value of the widget. Fires when it's interacted with." />
+            <Pin Id="M1rCgyKk5pxLTBhvGjJFSo" MergeId="306910" Name="On Interaction" Kind="OutputPin" Summary="Returns the widget's value as an Observable." />
           </Patch>
           <Link Id="VVLY2xdDLYtQBtRKiUY8Gp" Ids="AJV71z2Eo54P2I2APWTHaL,M1rCgyKk5pxLTBhvGjJFSo" IsHidden="true" />
           <Link Id="NEM8Ou9ko6vQFTnMeWXZGN" Ids="Klx6o0nJr9wNv0cmkhYwAq,G2Qmp1lSG06Psj3GGXT344" IsHidden="true" />
@@ -4257,7 +4257,7 @@
           <Link Id="M8oN3Lm9JX4MbpAaEDQJ1K" Ids="Ou1xi0RJhCGQJDYoOUVy9r,AJV71z2Eo54P2I2APWTHaL" />
           <Link Id="NyRYK7vuKnRMQEcW88acen" Ids="LKzcrK0SVTvLI52aB0k2c3,NVTyeAxPvOIQb6NW5nNDsz" IsHidden="true" />
           <Patch Id="IZnjhoWDe01PQASB4HnhGB" Name="SetForceToStickyFunc">
-            <Pin Id="UW8hAJEFF4yN0yq3LgdsEc" MergeId="7432686" Name="Force To Sticky Func" Kind="InputPin" Visibility="Optional" />
+            <Pin Id="UW8hAJEFF4yN0yq3LgdsEc" MergeId="7432686" Name="Force To Sticky Func" Kind="InputPin" Visibility="Optional" Summary="A function that defines under which conditions the widget is forced sticky mode." />
           </Patch>
           <Link Id="FcE02mn8NkOPqRp2dIJQNy" Ids="UW8hAJEFF4yN0yq3LgdsEc,NWcErzeZx6HOmjyAorSWaE" IsHidden="true" />
           <Link Id="FYcRzEZRk1UMhQl2bQnmHN" Ids="NWcErzeZx6HOmjyAorSWaE,FPQWDc28xXrNRYNgarwPAY" />

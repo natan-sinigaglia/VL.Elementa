@@ -1425,25 +1425,25 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="CfXbhjIX1V3QZyoOLtZBcC" MergeId="291062" Name="Anchor" Kind="InputPin" Bounds="175,108" Visibility="Optional" Summary="The anchor of the widget" />
-            <Pin Id="UUVfpXKbscpO4F1GCk8jWE" Name="Display Text" Kind="InputPin" Bounds="1313,238" Visibility="Optional">
+            <Pin Id="UUVfpXKbscpO4F1GCk8jWE" Name="Display Text" Kind="InputPin" Bounds="1313,238" Visibility="Optional" Summary="A text to display on the widget.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="HVUM4RuvfCMOw9J6BiwrEq" Name="Enable Interaction" Kind="InputPin" Bounds="887,351" Visibility="Optional" />
-            <Pin Id="USueH8gyJvVQAWY9V8NKne" Name="Default" Kind="InputPin" Bounds="284,58" Visibility="Optional">
+            <Pin Id="HVUM4RuvfCMOw9J6BiwrEq" Name="Enable Interaction" Kind="InputPin" Bounds="887,351" Visibility="Optional" Summary="Enables user interaction on the widget. False makes it read-only." />
+            <Pin Id="USueH8gyJvVQAWY9V8NKne" Name="Default" Kind="InputPin" Bounds="284,58" Visibility="Optional" Summary="Sets the widget's defaut value that will be recalled on middle-click.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="IY8MRGVnTm0QSfMSAY94Iz" Name="Value" Kind="InputPin" Bounds="404,44" />
-            <Pin Id="CCtlDQeN5n0MqU35iR1FSg" Name="Set Value" Kind="InputPin" Bounds="456,205" Visibility="Optional" />
-            <Pin Id="LhkCjO3LUtAOOb2woML7TR" Name="Push Input To Observable" Kind="InputPin" Bounds="451,62" DefaultValue="False">
+            <Pin Id="IY8MRGVnTm0QSfMSAY94Iz" Name="Value" Kind="InputPin" Bounds="404,44" Summary="Sets the widget's value. Applies on change." />
+            <Pin Id="CCtlDQeN5n0MqU35iR1FSg" Name="Set Value" Kind="InputPin" Bounds="456,205" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
+            <Pin Id="LhkCjO3LUtAOOb2woML7TR" Name="Push Input To Observable" Kind="InputPin" Bounds="451,62" DefaultValue="False" Summary="If true, the On Interaction output will fire when the widget's value is changed from upstream.">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="GNPGhYKn7jyOkY4L2MgLkZ" Name="Components" Kind="InputPin" Bounds="346,319">
+            <Pin Id="GNPGhYKn7jyOkY4L2MgLkZ" Name="Components" Kind="InputPin" Bounds="346,319" Summary="A component to add to the widget.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="Spread" />
                 <p:TypeArguments>
@@ -1500,13 +1500,13 @@
           <Link Id="BjBD63ZnIPUNYGROl6PtJN" Ids="F6xfHjgKDGyQZXsiu8A2kP,N7Yrm58echvOEEp9XfM4jf" />
           <Link Id="SMMIcX3OeCyNRZAe550rEU" Ids="N7Yrm58echvOEEp9XfM4jf,UASjzGwM6NUMFZDLm0Ya7F" IsHidden="true" />
           <Patch Id="E2anCSypw5gOVSoZUsXaXL" Name="GetValue (Internal)" ParticipatingElements="KRTYlpK0yabLPxmn19tVS9">
-            <Pin Id="UASjzGwM6NUMFZDLm0Ya7F" Name="Value" Kind="OutputPin" />
+            <Pin Id="UASjzGwM6NUMFZDLm0Ya7F" Name="Value" Kind="OutputPin" Summary="Returns the widget's value." />
           </Patch>
           <Link Id="EvygKZHq8soOPkYxhGA3Ox" Ids="J0YlmJDqaVMLEVMCvxcEpe,VEM2eVqVd90N94KciXz3cP" />
           <Link Id="IbkrRgVIEvFMxjJqyDjcg5" Ids="L6Eun7YMqVJLslTN3ys184,Vm8ffVIvhEeN7HnZIt9Dez" />
           <Link Id="ALrdWwkearqO92iF36GCnc" Ids="Vm8ffVIvhEeN7HnZIt9Dez,HDMJ0m4xbp1QHuzd8j3VqD" IsHidden="true" />
           <Patch Id="LkrsMHstJjzO8NwhOW2RQZ" Name="GetOnInteraction (Internal)" ParticipatingElements="Ek4Za3J87rcLYjLgCRsgHO">
-            <Pin Id="HDMJ0m4xbp1QHuzd8j3VqD" Name="Value Observable" Kind="OutputPin" />
+            <Pin Id="HDMJ0m4xbp1QHuzd8j3VqD" Name="Value Observable" Kind="OutputPin" Summary="Returns the widget's value as an Observable." />
           </Patch>
           <Link Id="NSHrZbeNYATNnVm1hSCNTV" Ids="BuEOgHhQKzROjpTJGRuP3B,NtVvXtuEkJoPdssypbgCiX" />
           <Link Id="LxO4ExPfvbvNe1Twqq4SVn" Ids="NtVvXtuEkJoPdssypbgCiX,KkMhporgmRlNCguuWhlHN6" />
@@ -1563,7 +1563,7 @@
     ************************ Toggle ************************
 
 -->
-      <Node Name="Toggle" Bounds="508,485" Id="JneaUEkydbXN7navQ8p2Xr">
+      <Node Name="Toggle" Bounds="508,485" Id="JneaUEkydbXN7navQ8p2Xr" Summary="Toggles between true and false on each interaction" Tags="ui,bool,logic">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -1604,14 +1604,14 @@
           </Canvas>
           <Patch Id="OTLBBU4pqEpNi53DtSw9yu" Name="Create" />
           <Patch Id="OuyHeg9gOd4N1pFpADC13z" Name="Update">
-            <Pin Id="Rl35FRTZfPeMf71xP2iSjz" Name="Position" Kind="InputPin" Bounds="684,256" />
-            <Pin Id="LAQGxSC1JTKNMhf4TO0Xtp" Name="Size" Kind="InputPin" Bounds="711,254" />
-            <Pin Id="FgWmebiRD3qOEdhhPWRtfG" Name="Anchor" Kind="InputPin" Bounds="724,304" Visibility="Optional" />
-            <Pin Id="KzG140TIIiDNdIT3CdtITh" Name="Enable Interaction" Kind="InputPin" Bounds="725,330" Visibility="Optional" />
-            <Pin Id="PMhbOJfQEMFO4MtYZLpRtd" Name="Default" Kind="InputPin" Bounds="734,341" Visibility="Optional" />
-            <Pin Id="QL0bnKkUSaSL9RZQwuifyn" Name="Value" Kind="InputPin" Bounds="746,355" />
-            <Pin Id="Snnf3FdOaH1OpIs4iR5V0F" Name="Push Input Value To Observable" Kind="InputPin" Bounds="777,387" Visibility="Optional" />
-            <Pin Id="R3b96LTbTlIOLmM2amWz2Y" Name="Component" Kind="InputPin" Bounds="777,409" IsPinGroup="true">
+            <Pin Id="Rl35FRTZfPeMf71xP2iSjz" Name="Position" Kind="InputPin" Bounds="684,256" Summary="Sets the widget's position." />
+            <Pin Id="LAQGxSC1JTKNMhf4TO0Xtp" Name="Size" Kind="InputPin" Bounds="711,254" Summary="Sets the widget's size." />
+            <Pin Id="FgWmebiRD3qOEdhhPWRtfG" Name="Anchor" Kind="InputPin" Bounds="724,304" Visibility="Optional" Summary="Sets the widget's anchor." />
+            <Pin Id="KzG140TIIiDNdIT3CdtITh" Name="Enable Interaction" Kind="InputPin" Bounds="725,330" Visibility="Optional" Summary="Enables user interaction on the widget. False makes it read-only." />
+            <Pin Id="PMhbOJfQEMFO4MtYZLpRtd" Name="Default" Kind="InputPin" Bounds="734,341" Visibility="Optional" Summary="Sets the widget's defaut value that will be recalled on middle-click." />
+            <Pin Id="QL0bnKkUSaSL9RZQwuifyn" Name="Value" Kind="InputPin" Bounds="746,355" Summary="Sets the widget's value. Applies on change." />
+            <Pin Id="Snnf3FdOaH1OpIs4iR5V0F" Name="Push Input Value To Observable" Kind="InputPin" Bounds="777,387" Visibility="Optional" Summary="If true, the On Interaction output will fire when the widget's value is changed from upstream." />
+            <Pin Id="R3b96LTbTlIOLmM2amWz2Y" Name="Component" Kind="InputPin" Bounds="777,409" IsPinGroup="true" Summary="A component to add to the widget.">
               <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
                 <Choice Kind="TypeFlag" Name="Spread" />
                 <p:TypeArguments>
@@ -1622,13 +1622,13 @@
               </p:TypeAnnotation>
               <p:DefaultValue />
             </Pin>
-            <Pin Id="HL8NHhA8gfHP5fhqWs2pcu" Name="Output" Kind="OutputPin" Bounds="597,677">
+            <Pin Id="HL8NHhA8gfHP5fhqWs2pcu" Name="Output" Kind="OutputPin" Bounds="597,677" Summary="The Elementum.">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="IElementum" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="Ct1yoZenhmPMZs7EEOiPn0" Name="Display Text" Kind="InputPin" Bounds="684,303" Visibility="Optional" />
-            <Pin Id="HrB3P3m97WvP3Zn6PZSjoo" Name="Set Value" Kind="InputPin" Bounds="330,282" Visibility="Optional" />
+            <Pin Id="Ct1yoZenhmPMZs7EEOiPn0" Name="Display Text" Kind="InputPin" Bounds="684,303" Visibility="Optional" Summary="A text to display on the widget." />
+            <Pin Id="HrB3P3m97WvP3Zn6PZSjoo" Name="Set Value" Kind="InputPin" Bounds="330,282" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
           </Patch>
           <Link Id="NnbVbDOQ3EyPg5HHStzAI6" Ids="TVOxr0R8b1ULY1TcBRwRGH,JA6hsKtgQtWQXEQJvQ67bd" />
           <Link Id="LEkbCSRm0T2Lz08QymXk4B" Ids="Rl35FRTZfPeMf71xP2iSjz,TVOxr0R8b1ULY1TcBRwRGH" IsHidden="true" />
@@ -1649,10 +1649,10 @@
           <Link Id="Tklx0qDsYgTO2cuqglKNeu" Ids="SnBT7ULibGINYbKy3Ggh2Y,FkTTMCiHuilLgk9u0qQXMA" />
           <Link Id="OL2k5mTrPsTN43yfylfnQK" Ids="FkTTMCiHuilLgk9u0qQXMA,AATyAbC97CILoGnAzyOO0X" IsHidden="true" />
           <Patch Id="MRyL7YiDI5NQQA0onYu2oE" Name="GetValue (Internal)">
-            <Pin Id="AATyAbC97CILoGnAzyOO0X" Name="Value" Kind="OutputPin" />
+            <Pin Id="AATyAbC97CILoGnAzyOO0X" Name="Value" Kind="OutputPin" Summary="Returns the widget's value." />
           </Patch>
           <Patch Id="QSu2ecnMnPBOla0zKI9ew7" Name="GetValueStream (Internal)">
-            <Pin Id="UmSH4GJLTEPLgFwFplIEF9" Name="On Interaction" Kind="OutputPin" />
+            <Pin Id="UmSH4GJLTEPLgFwFplIEF9" Name="On Interaction" Kind="OutputPin" Summary="Returns the widget's value as an Observable." />
           </Patch>
           <Link Id="NcugsnJ4I6nNC7AZo6XwVN" Ids="TwTJn2wa9XULWhZY72WrUm,Uk7cgrN7OB2LcI6J9sAQqY" />
           <Link Id="CxsRoeFOihoNxoMKcQWrWA" Ids="Ct1yoZenhmPMZs7EEOiPn0,TwTJn2wa9XULWhZY72WrUm" IsHidden="true" />
