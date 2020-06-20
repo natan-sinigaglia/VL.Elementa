@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="EPI39uwpPiXPUg9niil4GQ" LanguageVersion="2020.1.0" Version="0.128">
-  <NugetDependency Id="TRCPOpT8dPAMMeZTNlDFbj" Location="VL.CoreLib" Version="2020.1.0" />
+<Document xmlns:p="property" Id="EPI39uwpPiXPUg9niil4GQ" LanguageVersion="2020.1.4.167" Version="0.128">
+  <NugetDependency Id="TRCPOpT8dPAMMeZTNlDFbj" Location="VL.CoreLib" Version="2020.1.4" />
   <Patch Id="Gd72XSXDM2tPl9JwGR5zWo">
     <Canvas Id="KUZVH6zF0B2PQtq5PLbTag" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -102,14 +102,16 @@
                     <Choice Kind="TypeFlag" Name="Vector2" />
                   </p:TypeAnnotation>
                 </Pin>
+                <Pin Id="No1YinYjTIFLYCRYaeL2XH" Name="Remove Empty Lines" Kind="InputPin" />
+                <Pin Id="TOiXDBRExKELymq1JHVqUF" Name="Break at Words" Kind="InputPin" />
                 <Pin Id="MzPhHCQe3qwNkBFAc2AkKc" Name="Value" Kind="InputPin">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
                 </Pin>
-                <Pin Id="STuEr1n0nHOOaFfI6sjEm8" Name="Return Carriage Letters Count" Kind="InputPin" />
                 <Pin Id="Sszsr4EeQIFQDJBuTheI6K" Name="Output" Kind="OutputPin" />
                 <Pin Id="E0d5UOHcPC8QUsSQ9x1bxc" Name="On Interaction" Kind="OutputPin" />
+                <Pin Id="L2KrP6FQGBlLUZhJGhcOBz" Name="Value" Kind="OutputPin" />
                 <Pin Id="LCBm8KygeIGOFoBNxqyy2e" Name="Value " Kind="OutputPin" />
               </Node>
             </Patch>
@@ -314,20 +316,21 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="154,1040,105,19" Id="V13yaWw6e1LPDzPfo3BnPf">
-            <p:NodeReference LastCategoryFullName="Elementa" LastSymbolSource="Elementa.Core.vl">
+            <p:NodeReference LastCategoryFullName="VL.Elementa" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Root" />
               <CategoryReference Kind="Category" Name="Elementa" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Elementa" />
             </p:NodeReference>
             <Pin Id="CIGgDa5q1CwLFbA1RNlGEw" Name="Input" Kind="InputPin" />
             <Pin Id="Uz9AjA3wJWdNpA2rJjUMon" Name="Transformation" Kind="InputPin" />
             <Pin Id="Dl44q8MxUPXMRmMMGenOYm" Name="Force Layout Update" Kind="InputPin" />
-            <Pin Id="OlGOC70atxmM4Ut31Xz8AT" Name="Base StyleSheet" Kind="InputPin" />
-            <Pin Id="IKmsaAJE7F7LJiQmGxZbn6" Name="Enable Selection" Kind="InputPin" />
+            <Pin Id="LPMHFQhIGXMNEhOoSYe8mF" Name="StyleSheet" Kind="InputPin" />
+            <Pin Id="TAOGyBsuLajPuhEuXRiDI7" Name="Force Style Update" Kind="InputPin" />
             <Pin Id="P1seHwQ0o8BLdjSDMmXbhp" Name="Output" Kind="OutputPin" />
+            <Pin Id="Itpa4d469VsOIqU3004b6s" Name="Components Version" Kind="OutputPin" />
             <Pin Id="LOOGHEZ0TwkL4Cq4qwJiEf" Name="Dirty Graph" Kind="OutputPin" />
             <Pin Id="OOIzFpZ3slkOVxoFF70jmB" Name="Dirty Layout" Kind="OutputPin" />
-            <Pin Id="Jxy9P4zGNP0QLdzVZpKDRI" Name="Rebuild Layout" Kind="OutputPin" />
+            <Pin Id="UjfS9RpCbh8NyBc5H5crKi" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="471,458,201,91" Id="UT8PjvHPnWEO3lxhpZnAAB">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -403,7 +406,6 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="Bi9DaReCHWpQGCgOHCBFqm" Name="Elementa Alignment" Kind="InputPin" />
             <Pin Id="AEB54guaSzVLWNYCBxoQl3" Name="Padding String" Kind="InputPin" />
             <Pin Id="TL7Dnp8EiIWPoGbaB7Fr75" Name="Output" Kind="StateOutputPin" />
             <Pin Id="E0QzUrXOtScLR4H6uUPSMt" Name="Graph Version" Kind="OutputPin" />
@@ -424,7 +426,7 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="EhRzokKYZMgPO8VfH5cOSQ" Name="Elementa Alignment" Kind="InputPin" />
+            <Pin Id="HJjioQYDk69M4VxozlmTXA" Name="Widget Horizontal Alignment" Kind="InputPin" />
             <Pin Id="TaYA4ctEfnwPIwO5SMygtO" Name="Padding String" Kind="InputPin" DefaultValue=".2">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
@@ -448,7 +450,6 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="ItWv40HLHx4O7rpbNCCAiG" Name="Elementa Alignment" Kind="InputPin" />
             <Pin Id="CUV8KfkQC1QPPCxX8xB4tF" Name="Padding String" Kind="InputPin" />
             <Pin Id="EHyrlyoU9UZQEhFGvKdrNW" Name="Output" Kind="StateOutputPin" />
             <Pin Id="I4bt66NKx65Pcyr7rGA495" Name="Graph Version" Kind="OutputPin" />
@@ -468,7 +469,6 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="GGuqrIp62UVPVoapicuKov" Name="Elementa Alignment" Kind="InputPin" />
             <Pin Id="CMNijNgXcF1M0735Xjz84o" Name="Padding String" Kind="InputPin" />
             <Pin Id="KinjrblKt4gLFLOH5SkOYb" Name="Output" Kind="StateOutputPin" />
             <Pin Id="G4guBSNbqGzM8VYrmieyXp" Name="Graph Version" Kind="OutputPin" />
@@ -488,7 +488,6 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="QHaA294ZaRxP4ILrWMU7YL" Name="Elementa Alignment" Kind="InputPin" />
             <Pin Id="LnugPWqk0pLNtWwj3zWYiB" Name="Padding String" Kind="InputPin" />
             <Pin Id="KkNpkO6xlkjOihg3kyHGG7" Name="Output" Kind="StateOutputPin" />
             <Pin Id="JOySqdxrpU0NiKSgUS85UB" Name="Graph Version" Kind="OutputPin" />
@@ -508,7 +507,6 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="EquCIQditkaOzdJCUp6Li3" Name="Elementa Alignment" Kind="InputPin" />
             <Pin Id="BahmGZ4nXqQNFcKRAf9H59" Name="Padding String" Kind="InputPin" />
             <Pin Id="PfUijN4mcN8PlxONPlPwk7" Name="Output" Kind="StateOutputPin" />
             <Pin Id="TpyKmdCtcRmMM7fRXaFoEy" Name="Graph Version" Kind="OutputPin" />
@@ -593,6 +591,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="CT1RVDB6MvVQHpn7aCoy1M" Location="VL.Skia" Version="2020.1.0" />
+  <NugetDependency Id="CT1RVDB6MvVQHpn7aCoy1M" Location="VL.Skia" Version="2020.1.4" />
   <NugetDependency Id="JpNYNb71nbyM9yfEi8HeZl" Location="VL.Elementa" Version="0.0.0.0" />
 </Document>
