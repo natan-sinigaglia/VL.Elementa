@@ -566,7 +566,7 @@
                     <Patch Id="T2kqoP3QZsrQIc2QnKVfxK" ManuallySortedPins="true">
                       <Patch Id="TlBv5IHnRIjOkU4SK45clk" Name="Create" ManuallySortedPins="true" />
                       <Patch Id="SlidHddjHw2NB2DPMlQpaN" Name="Then" ManuallySortedPins="true" />
-                      <Node Bounds="491,740,133,78" Id="S4szYGjbIQ2PbyXJNswBxs">
+                      <Node Bounds="491,741,111,77" Id="S4szYGjbIQ2PbyXJNswBxs">
                         <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Behaviour" LastSymbolSource="VL.Elementa.Core.vl">
                           <Choice Kind="OperationCallFlag" Name="GoToState" />
                           <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
@@ -588,7 +588,7 @@
                           </Node>
                           <Pin Id="Apw8g1VdMV2OOBORhf5HLZ" Name="Arg" Kind="InputPin" />
                           <Pin Id="NdSJNMH4jscMzqKsABF2pj" Name="Result" Kind="OutputPin" />
-                          <ControlPoint Id="VE9PWLmQkVoL5sCTM8nU2f" Bounds="505,748" />
+                          <ControlPoint Id="VE9PWLmQkVoL5sCTM8nU2f" Bounds="544,749" />
                           <ControlPoint Id="LnTnxuh4ba8NtlAXIxR5J7" Bounds="505,811" />
                         </Patch>
                       </Node>
@@ -828,6 +828,16 @@
                   <Pad Id="MEBXIWUqBCaLIT8Ro4UE4N" SlotId="F8pDdmvECGBQEe1I2sVMQy" Bounds="752,180" />
                   <Pad Id="FWD8lz0xr50P5z1tz6FuRo" SlotId="F8pDdmvECGBQEe1I2sVMQy" Bounds="873,632" />
                   <ControlPoint Id="He65DJvVfqyNAECzhyjjg8" Bounds="24,78" />
+                  <Node Bounds="420,602,94,26" Id="FBOpFThIQDYMxbp1weSixh">
+                    <p:NodeReference LastCategoryFullName="Elementa.Core.Device.MouseState" LastSymbolSource="VL.Elementa.Core.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <Choice Kind="OperationCallFlag" Name="GetWorldPosition" />
+                    </p:NodeReference>
+                    <Pin Id="BIKgpCMT5qMLaN9w2ZOBCh" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="PR6907EcnVOLFFOD4RYrGP" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="N3b3nkCsLO7NfqO0772Yrb" Name="Position In World" Kind="OutputPin" />
+                    <Pin Id="Qsl4YNIyG1LNhgdtkGekbi" Name="Position In World Difference" Kind="OutputPin" />
+                  </Node>
                 </Canvas>
                 <ProcessDefinition Id="HLiGID1idg5OCRZWBKewk8" IsHidden="true">
                   <Fragment Id="MdZbo9Es18mQAj8Da3fBAA" Patch="TrX3l88W4MsM7nobRx2edx" Enabled="true" />
@@ -921,6 +931,8 @@
                   <Pin Id="C6HwccQcECYP7jTJotcoFC" Name="Name" Kind="OutputPin" />
                 </Patch>
                 <Link Id="JccPyirfPOxP9pihlzEvfJ" Ids="He65DJvVfqyNAECzhyjjg8,C6HwccQcECYP7jTJotcoFC" IsHidden="true" />
+                <Link Id="P8YM5f2rydOL4tyKrusdWl" Ids="UGTn9lcUkSiNh73xBIqEQj,BIKgpCMT5qMLaN9w2ZOBCh" />
+                <Link Id="Cx074iQmsbEQZUzWZHKs0h" Ids="N3b3nkCsLO7NfqO0772Yrb,C5NsxAbBWYyLzt5fTpcBRQ" />
               </Patch>
             </Node>
             <!--
@@ -2578,7 +2590,7 @@
           </Patch>
           <Patch Id="B4zrRtDBuiPPZZ8dv7E804" Name="Update (Internal)" ManuallySortedPins="true">
             <Pin Id="OPYk23nK9ncLwwYcluOlcy" Name="Position" Kind="InputPin" Bounds="245,366" Summary="Sets the widget's position." />
-            <Pin Id="T1gjltMHhQ6QWhssj5RLtD" Name="Size" Kind="InputPin" Bounds="268,391" DefaultValue="1, 0.3" Summary="Sets the widget's size.">
+            <Pin Id="T1gjltMHhQ6QWhssj5RLtD" Name="Size" Kind="InputPin" Bounds="268,391" DefaultValue="0.6, 0.2" Summary="Sets the widget's size.">
               <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Vector2" />
               </p:TypeAnnotation>
@@ -2591,8 +2603,12 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="AKOr4ZjTe5ROKhfm5Y77RM" Name="Min" Kind="InputPin" Bounds="1386,241" Visibility="Optional" Summary="Sets the widget's minimum value." />
-            <Pin Id="ImIhAM4LRcTLPBc8ehNUQY" Name="Max" Kind="InputPin" Bounds="1437,227" DefaultValue="1" Visibility="Optional" Summary="Sets the widget's maximum value.">
+            <Pin Id="AKOr4ZjTe5ROKhfm5Y77RM" Name="Min" Kind="InputPin" Bounds="1386,241" DefaultValue="-99999" Visibility="Optional" Summary="Sets the widget's minimum value.">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="ImIhAM4LRcTLPBc8ehNUQY" Name="Max" Kind="InputPin" Bounds="1437,227" DefaultValue="99999" Visibility="Optional" Summary="Sets the widget's maximum value.">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
