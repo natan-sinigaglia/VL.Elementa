@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2020.1.0" Version="0.128">
-  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2020.1.0" />
+<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2020.1.4.167" Version="0.128">
+  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2020.1.4" />
   <Patch Id="U2OktPJIft6LmRYDfHRaRo">
     <Canvas Id="OnAcnjd8HswONAJUfjLtjR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -41,10 +41,10 @@
             <Pin Id="Ov3Egy9zSQqMWeYBX1C3j2" Name="Position" Kind="InputPin" />
             <Pin Id="FUDQJglfHCYMcXBi0a3y8c" Name="Size" Kind="InputPin" />
             <Pin Id="GxgthezkVtEMRylwKVuMLd" Name="Value" Kind="InputPin" />
-            <Pin Id="V40N7qU0wgjPPmPAAsIPJe" Name="Component" Kind="InputPin" />
             <Pin Id="SAGK5QGvyNzOLEHlxY0Dck" Name="Output" Kind="OutputPin" />
             <Pin Id="Kf9v9l3EHTeNifCP83tych" Name="On Interaction" Kind="OutputPin" />
             <Pin Id="H8HnGDUVCtkLVGi6k4fhBE" Name="Value" Kind="OutputPin" />
+            <Pin Id="GOVXYh2RkfANByvGGJTq2K" Name="Components" Kind="InputPin" />
           </Node>
           <Node Bounds="518,359,131,19" Id="Umj8oLnnfgvL8rYhE9i3Jr">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Press.vl">
@@ -94,25 +94,14 @@
             <Pin Id="R2IHlGXWw9JOObTxbrCzAF" Name="Render Time" Kind="OutputPin" />
           </Node>
           <Node Bounds="237,728,105,19" Id="TcAzEtI5S3QNJ6r6y51KDH">
-            <p:NodeReference LastCategoryFullName="Elementa" LastSymbolSource="Elementa.Core.vl">
+            <p:NodeReference LastCategoryFullName="VL.Elementa" LastSymbolSource="VL.Elementa.Core.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Root" />
               <CategoryReference Kind="Category" Name="Elementa" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Elementa" />
             </p:NodeReference>
             <Pin Id="CZ2toJlF15cPEfFIkhvVkM" Name="Input" Kind="InputPin" />
-            <Pin Id="KTwtAJYigQQMPf5IZ8jl0c" Name="Transformation" Kind="InputPin" />
-            <Pin Id="DZAu9flTaPrMAWJgJgxogj" Name="Force Layout Update" Kind="InputPin" />
-            <Pin Id="Aq7l5qko6xGOIx416ZvrRq" Name="Base StyleSheet" Kind="InputPin" />
-            <Pin Id="HWPlc3yOEktL9rKne5btey" Name="Enable Selection" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="AUZzdq1j3biLGCCeyJNLrl" Name="Output" Kind="OutputPin" />
-            <Pin Id="HfAPR66SPnMOYxiOkbPMBQ" Name="Dirty Graph" Kind="OutputPin" />
-            <Pin Id="UmIGmrWFuAyNjzjrADq1pJ" Name="Dirty Layout" Kind="OutputPin" />
-            <Pin Id="UK5s9sTpbJFQd3QTwgQcOB" Name="Rebuild Layout" Kind="OutputPin" />
-            <Pin Id="S4lOSYisMsqM91UXbpVGEB" Name="Component Processor Context" Kind="OutputPin" />
+            <Pin Id="JY44eVv8CiVNAL1xMPZDFr" Name="Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="237,680,325,19" Id="I5LyC4iJBQQMc3XcxQQf2S">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Core.vl">
@@ -120,11 +109,10 @@
               <CategoryReference Kind="Category" Name="Layout" NeedsToBeDirectParent="true" />
               <Choice Kind="ProcessAppFlag" Name="Columns (Spectral)" />
             </p:NodeReference>
-            <Pin Id="EzkbMcTqVQtLA2TQUuGf5U" Name="Elementum" Kind="InputPin" />
+            <Pin Id="HKESTf6IMohM75kqPe74Zq" Name="Input" Kind="InputPin" />
             <Pin Id="M46ytu75mNdMhqAWUz9pk8" Name="Position" Kind="InputPin" />
             <Pin Id="RjdFtudXlXMMBOvmNze49d" Name="Size" Kind="InputPin" />
-            <Pin Id="BU7BD3iTMmBPaRO5m0ScPM" Name="Elementa Margin" Kind="InputPin" />
-            <Pin Id="KeUedZHGJTxOEdrN1dwh2l" Name="Elementa Alignment" Kind="InputPin" />
+            <Pin Id="KjQOGsh181TLvdi5w9x3Rx" Name="Widget Margin" Kind="InputPin" />
             <Pin Id="Dwz62Pl8vjAM1ddnwMaIPG" Name="Columns Padding String" Kind="InputPin" />
             <Pin Id="V0uAx3NnWYgQDTUkwDtWPb" Name="Column Width" Kind="InputPin" />
             <Pin Id="JnE8PvzDINGL625lilFAYk" Name="Columns Margin" Kind="InputPin" />
@@ -231,7 +219,9 @@
             </p:NodeReference>
             <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="N7hRRszQNEkM0e6PxfGMSb" Name="Is Selectable" Kind="InputPin" />
-            <Pin Id="LmlFsPN8UOKNuZj3jV4kdF" Name="Selection Tags" Kind="InputPin" />
+            <Pin Id="GxiLdv97bUpPzTmNFwORXG" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="Rh7ETwKpSL6NAZX55oK5nk" Name="Custom Start Selection Func" Kind="InputPin" />
+            <Pin Id="RBACw3cP2AFMLHof64Dlxk" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="CQ2EbAK7ldnMHXFxKBa13d" Name="Output" Kind="OutputPin" />
             <Pin Id="DlwozIRDpgnP5D8SYPnXZ0" Name="Selected" Kind="OutputPin" />
           </Node>
@@ -247,7 +237,9 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
             </p:NodeReference>
             <Pin Id="I9ZKNDKTqb1Ps8zzJiBK7V" Name="Is Selectable" Kind="InputPin" />
-            <Pin Id="TOOP5r4WkGZPjusDwXWCZD" Name="Selection Tags" Kind="InputPin" />
+            <Pin Id="MqbVwITJhefNxDWcIFSOpn" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="SUtVDNa1MvWNwhWPjmT3lG" Name="Custom Start Selection Func" Kind="InputPin" />
+            <Pin Id="OJpZv2UjrgvPlQFI3rX2zf" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="PdQuYlgFZwMNiiSO4bGbPW" Name="Output" Kind="OutputPin" />
             <Pin Id="EQqXhrsNjxtO8dRcAmwXau" Name="Selected" Kind="OutputPin" />
           </Node>
@@ -258,7 +250,9 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
             </p:NodeReference>
             <Pin Id="V6W6uEAIDKSNAsjZsGPNmx" Name="Is Selectable" Kind="InputPin" />
-            <Pin Id="UR7GQJAkQaDLRkwCluqAvq" Name="Selection Tags" Kind="InputPin" />
+            <Pin Id="Db2AMfMgvXePnVlxEXxNeP" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="PMA4gH4MqJ4OOPJJJjBwKE" Name="Custom Start Selection Func" Kind="InputPin" />
+            <Pin Id="Rgb5LwV9oQdNehxx6oO8fr" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="L0cuTSeFBxvOt5uTUtky94" Name="Output" Kind="OutputPin" />
             <Pin Id="NeD1Ar1P67dP9oXy5LenbB" Name="Selected" Kind="OutputPin" />
           </Node>
@@ -269,20 +263,13 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
             </p:NodeReference>
             <Pin Id="Szcq4to2awWOZ8jECYKhiy" Name="Is Selectable" Kind="InputPin" />
-            <Pin Id="JJjqxv7RDC9OuWE1SA2ZSV" Name="Selection Tags" Kind="InputPin" />
+            <Pin Id="CLMOKQvmk3kNdjkhvFL0aX" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="PkatStHzIk8QLQPWZ5U5MD" Name="Custom Start Selection Func" Kind="InputPin" />
+            <Pin Id="F6oI0BSS9DjOpY21n5S2S9" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="LjW2FJM2RYFQH22nvMGLUJ" Name="Output" Kind="OutputPin" />
             <Pin Id="V3I1z4W4hYOM2rpXGTuMSy" Name="Selected" Kind="OutputPin" />
           </Node>
           <Pad Id="LvEG34jaEdWLEaGvJlzsvR" Comment="" Bounds="488,328,35,15" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="876,263,64,19" Id="T5hJ03jmRzCPxoxKMfm62x">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Interactive" />
-            </p:NodeReference>
-            <Pin Id="FLTuV4tdKhAOv9QmPJk1DC" Name="Allow Selection Start" Kind="InputPin" />
-            <Pin Id="Apmghn9pblFMSodlDs7e3u" Name="Selection Filter Tags" Kind="InputPin" />
-            <Pin Id="K90k5JgaSXYQQUhUgcreRH" Name="Output" Kind="StateOutputPin" />
-          </Node>
           <Pad Id="A6QuAHuUpRoMTK2r7NSV7c" Bounds="599,158,192,110" ShowValueBox="true" isIOBox="true" Value="RoundRectangle Widget is not Interactive by default. If you want it to be selectable it has to be interactive, so you'll  need to add the Interactive component to it">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
@@ -368,17 +355,6 @@
             <Pin Id="O5LlrHpfJ6eQExjGkCqaoX" Name="Component 2" Kind="InputPin" />
             <Pin Id="VpjQHwppf0xMSVWyDhZpF1" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="337,763,121,26" Id="LEvLn0EEtf3MPwkzPeI3yH">
-            <p:NodeReference LastCategoryFullName="Elementa.Core.Component.ComponentProcessorContext" LastSymbolSource="Elementa.Core.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="ClassType" Name="ComponentProcessorContext" />
-              <Choice Kind="OperationCallFlag" Name="GetSelection" />
-            </p:NodeReference>
-            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
-            <Pin Id="AJjqrlRSdmFNKlPfTLnNtG" Name="Input" Kind="StateInputPin" />
-            <Pin Id="BvPDGjfSnbaQJ3L6Jy1WxM" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="GJ5GF7vtN4iOAjFbJRZiR0" Name="Selection" Kind="OutputPin" />
-          </Node>
           <Node Bounds="453,807,44,19" Id="CMDNHO4aGQbQIuXIxa5q3z">
             <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -406,11 +382,20 @@
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="NGwEm1ImbwRQY354Peok6A" Comment="Elementa Margin" Bounds="346,590,35,15" ShowValueBox="true" isIOBox="true" Value="0.3">
+          <Pad Id="NGwEm1ImbwRQY354Peok6A" Comment="Widgets Margin" Bounds="346,590,35,15" ShowValueBox="true" isIOBox="true" Value="0.3">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
+          <Node Bounds="450,766,111,19" Id="G0aoMMh6WA2M5nkuBZWGw1">
+            <p:NodeReference LastCategoryFullName="VL.Elementa" LastSymbolSource="VL.Elementa.Core.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetSelectedElementa" />
+            </p:NodeReference>
+            <Pin Id="VGHmfhd3Ge4NydaXXjuHR9" Name="Input" Kind="InputPin" />
+            <Pin Id="RFKsjp14pzbPvzYhbgicaC" Name="Output" Kind="OutputPin" />
+            <Pin Id="F8R6eY0Q0RVNlVr1Iifcgn" Name="Is Selecting" Kind="OutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="KdTKK5TpWjnPJ5vScQ5VCP" Name="Create" />
         <Patch Id="JqQ55xVIbp9PzgWa6c2UoC" Name="Update" />
@@ -435,27 +420,26 @@
         <Link Id="QTCCE9jCFoHPsQ1YQOWzcx" Ids="NeD1Ar1P67dP9oXy5LenbB,I5RILSjaGV1OgQZqI6zuM1" />
         <Link Id="Bv7bgljZzqNLoO8LbtkXxa" Ids="V3I1z4W4hYOM2rpXGTuMSy,LvEG34jaEdWLEaGvJlzsvR" />
         <Link Id="IPZrCooh4UYPv9tJQSIkFQ" Ids="CQ2EbAK7ldnMHXFxKBa13d,EHCXKTfwovuL6Eo9Tly8s6" />
-        <Link Id="NLJC4Z0f5ZqMFWGU9epSZz" Ids="LjW2FJM2RYFQH22nvMGLUJ,V40N7qU0wgjPPmPAAsIPJe" />
         <Link Id="KMhm6K0zrXhNKDHWCsn3kd" Ids="PdQuYlgFZwMNiiSO4bGbPW,RtTWFVFlmMCMjq1eJ5yuFX" />
         <Link Id="MpQ8yWvN1ZlN4WBic5usIT" Ids="Rrn4aPmB3B0PqM7cpfJEsA,CZ2toJlF15cPEfFIkhvVkM" />
         <Link Id="Ncr7DMseVFqLrvlP8XGLPq" Ids="OK9O7H2M7GNLvf157gjKnR,HVCvRneTbn6MPXjl9iJfJN" />
         <Link Id="QuvMuPEHgdhMpRx3jUGqjx" Ids="VpjQHwppf0xMSVWyDhZpF1,FFxuopfsgNsMyFJ64S4Cpm" />
         <Link Id="GXLBnJZ1q0HOaN5D6buEpY" Ids="L0cuTSeFBxvOt5uTUtky94,F0nE8O64nWxNgYC4pd17ko" />
-        <Link Id="PrY7wkHoxNsMz21kVjReWN" Ids="K90k5JgaSXYQQUhUgcreRH,O5LlrHpfJ6eQExjGkCqaoX" />
         <Link Id="E1LMU2NI4bVQWf368C2BIK" Ids="Ozd0lPruJKZMut2K6q8YdX,RjdFtudXlXMMBOvmNze49d" />
-        <Link Id="MjL5moumqk4P5IYuctswbl" Ids="S4lOSYisMsqM91UXbpVGEB,AJjqrlRSdmFNKlPfTLnNtG" />
-        <Link Id="HNGMQWOFd1CMbyUqU03jnp" Ids="GJ5GF7vtN4iOAjFbJRZiR0,IHQJ3YWAWukMxdWIaXume9" />
         <Link Id="JjJrYZIcAFLNBevnMNxEj9" Ids="IDQlK0B0e9UPlysUakkCyZ,EPzfkJsqkozMLZOOSLodQI" />
         <Link Id="JG63R62vu2QPzKpiqQ3jYM" Ids="PEZA0dFJRO5PDd0rC5EkuO,CxgHet0qGYQOaDfgpghl0Z" />
         <Link Id="DJDguhCzl48LG3SxfyNtTA" Ids="B2mtQq5ZRUhLx0IQnlxctC,Bltw5lUEwcBLAzRYEKpK93" />
         <Link Id="KejWmRBHhCXOC0s0iEvO5k" Ids="UYG8KB2iMSMOaCm8esYxs7,NVTsKHRb1nvOavwi4NtIpE" />
         <Link Id="FKXkfoJ6hiEMEVG0sRgbXA" Ids="ASI6lfiKRkaP4T6rgsjzZQ,Md6XjSqyXDcLWlQ3Awut0M" />
-        <Link Id="EiMKWFF0ATiPKyYAlcSjB6" Ids="M4Hiq3ew5zFLfaqfkkH6NV,EzkbMcTqVQtLA2TQUuGf5U" />
         <Link Id="He8iK0IMeK9Nn6CSjBv6Ye" Ids="FVoFxTQ7NbIMuJ6s5qsHp3,JnE8PvzDINGL625lilFAYk" />
-        <Link Id="KYSmmrrB9fQPPOxpoYcSr3" Ids="NGwEm1ImbwRQY354Peok6A,BU7BD3iTMmBPaRO5m0ScPM" />
+        <Link Id="HPdIB0t2OZpOrJ7tSGduzl" Ids="LjW2FJM2RYFQH22nvMGLUJ,GOVXYh2RkfANByvGGJTq2K" />
+        <Link Id="VFob4hKFk5PNDXmib9Oguz" Ids="M4Hiq3ew5zFLfaqfkkH6NV,HKESTf6IMohM75kqPe74Zq" />
+        <Link Id="GnoQxMn0iyRNwgOk1qk7Cm" Ids="NGwEm1ImbwRQY354Peok6A,KjQOGsh181TLvdi5w9x3Rx" />
+        <Link Id="BokNYqPqfcqN4E8QJM96Qj" Ids="JY44eVv8CiVNAL1xMPZDFr,VGHmfhd3Ge4NydaXXjuHR9" />
+        <Link Id="C7P9m9bznAuL4lilntUpnV" Ids="RFKsjp14pzbPvzYhbgicaC,IHQJ3YWAWukMxdWIaXume9" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2020.1.0" />
+  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2020.1.4" />
   <NugetDependency Id="ATLPsm8jJ82L9KRR90n3Lp" Location="VL.Elementa" Version="0.0.0.0" />
 </Document>
