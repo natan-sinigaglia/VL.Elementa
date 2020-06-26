@@ -93,7 +93,11 @@
                     </p:TypeAnnotation>
                   </Pin>
                   <Pin Id="QdPB91DvqgEOXFnCkfV5Sb" Name="Factor" Kind="InputPin" />
-                  <Pin Id="V3qOT3qsI1tMRa0uMMXlgI" Name="Inner Radius" Kind="InputPin" />
+                  <Pin Id="V3qOT3qsI1tMRa0uMMXlgI" Name="Inner Radius" Kind="InputPin" DefaultValue="0.09999999">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </p:TypeAnnotation>
+                  </Pin>
                   <Pin Id="Lx2QfomOww4PTqUisHo3R0" Name="Resolution" Kind="InputPin" DefaultValue="4">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Integer32" />
@@ -591,7 +595,6 @@
           <Link Id="TMLjB83dQBGQJ8JW36q3Bh" Ids="NMR92auLULENhNUdNOdqeI,LHIeyqUkrJVQAfWRBe42r1" />
           <Link Id="QM0LJuFH1WGOFXGyToIewm" Ids="BJ2Q8HwahnJN96FJXnLLS3,FooDin3ytvtO6rQoMs32oJ" />
           <Link Id="VOS3tYGYwNGLiSlH2Nvwoc" Ids="Kdk1A1THUlwQJZDRvAX6dV,GcxCDARySTpLEgPNx0ftpG" />
-          <Link Id="Pzr4oX6dfUUQHl5lSqXfE9" Ids="JL2pjx959ZWNhDDBqgqfCr,JLVvpzXa93AP6dasKBZSoL" />
           <Link Id="K6ARraxnRyOMIyrR4Em9G6" Ids="UjPZGAihTgdMtydsF1VxFY,SrdBMBF2tjULkuIauGiB8G" />
           <Link Id="JbgjQgz23rAOCvXLmheBfq" Ids="UjPZGAihTgdMtydsF1VxFY,EgDbSHvH9vXPCY6M395muN" />
           <Link Id="RDL32mtmb5nPTwBpPqmm6r" Ids="LuQs3BotCfHMjFK4PRGuhu,MrxUN3JHL7bMzJf17U3SDr" />
@@ -615,7 +618,6 @@
           <Link Id="Nwr5q1dJxGjMRLwqf4a9IO" Ids="KLtfHlIhhLJMRIjIUL98sf,SOphZDZyYW1N36nrPNinqR" />
           <Link Id="OgVw9rsbmpAMxubOkFaiS4" Ids="NGSLwBEbJeUPr2Eif9TnXl,BEIM6OJeCQELolG11xxnzG" />
           <Link Id="Rkrmr65sgIoMmSGu2X5oYI" Ids="PGR9jsQFXeJN1tFKzNn5S4,GgLTJoIfjaiNLV9NVz1MLY" />
-          <Link Id="HmZH6wKDNW2NERdlE1IcQU" Ids="OzOEcJRSFkaO8GCU9EyNlK,SbASOZVwenzLVwlmSGvKV0" />
           <Link Id="MqEusXF1oYRMZZ8nhAeTKm" Ids="Ur314HLk7EwNEt5Bjh0TNr,HLZq3GfBz4AM6lERLFxB82" />
           <Link Id="NY9gs9ubRbWMIZqBWKR0ZV" Ids="Ur314HLk7EwNEt5Bjh0TNr,SlUvN2Q4MonQCwePX0Qv11" />
           <Link Id="Hk7vLHo4teuO9wPZveZms4" Ids="AMk3mkyCgRcL1PKzMf7Ugn,Hh3JKTQex5AL7U94EwaRSl" IsHidden="true" />
@@ -704,6 +706,8 @@
           <Link Id="PfSGC7CQUuQQUMRryt5UUd" Ids="AZnCCsSDvOYPvouuu0VHkx,N55oBAElqNgPGcjEYPXBkc" />
           <Link Id="UbfVYkJOTLwL9pV5nCArnC" Ids="GcxCDARySTpLEgPNx0ftpG,GtpNZq8hXLOMsfqJErwcad" />
           <Link Id="BSUuEoXWNFfOI2z4I1luwf" Ids="F6qwQzkVpemN3BKLMQhj2d,ABdyDvX6H0aO4PZDQF6DFl" />
+          <Link Id="VAKPFvneN0bNaoJZexOs9p" Ids="OzOEcJRSFkaO8GCU9EyNlK,SbASOZVwenzLVwlmSGvKV0" />
+          <Link Id="LVCNaaQsU4IQZ8QSHkhhGG" Ids="JL2pjx959ZWNhDDBqgqfCr,JLVvpzXa93AP6dasKBZSoL" />
         </Patch>
       </Node>
       <!--
@@ -1075,7 +1079,7 @@
               </Patch>
               <ControlPoint Id="VB32avMc4pBMoGNf8VTkff" Bounds="1196,479" Alignment="Top" />
             </Node>
-            <Node Bounds="987,434,71,19" Id="SepyQ20cqYsPFraVdb8jl8">
+            <Node Bounds="1005,426,71,19" Id="SepyQ20cqYsPFraVdb8jl8">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Attributable" />
@@ -1440,7 +1444,7 @@
                       <Pad Id="DlmoNq4tpCMLD14RZzmlMo" SlotId="P9egumgew4gOPLa0sCENoh" Bounds="496,922" />
                       <Slot Id="P9egumgew4gOPLa0sCENoh" Name="I am Current Overlay" />
                       <Pad Id="EGj2DeNJiRTM0Pv2QNFaMz" SlotId="P9egumgew4gOPLa0sCENoh" Bounds="641,213" />
-                      <Node Bounds="639,255,440,495" Id="EU5de47pup1LUhYlHLAbkV">
+                      <Node Bounds="639,254,440,496" Id="EU5de47pup1LUhYlHLAbkV">
                         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                           <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                           <Choice Kind="ApplicationStatefulRegion" Name="If" />
@@ -1789,6 +1793,7 @@
                   <Overlay Id="DaLz9rZG4jqOGzf7G5xsKw" Name="Open" Bounds="151,962,492,508">
                     <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
                   </Overlay>
+                  <ControlPoint Id="RNBHzGVHeyXN4fUWAAkLLn" Bounds="1033,81" />
                 </Canvas>
                 <Patch Id="UKnOQ5MO2RkOVDeTMivEYk" Name="Create" ParticipatingElements="AnhN1mP86iWNdBxQySuek0" />
                 <Patch Id="Lh19eYXyVEeMeiY964THGb" Name="Update">
@@ -1806,6 +1811,11 @@
                           <Choice Kind="TypeFlag" Name="String" />
                         </TypeReference>
                       </p:TypeArguments>
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Pin Id="MfehhESQYUvLzFFongUlZ7" Name="EntriesLength" Kind="InputPin" Bounds="1033,81" DefaultValue="0.5">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
                 </Patch>
@@ -1915,7 +1925,6 @@
                 <Link Id="GCMdCqyF90ALvIJ5YrTgHj" Ids="RKFfbCgANAZM4xPTQ8nEfd,AFi5MU8PcfQMe6zHpeDozp" />
                 <Link Id="LrnsCWLHveUOGsihr0frBq" Ids="UvZ3EoML2bFPZFqTcJ779T,LEMUeTbYJQ2Nm2d0SN0QMc" />
                 <Link Id="QuxQ4RtHJPDNTlysnySxH5" Ids="Oa2Nw4dhx6uPUPo6xZeB6k,V1AkWcpMXwUPJPl9lRFgWQ" />
-                <Link Id="DmydDKYIKcaO5l9wR82OfV" Ids="SpC1rAkLDxwPgVTEdTeNoh,SnUZTEt4DONM7F3gHuphLn" />
                 <Link Id="JHgoNH09et5PKIEtJ54qQu" Ids="Mqlo1gJh1fqMI5CWTzCPdK,OqVDcunDEVEPnw6gZWgJiT" />
                 <Link Id="NJzjufqtdaxOfTWH6T25ZW" Ids="SpC1rAkLDxwPgVTEdTeNoh,BWACpDnYETVOawt3ER5GHa" />
                 <Link Id="L2eRmUryfNHNcoS8iRUKi7" Ids="DZKFl7RlTC2LDLapLf81ay,HZwLCJYHziWNcoHUAQNo9v" />
@@ -1929,6 +1938,8 @@
                 <Link Id="KH2UKeBAKFTM8IY3wD91Xw" Ids="AvfPNQ4KhsnOxgBkBjQhdT,Gec5uJLyxrfPwPvWXysdz6" />
                 <Link Id="RbTHGwSblWbLHtlWeuVVgM" Ids="AvfPNQ4KhsnOxgBkBjQhdT,V1SzvTOfeU2PgPwUt23gf7" />
                 <Link Id="DH8mwQOg2S5Pai6HW3NWSv" Ids="AvfPNQ4KhsnOxgBkBjQhdT,Qi74v486kABMgBk5U1WEfT" />
+                <Link Id="KpswPuf7JIUQaOzrprv2gO" Ids="RNBHzGVHeyXN4fUWAAkLLn,SnUZTEt4DONM7F3gHuphLn" />
+                <Link Id="GQwuO3ClJKhN4i2gxFDWZx" Ids="MfehhESQYUvLzFFongUlZ7,RNBHzGVHeyXN4fUWAAkLLn" IsHidden="true" />
               </Patch>
             </Node>
             <Node Bounds="1534,721,88,19" Id="BCYPfjWpGFAQOvP6uJQKh0">
@@ -1938,6 +1949,7 @@
               </p:NodeReference>
               <Pin Id="DsDrD0DSb3xNbvAeVS5Vr0" Name="Elementum" Kind="InputPin" />
               <Pin Id="E0SQWRBwcUSOVp1pbCrjGZ" Name="Entries Label" Kind="InputPin" />
+              <Pin Id="AVA1RDHJhqXMCw14rNsLJl" Name="EntriesLength" Kind="InputPin" />
               <Pin Id="GHz7bIciTQrQSQPxugzL7W" Name="Open Func" Kind="InputPin" />
               <Pin Id="TXooUzNLgC6Mhy0th305Hx" Name="Output" Kind="OutputPin" />
             </Node>
@@ -1952,6 +1964,7 @@
               <Pin Id="CrGv7Jz0K7lMx1aGAOUph0" Name="Input" Kind="StateInputPin" />
               <Pin Id="GpMMjd5F8wtOao3WiAVAqA" Name="Output" Kind="StateOutputPin" />
             </Node>
+            <ControlPoint Id="VyIpf5NG4wKOMO2rARwrdy" Bounds="1631,693" />
           </Canvas>
           <Link Id="N9I5MXWZvRvLfxBORTbfjQ" Ids="QOGkP66NDOdOKGXbO6mORe,BVyQSylsqvOO0bGvVRd8aq" IsHidden="true" />
           <Link Id="AraT18xub95N3VytKiQsj7" Ids="DV4fGrDce9bLmUxn6J5FTx,QhdwrghKtEiO9MU933W7NM" IsHidden="true" />
@@ -2116,6 +2129,7 @@
                 </p:TypeArguments>
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="HUkRrwFKIUPLfjUwzI66Bv" Name="EntriesLength" Kind="InputPin" Bounds="1631,693" />
             <Pin Id="HZECZeHuxlUMKzveGLt9TL" Name="Default" Kind="InputPin" Visibility="Optional" Summary="The default value of the widget to be recalled when middle-clicking it" />
             <Pin Id="JOwEiBUZxXZMjuenCGNCwT" Name="Value" Kind="InputPin" Bounds="586,255" Summary="Sets the widget's value" />
             <Pin Id="CBnmACa0dMxM6g51ojQoKT" Name="Set Value" Kind="InputPin" Bounds="803,259" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
@@ -2211,6 +2225,8 @@
           <Link Id="ToT3gUJZLBYNfHV06miwVZ" Ids="J1X5846F9BWOtMj4BAUWnp,EnkntTDAlM3NgBv20nuk0a" />
           <Link Id="JPvd6DWLf6fN0ubJGtvWNz" Ids="TXooUzNLgC6Mhy0th305Hx,MQhfIEHgRO1NQSWQzqCmw4" />
           <Link Id="OaL11JqoANiLeJgD1Yu7KI" Ids="BpzCEwDLqkRL2yjkbiaJ9j,CgU193VzqMmOj95NTxLNNB" />
+          <Link Id="ItnhBUNp2nuPvn46pn3Fz5" Ids="VyIpf5NG4wKOMO2rARwrdy,AVA1RDHJhqXMCw14rNsLJl" />
+          <Link Id="HgRMMDmLktsLQHT1tqVvzP" Ids="HUkRrwFKIUPLfjUwzI66Bv,VyIpf5NG4wKOMO2rARwrdy" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -2234,6 +2250,7 @@
               <Pin Id="FagwhUwTKEGPWUfp4CgyPT" Name="Anchor" Kind="InputPin" />
               <Pin Id="Pj7Iug1NeOCOiXawbVgy5Q" Name="Entries" Kind="InputPin" />
               <Pin Id="UL2mLkILnFKMGUNFV0j49j" Name="Entries Label" Kind="InputPin" />
+              <Pin Id="BItBR05haQ6MHVfocgUcrX" Name="EntriesLength" Kind="InputPin" />
               <Pin Id="KDueNRglLp4OnVRNicSxTv" Name="Default" Kind="InputPin" />
               <Pin Id="IkIxQwqCr8LPLqPyqFu6Dj" Name="Value" Kind="InputPin" />
               <Pin Id="HmZ4BeqKBSfQeAOWvxmE0u" Name="Set Value" Kind="InputPin" />
@@ -2248,14 +2265,15 @@
             <ControlPoint Id="MmokTPWk3FRQV4pfXokpul" Bounds="457,148" />
             <ControlPoint Id="BLI0gn6MnV4M38Vkbjqdwq" Bounds="479,170" />
             <ControlPoint Id="PfYhHdRiopWQWrKSA0NuOa" Bounds="500,194" />
-            <ControlPoint Id="LVJTNWTccWyLwWY81wK1yy" Bounds="520,231" />
-            <ControlPoint Id="UQXnlPwUt3JNI9ryszFvci" Bounds="544,256" />
-            <ControlPoint Id="M9euL0tvychOhXKkAEp18R" Bounds="586,297" />
-            <ControlPoint Id="LuMCO1ncHTiP02Aq9Pgggi" Bounds="608,321" />
+            <ControlPoint Id="LVJTNWTccWyLwWY81wK1yy" Bounds="542,238" />
+            <ControlPoint Id="UQXnlPwUt3JNI9ryszFvci" Bounds="566,263" />
+            <ControlPoint Id="M9euL0tvychOhXKkAEp18R" Bounds="608,304" />
+            <ControlPoint Id="LuMCO1ncHTiP02Aq9Pgggi" Bounds="621,328" />
             <ControlPoint Id="RNrIKF4OqbrNT6kyGKcn4p" Bounds="411,433" />
             <ControlPoint Id="Je1c63TN2IfQPjoRW4CajU" Bounds="521,433" />
             <ControlPoint Id="I2dLjBU4MGAMpeNi6Arv0X" Bounds="631,433" />
-            <ControlPoint Id="Q07NvnqfkXaOXw1vo15vYG" Bounds="566,275" />
+            <ControlPoint Id="Q07NvnqfkXaOXw1vo15vYG" Bounds="588,282" />
+            <ControlPoint Id="Dao6dPaTtJEPurYmaSnJYZ" Bounds="523,215" />
           </Canvas>
           <Patch Id="PiYoaSWQ0WDOxpXJpdKMVl" Name="Create" />
           <Patch Id="GVvi8z4rvHTLho4ANfOP8i" Name="Update">
@@ -2284,6 +2302,7 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="T4eEJMCDSqRL58JU6ThCyB" Name="Set Value" Kind="InputPin" Bounds="590,301" Visibility="Optional" />
+            <Pin Id="MJMWM6Lwnf3MQi2UNCkKNJ" Name="EntriesLength" Kind="InputPin" Bounds="523,215" Visibility="Optional" />
           </Patch>
           <Link Id="EtD9WG6igUlPjyljXpAq5j" Ids="IryozzkOCERPmlyPyD0Hrb,BHZ1OwUFfj0MvurxYuealk" />
           <Link Id="SKh8oMFwWGpOmnWyr3WOpq" Ids="HHKPewb7zXKQBgZJZ2JXzn,IryozzkOCERPmlyPyD0Hrb" IsHidden="true" />
@@ -2323,6 +2342,8 @@
           <Link Id="Lx6tLN3GzCmLh0XED1IwdK" Ids="LuMCO1ncHTiP02Aq9Pgggi,CwaiZGb2baNLPn0Al1VBjw" />
           <Link Id="GLPmGWPHhVyLN4HezeLjPq" Ids="Q07NvnqfkXaOXw1vo15vYG,HmZ4BeqKBSfQeAOWvxmE0u" />
           <Link Id="EtjbnZUurLHO3DhQ3Ga9PQ" Ids="T4eEJMCDSqRL58JU6ThCyB,Q07NvnqfkXaOXw1vo15vYG" IsHidden="true" />
+          <Link Id="CAtZ1n0U6P6NfmDm5E8ERp" Ids="Dao6dPaTtJEPurYmaSnJYZ,BItBR05haQ6MHVfocgUcrX" />
+          <Link Id="RzMCIQkqHNTOcxdwLeZg68" Ids="MJMWM6Lwnf3MQi2UNCkKNJ,Dao6dPaTtJEPurYmaSnJYZ" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -2346,6 +2367,7 @@
               <Pin Id="RKfTSHYL9dCPRmDh9jqlF7" Name="Anchor" Kind="InputPin" />
               <Pin Id="Ghe1qJZDoNiOYj5kjzO99y" Name="Entries" Kind="InputPin" />
               <Pin Id="AiYWV6rmndsOYC4Hb3UISD" Name="Entries Label" Kind="InputPin" />
+              <Pin Id="BeMexGM1W3APo1sAF2oM0x" Name="EntriesLength" Kind="InputPin" />
               <Pin Id="GRgmDqjPYXgOd1zGcaQ02J" Name="Default" Kind="InputPin" />
               <Pin Id="NAwAvBHBpClMpo45gs8tVE" Name="Value" Kind="InputPin" />
               <Pin Id="SoSl66CoeI7PYnBSwpNIDy" Name="Set Value" Kind="InputPin" />
@@ -2662,6 +2684,7 @@
               <Pin Id="Fx1Bu73dXTvMXD5IJO4RpP" Name="Anchor" Kind="InputPin" />
               <Pin Id="KcFf2zS3IRILv0WTUlQbSW" Name="Entries" Kind="InputPin" />
               <Pin Id="EFzxETAcMw7LUDyRQHX0ZA" Name="Entries Label" Kind="InputPin" />
+              <Pin Id="TApiH31CXDXLECLXpCbgWV" Name="EntriesLength" Kind="InputPin" />
               <Pin Id="GRA13lYBR9qQM0lMicfKwp" Name="Default" Kind="InputPin" />
               <Pin Id="T03WB13jNtvOFArCGNmcon" Name="Value" Kind="InputPin" />
               <Pin Id="O1K5IAy0JVHO6lSWI352XB" Name="Set Value" Kind="InputPin" />
