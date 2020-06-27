@@ -17,38 +17,46 @@ namespace MyTests
 {
     [TestFixture]
     public class PatchTests
-    {       
-        // FIX ME
-        //                       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        const string PacksPath = @"C:\Program Files\vvvv\vvvv_gamma_2020.1.4\lib\packs";
-        //                       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    {
+        static string[] Packs = new string[]{ 
+        
+        //  FIX ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            @"C:\Program Files\vvvv\vvvv_gamma_2020.1.4\lib\packs",
+
+        };
 
 
-        /// <summary>
-        /// Yield all your vl docs
-        /// </summary>
+
         public static IEnumerable<string> NormalPatches()
         {
-            var currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
-            // get out of src/VL.DemoLib/bin/whatnot
-            var mainLibPath = Path.GetFullPath(Path.Combine(currentDirectory, @"..\..\..\..\..\..\..")); 
-
-            foreach (var file in Directory.GetFiles(mainLibPath, "*.vl", SearchOption.AllDirectories))
+            // Yield all your VL docs
+            foreach (var file in Directory.GetFiles(MainLibPath, "*.vl", SearchOption.AllDirectories))
                 yield return file;
         }
 
 
+
         public static readonly VLSession Session;
+        public static string MainLibPath;
+        public static string RepositoriesPath;
 
         static PatchTests()
         {
-            // TODO: Should we add more?
-            AssemblyLoader.AddPackageRepositories(PacksPath);
+            var currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            MainLibPath = Path.GetFullPath(Path.Combine(currentDirectory, @"..\..\..\..\..\..\.."));
+            RepositoriesPath = Path.GetFullPath(Path.Combine(MainLibPath, @".."));
 
-            // Setup session
+            foreach (var pack in Packs)
+                AssemblyLoader.AddPackageRepositories(pack);
+
+            // Also add the "vl-libs" folder. The folder that contains our library.
+            AssemblyLoader.AddPackageRepositories(RepositoriesPath);
+
+
             if (SynchronizationContext.Current == null)
                 SynchronizationContext.SetSynchronizationContext(new WindowsFormsSynchronizationContext());
+
+
             Session = new VLSession("gamma", SynchronizationContext.Current, includeUserPackages: false)
             {
                 CheckSolution = false,
