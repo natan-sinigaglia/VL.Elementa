@@ -1,6 +1,6 @@
 # VL.Elementa
 
-![Matrix](https://img.shields.io/matrix/VL.Elementa:matrix.org?color=blue&label=chat%20on%20matrix&logo=matrix)
+[![Matrix](https://img.shields.io/matrix/VL.Elementa:matrix.org?color=blue&label=chat%20on%20matrix&logo=matrix)](https://matrix.to/#/!ozhuuBcieNoMbRkvVj:matrix.org?via=matrix.org)
 
 A node based UI widgets library made in VL for Skia rendering.
 
