@@ -20,6 +20,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="StackY" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="HEztMJ5Hz9BMTAHsnSWoEe" Name="Input" Kind="InputPin" />
             <Pin Id="RTZg5rQFIvIPolHBC2VSTh" Name="Position" Kind="InputPin" />
             <Pin Id="GfOXvoi4augMwx6Zmq39rc" Name="Margin" Kind="InputPin" DefaultValue="0.09999999">
@@ -95,7 +96,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="CwvAbpq1ulJP2ob5iN8SwE" Name="Bounds" Kind="InputPin" DefaultValue="969, 224, 189, 313">
+            <Pin Id="CwvAbpq1ulJP2ob5iN8SwE" Name="Bounds" Kind="InputPin" DefaultValue="1068, 218, 189, 313">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -189,7 +190,7 @@
             <Pin Id="O6Vv4QlHLnMOji62rmImwc" Name="Padding Value" Kind="InputPin" />
             <Pin Id="Clc3x9WOt3zOA5Z6aXfnat" Name="Padding String" Kind="OutputPin" />
           </Node>
-          <Pad Id="HmFJ6knE10KNfmLGHPqk72" Bounds="29,572,402,166" ShowValueBox="true" isIOBox="true" Value="A few things are done by default here :&#xD;&#xA;&#xD;&#xA;- The size of the stack is inherited from the size of all the widgets it contains&#xD;&#xA;- The anchor of the stack is at its top left corner&#xD;&#xA;- All widgets are vertically aligned to the left&#xD;&#xA;&#xD;&#xA;Those settings (and many more can be tweaked with optional pins.&#xD;&#xA;">
+          <Pad Id="HmFJ6knE10KNfmLGHPqk72" Bounds="29,563,402,166" ShowValueBox="true" isIOBox="true" Value="A few things are done by default here :&#xD;&#xA;&#xD;&#xA;- The size of the stack is inherited from the size of all the widgets it contains&#xD;&#xA;- The anchor of the stack is at its top left corner&#xD;&#xA;- All widgets are vertically aligned to the left&#xD;&#xA;&#xD;&#xA;Those settings (and many more can be tweaked with optional pins.&#xD;&#xA;">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -274,7 +275,11 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Slider" />
             </p:NodeReference>
-            <Pin Id="QL17x0fnANrQFe58zE82do" Name="Position" Kind="InputPin" />
+            <Pin Id="QL17x0fnANrQFe58zE82do" Name="Position" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="M2ozPKs5sGzM4IBrcHfuEI" Name="Size" Kind="InputPin" />
             <Pin Id="PaOsT8CZ3PvO84n2RvoYjt" Name="Value" Kind="InputPin" />
             <Pin Id="C3Fs4hwh6zrNYUNSKex7gx" Name="Output" Kind="OutputPin" />
@@ -314,7 +319,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="T0hFciD0wPaPof8KO9sZf5" Name="Bounds" Kind="InputPin" DefaultValue="1172, 224, 600, 400">
+            <Pin Id="T0hFciD0wPaPof8KO9sZf5" Name="Bounds" Kind="InputPin" DefaultValue="1256, 218, 328, 400">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -382,7 +387,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FRAXsJXifEOOsBmEUShiHf" Comment="Widget Vertical Alignment" Bounds="652,365,58,15" ShowValueBox="true" isIOBox="true" Value="None">
+          <Pad Id="FRAXsJXifEOOsBmEUShiHf" Comment="Widget Vertical Alignment" Bounds="652,365,58,15" ShowValueBox="true" isIOBox="true" Value="Center">
             <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component.Layout" LastSymbolSource="VL.Elementa.Component.Layout.vl">
               <Choice Kind="TypeFlag" Name="VerticalAlignment" />
             </p:TypeAnnotation>
@@ -396,34 +401,73 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="Nn8Cgs8L8emPTzwOf8THRZ" Comment="Alignment Within Bounds Enabled" Bounds="678,483,35,15" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="Nn8Cgs8L8emPTzwOf8THRZ" Comment="Alignment Within Bounds Enabled" Bounds="678,470,35,15" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="JzfM6K5jSudOCUJD1yRxfc" Comment="Alignment Within Bounds" Bounds="704,506,91,15" ShowValueBox="true" isIOBox="true" Value="TopLeft">
+          <Pad Id="JzfM6K5jSudOCUJD1yRxfc" Comment="Alignment Within Bounds" Bounds="704,493,91,15" ShowValueBox="true" isIOBox="true" Value="Center">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="RectangleAnchor" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="Bez9FYcdoU8LVunl8VVvN9" Comment="Enable Helper" Bounds="782,654,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="Bez9FYcdoU8LVunl8VVvN9" Comment="Enable Helper" Bounds="782,724,35,15" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="QLnQa32HxXnPDg5CogZhHm" Comment="Helper Color" Bounds="808,700,20,22" ShowValueBox="true" isIOBox="true" Value="1, 0, 0, 1">
+          <Pad Id="QLnQa32HxXnPDg5CogZhHm" Comment="Helper Color" Bounds="808,745,20,22" ShowValueBox="true" isIOBox="true" Value="1, 0, 0, 1">
             <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="RGBA" />
             </p:TypeAnnotation>
           </Pad>
+          <Overlay Id="MnPgCGNNSDiMK7L5c8vp0F" Name="" Bounds="620,445,320,128" />
+          <Pad Id="GNXlzddapxjLANcaC5j2hT" Bounds="706,520,205,55" ShowValueBox="true" isIOBox="true" Value="Controls how the stack of widgets is aligned within its bounds">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="LxbU3CIK7CwM3ezekiR7UF" Bounds="734,657,176,57" ShowValueBox="true" isIOBox="true" Value="Draws a colored stroke on the stack's bounds so you can quickly visualize it.">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Overlay Id="K1JrXECcX1PMPDZ2pphK3v" Name="" Bounds="734,636,189,145" />
+          <Node Bounds="182,875,85,19" Id="JXWilYY8lcPPaog96QUsxm">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Layout.Stack.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Layout" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="LdCeZI0CrdjPba8MQIrjqk" Name="Input" Kind="InputPin" />
+            <Pin Id="JoxSOP60h6QNgLKGThAFbJ" Name="Position" Kind="InputPin" />
+            <Pin Id="RucF1U89QQOMocFuLF5HQ9" Name="Margin" Kind="InputPin" />
+            <Pin Id="EptfcgLE67ANaPSCWzh0U3" Name="Padding String" Kind="InputPin" />
+            <Pin Id="QI2RRYvNYKtNgRL1xV5tBb" Name="Output" Kind="OutputPin" />
+            <Pin Id="MnDXAuPjtMQOlQlxql0BZt" Name="Components" Kind="InputPin" />
+          </Node>
+          <Pad Id="NUsQxNJEDyWLq0RjLAj1e7" Bounds="34,761,396,114" ShowValueBox="true" isIOBox="true" Value="Note that Layout nodes can also use components! Simply press CTRL/+ to add Component inputs.&#xD;&#xA;&#xD;&#xA;Also, the node comes with a Spectral version that takes a spread of components instead of a pingroup (via a hidden pin). This is only useful for advanced scenarios.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Overlay Id="SBkLaArGDHOMrKv2o4AWKz" Name="" Bounds="25,727,444,179" />
         </Canvas>
         <Patch Id="HKuxaPU821WLkFPOSAVfa0" Name="Create" />
         <Patch Id="U6R7oHupWoLQSDtwyaWqFR" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="HFQslhp1J2IMc6ghF2EknD">
           <Fragment Id="DXxeOkxxGXULCglkvS1yHi" Patch="HKuxaPU821WLkFPOSAVfa0" Enabled="true" />
           <Fragment Id="CF9ujojG4r4ODma9HahQB1" Patch="U6R7oHupWoLQSDtwyaWqFR" Enabled="true" />
