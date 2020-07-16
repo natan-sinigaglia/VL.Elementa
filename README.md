@@ -1,5 +1,7 @@
 # VL.Elementa
 
+[![Matrix](https://img.shields.io/matrix/VL.Elementa:matrix.org?color=blue&label=chat%20on%20matrix&logo=matrix)](https://matrix.to/#/!ozhuuBcieNoMbRkvVj:matrix.org?via=matrix.org)
+
 A node based UI widgets library made in VL for Skia rendering.
 
 The library includes:
@@ -26,6 +28,10 @@ To use the latest stable version:
 1. Clone the repository
 2. build the solution located in the `src` folder in `Release` mode. 
 3. You can then start contributing to the lib.
+
+### Contributing new widgets
+
+Read [this wiki page](https://github.com/vvvv-dottore/VL.Elementa/wiki/Contributing-new-widgets) to get specific guidelines on how to contribute new widgets.
 
 
 ## Resources
