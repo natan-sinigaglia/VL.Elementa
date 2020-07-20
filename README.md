@@ -81,7 +81,6 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - renamed Typeable component to Focusable
 - Rotary widget now internally made with a slider (since they share the same behaviour)
 
-
 ### 2.2.3
 
 - Another small fix in Panel
