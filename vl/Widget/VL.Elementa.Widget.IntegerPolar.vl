@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="F4rhP8LPNlnLsi3dX1fjit" LanguageVersion="2020.1.7.184" Version="0.128">
-  <NugetDependency Id="AOSzh4uGQrvOWsteO8NAPg" Location="VL.CoreLib" Version="2020.1.7" />
+<Document xmlns:p="property" Id="F4rhP8LPNlnLsi3dX1fjit" LanguageVersion="2020.1.8.186" Version="0.128">
+  <NugetDependency Id="AOSzh4uGQrvOWsteO8NAPg" Location="VL.CoreLib" Version="2020.1.8-0186-g0e02aab4a9" />
   <Patch Id="IKajJRnz6YTN5bo8bcrrpL">
     <Canvas Id="DUxBj8Q6ubcLk1V3yBfnuF" DefaultCategory="VL.Elementa.Widget" CanvasType="FullCategory">
       <!--
@@ -206,7 +206,7 @@
               <Pin Id="L5MP6ZRaIYzPb6NKdpbz9z" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="EynnJGjjsveOsRuKPmqefy" Bounds="667,708" />
-            <Node Bounds="1037,867,151,19" Id="JB1R8k60sbKPqVvUtKA7tt">
+            <Node Bounds="1037,867,20,19" Id="JB1R8k60sbKPqVvUtKA7tt">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.IntegerPolar.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="DefaultIntegerPolarDrawer" />
@@ -2302,7 +2302,7 @@
                 <Choice Kind="TypeFlag" Name="Vector2" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="BU1HTVKD9ROOaEgTppXIZ4" Name="Anchor" Kind="InputPin" Bounds="175,108" DefaultValue="Center" Visibility="Optional" Summary="Sets the widget's anchor.">
+            <Pin Id="BU1HTVKD9ROOaEgTppXIZ4" Name="Anchor" Kind="InputPin" Bounds="175,108" DefaultValue="TopLeft" Visibility="Optional" Summary="Sets the widget's anchor.">
               <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="RectangleAnchor" />
               </p:TypeAnnotation>
@@ -2314,7 +2314,7 @@
                 <Choice Kind="TypeFlag" Name="Integer32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="GgIHtWep29PLSEb9HojKjj" Name="Min" Kind="InputPin" Bounds="323,539" />
+            <Pin Id="GgIHtWep29PLSEb9HojKjj" Name="Min" Kind="InputPin" Bounds="323,539" Visibility="Optional" />
             <Pin Id="HCK3oIE2sjON0B9g3z2zTt" Name="Max" Kind="InputPin" Bounds="1350,415" DefaultValue="9999" Visibility="Optional" Summary="Sets the widget's maximum value.">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Integer32" />
@@ -3227,7 +3227,11 @@
           <Patch Id="LkhECHLDsN5NR1G7VbKdhX" Name="Create" />
           <Patch Id="NikkmlXYNjJOdzjrEpLlk1" Name="Update">
             <Pin Id="HK6hOw7mulUPt1C90y9gpA" Name="Position" Kind="InputPin" Bounds="516,242" Summary="Sets the widget's position." />
-            <Pin Id="Mcb3I3sIyidM19K8kfknOY" Name="Size" Kind="InputPin" Bounds="497,296" Summary="Sets the widget's size." />
+            <Pin Id="Mcb3I3sIyidM19K8kfknOY" Name="Size" Kind="InputPin" Bounds="497,296" DefaultValue="1, 1" Summary="Sets the widget's size.">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="ToWs7KSitEFQIZEaRrLcCA" Name="Anchor" Kind="InputPin" Bounds="532,284" Visibility="Optional" Summary="Sets the widget's anchor." />
             <Pin Id="Nr5HrP4yWbOPCeguDWQmdo" Name="Enable Interactions" Kind="InputPin" Bounds="535,292" Visibility="Optional" Summary="Enables user interaction on the widget. False makes it read-only." />
             <Pin Id="L7U9PTywphhNMZZYe6DPTD" Name="Default" Kind="InputPin" Bounds="544,324" Visibility="Optional" Summary="Sets the widget's value. Applies on change." />
@@ -3253,7 +3257,7 @@
             <Pin Id="FnRHPz15xdONhcdIdS1fSz" Name="Go To Focus" Kind="InputPin" Bounds="633,456" Visibility="Optional" Summary="Forces focus on the widget." />
             <Pin Id="S4hFNom3Vz4QJcgWxHtfno" Name="Set Value" Kind="InputPin" Bounds="255,228" Visibility="Optional" Summary="Applies the value of the Value input to the widget." />
             <Pin Id="UxsNaGrmGSYQG3vavnKRjo" Name="Value Editing Mode" Kind="InputPin" Bounds="369,263" Visibility="Optional" />
-            <Pin Id="LDJlwGQo9LnLtQc1c1WnO1" Name="Min" Kind="InputPin" Bounds="201,186" />
+            <Pin Id="LDJlwGQo9LnLtQc1c1WnO1" Name="Min" Kind="InputPin" Bounds="201,186" Visibility="Optional" />
           </Patch>
           <Link Id="GWHTOpg0f8GMgtTWcvj3Sg" Ids="F5g1qhymHmuPnqxpNaS571,T1IkDYqfWW2O8UXR3zXu6Q" />
           <Link Id="V5RfpksdMMcN40MFXGGTPF" Ids="HK6hOw7mulUPt1C90y9gpA,F5g1qhymHmuPnqxpNaS571" IsHidden="true" />
@@ -3323,7 +3327,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="SE1rSAdJA89OariW0JEFwj" Location="VL.Skia" Version="2020.1.7" />
+  <NugetDependency Id="SE1rSAdJA89OariW0JEFwj" Location="VL.Skia" Version="2020.1.8-0186-g0e02aab4a9" />
   <DocumentDependency Id="MY3PXCAYdGnQLx6hl0ZemK" Location="../VL.Elementa.Core.vl" />
   <DocumentDependency Id="PiAWuGdrG1oOK8wpBKz7hC" Location="../VL.Elementa.Components.vl" />
 </Document>
