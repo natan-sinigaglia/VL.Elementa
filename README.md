@@ -5,38 +5,33 @@
 A node based UI widgets library made in VL for Skia rendering.
 
 The library includes:
-- a collection of ready to use widgets to handle the most common value types in vvvv Gamma
-- a set of Layout nodes to easily arrange your widgets and create responsive UIs
-- a bunch of utilities and help patches
+- A collection of ready to use widgets to handle the most common value types in vvvv Gamma
+- A set of Layout nodes to easily arrange your widgets and create responsive UIs
+- A bunch of utilities and help patches
 
 
 
 ## Installing
 
 To use the latest stable version:
-1. go to Gamma's Quad menu > Manage Nugets > Commandline and type:
+1. Go to Gamma's Quad menu > Manage Nugets > Commandline and type:
 
 	```
-	nuget install vl.elementa
+	nuget install VL.Elementa
 	```
-2. press Enter and wait the ending of the installation process
+2. Press Enter and wait the ending of the installation process
 
 
 
 ## Contributing to the development
 
 1. Clone the repository
-2. build the solution located in the `src` folder in `Release` mode. 
+2. Build the solution located in the `src` folder in `Release` mode. 
 3. You can then start contributing to the lib.
 
 ### Contributing new widgets
 
 Read [this wiki page](https://github.com/vvvv-dottore/VL.Elementa/wiki/Contributing-new-widgets) to get specific guidelines on how to contribute new widgets.
-
-
-## Resources
-[Github Repository](https://github.com/vvvv-dottore/VL.Elementa)
-[Riot Chat Room](https://riot.im/app/#/room/#VL.Elementa:matrix.org)
 
 
 ## Licencing
@@ -46,11 +41,24 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 [Natan Sinigaglia](http://natansinigaglia.com/)
 
 
-
 ## Changelog
 
-### 3.0.0
+### 4.0.0
 
+#### New
+- Massive documentation update : many new help patches, pin and nodes descriptions
+- New widgets :
+	- DropdownGrid
+	- DropdownGridEnum
+	- IntegerPolar
+	- ValuePolar
+	- IntegerPolarUpDown
+
+#### Changed/Updated
+- Changed pin names in Layout nodes. `Inherit Size From Children` and all similar names are now `Auto Size`
+- Masked irrelevant pins for some Layout nodes
+
+### 3.0.0
 
 - NEW Style system. there's no StyleSheet property anymore in IElementum interface (everything gets managed by the Styleable component, already implemented within every widget)
 - NEW "Selector" utility library to validate conditions within an entity-component tree graph (used for the style system)
