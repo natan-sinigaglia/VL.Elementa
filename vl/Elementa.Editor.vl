@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="PteB4SGIz2HLEHnWfsTNYi" LanguageVersion="2019.2.0-0236-52759e123e" Version="0.128">
-  <NugetDependency Id="DWHBR0yKpKpLovCZjpRCvi" Location="VL.CoreLib" Version="2019.2.0-0236-g52759e123e" />
+<Document xmlns:p="property" Id="PteB4SGIz2HLEHnWfsTNYi" LanguageVersion="2020.1.6.171" Version="0.128">
+  <NugetDependency Id="DWHBR0yKpKpLovCZjpRCvi" Location="VL.CoreLib" Version="2020.1.6" />
   <Patch Id="JuVa7E7lhYwLnM2ef56WNK">
     <Canvas Id="CJIv5mf1hOYM9876oFNSeL" DefaultCategory="Elementa.Editor" CanvasType="FullCategory">
       <!--
@@ -10506,6 +10506,134 @@
             <Link Id="UMEr9TApmfdL4ISiTYW6IS" Ids="PvaX9T2SymhQW1KOMOto57,Bvc82WG8hjEL6oXRCLFYpM" IsHidden="true" />
           </Patch>
         </Node>
+        <!--
+
+    ************************ InspectorServer ************************
+
+-->
+        <Node Name="InspectorServer" Bounds="1245,119" Id="SYiqF13ZNTsLKyoaYu4AQj">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ClassDefinition" Name="Class" />
+          </p:NodeReference>
+          <Patch Id="HukJWiG8xA8MLjMRAAcYDw">
+            <Canvas Id="QL8uuIhs1uZQCkKlFnwFgt" CanvasType="Group">
+              <Pad Id="QFDTrVFpRqwPvPAClb0Cb1" SlotId="U3PL60IWqFVOAi5Zao5Ou4" Bounds="265,158" />
+              <Node Bounds="263,101,46,26" Id="EHucEK7RooKPpyXHdiHdvK">
+                <p:NodeReference LastCategoryFullName="Reactive.Subjects.Subject" LastSymbolSource="VL.Reactive.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                  <CategoryReference Kind="ClassType" Name="Subject" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="EyqrnxbSOLeLcVyKeITlsX" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="421,198,51,26" Id="FY55uxVIYUbNMR3uNlDMZ8">
+                <p:NodeReference LastCategoryFullName="Reactive.Subjects.Subject" LastSymbolSource="VL.Reactive.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="OnNext" />
+                  <CategoryReference Kind="ClassType" Name="Subject" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="UtPNYZ6ymJONjBvxSicwWH" Name="Input" Kind="StateInputPin" />
+                <Pin Id="G0NmDY1qSRhM0Hi1i2B9SQ" Name="Value" Kind="InputPin" />
+                <Pin Id="S581CQpc4LPLbjLuzUmF8Y" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <ControlPoint Id="CIrArpXMXNTLkQAo4TGKKb" Bounds="534,136" />
+              <Node Bounds="467,159,70,26" Id="LprDD575bssOIcTBM8Jy9z">
+                <p:NodeReference LastCategoryFullName="Primitive.Tuple (2 Items)" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="RecordType" Name="Tuple (2 Items)" />
+                  <Choice Kind="OperationCallFlag" Name="Join" />
+                </p:NodeReference>
+                <Pin Id="Jif7GkNg16bPgALLtf7Bjx" Name="Item 1" Kind="InputPin" />
+                <Pin Id="SMIhGuKQgzJOj9GD01ger6" Name="Item 2" Kind="InputPin" />
+                <Pin Id="PYHSIee8JDkNlVlUNTJwfj" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <ControlPoint Id="Os1rfk1LxYAMehoBAxBWMY" Bounds="469,108" />
+              <ControlPoint Id="HOAwXIvPnvKLdwVkVgsiDs" Bounds="265,215" />
+            </Canvas>
+            <Patch Id="JsSzvWnCahGNG5JiPIYgEs" Name="Create" ParticipatingElements="SKvsa1FOoYXPOwV9L1qac2" />
+            <ProcessDefinition Id="LRpxoEmGGg4LZ8dB0j4NV7" IsHidden="true">
+              <Fragment Id="K0qCNKkAP9KMnUElqfSykZ" Patch="JsSzvWnCahGNG5JiPIYgEs" Enabled="true" />
+              <Fragment Id="K3eUq4izI2LO62jWVdRIQe" Patch="DuWwUnjUTunL2VXhdfMFir" Enabled="true" />
+              <Fragment Id="FUGkms43hMZNqRCiXOWYwe" Patch="SIRiJ8SQmyyN0N9RrcWVKW" Enabled="true" />
+            </ProcessDefinition>
+            <Slot Id="U3PL60IWqFVOAi5Zao5Ou4" Name="Inspected Item Subject">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Subject" />
+              </p:TypeAnnotation>
+            </Slot>
+            <Link Id="SKvsa1FOoYXPOwV9L1qac2" Ids="EyqrnxbSOLeLcVyKeITlsX,QFDTrVFpRqwPvPAClb0Cb1" />
+            <Link Id="GzgPbTGyDKlP92arpTXnKW" Ids="QFDTrVFpRqwPvPAClb0Cb1,UtPNYZ6ymJONjBvxSicwWH" />
+            <Link Id="LQfInGBv6whO2uqqBHuTIz" Ids="A400vhsypTzOJb1m5eHCl3,CIrArpXMXNTLkQAo4TGKKb" IsHidden="true" />
+            <Patch Id="DuWwUnjUTunL2VXhdfMFir" Name="InspectItem">
+              <Pin Id="A400vhsypTzOJb1m5eHCl3" Name="Item" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Object" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="NcWDOfUr8uuPTAUSiTYxcr" Name="Root Reference" Kind="InputPin" Bounds="593,329">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Reference" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="IVLObject" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
+            <Link Id="PVlq1FqOyLFPSXBjRdHDHY" Ids="CIrArpXMXNTLkQAo4TGKKb,SMIhGuKQgzJOj9GD01ger6" />
+            <Link Id="EqOorwJjxyvNmkmm0vJzyb" Ids="Os1rfk1LxYAMehoBAxBWMY,Jif7GkNg16bPgALLtf7Bjx" />
+            <Link Id="RGPZEVgOHbwOv4Jk5KfUId" Ids="NcWDOfUr8uuPTAUSiTYxcr,Os1rfk1LxYAMehoBAxBWMY" IsHidden="true" />
+            <Link Id="ND3uk33mPPDNrv31BmgRZX" Ids="PYHSIee8JDkNlVlUNTJwfj,G0NmDY1qSRhM0Hi1i2B9SQ" />
+            <Link Id="Q3lfnSQaIxTMP1uD6TsMsD" Ids="QFDTrVFpRqwPvPAClb0Cb1,HOAwXIvPnvKLdwVkVgsiDs" />
+            <Link Id="NBsngtWE7RXLRCzzXUxDC9" Ids="HOAwXIvPnvKLdwVkVgsiDs,Ia3HfojaEvwNVnVNpriW45" IsHidden="true" />
+            <Patch Id="SIRiJ8SQmyyN0N9RrcWVKW" Name="GetInspectedItemStream">
+              <Pin Id="Ia3HfojaEvwNVnVNpriW45" Name="Inspected Item Subject" Kind="OutputPin" />
+            </Patch>
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ GetInspectorServer ************************
+
+-->
+        <Node Name="GetInspectorServer" Bounds="1245,203,206,152" Id="SKoBgpNuuwxLbk3gCTfpzy">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="Mig9R4qXXBHOcsFqH9woi3">
+            <Node Bounds="1337,234,104,79" Id="RueiPh26jW2NCTQALvad8Q">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.Experimental.vl">
+                <Choice Kind="OperationCallFlag" Name="SingleInstance" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+                <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+              </p:NodeReference>
+              <Pin Id="C2NN6IKQDdOLRWpUoGmORh" Name="Force New Instance" Kind="InputPin" />
+              <Pin Id="GHvEhoJexfnP9EBC9htmza" Name="Singleton" Kind="OutputPin" />
+              <Patch Id="LXrt32m46JWL2jMaoIpwPF" Name="Producer" ManuallySortedPins="true">
+                <Pin Id="RPJdVIKv7vMQI50Vk3SYEu" Name="Result" Kind="OutputPin" />
+                <ControlPoint Id="FW2IgwQWu2vO1hosh9A270" Bounds="1350,306" />
+                <Node Bounds="1349,257,80,26" Id="RsLgqKvrbxpLc58P9YHDN7">
+                  <p:NodeReference LastCategoryFullName="Elementa.Editor.Parameter.InspectorServer" LastSymbolSource="Elementa.Editor.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <CategoryReference Kind="ClassType" Name="InspectorServer" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="NcDX80jvugWLTGNo2GNYGJ" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <Link Id="QsbmMIx9nSgNcLH8Z9Vve6" Ids="FW2IgwQWu2vO1hosh9A270,RPJdVIKv7vMQI50Vk3SYEu" IsHidden="true" />
+            <Link Id="Gj8PNrsAewJLpA7Jbo2eLN" Ids="NcDX80jvugWLTGNo2GNYGJ,FW2IgwQWu2vO1hosh9A270" />
+            <ControlPoint Id="NmW3lsTBHwkMrzNmwB30EH" Bounds="1338,337" />
+            <Link Id="Pb302bsVgOuNwuGQ4V3Iwr" Ids="GHvEhoJexfnP9EBC9htmza,NmW3lsTBHwkMrzNmwB30EH" />
+            <Pin Id="MH70zbIJi6YOkCJuTEctoR" Name="Singleton" Kind="OutputPin" Bounds="860,-482" />
+            <Link Id="CM3qG2SgAedNMJD3mQIOBT" Ids="NmW3lsTBHwkMrzNmwB30EH,MH70zbIJi6YOkCJuTEctoR" IsHidden="true" />
+          </Patch>
+        </Node>
+        <Overlay Id="Fg6oFUsn6hWMzUXkZ2P2LY" Name="Inspector" Bounds="1182,10,320,399">
+          <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
+        </Overlay>
       </Canvas>
       <!--
 
@@ -14204,7 +14332,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="MQwKhR2gxIMOku1hsQwRSV" Location="VL.Skia" Version="2019.2.0-0236-g52759e123e" />
+  <NugetDependency Id="MQwKhR2gxIMOku1hsQwRSV" Location="VL.Skia" Version="2020.1.6" />
   <DocumentDependency Id="Bt8FnGBNpSaLyDa0zW58oE" Location="./Elementa.Widgets.vl" />
   <PlatformDependency Id="But9OdSzkYCLtydljplsoz" Location="../src/Elementa/bin/Release/netstandard2.0/Elementa.dll" />
   <PlatformDependency Id="Vdt81mJMS3FOmI4sp5Gb3M" Location="System.Windows.Forms" />
