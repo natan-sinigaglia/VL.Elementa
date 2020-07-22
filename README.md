@@ -1,7 +1,7 @@
 # VL.Elementa
 
 [![Matrix](https://img.shields.io/matrix/VL.Elementa:matrix.org?color=blue&label=chat%20on%20matrix&logo=matrix)](https://matrix.to/#/!ozhuuBcieNoMbRkvVj:matrix.org?via=matrix.org)
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/VL.Elementa?logo=nuget)
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/VL.Elementa?logo=nuget)](https://www.nuget.org/packages/VL.Elementa/)
 
 A node based UI widgets library made in VL for Skia rendering.
 
