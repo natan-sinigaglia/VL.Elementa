@@ -78,10 +78,10 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - Layout nodes come just with a Spectral version (no pingroup version anymore)
 - All widgets now come with a Spectral version (that expect a component spread as input, not using pingroup)
 - Styleable component now as advanced, not meant to be plugged to the widgets to customize their style
-- Taggable component reworked: now it simply contains an HashSet<Object>. it comes also as a (Spectral Advanced) version, with no pingroup.
-- Attributable component got refreshed as well: attributes come as Dictionary<String, Object> 
+- Taggable component reworked: now it simply contains an `HashSet<Object>`. it comes also as a (Spectral Advanced) version, with no pingroup.
+- Attributable component got refreshed as well: attributes come as `Dictionary<String, Object>` 
 - renamed Typeable component to Focusable
-- Rotary widget now internally made with a slider (since they share the same behaviour)
+- Rotary widget now internally made with a slider (since they share the same behaviour).
 
 ### 2.2.3
 
