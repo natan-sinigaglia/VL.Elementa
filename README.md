@@ -59,6 +59,7 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 #### Changed/Updated
 - Changed pin names in Layout nodes. `Inherit Size From Children` and all similar names are now `Auto Size`
 - Masked irrelevant pins for some Layout nodes
+- Layout nodes now have an optionnal pin to that draws a helper stroke to visualize them more easily
 
 ### 3.0.0
 
