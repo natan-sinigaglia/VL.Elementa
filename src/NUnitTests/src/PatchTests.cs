@@ -21,7 +21,7 @@ namespace MyTests
         static string[] Packs = new string[]{ 
         
         //  FIX ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            @"C:\Program Files\vvvv\vvvv_gamma_2020.1.4\lib\packs",
+            @"C:\Program Files\vvvv\vvvv_gamma_2020.2.0\lib\packs",
 
         };
 
