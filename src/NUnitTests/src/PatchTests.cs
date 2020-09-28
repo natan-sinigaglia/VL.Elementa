@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using NUnit.Framework.Internal;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ using VVVV.NuGetAssemblyLoader;
 
 namespace MyTests
 {
+    enum SaveDocCondition { Never, WhenGreen, Always };
+
     [TestFixture]
     public class PatchTests
     {
@@ -25,6 +28,8 @@ namespace MyTests
 
         };
 
+        // DO YOU WANT TO SAVE THE VL DOCS TO DISK? 
+        static SaveDocCondition SaveDocCondition = SaveDocCondition.WhenGreen;
 
 
         public static IEnumerable<string> NormalPatches()
@@ -88,10 +93,21 @@ namespace MyTests
 
             // Check dependenices
             foreach (var dep in document.GetDocSymbols().Dependencies)
-                Assert.IsFalse(dep.RemoteSymbolSource is Dummy, $"Couldn't find dependency {dep}. Press F6 to build all library projects!");
+                Assert.IsFalse(dep.RemoteSymbolSource is Dummy, $"Couldn't find dependency {dep}");
 
             // Check all containers and process node definitions, including application entry point
             CheckNodes(document.AllTopLevelDefinitions);
+
+            if (SaveDocCondition == SaveDocCondition.Always || (SaveDocCondition == SaveDocCondition.WhenGreen && Success()))
+                document.Save(isTrusted: false); // TODO: discuss when this can be turned on.
+        }
+
+        private static bool Success()
+        {
+            var thisTest = TestExecutionContext.CurrentContext.CurrentTest;
+            var testResult = thisTest.MakeTestResult();
+            var resultState = testResult.ResultState;
+            return resultState == ResultState.Success || resultState == ResultState.Inconclusive;
         }
 
         static Solution Compile(IEnumerable<string> docs)
