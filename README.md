@@ -62,6 +62,10 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - Layout nodes now have an optionnal pin to that draws a helper stroke to visualize them more easily
 - Boolean widgets (bang, toggle, press) now have a new default drawer making it more obvious if they're true or not
 
+#### Fixed
+
+- Layer Objects are now stroked when selected
+
 ### 3.0.0
 
 - NEW Style system. there's no StyleSheet property anymore in IElementum interface (everything gets managed by the Styleable component, already implemented within every widget)
