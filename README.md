@@ -60,6 +60,7 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - Changed pin names in Layout nodes. `Inherit Size From Children` and all similar names are now `Auto Size`
 - Masked irrelevant pins for some Layout nodes
 - Layout nodes now have an optionnal pin to that draws a helper stroke to visualize them more easily
+- Boolean widgets (bang, toggle, press) now have a new default drawer making it more obvious if they're true or not
 
 ### 3.0.0
 
