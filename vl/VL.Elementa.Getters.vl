@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="VSs2Ib4QhlxNcG33hEzITU" LanguageVersion="2020.2.0.292" Version="0.128">
+  <NugetDependency Id="NA5E0tHZDdqNet9RvW1ole" Location="VL.CoreLib" Version="2020.2.0-0292-gbb7183ae5b" />
+  <Patch Id="GntGCJ2u712OdoeTblnGon">
+    <Canvas Id="JtstgBjrDMhMz3kCbNq7au" DefaultCategory="Main" CanvasType="FullCategory">
+      <!--
+
+    ************************ AnyHovered ************************
+
+-->
+      <Node Name="AnyHovered" Bounds="426,457" Id="A5G8DUgOaAKPYVC1KHKszJ" Summary="Outputs whether any of the widgets of the graph is hovered" Remarks="Connect it after your Elementa node">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="Hw4MXK2APE4LdF52JUWTGa">
+          <Canvas Id="PjcXc5kfdE2MLeoj9aP8uQ" CanvasType="Group">
+            <ControlPoint Id="SNf6CUfDf1bOhh0Rz3DDMa" Bounds="469,443" />
+            <Node Bounds="467,480,112,26" Id="MGeumf3A4NrN1zqWdKFlVa">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Core.Context" LastSymbolSource="VL.Elementa.Core.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="ClassType" Name="Context" />
+                <Choice Kind="OperationCallFlag" Name="GetElementaManager" />
+              </p:NodeReference>
+              <Pin Id="LLZkUMTDVaQNnBLby3RGD0" Name="Input" Kind="StateInputPin" />
+              <Pin Id="SraSSAr8DDzOq8mfKctox4" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="QBwnRbLcYC7N03SFPbVMAD" Name="Elementa Manager" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="574,526,65,19" Id="ShhYuCADzy7L8GFDr34xJn">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+                <CategoryReference Kind="ClassType" Name="Object" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="KYXA6IZFUpoMSDL7sq51e4" Name="X" Kind="InputPin" />
+              <Pin Id="TBlI7EsTB9bQQRzef1o82i" Name="Result" Kind="OutputPin" />
+              <Pin Id="GlGEvRlv3MNPv365OmacnV" Name="Not Assigned" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="574,571,441,198" Id="MbwBi6jRvhsQENTJrmwwGX">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <Pin Id="Bmraw9ANKAkLS1soDfnrNP" Name="Condition" Kind="InputPin" />
+              <ControlPoint Id="ImmHGz9pAx8Muzp617wkRF" Bounds="905,764" Name="Any Hovered" Alignment="Bottom" />
+              <ControlPoint Id="TiE5UoSDaRyMj2IznEj9AD" Bounds="944,580" Name="Any Hovered" Alignment="Top" />
+              <Patch Id="AxHXCRKnpJqQMtqGxElSd3" ManuallySortedPins="true">
+                <Patch Id="Cng5DpCqLRRMksNUVyDdh5" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="HBztFY0XPwqPrK3vPcukgH" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="586,594,133,26" Id="Mqy2f4R0AhVOu8GerziSVC">
+                  <p:NodeReference LastCategoryFullName="VL.Elementa.Core.ElementaManager" LastSymbolSource="VL.Elementa.Core.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="ElementaManager" />
+                    <Choice Kind="OperationCallFlag" Name="GetComponentProcessors" />
+                  </p:NodeReference>
+                  <Pin Id="C4AcGFDJK7IL5Wf9Du5Mok" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MVeT0X1Y2mIODf54Do2GL2" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="ToaQ3Ss8kmkPIpJwLLvH3O" Name="Component Processors" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="714,640,71,26" Id="BNk6Js2vBXINQsFbVX3Gvx">
+                  <p:NodeReference LastCategoryFullName="Collections.Dictionary" LastSymbolSource="VL.Collections.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="TryGetValue" />
+                    <CategoryReference Kind="RecordType" Name="Dictionary" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="UCURyE1GDXEMLdJeSjILpP" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MLpLNuXqqKSOMWrcSEc39x" Name="Key" Kind="InputPin" DefaultValue="HoverableComponentProcessor">
+                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="String" />
+                    </p:TypeAnnotation>
+                  </Pin>
+                  <Pin Id="FSmtFmXlnSPMJ5olQmSQEq" Name="Result" Kind="OutputPin" />
+                  <Pin Id="RTCl7AOZI9QPoqcwe7Vra4" Name="Value" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="780,721,128,26" Id="V7t1RX3IuKULLnf91FiTZN">
+                  <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor.HoverableComponentProcessor" LastSymbolSource="VL.Elementa.Component.Hoverable.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="GetAnyHovered" />
+                  </p:NodeReference>
+                  <Pin Id="ABVkehlx0qkNIHBPMh4kt5" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="L5VRGQJ7K3WQWBZkFjmZJj" Name="Consider Layout Elements" Kind="InputPin" />
+                  <Pin Id="FQxanBjIHCgPb6gjTbItuc" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="U5oQd134frTNfHKCNv2bDh" Name="Any Hovered" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="780,683,48,19" Id="NuiuAWcReWEOnf2vts2DzD">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="CastAs" />
+                  </p:NodeReference>
+                  <Pin Id="AJArOeOnOEqPCcDmoByP3k" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="TgwSuYFIrMqM6fvTUaDVS3" Name="Default" Kind="InputPin" />
+                  <Pin Id="M3f3gAxdXBHOHEiQBZIvo1" Name="Result" Kind="OutputPin" />
+                  <Pin Id="SMqsaZpJopPO3Ubhs18LQH" Name="Success" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <ControlPoint Id="Tta3TcIPRudL0xfuienEaX" Bounds="905,799" />
+            <ControlPoint Id="JVhT0TNRdq4L7SLjBSyBXF" Bounds="906,534" />
+          </Canvas>
+          <Patch Id="ACErRy94fuaPUsRjjlUo5r" Name="Create" />
+          <Patch Id="FPNEGjeTZGCO8D6T6nTjyz" Summary="Outputs whether any widget in the graph is hovered" Remarks="Connect this after the Elementa node" Name="Update">
+            <Pin Id="UFL1PotrPmaMadpojkkbVp" Name="Context" Kind="InputPin" Summary="The Elementa context">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Context" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="LWPud7XZypNPaWl8AGJKNZ" Name="Any Hovered" Kind="OutputPin" Bounds="870,840" Summary="True if any widget is hovered" />
+            <Pin Id="ABTy8s0BnIKLpxr2bnFLYd" Name="Consider Layout Operators" Kind="InputPin" Bounds="904,517" Summary="If true, Layout Operators will be taken into account in the hit test" />
+          </Patch>
+          <ProcessDefinition Id="GLsJMLl47CrNsgeEppcPLp">
+            <Fragment Id="PR8aeoLH1KKOakSmLDjSej" Patch="ACErRy94fuaPUsRjjlUo5r" Enabled="true" />
+            <Fragment Id="ImVq7YZD76bQXsQInCSnX3" Patch="FPNEGjeTZGCO8D6T6nTjyz" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="VIvNWEZxTKPN4tPPOTVyZ7" Ids="UFL1PotrPmaMadpojkkbVp,SNf6CUfDf1bOhh0Rz3DDMa" IsHidden="true" />
+          <Link Id="PswJDlvc8CkLjyxsKNpTQK" Ids="SNf6CUfDf1bOhh0Rz3DDMa,LLZkUMTDVaQNnBLby3RGD0" />
+          <Link Id="JQErmiGKhH7ODdfVsLdeAq" Ids="QBwnRbLcYC7N03SFPbVMAD,KYXA6IZFUpoMSDL7sq51e4" />
+          <Link Id="Qkm2wHWj3IUMyM8PpCeBDT" Ids="TBlI7EsTB9bQQRzef1o82i,Bmraw9ANKAkLS1soDfnrNP" />
+          <Link Id="HN49D8dVOdmL707W5bX5sU" Ids="QBwnRbLcYC7N03SFPbVMAD,C4AcGFDJK7IL5Wf9Du5Mok" />
+          <Link Id="PrVdQDzO5GLOxNhrl7iuK2" Ids="ToaQ3Ss8kmkPIpJwLLvH3O,UCURyE1GDXEMLdJeSjILpP" />
+          <Link Id="ScxdCDJ1E8rM4mwLEpqGuW" Ids="RTCl7AOZI9QPoqcwe7Vra4,AJArOeOnOEqPCcDmoByP3k" />
+          <Link Id="NVcBofn8KDzMYP29vqyFUW" Ids="M3f3gAxdXBHOHEiQBZIvo1,ABVkehlx0qkNIHBPMh4kt5" />
+          <Link Id="Po0w9X3Lk2xP9Ij4jhG4l8" Ids="TiE5UoSDaRyMj2IznEj9AD,ImmHGz9pAx8Muzp617wkRF" IsFeedback="true" />
+          <Link Id="UUa974VBbiYQHITbRbdQZG" Ids="U5oQd134frTNfHKCNv2bDh,ImmHGz9pAx8Muzp617wkRF" />
+          <Link Id="A9yjcVBgkskP3evRwZgpMu" Ids="ImmHGz9pAx8Muzp617wkRF,Tta3TcIPRudL0xfuienEaX" />
+          <Link Id="Lm7577W9ADuN96Uy7LFUxO" Ids="Tta3TcIPRudL0xfuienEaX,LWPud7XZypNPaWl8AGJKNZ" IsHidden="true" />
+          <Link Id="HpycOtArXeYMuvqP14W0zx" Ids="JVhT0TNRdq4L7SLjBSyBXF,L5VRGQJ7K3WQWBZkFjmZJj" />
+          <Link Id="FE9NpRFMTWeLDIRcmso6JL" Ids="ABTy8s0BnIKLpxr2bnFLYd,JVhT0TNRdq4L7SLjBSyBXF" IsHidden="true" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="LN1BtBUj0brOEHaGuqDBWc">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Tyf7ozKILGgP08D68gfzTy">
+        <Canvas Id="KmNHnNaq1OYQaLUfodUnM1" CanvasType="Group" />
+        <Patch Id="GYwx77bhr6IMm495Q1tLKr" Name="Create" />
+        <Patch Id="BumQNfn73eqQVzeXQBEYao" Name="Update" />
+        <ProcessDefinition Id="JlCaDbUq5ASL3c7Ggg8Py2">
+          <Fragment Id="FrNqeguT9fGNY2kzRCbdON" Patch="GYwx77bhr6IMm495Q1tLKr" Enabled="true" />
+          <Fragment Id="RHNK8mJQfB5MEr2Nu6Up6U" Patch="BumQNfn73eqQVzeXQBEYao" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="AMKsDDGSCtiPaMyYxiMZdb" Location="VL.Skia" Version="2020.2.0-0292-gbb7183ae5b" />
+  <DocumentDependency Id="M5aLSpKVzK0MkLNDQ5jGEF" Location="./VL.Elementa.Core.vl" />
+  <DocumentDependency Id="PvN89HeEqWoN9iZUpWyHOq" Location="./Component/VL.Elementa.Component.Hoverable.vl" />
+</Document>
