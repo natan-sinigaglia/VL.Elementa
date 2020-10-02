@@ -55,6 +55,7 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 	- ValuePolar
 	- IntegerPolarUpDown
 - New StylePresets : readymade stylesheets you can plug to your Elementa graph. Contribute your own!
+- AnyHovered : tells you if any widget of your graph is hovered. Comes with its help patch
 
 #### Changed/Updated
 - Changed pin names in Layout nodes. `Inherit Size From Children` and all similar names are now `Auto Size`
