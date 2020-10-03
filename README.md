@@ -44,7 +44,7 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
-### 4.0.0
+### 4.0.4
 
 #### New
 - Massive documentation update : many new help patches, pin and nodes descriptions
