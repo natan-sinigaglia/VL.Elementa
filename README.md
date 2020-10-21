@@ -44,6 +44,15 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 4.1.0
+
+_Not yet released_
+
+- Default style is now more wireframe-ish
+- Default font is now SegoeUI
+- Newly introduced widgets got added to `Widgets In Action` and `Widget Overview` help patches
+- New `AnyEditing` node in the `Getters` category
+
 ### 4.0.4
 
 #### New
