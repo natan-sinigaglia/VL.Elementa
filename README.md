@@ -53,6 +53,13 @@ _Not yet released_
 - Newly introduced widgets got added to `Widgets In Action` and `Widget Overview` help patches
 - New `AnyEditing` node in the `Getters` category
 
+### 4.0.5
+
+
+#### Fixes
+
+- NUnit project builds again
+
 ### 4.0.4
 
 #### New
