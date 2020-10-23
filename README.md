@@ -44,14 +44,23 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
-### 4.1.0
+### 5.0.0
 
-_Not yet released_
+_Not released yet, available as a preview package_
+
+### New
+
+- `AnyEditing` node in the `Getters` category
+- `ScrollableValue` component, comes with two help patches
+
+### Changed
 
 - Default style is now more wireframe-ish
 - Default font is now SegoeUI
-- Newly introduced widgets got added to `Widgets In Action` and `Widget Overview` help patches
-- New `AnyEditing` node in the `Getters` category
+
+### Fixed
+
+- Polar widgets got added to `Widgets In Action` and `Widget Overview` help patches
 
 ### 4.0.5
 
