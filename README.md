@@ -55,7 +55,6 @@ _Not yet released_
 
 ### 4.0.5
 
-
 #### Fixes
 
 - NUnit project builds again
