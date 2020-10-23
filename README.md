@@ -44,6 +44,13 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 4.0.5
+
+
+#### Fixes
+
+- NUnit project builds again
+
 ### 4.0.4
 
 #### New
