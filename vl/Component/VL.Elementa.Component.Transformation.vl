@@ -322,6 +322,7 @@
               <ControlPoint Id="IPlVkUTlf4zOs7tu0GNNUt" Bounds="889,727" />
               <ControlPoint Id="SUq9vAPiBRELaUvv92bUZF" Bounds="889,862" />
               <ControlPoint Id="RHJ9fwUPfLdQId6ixbNE8a" Bounds="909,756" />
+              <ControlPoint Id="NNFXEgTYHZoMOOcvFY5Ejw" Bounds="615,448" />
             </Canvas>
             <Link Id="VevmYSK6kdcMfUjUF2d03e" Ids="BNhpCXPohtOPtOvqJvFA10,Vbs21jil9asNzv6jjxprQ8" IsHidden="true" />
             <Slot Id="Sb2r25niVCyLUC0YB8kr9B" Name="Enabled">
@@ -331,7 +332,7 @@
             </Slot>
             <Link Id="Vk7xWgtihYsQWlm8glCdII" Ids="Mznwv3bpBcwMpLndBufLVD,IKA9oUTYVzwNmG7uLQlyve" />
             <Link Id="H8Hc0tLcCAOL24v6LPXCHS" Ids="Vx3MouLAiomM9q6UgtMraR,Mznwv3bpBcwMpLndBufLVD" IsHidden="true" />
-            <Slot Id="HtpZV9yss4hN9BWAncAHQf" Name="Operate On Element Bounds">
+            <Slot Id="HtpZV9yss4hN9BWAncAHQf" Name="Operate On Widget Bounds">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -430,7 +431,7 @@
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="CmROtARNapPMJAEpBnPZRi" Name="Operate On Element Bounds" Kind="InputPin" Bounds="664,65" DefaultValue="True">
+              <Pin Id="CmROtARNapPMJAEpBnPZRi" Name="Operate On Widget Bounds" Kind="InputPin" Bounds="664,65" DefaultValue="True">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
@@ -535,7 +536,7 @@
             <Patch Id="OZunpFBMB3iNgnSjPCZAcA" Name="GetSettings">
               <Pin Id="Sr6AR8JqKQ8N6OxHXQDUKy" Name="Helper Enabled" Kind="OutputPin" />
               <Pin Id="STVEhLBlglDORYn8VW3LD3" Name="Enabled" Kind="OutputPin" />
-              <Pin Id="FS3BeYj6oBOOa1GtecvXL6" Name="Operate On Element Bounds" Kind="OutputPin" />
+              <Pin Id="FS3BeYj6oBOOa1GtecvXL6" Name="Operate On Widget Bounds" Kind="OutputPin" />
             </Patch>
             <Link Id="QyldLLdXQx3LRBcu86saqt" Ids="IKA9oUTYVzwNmG7uLQlyve,A7P9tnDMoYsMtrFMV9xqPx" />
             <Link Id="Jhg50MPDuXgOXZCN9gIVdt" Ids="A7P9tnDMoYsMtrFMV9xqPx,STVEhLBlglDORYn8VW3LD3" IsHidden="true" />
@@ -574,6 +575,7 @@
               <Fragment Id="TXQHIAeWgMvMihj2EDhfO0" Patch="GTPsHVjA1ZYPi1tLGqPD0L" />
               <Fragment Id="UfS0P1b7o4fPgeKXJ5D9zd" Patch="OGXgQxFJatQMGqztAswshk" />
               <Fragment Id="IpTEz96PsaDNtNoBBXkBqY" Patch="TMSVlC9SQZ6NTrGcw1xLVQ" />
+              <Fragment Id="RsBqzE2K8c5Lu7hpJYVVJF" Patch="Tic79JpeRPkP4luOvGNVAA" />
             </ProcessDefinition>
             <Link Id="CW6BHA6DTVhLtmRKzQNtFu" Ids="OPOjJN47ImsMD6LZNp7DVY,IuUzUdU44xlPy0O2Mrmjml" />
             <Link Id="D1SCETnZr29OzCgEdiqHQr" Ids="IuUzUdU44xlPy0O2Mrmjml,RMpH75ibuVWM9Vcox6Sjq8" />
@@ -679,6 +681,11 @@
             <Link Id="MsQIltjBAnKNu3rSKDiaWV" Ids="FfbIZ3m3FE3OyuPJAdz58b,RHJ9fwUPfLdQId6ixbNE8a" IsHidden="true" />
             <Patch Id="TMSVlC9SQZ6NTrGcw1xLVQ" Name="SetResizeEnabled">
               <Pin Id="FfbIZ3m3FE3OyuPJAdz58b" Name="Resize Enabled" Kind="InputPin" />
+            </Patch>
+            <Link Id="FrZiK19FEPKNz8CJ4GI00W" Ids="NdlZChoFCMePg5aJaWzWjp,NNFXEgTYHZoMOOcvFY5Ejw" />
+            <Link Id="IwX2ReXEc1zOZpXou32o7R" Ids="NNFXEgTYHZoMOOcvFY5Ejw,CFfAJRS6xEgOKq3hmxeMeY" IsHidden="true" />
+            <Patch Id="Tic79JpeRPkP4luOvGNVAA" Name="GetOperateOnWidgetBounds">
+              <Pin Id="CFfAJRS6xEgOKq3hmxeMeY" Name="Operate On Widget Bounds" Kind="OutputPin" />
             </Patch>
           </Patch>
         </Node>
@@ -2669,7 +2676,7 @@
                       <Pin Id="C899GsgzLd1LBngQ5xCJqf" Name="Input" Kind="StateInputPin" />
                       <Pin Id="EG6mmHMLnn0QSJDJftLYkI" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="F7IqESa1gEeLzXOUKiOenp" Name="Enabled" Kind="OutputPin" />
-                      <Pin Id="ALaw0ZdLsiBN5imeVUi172" Name="Operate On Element Bounds" Kind="OutputPin" />
+                      <Pin Id="ALaw0ZdLsiBN5imeVUi172" Name="Operate On Widget Bounds" Kind="OutputPin" />
                       <Pin Id="IZzOwZaUCieNlBgqWLVpSS" Name="Helper Enabled" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="611,895,45,19" Id="HPCuA0N3ttRPId1PeipNAU">
@@ -3202,7 +3209,7 @@
                       <Pin Id="Mg0kmdTSKrwNd3Y1Prz36Z" Name="Input" Kind="StateInputPin" />
                       <Pin Id="LMv3Je8XOtpLMrFRWKvAaE" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="HDLFj27cI5QLrRCsQqN5Wv" Name="Enabled" Kind="OutputPin" />
-                      <Pin Id="SF9tEVMywOYMav1lcTFFbr" Name="Operate On Element Bounds" Kind="OutputPin" />
+                      <Pin Id="SF9tEVMywOYMav1lcTFFbr" Name="Operate On Widget Bounds" Kind="OutputPin" />
                       <Pin Id="Qzr5JyOIofKLmUVeemXybp" Name="Helper Enabled" Kind="OutputPin" />
                     </Node>
                     <Pad Id="UdNKzKbEmKuNJ3IS22nuPD" SlotId="T5y7S0KqbY9OabmmicxSZP" Bounds="1247,1381" />
@@ -3281,7 +3288,7 @@
                       <Pin Id="O7ylBZowfl3OL7tB6KGhoT" Name="Input" Kind="StateInputPin" />
                       <Pin Id="PsV2dy0KU6BPhLzFmWaPcS" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="RjJswCfsazzPAXQmP01Qtu" Name="Enabled" Kind="OutputPin" />
-                      <Pin Id="MjlyF6nUFmyOeFOOJUqxoW" Name="Operate On Element Bounds" Kind="OutputPin" />
+                      <Pin Id="MjlyF6nUFmyOeFOOJUqxoW" Name="Operate On Widget Bounds" Kind="OutputPin" />
                       <Pin Id="GJ6XVji6CXCLgC8BMHn1l5" Name="Helper Enabled" Kind="OutputPin" />
                     </Node>
                     <Pad Id="Uh2SokwvikDMOPT0dxsJKd" SlotId="T5y7S0KqbY9OabmmicxSZP" Bounds="-719,1178" />
@@ -3718,6 +3725,7 @@
                     <Pin Id="Oi7bK4ivDv5PEggq7noXYO" Name="Translate Activation Func" Kind="InputPin" />
                     <Pin Id="SwYcHFVGdKuMksgrZFHFpv" Name="Scale Activation Func" Kind="InputPin" />
                     <Pin Id="OrCKxsRyvaGQLadAJACH3t" Name="Notification" Kind="InputPin" />
+                    <Pin Id="TGSdjfCwBiCOeWUYIK5Mj1" Name="Update" Kind="InputPin" />
                     <Pin Id="Ol9eXi6w1HfMzGoSn0ByFL" Name="Output" Kind="OutputPin" />
                     <Pin Id="FQFclekV3eINkyNaqonPGV" Name="Transformation Active" Kind="OutputPin" />
                     <Pin Id="CCLDSVPmWDcNCBi3M2cicM" Name="Handled" Kind="OutputPin" />
@@ -3778,7 +3786,7 @@
                     <ControlPoint Id="RMDjJNUTiQXNJ5DJ85oUML" Bounds="794,253" />
                     <ControlPoint Id="UcNMr2aal5QLBMVtmyUy6D" Bounds="813,274" />
                     <ControlPoint Id="MwPPFoU8nvnMxMOvyiTdxk" Bounds="847,300" />
-                    <ControlPoint Id="HMgVbCmM7mjOPQ8f1IyiTO" Bounds="472,884" />
+                    <ControlPoint Id="HMgVbCmM7mjOPQ8f1IyiTO" Bounds="489,923" />
                     <Node Bounds="306,525,37,19" Id="NTGsrcMTTGkOCTfZ2Usbeg">
                       <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -3827,7 +3835,7 @@
                       <ControlPoint Id="JEqSs3xj4BUOrLGuZXdGGv" Bounds="818,1067" Alignment="Bottom" />
                       <ControlPoint Id="IxiuAk6UUvcMjEJTaPKJoH" Bounds="818,990" Alignment="Top" />
                     </Node>
-                    <Node Bounds="347,893,99,26" Id="OlkWdqzmCufL2jwCFH4e1l">
+                    <Node Bounds="346,932,99,26" Id="OlkWdqzmCufL2jwCFH4e1l">
                       <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Transformation" LastSymbolSource="VL.Elementa.Component.Transformation.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="SetIsTransforming" />
@@ -3947,7 +3955,7 @@
                     <Pad Id="NdlijTbqipQQBOIFQzWyql" SlotId="C3khoso5JJ4LEgvbIG3ASK" Bounds="1008,445" />
                     <Pad Id="OZ9IQOt3TrzPmByd3piKkR" SlotId="C3khoso5JJ4LEgvbIG3ASK" Bounds="375,429" />
                     <Pad Id="NYX0RRglao9OMkrs9c0LSj" SlotId="LE75IbELyKGMyZjTKOaePV" Bounds="709,224" />
-                    <Pad Id="M8smWYVSn3ZOrqqpSNAemn" SlotId="LE75IbELyKGMyZjTKOaePV" Bounds="350,866" />
+                    <Pad Id="M8smWYVSn3ZOrqqpSNAemn" SlotId="LE75IbELyKGMyZjTKOaePV" Bounds="349,905" />
                     <ControlPoint Id="Hq3p2sCym0BL98Z1vGYH3L" Bounds="272,243" />
                     <Node Bounds="734,708,225,19" Id="EaNpQwQ26W3PX5erAMGrry">
                       <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor.TransformationComponentProcessor" LastSymbolSource="VL.Elementa.Component.Transformation.vl">
@@ -4021,6 +4029,84 @@
                       <Pin Id="MxFW50JvMZ3PjQ2dT5TUZv" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="Cn2aLvmht3HLAZeOsyrij9" Name="Resize Enabled" Kind="OutputPin" />
                     </Node>
+                    <Pad Id="JnP2ggLe4wIOvBb614d5Oi" SlotId="C3khoso5JJ4LEgvbIG3ASK" Bounds="703,1383" />
+                    <Pad Id="Rshh82izRHMMrw2tC5Ta15" SlotId="A4ISojl1UC1MisIGb2cut5" Bounds="418,868" />
+                    <Pad Id="L2uucKEgfX0MtFoaCINrRp" SlotId="A4ISojl1UC1MisIGb2cut5" Bounds="842,1383" />
+                    <Overlay Id="CevF0ezAPIpQdmOc88XKTH" Name="Write Transformed Bounds into Widget Position and Size input pins" Bounds="614,1189,432,412">
+                      <p:ColorIndex p:Type="Int32">11</p:ColorIndex>
+                    </Overlay>
+                    <Pad Id="I7JmuYgBphvM7TiVVYOiPL" SlotId="LE75IbELyKGMyZjTKOaePV" Bounds="775,1289" />
+                    <Node Bounds="641,1320,145,26" Id="C9GLvJ74YLmL4bOYJCX5Xa">
+                      <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Transformation" LastSymbolSource="VL.Elementa.Component.Transformation.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="ClassType" Name="Transformation" />
+                        <Choice Kind="OperationCallFlag" Name="GetOperateOnWidgetBounds" />
+                      </p:NodeReference>
+                      <Pin Id="IYUDZnEzQzfM24GEUDMsl8" Name="Input" Kind="InputPin" />
+                      <Pin Id="N3gCW6naHVxQbRstwOghLz" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="IlXLwopSrM0POvBEXE2lB5" Name="Operate On Widget Bounds" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="689,1415,321,166" Id="RFkCNqDsftWNPhgW9oHtaa">
+                      <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                        <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                        <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                        <FullNameCategoryReference ID="Primitive" />
+                      </p:NodeReference>
+                      <Pin Id="Q4SKujVjiSMNdKpStsKOr9" Name="Condition" Kind="InputPin" />
+                      <Patch Id="Db9ft27iGGUPCAP6ElMJpS" ManuallySortedPins="true">
+                        <Node Bounds="701,1542,150,19" Id="BRvnfeJTUa0OJOCkZNEGgO">
+                          <p:NodeReference LastCategoryFullName="VL.Elementa.Core.Utils" LastSymbolSource="VL.Elementa.Core.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="OperationCallFlag" Name="WriteLocalBoundsToInputPins" />
+                          </p:NodeReference>
+                          <Pin Id="IbPSQ1P7zpcQSPhJvoYs7h" Name="IElementum" Kind="InputPin" />
+                          <Pin Id="HGYRhf18grQOJNNvbxuDUN" Name="Local Bounds" Kind="InputPin" />
+                          <Pin Id="P47LgTFsIEhP1jloJlMBgQ" Name="Apply" Kind="InputPin" />
+                        </Node>
+                        <Node Bounds="840,1466,65,19" Id="GsqQx0Po4g6LO0SLbvWFJI">
+                          <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="ProcessAppFlag" Name="MonoFlop" />
+                          </p:NodeReference>
+                          <Pin Id="DdU4V9nTqpyLEqQVGC4D4X" Name="Set" Kind="InputPin" />
+                          <Pin Id="RWf5DaFQTl5ME2LGtYzzO5" Name="Time" Kind="InputPin" DefaultValue="2">
+                            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                              <Choice Kind="TypeFlag" Name="Float32" />
+                            </p:TypeAnnotation>
+                          </Pin>
+                          <Pin Id="At2yLF302KVMQIlLpZ3V8R" Name="Retriggerable" Kind="InputPin" />
+                          <Pin Id="E7GFkuzYsSLL5F3IhLMgZt" Name="Reset" Kind="InputPin" />
+                          <Pin Id="OeMofiLjqrWPS8be8zchcU" Name="Value" Kind="OutputPin" />
+                          <Pin Id="BZtsg7ahfnoO04xaK6fUMy" Name="Inverse Output" Kind="OutputPin" />
+                        </Node>
+                        <Node Bounds="840,1502,56,19" Id="PeULRWsK1QcQaK7gJ75yUC">
+                          <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="ProcessAppFlag" Name="TogEdge" />
+                          </p:NodeReference>
+                          <Pin Id="JHA7iheqVOnMTdaTFUY6Qi" Name="Value" Kind="InputPin" />
+                          <Pin Id="D70WqNy0B1KQTDnFxaLXq4" Name="Up Edge" Kind="OutputPin" />
+                          <Pin Id="Bcm6OxhZY2xLPj5aLPcPO8" Name="Down Edge" Kind="OutputPin" />
+                        </Node>
+                        <Pad Id="KSgm9OjjoY4QIruAyUUWqJ" Comment="Time" Bounds="862,1443,35,15" ShowValueBox="true" isIOBox="true" Value="0.5">
+                          <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                            <Choice Kind="TypeFlag" Name="Float32" />
+                          </p:TypeAnnotation>
+                        </Pad>
+                        <Node Bounds="721,1502,89,19" Id="BYETraVikzeNZQvoXtWPe9">
+                          <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Layoutable" LastSymbolSource="VL.Elementa.Component.Layout.vl">
+                            <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                            <Choice Kind="ProcessAppFlag" Name="GetLocalBounds (IElementum)" />
+                            <PinReference Kind="InputPin" Name="Node Context" />
+                          </p:NodeReference>
+                          <Pin Id="BoD9ApnBU6hMA5gH2F9vjv" Name="Input" Kind="InputPin" />
+                          <Pin Id="KEx8zfnR0bnMNbP8s5CH85" Name="Local Bounds" Kind="OutputPin" />
+                          <Pin Id="K4d1V6yBqENL8J3rpt8hqv" Name="Found" Kind="OutputPin" />
+                        </Node>
+                        <Patch Id="OIh7Ni1QqiYNHQwGM9Nxfk" Name="Create" ManuallySortedPins="true" />
+                        <Patch Id="U12dkk8fXI5N7xie5sxDwF" Name="Then" ManuallySortedPins="true" />
+                      </Patch>
+                    </Node>
                   </Canvas>
                   <Patch Id="JdIOMAlaQCLNff7CkVbtSs" Name="Create" ParticipatingElements="Cn19EWmBijtOufnv9kRgeZ">
                     <Pin Id="U4QglYm1S51PHcUsSVAlDu" Name="Global Transformation Stream" Kind="InputPin">
@@ -4044,7 +4130,7 @@
                       </p:TypeAnnotation>
                     </Pin>
                   </Patch>
-                  <Patch Id="H2d6oAIEizANgAa51nw64O" Name="Update" ManuallySortedPins="true">
+                  <Patch Id="H2d6oAIEizANgAa51nw64O" Name="ProcessNotification" ManuallySortedPins="true">
                     <Pin Id="JPrv4FAPdSSLyw7t1OrRmB" Name="Translate Activation Func" Kind="InputPin">
                       <p:TypeAnnotation>
                         <Choice Kind="TypeFlag" Name="Delegate (2 -&gt; 1)" />
@@ -4081,11 +4167,6 @@
                     <Pin Id="KGEU5HFJmBJMlxCpb7ojCT" Name="Transformation Active" Kind="OutputPin" Bounds="315,327" />
                     <Pin Id="AW8enTDbKm1QTDuVBup2Hc" Name="Handled" Kind="OutputPin" Bounds="492,827" />
                   </Patch>
-                  <ProcessDefinition Id="MFoXmCwM55uNOEmdS6HtMC" HasStateOut="true">
-                    <Fragment Id="T0Vfa0uYhyHQb2tahYDSXZ" Patch="JdIOMAlaQCLNff7CkVbtSs" Enabled="true" />
-                    <Fragment Id="E0UnGSFHWhYLEnWjieGztW" Patch="H2d6oAIEizANgAa51nw64O" Enabled="true" />
-                    <Fragment Id="Q1Abxdm5mcyPBptyYCIbGr" Patch="GH2MWZrnokYLUOWx2GAfUD" />
-                  </ProcessDefinition>
                   <Slot Id="P9a7XQWps63MPgyLQtgWCP" Name="Transformation Data" />
                   <Link Id="Fl9UG5KwIXXOYwYcGriFzq" Ids="FbXIwMculMALX1pxdtFMzN,Nnc9zYWTxe9OStj0YpMwmS" />
                   <Link Id="EhYdzCBb2qKNCY5ZMnTdIl" Ids="U4QglYm1S51PHcUsSVAlDu,IGidvbr4QRaMLxpv1HI9T7" IsHidden="true" />
@@ -4181,6 +4262,24 @@
                   <Link Id="EOJO8VUaPyfOAkRTCBE9gk" Ids="FH3fl6blrvvL7wS21mpASs,C0XhUOVj87ZQM5TGQwnbX0" />
                   <Link Id="QtgbfrRhgQFOMtJMKrhDk3" Ids="NXAQsj92aRJLAXbgUggZtx,FJWIdLdaapPLKskok75k0o" />
                   <Link Id="JXP53ZMZzFtOwA5olScDKb" Ids="Cn2aLvmht3HLAZeOsyrij9,DupIyOls3XrPhbBqdnjDLn" />
+                  <Link Id="P3KfD7YId4iL3E59a3Qsvu" Ids="JnP2ggLe4wIOvBb614d5Oi,IbPSQ1P7zpcQSPhJvoYs7h" />
+                  <Slot Id="A4ISojl1UC1MisIGb2cut5" Name="Is Transforming" />
+                  <Link Id="CWHR1GqlLXWM9jhvDyQrb2" Ids="KqKcKsKF6giPq4kFYecdcL,Rshh82izRHMMrw2tC5Ta15" />
+                  <Link Id="LvR5iR5OjkKPVqq5YtXiOv" Ids="L2uucKEgfX0MtFoaCINrRp,DdU4V9nTqpyLEqQVGC4D4X" />
+                  <Patch Id="OXaDbMm0M8PPcZfqTlhjzt" Name="Update" />
+                  <Link Id="BO2BTBl2y0tN5ZIRqUljz5" Ids="JnP2ggLe4wIOvBb614d5Oi,BoD9ApnBU6hMA5gH2F9vjv" />
+                  <ProcessDefinition Id="MFoXmCwM55uNOEmdS6HtMC" HasStateOut="true">
+                    <Fragment Id="T0Vfa0uYhyHQb2tahYDSXZ" Patch="JdIOMAlaQCLNff7CkVbtSs" Enabled="true" />
+                    <Fragment Id="E0UnGSFHWhYLEnWjieGztW" Patch="H2d6oAIEizANgAa51nw64O" Enabled="true" />
+                    <Fragment Id="VMBSIrwDgJXLesm3Wu627x" Patch="OXaDbMm0M8PPcZfqTlhjzt" Enabled="true" />
+                    <Fragment Id="Q1Abxdm5mcyPBptyYCIbGr" Patch="GH2MWZrnokYLUOWx2GAfUD" />
+                  </ProcessDefinition>
+                  <Link Id="FiowXLvlri4MaIpYWtNOm6" Ids="I7JmuYgBphvM7TiVVYOiPL,IYUDZnEzQzfM24GEUDMsl8" />
+                  <Link Id="MNeAnIqdVWiNzrDhGzuZTB" Ids="OeMofiLjqrWPS8be8zchcU,JHA7iheqVOnMTdaTFUY6Qi" />
+                  <Link Id="L1HAJt7zBzzN3aIa2S2Ggp" Ids="KSgm9OjjoY4QIruAyUUWqJ,RWf5DaFQTl5ME2LGtYzzO5" />
+                  <Link Id="Mo3ogfCRoxTM0jfehhkjev" Ids="Bcm6OxhZY2xLPj5aLPcPO8,P47LgTFsIEhP1jloJlMBgQ" />
+                  <Link Id="MobM7b0rcW0LFJgkuU4t6n" Ids="KEx8zfnR0bnMNbP8s5CH85,HGYRhf18grQOJNNvbxuDUN" />
+                  <Link Id="MVZwyw4aXLRMSiA6jTL6bF" Ids="IlXLwopSrM0POvBEXE2lB5,Q4SKujVjiSMNdKpStsKOr9" />
                 </Patch>
               </Node>
               <Pad Id="HejUfft4JVkNUdsHcJ4Ngz" SlotId="UBRlTVfwtCOLNI9WzGRSch" Bounds="202,968" />
@@ -4889,7 +4988,7 @@
                           <Pin Id="DOlbXDDm7nJO2esTnBuJQq" Name="Input" Kind="StateInputPin" />
                           <Pin Id="NnaaqmL1LNyLs2eQzTjhOL" Name="Output" Kind="StateOutputPin" />
                           <Pin Id="VSoqBuXmgpZNUBoCNtF2AB" Name="Enabled" Kind="OutputPin" />
-                          <Pin Id="GlEpDXAgI43P4dqB3GZRgT" Name="Operate On Element Bounds" Kind="OutputPin" />
+                          <Pin Id="GlEpDXAgI43P4dqB3GZRgT" Name="Operate On Widget Bounds" Kind="OutputPin" />
                           <Pin Id="IGj09OulFQWL6gjlVxHGQf" Name="Helper Enabled" Kind="OutputPin" />
                         </Node>
                       </Patch>
@@ -5126,7 +5225,7 @@
                       <Pin Id="O3AX38AYQYxMQeSTmmVZqc" Name="Input" Kind="StateInputPin" />
                       <Pin Id="HM5uNZTCLUIMM03vQibkeM" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="A1PKpog5sAmMvEOlwzvWSh" Name="Enabled" Kind="OutputPin" />
-                      <Pin Id="G71fdC1KlFFLB9nkXyQx8E" Name="Operate On Element Bounds" Kind="OutputPin" />
+                      <Pin Id="G71fdC1KlFFLB9nkXyQx8E" Name="Operate On Widget Bounds" Kind="OutputPin" />
                       <Pin Id="IvPiMG7UGxBONH6A2QDUBN" Name="Helper Enabled" Kind="OutputPin" />
                     </Node>
                     <Pad Id="Fr3rKlsRC4VPFchtblirkY" SlotId="QDFjzer3BsoM2Or7X1m03s" Bounds="190,1568" />
@@ -5206,7 +5305,7 @@
                       <Pin Id="R1IVK5xn5n2NfkFCkYbMmu" Name="Input" Kind="StateInputPin" />
                       <Pin Id="OiHoag1PQXWLvE2HVyaKkX" Name="Output" Kind="StateOutputPin" />
                       <Pin Id="RPDzJaZMyLsLi8wARauecD" Name="Enabled" Kind="OutputPin" />
-                      <Pin Id="JeME0kQhLwKLTmHkf7bGeS" Name="Operate On Element Bounds" Kind="OutputPin" />
+                      <Pin Id="JeME0kQhLwKLTmHkf7bGeS" Name="Operate On Widget Bounds" Kind="OutputPin" />
                       <Pin Id="UIGRkolZp0LPBqJnsattLj" Name="Helper Enabled" Kind="OutputPin" />
                     </Node>
                     <Pad Id="Oh40hxJh0HkPnTLDzQrb81" SlotId="QDFjzer3BsoM2Or7X1m03s" Bounds="1348,919" />
@@ -5686,7 +5785,7 @@
                       <CategoryReference Kind="Category" Name="Component" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="BC4LZky9kVrMg45LtviqeE" Name="Enabled" Kind="InputPin" />
-                    <Pin Id="QYdYRU7YEa1MdFQwsuP6OP" Name="Operate On Element Bounds" Kind="InputPin" DefaultValue="True">
+                    <Pin Id="QYdYRU7YEa1MdFQwsuP6OP" Name="Operate On Widget Bounds" Kind="InputPin" DefaultValue="True">
                       <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                         <Choice Kind="TypeFlag" Name="Boolean" />
                       </p:TypeAnnotation>
@@ -6150,6 +6249,29 @@
                 <Pin Id="DX1v6dzsYXsLpyNddfJyTK" Name="Global Filter Func" Kind="OutputPin" />
               </Node>
               <Pad Id="DmdCq3vBfVoOdrIhz35j2J" SlotId="FH93EaCB3ZFLUg7TCJGb60" Bounds="93,1052" />
+              <Node Bounds="264,1474,122,86" Id="DuUJFl3t4BHNbqNM2BxKMh">
+                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                </p:NodeReference>
+                <Pin Id="NgYkXkU6I70QPfqDOpdYHa" Name="Break" Kind="OutputPin" />
+                <Patch Id="RzDSoMPWAvkPpBqlhep3G9" ManuallySortedPins="true">
+                  <Patch Id="Ev73DTsRxBqMqZoFoXANW7" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="RkPxtqX7WUEL85yZDyvYdS" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="LMUkqeZNBFlLUS7GNshOjm" Name="Dispose" ManuallySortedPins="true" />
+                  <Node Bounds="276,1501,98,26" Id="Rv0n0AW0cOtN6nxGzIdIYT">
+                    <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor.TransformationComponentProcessor.TransformationProcess" LastSymbolSource="VL.Elementa.Component.Transformation.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="ClassType" Name="TransformationProcess" />
+                      <Choice Kind="OperationCallFlag" Name="Update" />
+                    </p:NodeReference>
+                    <Pin Id="SvX2sU863MMPu2H0NIyb64" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="LoTJTrEtJBpOP5XGogExPr" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="QhHQdw4hMaRLgdi3xtS111" Bounds="278,1480" Alignment="Top" />
+              </Node>
             </Canvas>
             <Slot Id="SaEtr7Unq8uOMBKQOsdPsF" Name="Transformation Components" />
             <Link Id="L92OusWFpipMn29knWALHQ" Ids="MwWFG1DbNFqQGgG5WeVqFI,JbV9lEnLmBeOQKH2Cg4BPe" IsHidden="true" />
@@ -6469,6 +6591,8 @@
             <Link Id="AFoVXq7RK92PQXvCrGgRhr" Ids="AstZLwcKdpxLlZWcM6trza,TcryWLTSq5KMJDZyV9O0TR" />
             <Link Id="ECmDLd9bfd0NOj5ekuZT3Y" Ids="T1zKwfqzjOyLjPfg1pQKEL,DwinvkihqXvM5WDna099Ly" />
             <Link Id="PQ29ihnnqjTM3Fc5XbwdiH" Ids="RfQwfPy6eTNQI7LQRGmlDY,LqvHWqLB3xhPZbBG6OcQgZ" />
+            <Link Id="LToXbYWMT0kNuNyyihYkea" Ids="ORPnD35dfPcQWV74ONRDeI,QhHQdw4hMaRLgdi3xtS111" />
+            <Link Id="Jkm6MQHXFOfNl8SmVajuPI" Ids="QhHQdw4hMaRLgdi3xtS111,SvX2sU863MMPu2H0NIyb64" />
           </Patch>
         </Node>
         <!--
