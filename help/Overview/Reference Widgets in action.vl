@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="F5mF1O3FVTPLEbIh0SD9PO" LanguageVersion="2020.3.0.42" Version="0.128">
-  <NugetDependency Id="NwHIRyNdxrwNZtbd3dDPGo" Location="VL.CoreLib" Version="2020.3.0-0042-g1a9a5c158d" />
+<Document xmlns:p="property" Id="F5mF1O3FVTPLEbIh0SD9PO" LanguageVersion="2020.3.0.82" Version="0.128">
+  <NugetDependency Id="NwHIRyNdxrwNZtbd3dDPGo" Location="VL.CoreLib" Version="2020.3.0-0082-g7f8ac28314" />
   <Patch Id="Qq8fkcqBsQgMogHums79ce">
     <Canvas Id="MUJPaSMWDiuMOHWtW1kDI7" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -69,10 +69,10 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="MCUgwnMLPnOO1zfUfbB36d" Name="Component" Kind="InputPin" />
             <Pin Id="MTOq1SEMxr8Mnqm3NM4jHx" Name="Output" Kind="OutputPin" />
             <Pin Id="PUjiK0yBboMPorcPcxjyrb" Name="On Interaction" Kind="OutputPin" />
             <Pin Id="SFRVOAz5gmsQDf1ghmnzyX" Name="Value" Kind="OutputPin" />
+            <Pin Id="VAJ6x1hcQmBP0R7jxzSgsy" Name="Components" Kind="InputPin" />
           </Node>
           <Pad Id="SOQax6UToQcNQTgPKsFclq" Comment="" Bounds="1644,396,88,32" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
@@ -1414,6 +1414,19 @@
             <Pin Id="Ldy5I6bUUsGOuKz3QpYR3c" Name="Input" Kind="InputPin" />
             <Pin Id="RKwyNxAMeY4LIInKXOIj4Y" Name="Position" Kind="InputPin" />
             <Pin Id="GqRTXpKBHWhL9vqle6ACGb" Name="Size" Kind="InputPin" />
+            <Pin Id="BDMKXeml4qCLGGXW5RVy9r" Name="Auto Width" Kind="InputPin" />
+            <Pin Id="M2vUr6K0whKOJf2iDqDNcn" Name="Auto Height" Kind="InputPin" />
+            <Pin Id="BQ16nA2jpCkPo7p1VzyQL3" Name="Content Size Mult" Kind="InputPin" DefaultValue="0.5">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="I1VStXiqPYMN18LNhgb6V2" Name="Control Properties" Kind="InputPin" />
+            <Pin Id="RWSmjXsZctbOS5bfaIHe3P" Name="TitleBar" Kind="InputPin" />
+            <Pin Id="Fca8zWl9v6aQMY2I3bRpLZ" Name="Camera" Kind="InputPin" />
+            <Pin Id="BO8wmjzcB00OraoqqBTpbX" Name="Components" Kind="InputPin" />
+            <Pin Id="MtnGKU87oXzNhW9VQBASWA" Name="Scrollbar" Kind="InputPin" />
+            <Pin Id="PkJF44ujsJlMn2NByDim1y" Name="Output" Kind="OutputPin" />
             <Pin Id="PhjzJCQedBCN6B8Lt4H0PT" Name="Inherit Width from Content" Kind="InputPin" DefaultValue="True">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
@@ -1424,16 +1437,6 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="BQ16nA2jpCkPo7p1VzyQL3" Name="Content Size Mult" Kind="InputPin" DefaultValue="0.5">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Float32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="I1VStXiqPYMN18LNhgb6V2" Name="Control Properties" Kind="InputPin" />
-            <Pin Id="RWSmjXsZctbOS5bfaIHe3P" Name="TitleBar" Kind="InputPin" />
-            <Pin Id="Fca8zWl9v6aQMY2I3bRpLZ" Name="Camera" Kind="InputPin" />
-            <Pin Id="BO8wmjzcB00OraoqqBTpbX" Name="Components" Kind="InputPin" />
-            <Pin Id="PkJF44ujsJlMn2NByDim1y" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="7943,-150,85,19" Id="IIjjS1We2K4MVA84Tfu6a0">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Slider.vl">
@@ -1442,7 +1445,6 @@
             </p:NodeReference>
             <Pin Id="QRFh1oIQkMQPLK67rNGVva" Name="Position" Kind="InputPin" />
             <Pin Id="QsTuASEAMlcQJpWvBqrKZ3" Name="Size" Kind="InputPin" />
-            <Pin Id="EQXMR0oXZzDORrMgGQ5jtj" Name="Value Editing Mode" Kind="InputPin" />
             <Pin Id="BqnFajpJTAQMd0ANZBUvhs" Name="Value" Kind="InputPin" />
             <Pin Id="DrPvBlTcSGUML3JfxCKI72" Name="Components" Kind="InputPin" />
             <Pin Id="Lwkh8HReP23LQ9JKcRLotq" Name="Output" Kind="StateOutputPin" />
@@ -1821,12 +1823,12 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FFrbIPJZ4g5MCLG0GXnyu2" Comment="Format Input Index 1" Bounds="1710,306,40,17" ShowValueBox="true" isIOBox="true" Value=" Km/h">
+          <Pad Id="FFrbIPJZ4g5MCLG0GXnyu2" Comment="Format Input Index 1" Bounds="1710,291,40,17" ShowValueBox="true" isIOBox="true" Value=" Km/h">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="BeYntu3tfoTMYuaqAd9G42" Comment="Value Format String" Bounds="1644,279,35,15" ShowValueBox="true" isIOBox="true" Value="F2">
+          <Pad Id="BeYntu3tfoTMYuaqAd9G42" Comment="Value Format String" Bounds="1644,264,35,15" ShowValueBox="true" isIOBox="true" Value="F2">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -1925,7 +1927,7 @@
               <Item> y</Item>
             </p:Value>
           </Pad>
-          <Node Bounds="1642,322,71,19" Id="U3HfmeVuiKzP7jVT9hPSKU">
+          <Node Bounds="1642,307,71,19" Id="U3HfmeVuiKzP7jVT9hPSKU">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Component.Common.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Formattable (Unit)" />
@@ -2312,7 +2314,7 @@
             <Pin Id="BXhsoDYRUJtOMsomkBev4H" Name="ClientBounds" Kind="OutputPin" />
             <Pin Id="R7gqSfupUb3PytgUU0FHTU" Name="Render Time" Kind="OutputPin" />
           </Node>
-          <Node Bounds="4679,369,65,19" Id="I9xsDqAAEG8LkrtVkjSjmC">
+          <Node Bounds="4678,369,65,19" Id="I9xsDqAAEG8LkrtVkjSjmC">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.ValuePolar.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ValuePolar" />
@@ -2521,7 +2523,7 @@
           </Node>
         </Canvas>
         <Patch Id="S3CQIqecFepPPLi337mqRl" Name="Create" />
-        <Patch Id="CmtktibbFWHOi2XqCrwdNY" Name="Update" />
+        <Patch Id="CmtktibbFWHOi2XqCrwdNY" Name="Update" ParticipatingElements="PF8vx6bYH4yQN9espFZQ1U" />
         <ProcessDefinition Id="CoBg3BGf0rDMqI4IGO5vlv">
           <Fragment Id="A3jzurs8yAEN91fxZZyCdi" Patch="S3CQIqecFepPPLi337mqRl" Enabled="true" />
           <Fragment Id="JLqqCYu1WqPPKfuLBT1Bz3" Patch="CmtktibbFWHOi2XqCrwdNY" Enabled="true" />
@@ -2690,7 +2692,6 @@
         <Link Id="VD8mhVtbEfWPukLpuuY8UE" Ids="UNlAMWTOVxTPIdddyrZcMb,GZOzjGModcSOPRXvHKqNoI" />
         <Link Id="QIPFgmKptjCPfqxJ3xjFp0" Ids="KdQonDWyGINNk3FHoBEnsN,SknZL10m5kAOoxmeZUqnTO" />
         <Link Id="Hceg7exHNmEMxo7VoYxu3n" Ids="HppkqnYdHpBPpGJT5zQvfD,CoU737p0ms3OElKTvz3Yr1" />
-        <Link Id="J43H838E3hsLapmIeJUTh1" Ids="Qnns0YgTyMxNVp7DHE0klz,MCUgwnMLPnOO1zfUfbB36d" />
         <Link Id="N6vtCjtn4dnLZd3hOvBsNs" Ids="FFrbIPJZ4g5MCLG0GXnyu2,FdiQJ1MEZffNdBuxEn1G3L" />
         <Link Id="GALXaybQ3rLLVe8zPsh5xc" Ids="BeYntu3tfoTMYuaqAd9G42,Uk2G3AjU3dYOe6fUgBq61R" />
         <Link Id="N2g4mt8MkvbLl9tyugkNDZ" Ids="VF05WRxueJiMUrSOgLBkUl,SmAsD4bIuJ4PWncHQQqWpt" />
@@ -2783,10 +2784,11 @@
         <Link Id="EjekapR0eMeMbPrAGWo9Gz" Ids="DEuQdFHbJtIQTWLDK4j3u4,PTSL4bW1poWO0536mbxlss" />
         <Link Id="PQvK26Eu23KNLYiIfQf5r0" Ids="RqEV7lKUlhQMmyHjQtr8Jz,BGoUrElAKOqOV7FaaFZx2d" />
         <Link Id="PKWErX7poqsMXBcZxGqd5G" Ids="DprlWHKjK3gNS1vwpmV4Tc,HLZoy3xZ6nNM1AM0e8awJp" />
+        <Link Id="PF8vx6bYH4yQN9espFZQ1U" Ids="Qnns0YgTyMxNVp7DHE0klz,VAJ6x1hcQmBP0R7jxzSgsy" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="RfYigjkHiIpPU1SW9G9bRg" Location="VL.Skia" Version="2020.3.0-0042-g1a9a5c158d" />
+  <NugetDependency Id="RfYigjkHiIpPU1SW9G9bRg" Location="VL.Skia" Version="2020.3.0-0082-g7f8ac28314" />
   <NugetDependency Id="AKtjOKG8sWAQGNSxr6X6nL" Location="VL.Elementa" Version="3.0.0-beta" />
   <PlatformDependency Id="KjIhSUcD56wMVV8jbOaOq0" Location="System.IO" />
 </Document>
