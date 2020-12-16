@@ -2301,6 +2301,34 @@
               <Pin Id="AlmNUgbO7O2LDCv2P3XRdP" Name="Output" Kind="StateOutputPin" />
             </Node>
             <ControlPoint Id="Bm3gQ244yzlOV2RUbs2pJ0" Bounds="376,625" />
+            <Node Bounds="229,781,66,26" Id="FDNWFGtSqs4NVWXP5FEso4">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component.NumericValue" LastSymbolSource="VL.Elementa.Component.Common.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="SetMin" />
+                <CategoryReference Kind="ClassType" Name="NumericValue" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="E0ZxNf1pm9DPATorA5NZa8" Name="Input" Kind="StateInputPin" />
+              <Pin Id="GmqCt06jumQMPtvR2wDbsA" Name="Min" Kind="InputPin" DefaultValue="-9999">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="GvWBR1kwEy1L1JxzUtGabu" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="227,730,66,26" Id="P6fU6gcY5UQNIzGZmt3l4Z">
+              <p:NodeReference LastCategoryFullName="VL.Elementa.Component.NumericValue" LastSymbolSource="VL.Elementa.Component.Common.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="SetMax" />
+                <CategoryReference Kind="ClassType" Name="NumericValue" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="ICKMO9XTIF1NwELphaHkU0" Name="Input" Kind="StateInputPin" />
+              <Pin Id="V61pNo0G0jpMYlzAc3OWvF" Name="Max" Kind="InputPin" DefaultValue="9999">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="Qig5q4Zx2aeQZihmxhsEr2" Name="Output" Kind="StateOutputPin" />
+            </Node>
           </Canvas>
           <Link Id="DZiFjYCIMMJQbghqI3VRxp" Ids="LfFpBq7X5tCQVaUEaGA5VO,QECPXMojgXJPbwG515vTDk" />
           <Link Id="V7KrsZeJARwPUE3NJvqtfg" Ids="TPlMNgRO18QPQD6pFNjIxB,L90pLKYvuz0OIu8M4U1rmW" />
@@ -2469,17 +2497,13 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="CiT0sJZaMrRO0Z12GvykGa" MergeId="476095" Name="Set Value" Kind="InputPin" Visibility="Optional" />
+            <Pin Id="CiT0sJZaMrRO0Z12GvykGa" MergeId="476095" Name="Set Value" Kind="InputPin" DefaultValue="False" Visibility="Optional" />
           </Patch>
           <Patch Id="Vev5I2jAHNVP7LTrlEf2vm" Name="SetMax (Internal)">
-            <Pin Id="L0aZrNAVVUkO8xmEonCaVN" MergeId="475767" Name="Max" Kind="InputPin" DefaultValue="1" Visibility="Optional">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="L0aZrNAVVUkO8xmEonCaVN" MergeId="475767" Name="Max" Kind="InputPin" DefaultValue="9999" Visibility="Optional" />
           </Patch>
           <Patch Id="BSxcZ7Uh5eCL9TNqFRkZHb" Name="SetMin (Internal)">
-            <Pin Id="LCPRKh8RMtZOs19YxSzQ7U" MergeId="475759" Name="Min" Kind="InputPin" Visibility="Optional" />
+            <Pin Id="LCPRKh8RMtZOs19YxSzQ7U" MergeId="475759" Name="Min" Kind="InputPin" DefaultValue="-9999" Visibility="Optional" />
           </Patch>
           <Patch Id="V3FRS8wiiFYOpWcNf8r73J" Name="SetDefault (Internal)">
             <Pin Id="NTlX3aaSNMgOG1XAfGzeur" MergeId="475778" Name="Default" Kind="InputPin" Visibility="Optional" />
@@ -2507,7 +2531,7 @@
           <Link Id="RXdNCxA2BImOTmnZoeNBiS" Ids="CiT0sJZaMrRO0Z12GvykGa,Bm3gQ244yzlOV2RUbs2pJ0" IsHidden="true" />
           <Link Id="UtsJpFRmecIQRErFrmipkU" Ids="CFs2CZCdIz4NB1qfjRtKFq,H2KO7U2A3LePeMSTCV0SsT" />
           <Link Id="NzdVy6IDGdJMcPmPrC8O7Y" Ids="C0eSUXFp3qTND3LqJUqIdf,KEwWoCLFFkvQdJdoDdQGwI" />
-          <Link Id="V0jE9GdkjKjNFl8z25b3xK" Ids="CVBb8P3LYhrL4iG46CiptF,A2ZSK3PHWfRLcrE0XqRi9y" />
+          <Link Id="V0jE9GdkjKjNFl8z25b3xK" Ids="CVBb8P3LYhrL4iG46CiptF,ICKMO9XTIF1NwELphaHkU0" />
           <ProcessDefinition Id="AxmbCIdmHbINPBHYWJYBDn" HasStateOut="true">
             <Fragment Id="KFu4a8ohGf8QUpo4YG9Qf2" Patch="Efq77XfUrtJLejpGdpl4bL" Enabled="true" />
             <Fragment Id="Nknhx5TCjIGO3oarCKPAJI" Patch="TZmGqg3v3tMLYBrglsDhTo" Enabled="true" />
@@ -2532,6 +2556,8 @@
             <Fragment Id="EGdFYYvggR7P8I7SqEzK1Q" Patch="GHdgV9aVEffMNFFaTcxmN1" />
             <Fragment Id="IoJBCm3aPNDMyFZCzaducv" Patch="DizddiioYKVQJSivjFMR6P" />
           </ProcessDefinition>
+          <Link Id="Pz433VazadzMF15N6zFu3s" Ids="GvWBR1kwEy1L1JxzUtGabu,A2ZSK3PHWfRLcrE0XqRi9y" />
+          <Link Id="GL7fOZMFxZEP6RojmY3iPm" Ids="Qig5q4Zx2aeQZihmxhsEr2,E0ZxNf1pm9DPATorA5NZa8" />
         </Patch>
       </Node>
       <!--
@@ -2619,13 +2645,25 @@
             <Pin Id="FyAUexK2kSSM4jzUJV6mDA" MergeId="483660" Name="Set Value" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <Patch Id="JMwUxLKgqptNnXUzDpbkCn" Name="SetMax (Internal)">
-            <Pin Id="FmbrBk5mhpuQc8GyVhVrug" MergeId="483682" Name="Max" Kind="InputPin" DefaultValue="1" Visibility="Optional" />
+            <Pin Id="FmbrBk5mhpuQc8GyVhVrug" MergeId="483682" Name="Max" Kind="InputPin" DefaultValue="9999" Visibility="Optional">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
           </Patch>
           <Patch Id="HtKecWWTNQvQVutX6MZ75l" Name="SetMin (Internal)">
-            <Pin Id="ICP0SY76jJwLmOC8z6yL6Y" MergeId="483727" Name="Min" Kind="InputPin" Visibility="Optional" />
+            <Pin Id="ICP0SY76jJwLmOC8z6yL6Y" MergeId="483727" Name="Min" Kind="InputPin" DefaultValue="-9999" Visibility="Optional">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
           </Patch>
           <Patch Id="NWf3LZNC2z7PV9pb4XOftH" Name="SetDefault (Internal)">
-            <Pin Id="JTtQDXUzp2CM1RSpWrG1pP" MergeId="483749" Name="Default" Kind="InputPin" Visibility="Optional" />
+            <Pin Id="JTtQDXUzp2CM1RSpWrG1pP" MergeId="483749" Name="Default" Kind="InputPin" DefaultValue="0" Visibility="Optional">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
           </Patch>
           <Patch Id="O028HktjvOtPYMfRW3jY2Z" Name="SetGoToFocus (Internal)">
             <Pin Id="F3LJP8ndenZNJFvPun9sbg" MergeId="483874" Name="Go To Focus" Kind="InputPin" Visibility="Optional" />
