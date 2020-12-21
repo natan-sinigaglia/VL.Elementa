@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2020.2.0.270" Version="0.128">
-  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2020.2.2" />
+<Document xmlns:p="property" Id="Bn19L5G2eEMPUa3pGP2uv3" LanguageVersion="2020.3.0.120" Version="0.128">
+  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2020.3.0-0120-gb094184330" />
   <Patch Id="U2OktPJIft6LmRYDfHRaRo">
     <Canvas Id="OnAcnjd8HswONAJUfjLtjR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -54,8 +54,9 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
             </p:NodeReference>
-            <Pin Id="LSLzc7Rkf0lNdxyYL6pxaV" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="DruHHi4ySlbO1nf0LciGYv" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="D9xLDQi7DwQMgW4KkG3OXd" Name="Propagate Notification on Start" Kind="InputPin" />
+            <Pin Id="LSLzc7Rkf0lNdxyYL6pxaV" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="ETKhRN5jrxmNlzBf85qaTD" Name="Custom Start Selection Func" Kind="InputPin" />
             <Pin Id="M674o7LNYxfM2ZTqoGOFaQ" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="LjdN30zRyMqOO7ktNX4yOL" Name="Output" Kind="StateOutputPin" />
@@ -105,8 +106,6 @@
             <Pin Id="JInSuP7w1v6O1nZ1UrLHCW" Name="Position" Kind="InputPin" />
             <Pin Id="R5cxGoH1Z6PNzYAoZoehMS" Name="Size" Kind="InputPin" />
             <Pin Id="QpCRXpDQdxlLAJVcrRu8FR" Name="Value" Kind="InputPin" />
-            <Pin Id="ImD70tKJffZMTlhdU4gYlv" Name="Component" Kind="InputPin" />
-            <Pin Id="VhKXNNEjmvCPtMz5d6pMZr" Name="Component 2" Kind="InputPin" />
             <Pin Id="BL3ALarMtoXNuE1HLqne3F" Name="Output" Kind="StateOutputPin" />
             <Pin Id="IF9txfXCFD2QPZqHWTuEDl" Name="On Interaction" Kind="OutputPin" />
             <Pin Id="T2cQEST73JrMNnvQ9LYWxI" Name="Value" Kind="OutputPin" />
@@ -210,6 +209,7 @@
               <Choice Kind="ProcessAppFlag" Name="Tooltip" />
             </p:NodeReference>
             <Pin Id="PDSB0Iuq1u4Qb2p2j8Uhod" Name="Text" Kind="InputPin" />
+            <Pin Id="LsU6XCg0ooYNXfrujws54y" Name="SolveShowingTime" Kind="InputPin" />
             <Pin Id="Ecv9O8i3LJKNr8viNxIJuM" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="MlQ0Y5v0No0M3MjhDC8eCv" Bounds="548,314,114,81" ShowValueBox="true" isIOBox="true" Value="Displays a tooltip above the parent  widget when hovering it">
@@ -272,6 +272,7 @@
             <Pin Id="U5LosrtafyTPP66wwA60Ym" Name="Idle State Create" Kind="InputPin" />
             <Pin Id="HDSeMSmFvS2PKwWmH2kZvx" Name="Focused State Create" Kind="InputPin" />
             <Pin Id="P7qsn2UrFiWMwPKarZ2q3o" Name="Enable" Kind="InputPin" />
+            <Pin Id="Jk2vmvHAxIBNdCAuGOpOvK" Name="Initialize" Kind="InputPin" />
             <Pin Id="K0vS2uOMzNUPa7XaetAJQO" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="490,558,61,19" Id="Qdfn08gd5NoQHNjo477aqm">
@@ -288,7 +289,7 @@
               <Choice Kind="ProcessAppFlag" Name="Hoverable" />
             </p:NodeReference>
             <Pin Id="IFQVGOj7kp0M4TnH6LTrmz" Name="Is Hoverable" Kind="InputPin" />
-            <Pin Id="ORtqgTv8mY3QB0sEoSXNSz" Name="Occluded by Foreground Objects" Kind="InputPin" />
+            <Pin Id="BumVgnzL8DpNqboCG49Jz0" Name="Occluded by Foreground Widgets" Kind="InputPin" />
             <Pin Id="P75ZQwIEhL6LDrEChqlZnj" Name="Output" Kind="StateOutputPin" />
             <Pin Id="NOhbUcal0IJN11QtwGOv8D" Name="Hovered" Kind="OutputPin" />
           </Node>
@@ -298,7 +299,8 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
             <Pin Id="MwjeTxliJZ1ORWURbtdWJS" Name="Function" Kind="InputPin" />
-            <Pin Id="HLyvFpJycFAPqyrksFHngj" Name="Update" Kind="ApplyPin" />
+            <Pin Id="RFBKPQgAPV7N9Z1dsgJ7N4" Name="SolveVersion" Kind="InputPin" />
+            <Pin Id="SLCAcGm18BoMPjOo1O3L4k" Name="SolveRectangles" Kind="InputPin" />
             <Pin Id="TtXZNtS5tVENjVzPX8SGOA" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="1103,274,145,19" Id="Ves2UBzFds8PuTKCgt1pdr">
@@ -308,14 +310,19 @@
               <CategoryReference Kind="Category" Name="Component" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="HzGW0lxnKL6OyJisiQJUMV" Name="Enabled" Kind="InputPin" />
-            <Pin Id="NPBzVX1cTG0LZ4EaG5tOKj" Name="Operate On Element Bounds" Kind="InputPin" />
-            <Pin Id="QdVmLe9oWFuMWBa1RRlJ2m" Name="Translate Constraint Type" Kind="InputPin" />
             <Pin Id="U6VpEBC2zj2MlT7Vkqg44s" Name="Handler Left Enabled" Kind="InputPin" />
             <Pin Id="J1xkNiyVO0GNTEQxjwpRFh" Name="Handler Right Enabled" Kind="InputPin" />
             <Pin Id="CdFQ8izJ8wWMswRg3TFKhn" Name="Handler Top Enabled" Kind="InputPin" />
             <Pin Id="QZAETkJpfVnPgNcrE3kdIh" Name="Handler Bottom Enabled" Kind="InputPin" />
+            <Pin Id="QdVmLe9oWFuMWBa1RRlJ2m" Name="Translate Constraint Type" Kind="InputPin" />
+            <Pin Id="DU6ZGkPFHosN3cAgw3nr5a" Name="Handler Rectangles Option" Kind="InputPin" />
             <Pin Id="LAEcY6OrM5BOkvrZU4aPUA" Name="Snapping" Kind="InputPin" />
+            <Pin Id="Rd86jBc0m9lPvlMBLHK2Uk" Name="Operate On Widget Bounds" Kind="InputPin" />
+            <Pin Id="RAEqh8yahwNOBrY59QmA9r" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="DP9u9gf5rRaLvF4SoRibGh" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="DxjFy6t3NmBOogBqRUOouV" Name="Resize Enabled" Kind="InputPin" />
             <Pin Id="KvlHPwGEDTbLrO3HwA8ESt" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="L0j5igfLEXQMCIx2Zts6BS" Name="Operate On Widget Bounds" Kind="OutputPin" />
             <Pin Id="BLd2tuS2yrrNdYI7xNoeSP" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
           <Overlay Id="F8hUfq2bVMFOIGRu0Dt4Ts" Name="" Bounds="13,789,916,100">
@@ -388,9 +395,36 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Taggable" />
             </p:NodeReference>
-            <Pin Id="LyHe9uFO5Y3OCHUnVcbaZm" Name="Tag" Kind="InputPin" />
-            <Pin Id="FlYoxPQWDKiOQDQoJnNc1u" Name="Output" Kind="OutputPin" />
+            <Pin Id="B7y1aBnS18uPtcR3Fc7gWT" Name="Output" Kind="OutputPin" />
           </Node>
+          <Node Bounds="1369,277,165,19" Id="SMpyRjax0KPNoMsgvx33qn">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Component.Guides.vl">
+              <Choice Kind="ProcessAppFlag" Name="Guides" />
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+            </p:NodeReference>
+            <Pin Id="OCQJ6PSetBKNKbJnmhLsJ5" Name="Update" Kind="InputPin" />
+            <Pin Id="LZdHRVBMZ6HPRjXD8ZjWU2" Name="Left Guide" Kind="InputPin" />
+            <Pin Id="A3KTGlMvWJVPPDwCOtJkEO" Name="Center Guide" Kind="InputPin" />
+            <Pin Id="JYOWsjtX88TPOSOiGClGBl" Name="Right Guide" Kind="InputPin" />
+            <Pin Id="ApmODtOr74dNcFXKgvHY1G" Name="Top Guide" Kind="InputPin" />
+            <Pin Id="CGAmh8U0XKiNxO2R98zO7p" Name="Middle Guide" Kind="InputPin" />
+            <Pin Id="FFChN5XsPWMQBbblKHOjRN" Name="Bottom Guide" Kind="InputPin" />
+            <Pin Id="KGxSvzW6EFTL4eoMxm04Wo" Name="Custom Vertical Guides" Kind="InputPin" />
+            <Pin Id="NZPFGQxEoXiQG33uHsvEL6" Name="Custom Horizontal Guides" Kind="InputPin" />
+            <Pin Id="IqvngfMDjGCPrj1wqwacoa" Name="Enabled" Kind="InputPin" />
+            <Pin Id="RFWy5uEJdNvPsqs9oslYKb" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="JNGzTLrkNXOPCT6eU9cjD2" Name="Helper Clip Rectangle Func" Kind="InputPin" />
+            <Pin Id="RFcWTULaBEnMo96VtdOQwA" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Pad Id="Ei3GxVMtK6WLDYpaFn7PwI" Bounds="1381,322,131,84" ShowValueBox="true" isIOBox="true" Value="Allows to expose Guidelines for transformable Widgets to snap to">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="KdTKK5TpWjnPJ5vScQ5VCP" Name="Create" />
         <Patch Id="JqQ55xVIbp9PzgWa6c2UoC" Name="Update" />
@@ -403,6 +437,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2020.2.2" />
+  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2020.3.0-0120-gb094184330" />
   <NugetDependency Id="TMGxbf62uqbNXXTWpk5W4A" Location="VL.Elementa" Version="0.0.0.0" />
 </Document>
