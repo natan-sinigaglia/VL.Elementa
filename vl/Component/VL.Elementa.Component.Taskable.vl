@@ -269,7 +269,7 @@
             <Link Id="ExXRbMoQoDtO8ejGHY6K57" Ids="Je4gIsHkw4gMDg3Q84fy1C,SChWfdcqcZ0Pd8ri3xKo3m" />
             <Link Id="MszRUl0yOWnLiW650GOH8d" Ids="QRNV7Dm3QnQORFKxynIE2J,ALuY9syjkgoQJJJyM53LsN" />
             <Link Id="AAI9nDlFcwrP0NHKRAgBe9" Ids="BN1HmGkSKuHPoGAmIup3h9,BFEO45mRptHNpmugopllQk" />
-            <Patch Id="SilTrYd9jKsM0Borj3nImE" Name="SetTasks (Internal)" ParticipatingElements="QZ1sh0zPJ8jNKu7ISpmhDp">
+            <Patch Id="SilTrYd9jKsM0Borj3nImE" Name="SetTasks (Internal)" ParticipatingElements="QZ1sh0zPJ8jNKu7ISpmhDp,FjNyrd9phMxM4WDuX9YNUv">
               <Pin Id="Nl4565SCRQtOXLtwvQob5g" Name="Tasks" Kind="InputPin">
                 <p:TypeAnnotation>
                   <Choice Kind="TypeFlag" Name="Spread" />
@@ -702,24 +702,20 @@
           </p:NodeReference>
           <Patch Id="IFDTDHosA5AOWKDSs0M9QD">
             <Canvas Id="Drqd7uzOQX0L7IC24F7pyS" CanvasType="Group">
-              <Node Bounds="153,249" Id="KB0lkkzXY3jO0hBy2bpBe0">
-                <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Taskable (Spectral)" LastSymbolSource="VL.Elementa.Component.Taskable.vl">
+              <ControlPoint Id="J2vjEqH5zv0NBBu3OC7LeB" Bounds="123,188" />
+              <ControlPoint Id="F85ZXlpRwHoNrBESL98mE5" Bounds="123,103" />
+              <Node Bounds="121,136,57,19" Id="BNAJefNTvuKNEtDbHXytZM">
+                <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Component.Taskable.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="ClassType" Name="Taskable (Spectral)" />
-                  <Choice Kind="OperationCallFlag" Name="SetTasks" />
+                  <Choice Kind="ProcessAppFlag" Name="Taskable (Spectral)" />
                 </p:NodeReference>
-                <Pin Id="Jdc8UlXMqZfMj4PuaUHyPr" Name="Input" Kind="InputPin" />
-                <Pin Id="F7kMt2V1X0tLgtKoo6LTnZ" Name="Tasks" Kind="InputPin" />
-                <Pin Id="SJoDoxOzuxINh1Jz8dxZSt" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="CZfwVLBVgGJNCPGwTc6yX7" Name="Tasks" Kind="InputPin" />
+                <Pin Id="LTQW3tzGmXAMPVuiQmbXNH" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <ControlPoint Id="J2vjEqH5zv0NBBu3OC7LeB" Bounds="155,342" />
-              <ControlPoint Id="F85ZXlpRwHoNrBESL98mE5" Bounds="161,208" />
-              <Pad Id="JNUaChlLlFgLCsfVMA1d9k" Bounds="155,302" />
             </Canvas>
-            <Patch Id="M6D9hNB0OGPNMhrgK5dsgm" Name="Create" />
-            <Link Id="GikvDfW7tbmO3nDOyjWGGP" Ids="SJoDoxOzuxINh1Jz8dxZSt,JNUaChlLlFgLCsfVMA1d9k" />
+            <Patch Id="M6D9hNB0OGPNMhrgK5dsgm" Name="Create (Internal)" />
             <Link Id="KYw9Gf9iSyAPJUcJKq8mjA" Ids="J2vjEqH5zv0NBBu3OC7LeB,MDw6rZi2JAWPkU63Nwkk5b" IsHidden="true" />
-            <Patch Id="AzzFgct78FxMuYTrWlQ31n" Name="Split">
+            <Patch Id="AzzFgct78FxMuYTrWlQ31n" Name="GetOutput (Internal)">
               <Pin Id="MDw6rZi2JAWPkU63Nwkk5b" Name="Output" Kind="OutputPin">
                 <p:TypeAnnotation>
                   <Choice Kind="TypeFlag" Name="IComponent" />
@@ -727,16 +723,20 @@
               </Pin>
             </Patch>
             <Patch Id="Hmhlz3fwPNWNnX4VqIsAZO" Name="SetTasks (Internal)">
-              <Pin Id="CPhEeHfstu8PcdnbTNsoRc" MergeId="726032" Name="Tasks" Kind="InputPin" />
+              <Pin Id="CPhEeHfstu8PcdnbTNsoRc" MergeId="726032" Name="Task" Kind="InputPin" IsPinGroup="true" PinGroupDefaultCount="1">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                </p:TypeAnnotation>
+              </Pin>
             </Patch>
             <Link Id="QM0fcjAQV3JOaltHIWKQEm" Ids="CPhEeHfstu8PcdnbTNsoRc,F85ZXlpRwHoNrBESL98mE5" IsHidden="true" />
-            <Link Id="PEv673rUiHfPYWHaOOXy0V" Ids="F85ZXlpRwHoNrBESL98mE5,F7kMt2V1X0tLgtKoo6LTnZ" />
-            <Link Id="E2q6cvlKBdYPKVBKn60gut" Ids="JNUaChlLlFgLCsfVMA1d9k,J2vjEqH5zv0NBBu3OC7LeB" />
             <ProcessDefinition Id="PRl955itL0kPRRI2LSxRE6">
               <Fragment Id="BvR7a645sM0L3p5vPy7uU2" Patch="M6D9hNB0OGPNMhrgK5dsgm" Enabled="true" />
               <Fragment Id="Q2Ak2g4W1VMQMXdRW81H1K" Patch="Hmhlz3fwPNWNnX4VqIsAZO" Enabled="true" />
               <Fragment Id="G7DmGeHnIuQPOf3IQke82f" Patch="AzzFgct78FxMuYTrWlQ31n" Enabled="true" />
             </ProcessDefinition>
+            <Link Id="BCUW2yiMsbNQOslVSBWFh2" Ids="LTQW3tzGmXAMPVuiQmbXNH,J2vjEqH5zv0NBBu3OC7LeB" />
+            <Link Id="JFYno2WMPJlPdn5egiGQ3P" Ids="F85ZXlpRwHoNrBESL98mE5,CZfwVLBVgGJNCPGwTc6yX7" />
           </Patch>
         </Node>
       </Canvas>
@@ -861,11 +861,6 @@
                         <Pin Id="RBG40UvtB6rMzoByH0EZhW" Name="Handled" Kind="OutputPin" />
                       </Node>
                       <ControlPoint Id="VLEDLfz4rT4NeuTX6btvRJ" Bounds="647,911" />
-                      <Pad Id="EWHTc5S71T1LEKZ7ZmXUNi" Comment="Break" Bounds="559,872,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-                        <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                          <Choice Kind="TypeFlag" Name="Boolean" />
-                        </p:TypeAnnotation>
-                      </Pad>
                     </Patch>
                   </Node>
                 </Patch>
@@ -1103,7 +1098,7 @@
               <Pin Id="HcbDvmBuq30Lq0Uf2M3AIz" Name="Elementum" Kind="OutputPin" />
             </Patch>
             <Link Id="PV56Ogly6ZLOXugjN6wYAc" Ids="G5Lun6Vb9WBLV5CoeH80Hv,OE7uSEJSPY0OPXHCmphVrw" />
-            <Link Id="Me8KqvmKVNaN1M6GBJNS1C" Ids="EWHTc5S71T1LEKZ7ZmXUNi,VLEDLfz4rT4NeuTX6btvRJ" />
+            <Link Id="VYTYyWs4p9aPwo6eXnlGfs" Ids="RBG40UvtB6rMzoByH0EZhW,VLEDLfz4rT4NeuTX6btvRJ" />
           </Patch>
         </Node>
         <!--
