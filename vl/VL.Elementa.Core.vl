@@ -10349,13 +10349,16 @@
           </p:Interfaces>
           <Patch Id="FVxuAAefWUqNzkHKb3v6g8">
             <Canvas Id="OarSSFsr1dgOaVuWL8QsPS" CanvasType="Group">
-              <ControlPoint Id="OQwSAQOPDkjODFQm8b0Lkv" Bounds="473,389" />
-              <ControlPoint Id="TFAXH1sdvIkLyZTW5600iG" Bounds="632,256" />
-              <ControlPoint Id="DzVpxwbpXDINzK954aO7ZI" Bounds="478,261" />
-              <ControlPoint Id="RgPuCiS1vcEM02hvoahYOm" Bounds="811,265" />
-              <ControlPoint Id="DeEbOvIFq2VQGOJEcGVBW9" Bounds="637,391" />
-              <ControlPoint Id="AKsIt2av5oPOK6S4V4rMOh" Bounds="927,382" />
-              <ControlPoint Id="Q1sTlyEgP2wLF94svAIbdj" Bounds="704,427" />
+              <ControlPoint Id="OQwSAQOPDkjODFQm8b0Lkv" Bounds="292,268" />
+              <ControlPoint Id="TFAXH1sdvIkLyZTW5600iG" Bounds="451,135" />
+              <ControlPoint Id="DzVpxwbpXDINzK954aO7ZI" Bounds="297,140" />
+              <ControlPoint Id="RgPuCiS1vcEM02hvoahYOm" Bounds="630,144" />
+              <ControlPoint Id="DeEbOvIFq2VQGOJEcGVBW9" Bounds="456,270" />
+              <ControlPoint Id="AKsIt2av5oPOK6S4V4rMOh" Bounds="746,261" />
+              <Pad Id="UPUdB0SWrUQOF6l9VjtQOW" SlotId="HBX83SR0DNkQCRqWUD1lWl" Bounds="1004,255" />
+              <Pad Id="G3T5BZiYnG6QGXVe4sOFDq" SlotId="I6WuSXvhaWBMyYRBOVzYbA" Bounds="1199,255" />
+              <ControlPoint Id="BZ0SdJwITlgOShhZ3hy67p" Bounds="1004,296" />
+              <ControlPoint Id="Osf3TTnLMluO59g8dDVayC" Bounds="1199,296" />
             </Canvas>
             <ProcessDefinition Id="AFI9bDqWyfpLcCBCcM4W6f" IsHidden="true">
               <Fragment Id="C8TTVON37BGOIMDoROasQh" Patch="ROt94Vo8PnePQLGR6u7T1O" />
@@ -10364,7 +10367,8 @@
               <Fragment Id="Nu1NS0A61PhPAH1Jv2rGx2" Patch="FIXnObEHtL8NEjwiMq4r4u" />
               <Fragment Id="PzptYbFCEsvNFBtkZN3rtF" Patch="VArSVKCIbc6M0nlG3JHysX" />
               <Fragment Id="G3RlwoZDXD1Mxwf00gM5JC" Patch="EErL0cbgbdrMKICFsMyduq" />
-              <Fragment Id="V01B7SjMuoQMdQJplUhrA8" Patch="NlxdRNJJ9H5OVUwv5ulLVB" />
+              <Fragment Id="R8qhvxWF556M7W5DRSK5S0" Patch="Q0pe6HWoDzdLYnwrYAyGuJ" />
+              <Fragment Id="HO7Wd7KkJ88MU8Dw17ab9j" Patch="Tn0AUXv2gN8ONRvF5Igs9K" />
             </ProcessDefinition>
             <Patch Id="ROt94Vo8PnePQLGR6u7T1O" Name="Update">
               <Pin Id="KEi14LwUuMjNAvXUrImWa7" Name="Layer" Kind="OutputPin">
@@ -10415,14 +10419,36 @@
               </Pin>
             </Patch>
             <Link Id="CXfEeah3kEhQV83VkFrAY3" Ids="AKsIt2av5oPOK6S4V4rMOh,MMzZEIs6SCbMxmDrGKF2mk" IsHidden="true" />
-            <Link Id="NgINLQDIFQpMoi04uR2MZn" Ids="Q1sTlyEgP2wLF94svAIbdj,NrBGZU5wooqLsALKeKJWwI" IsHidden="true" />
-            <Patch Id="NlxdRNJJ9H5OVUwv5ulLVB" Name="GetBlockSiblingOverlaysNotification">
-              <Pin Id="NrBGZU5wooqLsALKeKJWwI" Name="Block Sibling Overlays Notification" Kind="OutputPin">
-                <p:TypeAnnotation>
-                  <Choice Kind="TypeFlag" Name="Boolean" />
-                </p:TypeAnnotation>
-              </Pin>
+            <Slot Id="HBX83SR0DNkQCRqWUD1lWl" Name="Open Event Stream">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Subject" />
+                <p:TypeArguments>
+                  <TypeReference>
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Slot>
+            <Slot Id="I6WuSXvhaWBMyYRBOVzYbA" Name="Close Event Stream">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Subject" />
+                <p:TypeArguments>
+                  <TypeReference>
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Slot>
+            <Patch Id="Q0pe6HWoDzdLYnwrYAyGuJ" Name="GetOpenEventStream">
+              <Pin Id="VoCxYcYHQTtPRCqum8BwN1" MergeId="1360522" Name="Open Event Stream" Kind="OutputPin" />
             </Patch>
+            <Patch Id="Tn0AUXv2gN8ONRvF5Igs9K" Name="GetCloseEventStream">
+              <Pin Id="UHJdXtsLzF6NHEpIn6WP5b" MergeId="1360818" Name="Close Event Stream" Kind="OutputPin" />
+            </Patch>
+            <Link Id="M4qHj52iaKINCo1qm01p5c" Ids="UPUdB0SWrUQOF6l9VjtQOW,BZ0SdJwITlgOShhZ3hy67p" />
+            <Link Id="LM4XUQt8A5NLXkpiuMEUEY" Ids="BZ0SdJwITlgOShhZ3hy67p,VoCxYcYHQTtPRCqum8BwN1" IsHidden="true" />
+            <Link Id="TR1BntX20lbOQoN5mSLY0i" Ids="G3T5BZiYnG6QGXVe4sOFDq,Osf3TTnLMluO59g8dDVayC" />
+            <Link Id="OWk5fKBAlbWObYD8cbweEM" Ids="Osf3TTnLMluO59g8dDVayC,UHJdXtsLzF6NHEpIn6WP5b" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
