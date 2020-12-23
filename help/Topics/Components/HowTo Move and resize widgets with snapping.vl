@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="IL4GxLXhz2aMA7hux2IclV" LanguageVersion="2020.2.0.270" Version="0.128">
-  <NugetDependency Id="NrXt4wpFONEMpSURczeNpK" Location="VL.CoreLib" Version="2020.2.2" />
+<Document xmlns:p="property" Id="IL4GxLXhz2aMA7hux2IclV" LanguageVersion="2020.3.0.125" Version="0.128">
+  <NugetDependency Id="NrXt4wpFONEMpSURczeNpK" Location="VL.CoreLib" Version="2020.3.0-0125-gaf5344c6f5" />
   <Patch Id="EORz4vkPB9dNAroFUyP3Gv">
     <Canvas Id="Mi78q9HregQPBjt9vrielQ" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -55,27 +55,29 @@
               <Choice Kind="ProcessAppFlag" Name="Elementa" />
             </p:NodeReference>
             <Pin Id="I6YSkcxy3vJPoaeBP7gspJ" Name="Input" Kind="InputPin" />
+            <Pin Id="JVm0RPLNlU2P7OOnGQaxSb" Name="Enabled" Kind="InputPin" />
             <Pin Id="HxN0wWUi4EBOuf3KEJBkWk" Name="Root Components" Kind="InputPin" />
-            <Pin Id="OHwREBQEja1ORhgWGY0Xvl" Name="Output" Kind="OutputPin" />
-            <Pin Id="E7BXhFDlPH2OPD7GgGoM1K" Name="Context" Kind="OutputPin" />
             <Pin Id="R9aTjZl7mMzPMCremNSXBL" Name="Root Components 2" Kind="InputPin" />
             <Pin Id="HlJEQhVCgn0PCbL9b9Q3P4" Name="Root Components 3" Kind="InputPin" />
             <Pin Id="CCgl5EXoRS6Lm2qTFdGhlW" Name="Root Components 4" Kind="InputPin" />
             <Pin Id="IvmSKBJxq2jO05yZvOsiKT" Name="Root Components 5" Kind="InputPin" />
             <Pin Id="HJJ57tignxMMqjjxQHrP0i" Name="Root Components 6" Kind="InputPin" />
             <Pin Id="Jljb1qy6PZsLy3n38WuBEM" Name="Root Components 7" Kind="InputPin" />
+            <Pin Id="OHwREBQEja1ORhgWGY0Xvl" Name="Output" Kind="OutputPin" />
+            <Pin Id="E7BXhFDlPH2OPD7GgGoM1K" Name="Context" Kind="OutputPin" />
           </Node>
-          <Node Bounds="185,648,65,19" Id="NvMaLdP4RXaLWcPpZM6hBs">
+          <Node Bounds="205,650,85,19" Id="NvMaLdP4RXaLWcPpZM6hBs">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Component.Selectable.vl">
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
-            <Pin Id="S5vwmVOgh97Lnd3WaMzWxt" Name="Is Selectable" Kind="InputPin" DefaultValue="False">
+            <Pin Id="A66m5AT7LrbOb8IB0qPnfH" Name="Start Selection" Kind="InputPin" DefaultValue="True">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="A66m5AT7LrbOb8IB0qPnfH" Name="Start Selection" Kind="InputPin" DefaultValue="True">
+            <Pin Id="D6AiDzT92HONToxmAcd9Dw" Name="Propagate Notification on Start" Kind="InputPin" />
+            <Pin Id="S5vwmVOgh97Lnd3WaMzWxt" Name="Is Selectable" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -85,7 +87,7 @@
             <Pin Id="SjBeKH2TezUMuV0KxufVDH" Name="Output" Kind="StateOutputPin" />
             <Pin Id="IFl59DIGlhENq1EgeoejOy" Name="Selected" Kind="OutputPin" />
           </Node>
-          <Node Bounds="65,683,125,19" Id="FcUD8dXx14fMDNnryrMVis">
+          <Node Bounds="65,683,35,19" Id="FcUD8dXx14fMDNnryrMVis">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Layout.Group.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Group" />
@@ -102,7 +104,7 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="UNhKsZLCIbZLJFpP1xidVX" Name="Components" Kind="InputPin" />
+            <Pin Id="LEaINUiRhiyPe2XundN7tA" Name="Component" Kind="InputPin" />
             <Pin Id="RZiSqT9IFjNPiEcN0X65SQ" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="65,600,1170,19" Id="V0XRfgkQdcQQOq62aJ2bB2">
@@ -123,37 +125,28 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Snapping" />
             </p:NodeReference>
-            <Pin Id="CTaxezzmvk0L8R6CorCVxV" Name="Left Anchor Line" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="GHzAPBEWRgOMUin0OzrQCi" Name="Center Anchor Line" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="VeTSM6ACoQVPqhl24klKVC" Name="Right Anchor Line" Kind="InputPin" />
+            <Pin Id="MMfK04He6DpPUcXPu6ztJM" Name="Enabled" Kind="InputPin" />
+            <Pin Id="UxcG4t1daloQYs4WE41ePG" Name="Accept Snappers From Selection" Kind="InputPin" />
             <Pin Id="KAmZ29EktEiO6JWUChTRjl" Name="Top Anchor Line" Kind="InputPin" />
-            <Pin Id="CaJwK2GKdEIPeMLeFRfKt0" Name="Middle Anchor Line" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="CaJwK2GKdEIPeMLeFRfKt0" Name="Middle Anchor Line" Kind="InputPin" />
             <Pin Id="EboMQVfLGZiQGI7TRLKwXA" Name="Bottom Anchor Line" Kind="InputPin" />
+            <Pin Id="CTaxezzmvk0L8R6CorCVxV" Name="Left Anchor Line" Kind="InputPin" />
+            <Pin Id="GHzAPBEWRgOMUin0OzrQCi" Name="Center Anchor Line" Kind="InputPin" />
+            <Pin Id="VeTSM6ACoQVPqhl24klKVC" Name="Right Anchor Line" Kind="InputPin" />
             <Pin Id="CsifsUgTsmDODIdBJQ0MyF" Name="Custom Horizontal Anchor Lines" Kind="InputPin" />
             <Pin Id="QVFifNRO6nsLDaZrbFfvgi" Name="Custom Vertical Anchor Lines" Kind="InputPin" />
             <Pin Id="DWburiEP5loOr82ULxsjJ8" Name="Guides Filter" Kind="InputPin" />
             <Pin Id="G57mjvughc9M8aNaAZgMLT" Name="Snappers Filter" Kind="InputPin" />
             <Pin Id="OVi6hNjWhKzNo8WR58FqyX" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Node Bounds="85,756,167,19" Id="HWIUJeJfJlZOqTVtncsMew">
+          <Node Bounds="106,764,167,19" Id="HWIUJeJfJlZOqTVtncsMew">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor" LastSymbolSource="VL.Elementa.Component.Transformation.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TransformationProcessorSettings" />
             </p:NodeReference>
             <Pin Id="P7w4cqv5qDFOgQe70z9lUj" Name="Snap Enabled" Kind="InputPin" />
             <Pin Id="H9oEiV12d7HLcsXzSp9bYn" Name="Snap Distance" Kind="InputPin" />
+            <Pin Id="LKsqYVg54siNGRVUYwFkWO" Name="Generate Snappers from Selected Elementa" Kind="InputPin" />
             <Pin Id="G9lLkNGVUmoMHyR0lu7KM5" Name="Snap Helper Enabled" Kind="InputPin" />
             <Pin Id="RIUxINkaMDPOIGXtF4aTqk" Name="Global Transformation Enabled" Kind="InputPin" />
             <Pin Id="FWNdiLbiyymO4Oz0bSskij" Name="Global Filter Func" Kind="InputPin" />
@@ -161,20 +154,16 @@
             <Pin Id="JpUiy4QyiTuNOVuVRVPUz1" Name="Scale Activation Func" Kind="InputPin" />
             <Pin Id="NcS22lQGbVZNmMWoHOkzFU" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Node Bounds="105,813,128,19" Id="UNxP6cJnONQOuzxN6nMYTy">
+          <Node Bounds="125,818,128,19" Id="UNxP6cJnONQOuzxN6nMYTy">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component.Processor" LastSymbolSource="VL.Elementa.Component.Guides.vl">
               <Choice Kind="ProcessAppFlag" Name="GuidesProcessorSettings" />
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
-            <Pin Id="BGbtbTD2f3ULgpYwOEuBgE" Name="Show Guides" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="BGbtbTD2f3ULgpYwOEuBgE" Name="Show Guides" Kind="InputPin" />
             <Pin Id="PrlOBxzKFZjOwWEmG4CAaC" Name="Guides Paint" Kind="InputPin" />
             <Pin Id="LdYWU68sxq9PdnYODlDKP4" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="OUN7O1yHFDuMK4rJ9wMhwu" Comment="Show Guides" Bounds="107,796,35,15" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="OUN7O1yHFDuMK4rJ9wMhwu" Comment="Show Guides" Bounds="127,801,35,15" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -210,37 +199,19 @@
             </p:NodeReference>
             <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="MOJcRS58yoeNSOP9jZ1CQ5" Name="Enabled" Kind="InputPin" />
-            <Pin Id="E1vzmCSlv5ALExCRIMRDxd" Name="Operate On Element Bounds" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="FopwQWA2JbNMCyQcGEWyMM" Name="Translate Constraint Type" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
-                <Choice Kind="TypeFlag" Name="AxisConstraint" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="K89wmZ1OertMHocPoWVqJD" Name="Handler Left Enabled" Kind="InputPin" />
-            <Pin Id="P7nGLrhCmytLIG5tG4AF8Y" Name="Handler Right Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="GBRwvNBITY1LrsDhOroJsE" Name="Handler Top Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="Bv8uGRo7RtXMGJ0sLA5gxT" Name="Handler Bottom Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="PVJz5IHzNa3NS8RjH4VjzN" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="P7nGLrhCmytLIG5tG4AF8Y" Name="Handler Right Enabled" Kind="InputPin" />
+            <Pin Id="GBRwvNBITY1LrsDhOroJsE" Name="Handler Top Enabled" Kind="InputPin" />
+            <Pin Id="Bv8uGRo7RtXMGJ0sLA5gxT" Name="Handler Bottom Enabled" Kind="InputPin" />
+            <Pin Id="FopwQWA2JbNMCyQcGEWyMM" Name="Translate Constraint Type" Kind="InputPin" />
             <Pin Id="KCdObB8YQ3ZLZibHaFWpMt" Name="Handler Rectangles Option" Kind="InputPin" />
-            <Pin Id="UnMAYfRDkbdPUk077njBbM" Name="Helper Enabled" Kind="InputPin" />
             <Pin Id="CSEUuJ7vphKMMpC17aDvGE" Name="Snapping" Kind="InputPin" />
+            <Pin Id="EhSVrgO6XGsOwkLyz1QFA3" Name="Operate On Widget Bounds" Kind="InputPin" />
+            <Pin Id="UnMAYfRDkbdPUk077njBbM" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="PVJz5IHzNa3NS8RjH4VjzN" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="SpvK3mGz0TYM34mzFEAPH4" Name="Resize Enabled" Kind="InputPin" />
             <Pin Id="FbJ39DddDD0N6IeXwGN5oB" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="PYBJ45MdgfGOKXNdDQJtQD" Name="Operate On Widget Bounds" Kind="OutputPin" />
             <Pin Id="EG2c0QKBGO3PNUwe4KzPJR" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
           <Node Bounds="161,439,65,19" Id="Aes0pyHqTkiNyC6btIniG0">
@@ -248,8 +219,9 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
-            <Pin Id="GK3bXsnwHnIOOVh3so2JdL" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="UjA12wleDcNMPsPioMNzlK" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="Ru6AjYMrTLuOT53EAVQTMD" Name="Propagate Notification on Start" Kind="InputPin" />
+            <Pin Id="GK3bXsnwHnIOOVh3so2JdL" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="RHe04Z4afiDOzpZynN9PvN" Name="Custom Start Selection Func" Kind="InputPin" />
             <Pin Id="DxLfboTKRYZP1Kn4dkWQts" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="Eyt10OtmruePaTV0NK8Vz8" Name="Output" Kind="StateOutputPin" />
@@ -260,39 +232,26 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Guides" />
             </p:NodeReference>
+            <Pin Id="RcogryXrLWtQTXfNLJ78HV" Name="Update" Kind="InputPin" />
             <Pin Id="JKMzT6kUGbIM3b9uuvtBZC" Name="Left Guide" Kind="InputPin" />
             <Pin Id="B5Z2kpT7lWvPehWamoaQXs" Name="Center Guide" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="Jw31Ni6yoIqLf56wkHUX9C" Name="Right Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="DfOBHk35IsVNG6awhc2Y4M" Name="Top Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="Jw31Ni6yoIqLf56wkHUX9C" Name="Right Guide" Kind="InputPin" />
+            <Pin Id="DfOBHk35IsVNG6awhc2Y4M" Name="Top Guide" Kind="InputPin" />
             <Pin Id="RwuCjRUB6W4LcY03AEj36O" Name="Middle Guide" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="HPhkeOpMs8YLUa1rUlqLef" Name="Bottom Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="FRZZBouCHS5NCEHnQmTyPS" Name="Custom Horizontal Guides" Kind="InputPin" />
+            <Pin Id="HPhkeOpMs8YLUa1rUlqLef" Name="Bottom Guide" Kind="InputPin" />
             <Pin Id="GB4uwEh2Q2ZQUMutPeWpck" Name="Custom Vertical Guides" Kind="InputPin" />
-            <Pin Id="LEo9Hes6aF6LkKfoY3k4pw" Name="Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="FRZZBouCHS5NCEHnQmTyPS" Name="Custom Horizontal Guides" Kind="InputPin" />
+            <Pin Id="LEo9Hes6aF6LkKfoY3k4pw" Name="Enabled" Kind="InputPin" />
+            <Pin Id="VO8QPSTgRR2LV0XzNPSNbQ" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="KZOXzlVE8a4Qamq2lkHmQA" Name="Helper Clip Rectangle Func" Kind="InputPin" />
             <Pin Id="OvzMvSblDAsOfg13GaiC2D" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="Q6o1SZAH24yMNPjmEMYYXb" Comment="Left Guide" Bounds="730,242,35,15" ShowValueBox="true" isIOBox="true" Value="True">
@@ -332,37 +291,19 @@
               <CategoryReference Kind="Category" Name="Component" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="B5zt2E3hlgSPxSoRfJcIGL" Name="Enabled" Kind="InputPin" />
-            <Pin Id="Cz2Nt7K3GgmNljKZNQmuS8" Name="Operate On Element Bounds" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="GhR8Lpjcm4pPE6DKoxnCVb" Name="Translate Constraint Type" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
-                <Choice Kind="TypeFlag" Name="AxisConstraint" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="Q3g3bXXeLiBMs4GtYKEX8g" Name="Handler Left Enabled" Kind="InputPin" />
-            <Pin Id="CeYTzUuNtqpOY3pCYmKouJ" Name="Handler Right Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="JJlRGuYbw0CP3f9MdlR0O3" Name="Handler Top Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="T77wxkAvYTGLqLIJuk7WNK" Name="Handler Bottom Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="CEwxzH8GjHgMjScXuF1rs0" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="CeYTzUuNtqpOY3pCYmKouJ" Name="Handler Right Enabled" Kind="InputPin" />
+            <Pin Id="JJlRGuYbw0CP3f9MdlR0O3" Name="Handler Top Enabled" Kind="InputPin" />
+            <Pin Id="T77wxkAvYTGLqLIJuk7WNK" Name="Handler Bottom Enabled" Kind="InputPin" />
+            <Pin Id="GhR8Lpjcm4pPE6DKoxnCVb" Name="Translate Constraint Type" Kind="InputPin" />
             <Pin Id="By7OkgJhYFpPHlL7rgVXwU" Name="Handler Rectangles Option" Kind="InputPin" />
-            <Pin Id="Bv0y5yUDUcNPrGaMd2e62t" Name="Helper Enabled" Kind="InputPin" />
             <Pin Id="FsGeSwk2sW4QR1oL3PXmSe" Name="Snapping" Kind="InputPin" />
+            <Pin Id="MepdpwZNujpPFurYZu74VK" Name="Operate On Widget Bounds" Kind="InputPin" />
+            <Pin Id="Bv0y5yUDUcNPrGaMd2e62t" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="CEwxzH8GjHgMjScXuF1rs0" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="GHAKYNsDlXaOH9sbstHaoT" Name="Resize Enabled" Kind="InputPin" />
             <Pin Id="DXXl5ffeDmqP9XFNjODC6w" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="UTYHLRbcF65OSRZlVAhpI1" Name="Operate On Widget Bounds" Kind="OutputPin" />
             <Pin Id="Dztnup1IMJAPuqtOpjYZvj" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
           <Node Bounds="939,496,105,19" Id="QCesy9Px2EwQJIHumnA6Y1">
@@ -394,39 +335,26 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Guides" />
             </p:NodeReference>
+            <Pin Id="UMIkLiRs3RkLqtc0ufipyR" Name="Update" Kind="InputPin" />
             <Pin Id="UHatMMWv3vcMvYfcvE3YgR" Name="Left Guide" Kind="InputPin" />
             <Pin Id="OmDkToFD4i1Lix0k1svXY9" Name="Center Guide" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="RBEya6qjUhwP7Mfeev86h2" Name="Right Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="IdAXfvAYXmfNYrTvMqjfvz" Name="Top Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="RBEya6qjUhwP7Mfeev86h2" Name="Right Guide" Kind="InputPin" />
+            <Pin Id="IdAXfvAYXmfNYrTvMqjfvz" Name="Top Guide" Kind="InputPin" />
             <Pin Id="TKPe5IYM8QULv7KJcgjXqf" Name="Middle Guide" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="ECRSje6K9lPQBfMijHTaAI" Name="Bottom Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="LUDHhUgKTlYOoSbTKh7I0Z" Name="Custom Horizontal Guides" Kind="InputPin" />
+            <Pin Id="ECRSje6K9lPQBfMijHTaAI" Name="Bottom Guide" Kind="InputPin" />
             <Pin Id="NLbB66lEsXVNDwd78OOScm" Name="Custom Vertical Guides" Kind="InputPin" />
-            <Pin Id="SMMU0Aq7G3dLlkksV7cn38" Name="Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="LUDHhUgKTlYOoSbTKh7I0Z" Name="Custom Horizontal Guides" Kind="InputPin" />
+            <Pin Id="SMMU0Aq7G3dLlkksV7cn38" Name="Enabled" Kind="InputPin" />
+            <Pin Id="MleYTjR5DGYORAH5vs2hJA" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="BS4Qzlo1akpNFJy4ecqeKh" Name="Helper Clip Rectangle Func" Kind="InputPin" />
             <Pin Id="IYhy9g3Wp4UMkeRN00f8vX" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="VvsgzjYfKJKMK8HpMj5z8A" Comment="Left Guide" Bounds="1023,250,35,15" ShowValueBox="true" isIOBox="true" Value="True">
@@ -466,37 +394,19 @@
               <CategoryReference Kind="Category" Name="Component" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="Sttrs3GiRMpNEfdqlwGGVC" Name="Enabled" Kind="InputPin" />
-            <Pin Id="CuaxdcdPGfZP1rKxXZ8Xmy" Name="Operate On Element Bounds" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="FupFyc30tynOrmaIOwfB94" Name="Translate Constraint Type" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
-                <Choice Kind="TypeFlag" Name="AxisConstraint" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="KocP7bawcHjLjLMPmP7Uox" Name="Handler Left Enabled" Kind="InputPin" />
-            <Pin Id="OE4GAsCoEooLCBahIPk0Zx" Name="Handler Right Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="OX8qre8b3rUNndYhA5f6Tj" Name="Handler Top Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RpBurk1ACsIPYq5GJeFz7R" Name="Handler Bottom Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="GV5TE1pE3ZOMZZnFex3LQ2" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="OE4GAsCoEooLCBahIPk0Zx" Name="Handler Right Enabled" Kind="InputPin" />
+            <Pin Id="OX8qre8b3rUNndYhA5f6Tj" Name="Handler Top Enabled" Kind="InputPin" />
+            <Pin Id="RpBurk1ACsIPYq5GJeFz7R" Name="Handler Bottom Enabled" Kind="InputPin" />
+            <Pin Id="FupFyc30tynOrmaIOwfB94" Name="Translate Constraint Type" Kind="InputPin" />
             <Pin Id="Bi4evHhPLfoNfaeIBV8mWu" Name="Handler Rectangles Option" Kind="InputPin" />
-            <Pin Id="IXDpY7gcVsEQZf1pFhILSu" Name="Helper Enabled" Kind="InputPin" />
             <Pin Id="OVENBvvd3W1NYfVcT8g7WT" Name="Snapping" Kind="InputPin" />
+            <Pin Id="US1LEwZsT68OPPgmu3ep5b" Name="Operate On Widget Bounds" Kind="InputPin" />
+            <Pin Id="IXDpY7gcVsEQZf1pFhILSu" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="GV5TE1pE3ZOMZZnFex3LQ2" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="TihEuUlcLfiQL5XUcmM1aa" Name="Resize Enabled" Kind="InputPin" />
             <Pin Id="Ictcf1rgfMXPgQQHjXcLRb" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="NPn8Wyu8IowPK15fhxLGfY" Name="Operate On Widget Bounds" Kind="OutputPin" />
             <Pin Id="OCBGLrrw7kMOJA8POgRxZG" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
           <Node Bounds="416,95,185,19" Id="GjlnQ9sNgKiMe4NuddqetL">
@@ -504,24 +414,14 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Snapping" />
             </p:NodeReference>
-            <Pin Id="TgFCXod2pwhOxf9NuFGjYg" Name="Left Anchor Line" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RgfcYLFAGNcLf2cU3sLuKk" Name="Center Anchor Line" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="UYj54iG3nf6M92Yc3Hyaxm" Name="Right Anchor Line" Kind="InputPin" />
+            <Pin Id="GxWHlhJ5FkXOFDBt4BKuOp" Name="Enabled" Kind="InputPin" />
+            <Pin Id="DoYjdzhIfTFOBS4sfaoj4P" Name="Accept Snappers From Selection" Kind="InputPin" />
             <Pin Id="S57kDWWfhWPNankUMpiLv3" Name="Top Anchor Line" Kind="InputPin" />
-            <Pin Id="C0JT36TLPFCL8zDX6y6M4j" Name="Middle Anchor Line" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="C0JT36TLPFCL8zDX6y6M4j" Name="Middle Anchor Line" Kind="InputPin" />
             <Pin Id="HjMJpKldEBSM91YW9ab6h1" Name="Bottom Anchor Line" Kind="InputPin" />
+            <Pin Id="TgFCXod2pwhOxf9NuFGjYg" Name="Left Anchor Line" Kind="InputPin" />
+            <Pin Id="RgfcYLFAGNcLf2cU3sLuKk" Name="Center Anchor Line" Kind="InputPin" />
+            <Pin Id="UYj54iG3nf6M92Yc3Hyaxm" Name="Right Anchor Line" Kind="InputPin" />
             <Pin Id="KonncOAibhtQcRlViXiXmj" Name="Custom Horizontal Anchor Lines" Kind="InputPin" />
             <Pin Id="Jnbw0tJGZVOOOqixWRvIh4" Name="Custom Vertical Anchor Lines" Kind="InputPin" />
             <Pin Id="FyJqnhsZjuENzwTJaQQL63" Name="Guides Filter" Kind="InputPin" />
@@ -535,37 +435,19 @@
               <CategoryReference Kind="Category" Name="Component" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="AHyOTMbAPVGNM3kFnMkWqI" Name="Enabled" Kind="InputPin" />
-            <Pin Id="G57GHRIafOWMq87Xkhj3X8" Name="Operate On Element Bounds" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="E0gNZLrKsouMgzoFU7Zk6Q" Name="Translate Constraint Type" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
-                <Choice Kind="TypeFlag" Name="AxisConstraint" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="MdF1Zl3XlkpOHfLCg9nxZ5" Name="Handler Left Enabled" Kind="InputPin" />
-            <Pin Id="CUa88UfeGsGNfsfuVeTBwU" Name="Handler Right Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="OisyK60fxYkNHIohJgoNcB" Name="Handler Top Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="JF2SjW1pi4pNS5gkyRBR6C" Name="Handler Bottom Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="C4jDBrcxWqqOFTm3hm80gJ" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="CUa88UfeGsGNfsfuVeTBwU" Name="Handler Right Enabled" Kind="InputPin" />
+            <Pin Id="OisyK60fxYkNHIohJgoNcB" Name="Handler Top Enabled" Kind="InputPin" />
+            <Pin Id="JF2SjW1pi4pNS5gkyRBR6C" Name="Handler Bottom Enabled" Kind="InputPin" />
+            <Pin Id="E0gNZLrKsouMgzoFU7Zk6Q" Name="Translate Constraint Type" Kind="InputPin" />
             <Pin Id="McVfPWwpCtbQSv32WceHC9" Name="Handler Rectangles Option" Kind="InputPin" />
-            <Pin Id="RKbDtAFyUSYNI7xHEUOGRv" Name="Helper Enabled" Kind="InputPin" />
             <Pin Id="GqmBYr6X57WM50BmLM5wT5" Name="Snapping" Kind="InputPin" />
+            <Pin Id="JI6I7AhcwOtMyj06p8IBCC" Name="Operate On Widget Bounds" Kind="InputPin" />
+            <Pin Id="RKbDtAFyUSYNI7xHEUOGRv" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="C4jDBrcxWqqOFTm3hm80gJ" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="F6sRHPHrZ3eM4KDoj9lQKt" Name="Resize Enabled" Kind="InputPin" />
             <Pin Id="PYPO1EbNym9QF1WH6O8qnl" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="EDMpuRehptNMVdh3JvZwmL" Name="Operate On Widget Bounds" Kind="OutputPin" />
             <Pin Id="NaRsAl7bULONuJ9L6O02ic" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
           <Node Bounds="436,439,65,19" Id="QhHRBn7win7Me26nto5AaZ">
@@ -573,8 +455,9 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
-            <Pin Id="HwfpZSfgeiqNadvz5Jxwjq" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="McIyDKrJnDCO2kKS96yqoW" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="PTipJS67Js5M7V83PM8fiO" Name="Propagate Notification on Start" Kind="InputPin" />
+            <Pin Id="HwfpZSfgeiqNadvz5Jxwjq" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="Ul1GAo7hRzJO2dIyltmvt3" Name="Custom Start Selection Func" Kind="InputPin" />
             <Pin Id="M5zAUwCdFg8NpY7g3Ynr1X" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="QT0YSKOjBA4QRL7QLKA1Xx" Name="Output" Kind="StateOutputPin" />
@@ -602,7 +485,7 @@
             <Pin Id="AuNEpHazVbFPYAU6OSXiTg" Name="Component" Kind="InputPin" />
             <Pin Id="VMoi2whtU9CNUyaKziucmF" Name="Component 2" Kind="InputPin" />
           </Node>
-          <Node Bounds="648,488,105,19" Id="HV4GOtIxeIHQIsaQSWQzsM">
+          <Node Bounds="648,488,79,19" Id="HV4GOtIxeIHQIsaQSWQzsM">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Slider2D.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Slider2D" />
@@ -618,12 +501,12 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="TevyeJEECXsOOoH36ck6pB" Name="Value" Kind="InputPin" />
+            <Pin Id="QsyLBVLB9jUQFBPB5DgaC2" Name="Component" Kind="InputPin" />
+            <Pin Id="EbGVQnPnoNmNaCghnmtVsn" Name="Component 2" Kind="InputPin" />
+            <Pin Id="SKOinkktui9OIkPqcRlNob" Name="Component 3" Kind="InputPin" />
             <Pin Id="KapH7PgFWXePUV7JALGMnc" Name="Output" Kind="OutputPin" />
             <Pin Id="QUbcJMK9APqNaJ8yn9eyy1" Name="On Interaction" Kind="OutputPin" />
             <Pin Id="HDzH03EHpMNQGX3xOaBdLo" Name="Value" Kind="OutputPin" />
-            <Pin Id="C2DZNrQWE3uMTJQPfAriah" Name="Components" Kind="InputPin" />
-            <Pin Id="AfRWsDYQhZaLcR6qq06l42" Name="Components 2" Kind="InputPin" />
-            <Pin Id="U3tNDNd5xorMXvLI6FmDMb" Name="Components 3" Kind="InputPin" />
           </Node>
           <Node Bounds="1230,518,105,19" Id="Vp31HfgllzlLZKrumWonVG">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Color.vl">
@@ -641,51 +524,38 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="JYwxb1rpfgKP7Ls0Qofo61" Name="Value" Kind="InputPin" />
-            <Pin Id="Hjild3XrR19LlHsIdOp2y7" Name="Output" Kind="OutputPin" />
-            <Pin Id="Gb1fuD59m7bNvOhbFF2kF4" Name="On Interaction" Kind="OutputPin" />
-            <Pin Id="HH6FNFBfrimOFR1L3bWYGq" Name="Value" Kind="OutputPin" />
             <Pin Id="NV2mdqVt87qLrgZ8oVflL3" Name="Component" Kind="InputPin" />
             <Pin Id="QTIYjcT5XNfPfWxzbeBDcL" Name="Component 2" Kind="InputPin" />
             <Pin Id="Gov5gZiCVvjNKix3sc5btF" Name="Component 3" Kind="InputPin" />
+            <Pin Id="Hjild3XrR19LlHsIdOp2y7" Name="Output" Kind="OutputPin" />
+            <Pin Id="HH6FNFBfrimOFR1L3bWYGq" Name="Value" Kind="OutputPin" />
+            <Pin Id="Gb1fuD59m7bNvOhbFF2kF4" Name="On Interaction" Kind="OutputPin" />
           </Node>
           <Node Bounds="1310,436,165,19" Id="VBxNvBuO21DMcQMUgWw7Iq">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Component.Guides.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Guides" />
             </p:NodeReference>
+            <Pin Id="BnE03Qrfa7gOtQvuLioNxF" Name="Update" Kind="InputPin" />
             <Pin Id="RZLWXtZJJsbPfCfVqmQNLb" Name="Left Guide" Kind="InputPin" />
             <Pin Id="MgLJxBB4AusL4YBEMyBZcZ" Name="Center Guide" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="MyBd8Ky2NWVNaiz8h5TjHM" Name="Right Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="JJK7q8aI1rnQMFQKWcHmKp" Name="Top Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="MyBd8Ky2NWVNaiz8h5TjHM" Name="Right Guide" Kind="InputPin" />
+            <Pin Id="JJK7q8aI1rnQMFQKWcHmKp" Name="Top Guide" Kind="InputPin" />
             <Pin Id="Gqh7z4yc3MBNeETxlBuDgT" Name="Middle Guide" Kind="InputPin" DefaultValue="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="AqrN6hVDCVUODw7YqPsDkG" Name="Bottom Guide" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="SXwTdNGXgQeLDoSGR2QXKI" Name="Custom Horizontal Guides" Kind="InputPin" />
+            <Pin Id="AqrN6hVDCVUODw7YqPsDkG" Name="Bottom Guide" Kind="InputPin" />
             <Pin Id="MrmvN01FWKdMCN78HkiRKG" Name="Custom Vertical Guides" Kind="InputPin" />
-            <Pin Id="ThK48wLFWmwM0HvbV1GN2H" Name="Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="SXwTdNGXgQeLDoSGR2QXKI" Name="Custom Horizontal Guides" Kind="InputPin" />
+            <Pin Id="ThK48wLFWmwM0HvbV1GN2H" Name="Enabled" Kind="InputPin" />
+            <Pin Id="O85WnoqCZ4LLsS9tzfBLvk" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="PWBGuUlPjDmPpoREUMemiP" Name="Helper Clip Rectangle Func" Kind="InputPin" />
             <Pin Id="OxsvJJHHusIP3Vt51Q3MJk" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="IrkMmdvAeMQNuSDUwZX2cY" Comment="Left Guide" Bounds="1312,275,35,15" ShowValueBox="true" isIOBox="true" Value="True">
@@ -725,40 +595,22 @@
               <CategoryReference Kind="Category" Name="Component" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="B91rZGO33uaMtZ8bBE01xH" Name="Enabled" Kind="InputPin" />
-            <Pin Id="VVktge6cNS4M9Rxt83GsVB" Name="Operate On Element Bounds" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="HmVrmiIkT5QPy9oZQY0BfU" Name="Translate Constraint Type" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
-                <Choice Kind="TypeFlag" Name="AxisConstraint" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="GwHcWq4keNNM77dvV16a7g" Name="Handler Left Enabled" Kind="InputPin" />
-            <Pin Id="H1rSPyXBccmMAZiul6H0aR" Name="Handler Right Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="QsGhPbm1dmHOy9KugtJJuc" Name="Handler Top Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="CZKbQ8WuGJWNzppHiLUTYA" Name="Handler Bottom Enabled" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="IbIvVp1BkYELEArXNHsA15" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="H1rSPyXBccmMAZiul6H0aR" Name="Handler Right Enabled" Kind="InputPin" />
+            <Pin Id="QsGhPbm1dmHOy9KugtJJuc" Name="Handler Top Enabled" Kind="InputPin" />
+            <Pin Id="CZKbQ8WuGJWNzppHiLUTYA" Name="Handler Bottom Enabled" Kind="InputPin" />
+            <Pin Id="HmVrmiIkT5QPy9oZQY0BfU" Name="Translate Constraint Type" Kind="InputPin" />
             <Pin Id="JvlvPSyRAoFNAfbhfpatws" Name="Handler Rectangles Option" Kind="InputPin" />
-            <Pin Id="RmTkUitSHhnLBK6sxViT2o" Name="Helper Enabled" Kind="InputPin" />
             <Pin Id="RNaJOTDc1fIMEY8St6ntjz" Name="Snapping" Kind="InputPin" />
+            <Pin Id="Q4zAAQ9XwzcPj5m0mQRlYz" Name="Operate On Widget Bounds" Kind="InputPin" />
+            <Pin Id="RmTkUitSHhnLBK6sxViT2o" Name="Helper Enabled" Kind="InputPin" />
+            <Pin Id="IbIvVp1BkYELEArXNHsA15" Name="Handler Thickness" Kind="InputPin" />
+            <Pin Id="NlUMXZNHE1tMDAMX7qnWQe" Name="Resize Enabled" Kind="InputPin" />
             <Pin Id="SQ8rAH1cqCSL8FBDYaenEV" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="GdBQd8HnHhvPbvCxt5b9Uq" Name="Operate On Widget Bounds" Kind="OutputPin" />
             <Pin Id="S7pYZo51yJtQan9iCXKF1F" Name="Transformation Stream" Kind="OutputPin" />
           </Node>
-          <Pad Id="MBDDkJ27S19QUeQHO4swuM" Comment="Global Transformation Enabled" Bounds="168,738,35,15" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="MBDDkJ27S19QUeQHO4swuM" Comment="Global Transformation Enabled" Bounds="189,746,35,15" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -768,8 +620,9 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
-            <Pin Id="CRATraU5295PCEIiYyFY2C" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="M7EzBwp8N0TO6Bz1ZpSCi8" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="Rtjhg7gXfzQOqlt3kGsgyc" Name="Propagate Notification on Start" Kind="InputPin" />
+            <Pin Id="CRATraU5295PCEIiYyFY2C" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="ESYZ3roDGtGLl1CLtEBbce" Name="Custom Start Selection Func" Kind="InputPin" />
             <Pin Id="EpkmLH1SrxkLQwzTgNmQFf" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="GxtvAskfAg8QGiyGB2mpuz" Name="Output" Kind="StateOutputPin" />
@@ -780,8 +633,9 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
-            <Pin Id="FW6Tpr34xaqM24pd6Bqu2H" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="K12cNxJSLEGNS9TsvXtYhT" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="JgGlKAXKqnTQc2Yx7YGqd2" Name="Propagate Notification on Start" Kind="InputPin" />
+            <Pin Id="FW6Tpr34xaqM24pd6Bqu2H" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="D3D4DXYyLiVM3I93FzZBlv" Name="Custom Start Selection Func" Kind="InputPin" />
             <Pin Id="O0pSne3DNLWN7pfUT6O0Dt" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="FOjR1j5nVA5MmKTXq2Tpme" Name="Output" Kind="StateOutputPin" />
@@ -792,8 +646,9 @@
               <Choice Kind="ProcessAppFlag" Name="Selectable" />
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
-            <Pin Id="NVcMENby85EO7FvJ1BFqDY" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="BxdNGJTrW2qL6FdXaK3DRl" Name="Start Selection" Kind="InputPin" />
+            <Pin Id="Ovyxuq9IlSONw6RFJ5ooXk" Name="Propagate Notification on Start" Kind="InputPin" />
+            <Pin Id="NVcMENby85EO7FvJ1BFqDY" Name="Is Selectable" Kind="InputPin" />
             <Pin Id="QVg7fArUeWlQS2Zc5H6wbQ" Name="Custom Start Selection Func" Kind="InputPin" />
             <Pin Id="TiNMvyQb5bwPbd17zYIEp3" Name="Custom Filter Rule" Kind="InputPin" />
             <Pin Id="BoNMrm441wUOMKbEqOi0nx" Name="Output" Kind="StateOutputPin" />
@@ -810,8 +665,9 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="Tgus4OG5HV4LlECVLfvIJ0" Name="Left / Bottom" Kind="InputPin" />
             <Pin Id="TkK5j9yIPz5NFJpdVa82SN" Name="Spacing" Kind="InputPin" />
+            <Pin Id="Tgus4OG5HV4LlECVLfvIJ0" Name="Left / Bottom" Kind="InputPin" />
+            <Pin Id="TVK92MtSsLtLJKufMOfkxO" Name="Update" Kind="InputPin" />
             <Pin Id="NU8lWLYjnv8QEHNAALRxdf" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="65,554,65,19" Id="R4qoQ1QZ40wLER8em9ij1L">
@@ -825,8 +681,9 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="JmE8eVe3EJEOcBuvrAWK0a" Name="Left / Bottom" Kind="InputPin" />
             <Pin Id="N69w85F4tIsOy8BYuRBuTE" Name="Spacing" Kind="InputPin" />
+            <Pin Id="JmE8eVe3EJEOcBuvrAWK0a" Name="Left / Bottom" Kind="InputPin" />
+            <Pin Id="Csmrlr5nN3NQT7LWXjGKPU" Name="Update" Kind="InputPin" />
             <Pin Id="HsAjho6cKjhLV8BNVCJdsG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="356,553,65,19" Id="L2dbLLKqpOWMjGKAPowyxv">
@@ -840,8 +697,9 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="C28Tk83LmnmNxI1H387Ojn" Name="Left / Bottom" Kind="InputPin" />
             <Pin Id="Cq3pydXhRdwNaHpeNLbmlT" Name="Spacing" Kind="InputPin" />
+            <Pin Id="C28Tk83LmnmNxI1H387Ojn" Name="Left / Bottom" Kind="InputPin" />
+            <Pin Id="Cf1O6U4ZKJyP4XwyjtvtDZ" Name="Update" Kind="InputPin" />
             <Pin Id="LimiioLiDAUN9dqaw3RIsl" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="939,560,65,19" Id="PfdlJ65BdLnLLTQCIpImJX">
@@ -855,8 +713,9 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="CZ3N01oUqooOK13slwcq35" Name="Left / Bottom" Kind="InputPin" />
             <Pin Id="JLErfzfkTNeO0v4pF2X24g" Name="Spacing" Kind="InputPin" />
+            <Pin Id="CZ3N01oUqooOK13slwcq35" Name="Left / Bottom" Kind="InputPin" />
+            <Pin Id="EgzCd1GTtNKMkmUb52W9FS" Name="Update" Kind="InputPin" />
             <Pin Id="EjnbyRJ2MqzLnKK4l7ZuTL" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="1230,562,65,19" Id="GpjSdZZbVVINSCiyyZ9FFg">
@@ -870,8 +729,9 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="IU5azOgde0ePlvYmXQQ2rH" Name="Left / Bottom" Kind="InputPin" />
             <Pin Id="GAslbdsBY8NQG088yTLZUJ" Name="Spacing" Kind="InputPin" />
+            <Pin Id="IU5azOgde0ePlvYmXQQ2rH" Name="Left / Bottom" Kind="InputPin" />
+            <Pin Id="QzpuidFEXokMqltItLyutS" Name="Update" Kind="InputPin" />
             <Pin Id="IqudTPm3kwWPgTiLy908GD" Name="Output" Kind="OutputPin" />
           </Node>
           <Overlay Id="GW7pFFZXggVNGFpreOZyWy" Name="Snapping" Bounds="113,41,543,208" />
@@ -918,7 +778,6 @@
         <Link Id="Sg8YGJXGtQOPjv0GGvbM4G" Ids="Mr6Amadsix3LCTC2yy1E23,PUPljwiZIjWPgEPrv48nKI" />
         <Link Id="JTKmW2P6PqAMi44muHh4g6" Ids="NcS22lQGbVZNmMWoHOkzFU,HxN0wWUi4EBOuf3KEJBkWk" />
         <Link Id="QQpiP7GrLbiO23j5dVukmt" Ids="LdYWU68sxq9PdnYODlDKP4,R9aTjZl7mMzPMCremNSXBL" />
-        <Link Id="CfowaupoL6AO8mTtKMfyQF" Ids="SjBeKH2TezUMuV0KxufVDH,UNhKsZLCIbZLJFpP1xidVX" />
         <Link Id="L21ppigzMRXOFpMOB9fmRx" Ids="OUN7O1yHFDuMK4rJ9wMhwu,BGbtbTD2f3ULgpYwOEuBgE" />
         <Link Id="IMmdJ9Ka0GYOoJEIC1dBAn" Ids="Eyt10OtmruePaTV0NK8Vz8,QVqV6PwrlIBLuqUyl8D22C" />
         <Link Id="NI9Z17P9TvqMWoEl1iy2jr" Ids="OVi6hNjWhKzNo8WR58FqyX,CSEUuJ7vphKMMpC17aDvGE" />
@@ -950,25 +809,26 @@
         <Link Id="NPXyrRE6wWrNvuFcH02q4f" Ids="VwEF3riogthM4DrKtDyP6R,AqrN6hVDCVUODw7YqPsDkG" />
         <Link Id="Eh26rjJh3fDOS0xSOXHvvo" Ids="OxsvJJHHusIP3Vt51Q3MJk,QTIYjcT5XNfPfWxzbeBDcL" />
         <Link Id="PSlhJAmUBHRM5BV4PdU0Oy" Ids="MBDDkJ27S19QUeQHO4swuM,RIUxINkaMDPOIGXtF4aTqk" />
-        <Link Id="IqH61l4k8eVQCKTt0SLRGM" Ids="GxtvAskfAg8QGiyGB2mpuz,U3tNDNd5xorMXvLI6FmDMb" />
         <Link Id="OR26GETMlDpMHyUceqLcvO" Ids="FOjR1j5nVA5MmKTXq2Tpme,MYLoGTIFPOrPbuPii59E6a" />
         <Link Id="B7swIrrmQ9hNRILQspBji6" Ids="BoNMrm441wUOMKbEqOi0nx,Gov5gZiCVvjNKix3sc5btF" />
         <Link Id="KHJLRsy8TKRNk8vjCSr2mQ" Ids="OHwREBQEja1ORhgWGY0Xvl,LfczjMljmwaPoaNNeaaFkO" />
         <Link Id="GF7oRKbyj4KOn79MZyguOq" Ids="FbJ39DddDD0N6IeXwGN5oB,RN83RN2YWl9PxTub9PkGEa" />
         <Link Id="FLHjxdAo1jXLToSWSWPADA" Ids="PYPO1EbNym9QF1WH6O8qnl,AuNEpHazVbFPYAU6OSXiTg" />
-        <Link Id="QJpvQj1BqE5NDf8wJ73zLW" Ids="DXXl5ffeDmqP9XFNjODC6w,C2DZNrQWE3uMTJQPfAriah" />
         <Link Id="I7qQ0RTfOlHMQdwnPHMLNm" Ids="Ictcf1rgfMXPgQQHjXcLRb,PZGV13D8HYuO4x9p04iQX0" />
         <Link Id="BaEWun5oJZtL0gTUSZCQGO" Ids="SQ8rAH1cqCSL8FBDYaenEV,NV2mdqVt87qLrgZ8oVflL3" />
-        <Link Id="NOVuhLHmzJnOGSeUd6Zj1d" Ids="OvzMvSblDAsOfg13GaiC2D,AfRWsDYQhZaLcR6qq06l42" />
         <Link Id="HqgTbusjDEbPQdA9g420Mp" Ids="KapH7PgFWXePUV7JALGMnc,PI8WWNZfLCoLQaT65i37Jk" />
         <Link Id="QbTFPYY2TH7P6WXif3cn6e" Ids="NU8lWLYjnv8QEHNAALRxdf,BBjpOpbf5b8MCgzbwQqRTh" />
         <Link Id="UI7PeTDq0xgNXV6UN8K3C3" Ids="HsAjho6cKjhLV8BNVCJdsG,QhQ72pNMLX5QQbdGsJevCW" />
         <Link Id="KrjvHEVvohKLNrGzVRFbzJ" Ids="LimiioLiDAUN9dqaw3RIsl,MfDdfC9QEs9LoL04v6GW5K" />
         <Link Id="HHC3KbWl2bKMVLXf9EuBTQ" Ids="EjnbyRJ2MqzLnKK4l7ZuTL,DzRGdowVip2O13H23GsptT" />
         <Link Id="D6IwwfqYKI1OIPwwNMCtRF" Ids="IqudTPm3kwWPgTiLy908GD,DSI8T3p53PnOYpS89RzqLT" />
+        <Link Id="RDrmcFCb7f3LKy6Vp4kItK" Ids="GxtvAskfAg8QGiyGB2mpuz,SKOinkktui9OIkPqcRlNob" />
+        <Link Id="VoKRy9DalYnLWGncff4dms" Ids="OvzMvSblDAsOfg13GaiC2D,EbGVQnPnoNmNaCghnmtVsn" />
+        <Link Id="O3mw7RexF63NKG1Pexg47o" Ids="DXXl5ffeDmqP9XFNjODC6w,QsyLBVLB9jUQFBPB5DgaC2" />
+        <Link Id="G2ncl43H55aLp1IX0UTbIG" Ids="SjBeKH2TezUMuV0KxufVDH,LEaINUiRhiyPe2XundN7tA" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="RUP1ZKzEjZXMfCfiwQLGx1" Location="VL.Skia" Version="2020.2.2" />
+  <NugetDependency Id="RUP1ZKzEjZXMfCfiwQLGx1" Location="VL.Skia" Version="2020.3.0-0125-gaf5344c6f5" />
   <NugetDependency Id="VKjFg0YSThOMqzgtqYu6ZU" Location="VL.Elementa" Version="3.0.0-beta" />
 </Document>
