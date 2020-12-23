@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.3.0.120" Version="0.128">
-  <NugetDependency Id="Bx4nGhFSlx7OEGH3hH1ytr" Location="VL.CoreLib" Version="2020.3.0-0120-gb094184330" />
+<Document xmlns:p="property" Id="TUt8c8ITGwgMcdDB3xWdFa" LanguageVersion="2020.3.0.125" Version="0.128">
+  <NugetDependency Id="Bx4nGhFSlx7OEGH3hH1ytr" Location="VL.CoreLib" Version="2020.3.0-0125-gaf5344c6f5" />
   <Patch Id="M42lugPQdWSN4Vlxe0moaV">
     <Canvas Id="A02gPGbHulbL0imDA69yuH" DefaultCategory="VL.Elementa.Core" CanvasType="FullCategory">
       <Canvas Id="Fu7GC3QDkVgNe6Mpdq9gQ9" Name="Advanced" Position="160,177">
@@ -9835,15 +9835,17 @@
           </p:NodeReference>
           <Patch Id="BbZjk1iiQIoP7GuOB1sAQV">
             <Canvas Id="QnLkQnQf8RMOt1efP6lcjn" CanvasType="Group">
-              <ControlPoint Id="SjMpzsdW97pLIMe48Jv0AE" Bounds="489,224" />
-              <ControlPoint Id="PF0RVKnGsszLrGFCGNxwqA" Bounds="488,282" />
-              <ControlPoint Id="HFA50YeZDG3N2HkHRoxPoW" Bounds="611,283" />
+              <ControlPoint Id="SjMpzsdW97pLIMe48Jv0AE" Bounds="234,133" />
+              <ControlPoint Id="PF0RVKnGsszLrGFCGNxwqA" Bounds="233,191" />
+              <ControlPoint Id="HFA50YeZDG3N2HkHRoxPoW" Bounds="356,192" />
+              <ControlPoint Id="Qt9EPvh4hroPruuw54WO9d" Bounds="420,131" />
             </Canvas>
             <ProcessDefinition Id="Iwayu6PXut4Of0TmQViHrV" IsHidden="true">
               <Fragment Id="PoP7Lrbw3JwNiuSGBCd8If" Patch="Niu8fAJN2CSORgvravIuJS" Enabled="true" />
               <Fragment Id="Ua4bz0REsH7NTGJGrZFizP" Patch="Eqqp2NeQ1kDNDRDM2jZ14J" />
               <Fragment Id="OELgUy3JeH4NJxv7hfPFqQ" Patch="IlWUzIJcGwiNVIYtnnd9Mi" />
               <Fragment Id="HnCgmxXrwpbQKdFqqOtIdz" Patch="OIK5CbK0t5eNyz0XEg5qDu" />
+              <Fragment Id="JJlBXotdNMBO6eks4xbCWl" Patch="TOsLXpRyNOPPf2GwO6FVtN" />
             </ProcessDefinition>
             <Patch Id="Niu8fAJN2CSORgvravIuJS" Name="OpenOverlay">
               <Pin Id="GISsqOtYqTzMUes5UTfgC9" Name="Item" Kind="InputPin">
@@ -9875,6 +9877,14 @@
               </Pin>
             </Patch>
             <Patch Id="OIK5CbK0t5eNyz0XEg5qDu" Name="CloseOverlays" />
+            <Patch Id="TOsLXpRyNOPPf2GwO6FVtN" Name="PopFromIndex">
+              <Pin Id="Mv0IzZ9LHMtNMj0M5RPL92" MergeId="564098" Name="Index" Kind="InputPin" Bounds="140,237">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Integer32" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
+            <Link Id="OkzdZBqkNcoPWg0lg7dfdV" Ids="Mv0IzZ9LHMtNMj0M5RPL92,Qt9EPvh4hroPruuw54WO9d" IsHidden="true" />
           </Patch>
         </Node>
         <!--
@@ -10007,7 +10017,7 @@
                 </p:NodeReference>
                 <Pin Id="EhUXl92U2nYNLFP5SHmqFs" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <Pad Id="KkKo2xRNuCPPh3PP6i1v1q" SlotId="QtPma8yGWEHONSOj3BTdN4" Bounds="389,133" />
+              <Pad Id="KkKo2xRNuCPPh3PP6i1v1q" SlotId="QtPma8yGWEHONSOj3BTdN4" Bounds="389,115" />
               <Pad Id="SvR7pacfM9MOzWoHnebmnY" Bounds="233,485,201,263" ShowValueBox="true" isIOBox="true" Value="Layer In -&gt; Layer Out&#xD;&#xA;&#xD;&#xA;most simple node that can be used anywhere to introduce a new Overlay&#xD;&#xA;&#xD;&#xA;That way nesting several overlays gets easy">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
@@ -10125,6 +10135,37 @@
                 <Pin Id="HaHH1dlq2qoLs6WSB1qhhT" Name="Input" Kind="StateInputPin" />
                 <Pin Id="G7kzU5rUaKKNfHWilKnF7r" Name="Output" Kind="StateOutputPin" />
               </Node>
+              <Node Bounds="191,261,80,26" Id="HTNcbICZHhXNQAvSLrb9PN">
+                <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastSymbolSource="VL.Collections.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="MutableList" />
+                  <Choice Kind="OperationCallFlag" Name="RemoveRange" />
+                </p:NodeReference>
+                <Pin Id="QNSx5I8bjAZOfEDjS7vFFn" Name="Input" Kind="StateInputPin" />
+                <Pin Id="JbhoNAUCmA9OdC8AR9z0tN" Name="Index" Kind="InputPin" />
+                <Pin Id="EyWjKHAru0vP6IosEwpgOW" Name="Count" Kind="InputPin" />
+                <Pin Id="Pg1AeqKl5fkPwVAaRoaeqC" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="191,167,80,26" Id="NHjdsZBmZGwNhCk8Y0hdvA">
+                <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableList" LastSymbolSource="VL.Collections.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="MutableList" />
+                  <Choice Kind="OperationCallFlag" Name="Count" />
+                </p:NodeReference>
+                <Pin Id="HIE3PRXGiOCP90M0Ds1wdH" Name="Input" Kind="StateInputPin" />
+                <Pin Id="IAszOjh7IZ8M6kEtXzFgPG" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="I1qkEx29K4zOqqHZ0O3TtB" Name="Count" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="Kk3FNKVcENoLLTLfHc2Jwl" Bounds="231,213" />
+              <Node Bounds="266,230,25,19" Id="J2ozWKHvP24MMfk4kktYtU">
+                <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="-" />
+                </p:NodeReference>
+                <Pin Id="DEtaBklx5P4OYwm2hX42tE" Name="Input" Kind="InputPin" />
+                <Pin Id="FeNJR0DWlg1O9ufSHW9Fts" Name="Input 2" Kind="InputPin" />
+                <Pin Id="GXFvoXK7fJ9Psyw8q1GLLj" Name="Output" Kind="OutputPin" />
+              </Node>
             </Canvas>
             <Link Id="Q6dnDNb7TKbPCHqu2H1Lut" Ids="FP158mFkh02O99sFKLNygS,DbFIhuzz8VuLJwN8onBjwU" IsHidden="true" />
             <Link Id="Af78uVAwGYBMb3jGwXwHfb" Ids="NZb4lDgQs2jMD6E9gshMES,VZA7fF8G46pOYYcVaFcIYX" />
@@ -10183,7 +10224,18 @@
               <Fragment Id="AsEMZJzKkwYMm0JLQiIo27" Patch="PKk3EuiOkiGL6B7kmKpLqq" />
               <Fragment Id="VOJ2Lc3QHlJMKB4UXou0AT" Patch="RoffRorONEjLFpzrHx5zBB" />
               <Fragment Id="OOMLrTbkiR4OlnWMwVXyrD" Patch="BEEg8P8PRCnPr5UjmeadE2" />
+              <Fragment Id="LCvkCFetuA4LRajsjKlNv5" Patch="LWlbGWXr5Y5OepMzurq6tE" />
             </ProcessDefinition>
+            <Patch Id="LWlbGWXr5Y5OepMzurq6tE" Name="PopFromIndex (Internal)" ParticipatingElements="HTNcbICZHhXNQAvSLrb9PN,NHjdsZBmZGwNhCk8Y0hdvA">
+              <Pin Id="TFhBBaqAn8EMVTlLvp8IUe" Name="Index" Kind="InputPin" Bounds="140,237" />
+            </Patch>
+            <Link Id="KhS5CUSNIQVLHPkUW1DbIB" Ids="KkKo2xRNuCPPh3PP6i1v1q,HIE3PRXGiOCP90M0Ds1wdH" />
+            <Link Id="JARVsUl0YJLNeAeZiu7toS" Ids="TFhBBaqAn8EMVTlLvp8IUe,Kk3FNKVcENoLLTLfHc2Jwl" IsHidden="true" />
+            <Link Id="VTsuNQj6fuFNERklvfo7cq" Ids="I1qkEx29K4zOqqHZ0O3TtB,DEtaBklx5P4OYwm2hX42tE" />
+            <Link Id="EiwKHKhKlvLQXsSjPcHQdW" Ids="GXFvoXK7fJ9Psyw8q1GLLj,EyWjKHAru0vP6IosEwpgOW" />
+            <Link Id="PsLNd3ePmWSMRprmO3W5vb" Ids="Kk3FNKVcENoLLTLfHc2Jwl,FeNJR0DWlg1O9ufSHW9Fts" />
+            <Link Id="B1dM440VvYpPfVRwVEbcFB" Ids="Kk3FNKVcENoLLTLfHc2Jwl,JbhoNAUCmA9OdC8AR9z0tN" />
+            <Link Id="A4VZ22a0D9xON7ND3PgCSe" Ids="IAszOjh7IZ8M6kEtXzFgPG,QNSx5I8bjAZOfEDjS7vFFn" />
           </Patch>
         </Node>
         <!--
@@ -10252,6 +10304,10 @@
               <ControlPoint Id="BZ0SdJwITlgOShhZ3hy67p" Bounds="1004,296" />
               <ControlPoint Id="Osf3TTnLMluO59g8dDVayC" Bounds="1199,296" />
               <ControlPoint Id="TzneQ4hGI64NffrX8RlEan" Bounds="666,336" />
+              <ControlPoint Id="HfjDS3ytTt7MZKeXtP1VVT" Bounds="804,143" />
+              <ControlPoint Id="HudY3xubB4RMeEAGbXe8t7" Bounds="1339,149" />
+              <ControlPoint Id="MqKPiDyQnFvNLoWLzNya9O" Bounds="1339,244" />
+              <ControlPoint Id="IbQTh981irkPvAuUAuFGP9" Bounds="1043,146" />
             </Canvas>
             <ProcessDefinition Id="AFI9bDqWyfpLcCBCcM4W6f" IsHidden="true">
               <Fragment Id="C8TTVON37BGOIMDoROasQh" Patch="ROt94Vo8PnePQLGR6u7T1O" />
@@ -10263,6 +10319,9 @@
               <Fragment Id="R8qhvxWF556M7W5DRSK5S0" Patch="Q0pe6HWoDzdLYnwrYAyGuJ" />
               <Fragment Id="HO7Wd7KkJ88MU8Dw17ab9j" Patch="Tn0AUXv2gN8ONRvF5Igs9K" />
               <Fragment Id="GV0BaGuJN6sPc3rpxXk4jM" Patch="NzkJBanE8rbOcVtTeF3Hjo" />
+              <Fragment Id="Sf4l60Q7KzbLWYVEb5pkr1" Patch="PomJvWEya4YOdzJjK8WfTR" />
+              <Fragment Id="NxrEPynUWbVPjFTvsHdoQy" Patch="Q2eQuhhpKlGPSoeLy9DjE6" />
+              <Fragment Id="OZOXmdSbQJ0PzzBkp2EEqi" Patch="ChhOQgntd49OFsDHisSGUT" />
             </ProcessDefinition>
             <Patch Id="ROt94Vo8PnePQLGR6u7T1O" Name="Update">
               <Pin Id="KEi14LwUuMjNAvXUrImWa7" Name="Layer" Kind="OutputPin">
@@ -10348,6 +10407,36 @@
               <Pin Id="C7a5ukXQKwNOtbONQb83u5" Name="Context" Kind="OutputPin">
                 <p:TypeAnnotation>
                   <Choice Kind="TypeFlag" Name="Context" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
+            <Link Id="QXQ5WKp1zgPMkMZ0BsZE2v" Ids="HHEs2tuO2yGPdlqv2S25o1,HfjDS3ytTt7MZKeXtP1VVT" IsHidden="true" />
+            <Patch Id="PomJvWEya4YOdzJjK8WfTR" Name="SetElementum">
+              <Pin Id="HHEs2tuO2yGPdlqv2S25o1" Name="Elementum" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="IElementum" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
+            <Patch Id="Q2eQuhhpKlGPSoeLy9DjE6" Name="ProcessNotification">
+              <Pin Id="R2g7IoTbtoOLRo0qpLbDYo" MergeId="1441022" Name="Notification" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="INotification" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="C4bfQflVz6lP7gC7rP7Gvs" MergeId="1441023" Name="Handled" Kind="OutputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
+            <Link Id="EFQNJdSJYtHMCXpJWdCkO5" Ids="R2g7IoTbtoOLRo0qpLbDYo,HudY3xubB4RMeEAGbXe8t7" IsHidden="true" />
+            <Link Id="P4yYTtdoolJMw1gpwixhIA" Ids="MqKPiDyQnFvNLoWLzNya9O,C4bfQflVz6lP7gC7rP7Gvs" IsHidden="true" />
+            <Link Id="NOjC7VIEdiQOiCx4p5a8yU" Ids="AZ06g3CcZKULDdgc8vkx2D,IbQTh981irkPvAuUAuFGP9" IsHidden="true" />
+            <Patch Id="ChhOQgntd49OFsDHisSGUT" Name="SetThis">
+              <Pin Id="AZ06g3CcZKULDdgc8vkx2D" Name="This" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="IOverlay" />
                 </p:TypeAnnotation>
               </Pin>
             </Patch>
@@ -13120,11 +13209,11 @@
     <Slot Id="DPTsOFVV4YWMCc8eq7tnJB" Name="Bounds Alignment Enabled" />
     <Slot Id="PbzgxnZbQ9rM6YUcHQsweH" Name="Elementum" />
   </Patch>
-  <NugetDependency Id="LDAahjGK2vhLbh44CyvuSw" Location="VL.Skia" Version="2020.3.0-0120-gb094184330" />
+  <NugetDependency Id="LDAahjGK2vhLbh44CyvuSw" Location="VL.Skia" Version="2020.3.0-0125-gaf5344c6f5" />
   <PlatformDependency Id="EuJ4QAxyhNaPJLaa2aqpgx" Location="../src/Elementa/bin/Release/netstandard2.0/Elementa.dll" IsForward="true" />
   <PlatformDependency Id="GudWbSxOZsgLAO9sOwwdAC" Location="mscorlib" />
   <PlatformDependency Id="NzpLrzaflNMMJ4qL4XHryg" Location="System.Windows.Forms" />
   <DocumentDependency Id="RM7zzjotrTROmug9T3jTuN" Location="./VL.Elementa.ToSkia.vl" IsForward="true" />
-  <NugetDependency Id="UHFklu3BtoDQEQ3P5lFbyI" Location="VL.Lang" Version="2020.3.0-0120-gb094184330" />
+  <NugetDependency Id="UHFklu3BtoDQEQ3P5lFbyI" Location="VL.Lang" Version="2020.3.0-0125-gaf5344c6f5" />
   <DocumentDependency Id="NAf4EvRT1gbNeMgiOJSKLK" Location="./VL.Elementa.Utils.vl" IsForward="true" />
 </Document>
