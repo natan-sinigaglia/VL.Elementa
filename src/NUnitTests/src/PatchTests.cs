@@ -9,9 +9,11 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VL.Core;
 using VL.Lang;
 using VL.Lang.Symbols;
 using VL.Model;
+using VL.TestLib;
 using VVVV.NuGetAssemblyLoader;
 
 namespace MyTests
@@ -23,32 +25,45 @@ namespace MyTests
     {
         static string[] Packs = new string[]{ 
         
-        //  FIX ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            @"C:\Program Files\vvvv\vvvv_gamma_2020.2.2\lib\packs",
+            //  FIX ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            @"C:\Program Files\vvvv\vvvv_gamma_2020.3.0-0138-gb1d0bb262a\lib\packs",
 
         };
 
         // DO YOU WANT TO SAVE THE VL DOCS TO DISK? 
         static SaveDocCondition SaveDocCondition = SaveDocCondition.WhenGreen;
 
-
-        public static IEnumerable<string> NormalPatches()
+        /// <summary>
+        /// Yield all vl documents of your library, including those that have tests
+        /// </summary>
+        public static IEnumerable<string> AllVLDocuments()
         {
             // Yield all your VL docs
             foreach (var file in Directory.GetFiles(MainLibPath, "*.vl", SearchOption.AllDirectories))
                 yield return file;
         }
 
+        /// <summary>
+        /// Yield all test patches that shall be executed and shall be checked for assertions
+        /// </summary>
+        static IEnumerable<string> AllVLDocumentsThatHaveTests()
+        {
+            // Yield all your VL docs that contain tests
+            foreach (var file in Directory.GetFiles(LibTestsPath, "*.vl", SearchOption.AllDirectories))
+                yield return file;
+        }
 
 
         public static readonly VLSession Session;
-        public static string MainLibPath;
+        public static string MainLibPath; 
+        public static string LibTestsPath;
         public static string RepositoriesPath;
 
         static PatchTests()
         {
             var currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             MainLibPath = Path.GetFullPath(Path.Combine(currentDirectory, @"..\..\..\..\..\..\.."));
+            LibTestsPath = Path.Combine(MainLibPath, "tests");
             RepositoriesPath = Path.GetFullPath(Path.Combine(MainLibPath, @".."));
 
             foreach (var pack in Packs)
@@ -82,10 +97,10 @@ namespace MyTests
         /// Checks if the document comes with compile time errors (e.g. red nodes). Doesn't actually run the patches.
         /// </summary>
         /// <param name="filePath"></param>
-        [TestCaseSource(nameof(NormalPatches))]
+        [TestCaseSource(nameof(AllVLDocuments))]
         public static void IsntRed(string filePath)
         {
-            var solution = FCompiledSolution ?? (FCompiledSolution = Compile(NormalPatches()));
+            var solution = FCompiledSolution ?? (FCompiledSolution = Compile(AllVLDocuments()));
             var document = solution.GetOrAddDocument(filePath);
 
             // Check document structure
@@ -133,16 +148,29 @@ namespace MyTests
 
 
 
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // Running Tests patches not supported yet. We for now can only check for compile time errors (like red nodes)
 
+        [TestCaseSource(nameof(TestNodes))]
+        public async Task ActualTestPatches(Node testNode)
+        {
+            await LanguageTests.RunTest(testNode);
+        }
 
         /// <summary>
         /// Yield all test patches that shall run
         /// </summary>
-        public static IEnumerable<string> TestPatches()
+        static IEnumerable<Node> TestNodes()
         {
-            yield return $@"C:\dev\vl-libs\VL.DemoLib\src\NUnitTests\tests\tests.vl";
+            var solution = FCompiledSolution ?? (FCompiledSolution = Compile(AllVLDocuments()));
+            foreach (var file in Directory.GetFiles(LibTestsPath, "*.vl", SearchOption.AllDirectories))
+            {
+                var document = solution.GetOrAddDocument(file, createNew: false, loadDependencies: false);
+                foreach (var definition in document.AllTopLevelDefinitions.Where(n => !n.IsGeneric && n.IsNodeDefinition))
+                {
+                    var name = definition.Name.NamePart;
+                    if (name.EndsWith("Test") || name.EndsWith("Tests"))
+                        yield return definition;
+                }
+            }
         }
     }
 }
