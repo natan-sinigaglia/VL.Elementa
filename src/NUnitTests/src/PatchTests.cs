@@ -15,6 +15,7 @@ using VL.Lang.Symbols;
 using VL.Model;
 using VL.TestLib;
 using VVVV.NuGetAssemblyLoader;
+using static System.QueryAPI;
 
 namespace MyTests
 {
@@ -23,12 +24,12 @@ namespace MyTests
     [TestFixture]
     public class PatchTests
     {
-        static string[] Packs = new string[]{ 
-        
-            //  FIX ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            @"C:\Program Files\vvvv\vvvv_gamma_2020.3.0-0138-gb1d0bb262a\lib\packs",
-
-        };
+        static IEnumerable<string> GetPacks()
+        {
+            var vlExecutable = AssocQueryString(AssocStr.Executable, ".vl");
+            var vlExePath = Path.GetDirectoryName(vlExecutable);
+            yield return Path.Combine(vlExePath, @"lib\packs");
+        }
 
         // DO YOU WANT TO SAVE THE VL DOCS TO DISK? 
         static SaveDocCondition SaveDocCondition = SaveDocCondition.WhenGreen;
@@ -66,7 +67,7 @@ namespace MyTests
             LibTestsPath = Path.Combine(MainLibPath, "tests");
             RepositoriesPath = Path.GetFullPath(Path.Combine(MainLibPath, @".."));
 
-            foreach (var pack in Packs)
+            foreach (var pack in GetPacks())
                 AssemblyLoader.AddPackageRepositories(pack);
 
             // Also add the "vl-libs" folder. The folder that contains our library.
