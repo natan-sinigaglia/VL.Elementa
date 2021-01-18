@@ -72,6 +72,11 @@ namespace Elementa
         Absolute, Relative, Sticky
     }
 
+    public enum TooltipPosition
+    {
+        MiddleLeft, MiddleTop, MiddleRight, MiddleBottom
+    }
+
 
     public enum StyleProperties
     {
