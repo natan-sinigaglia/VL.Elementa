@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="JrRjD3PoesbL2wlOKTZqDt" LanguageVersion="2021.3.0.5" Version="0.128">
-  <NugetDependency Id="DSWcAXJqILlL9F9cCISPZd" Location="VL.CoreLib" Version="2021.3.0-0005-g87211fe9ae" />
+<Document xmlns:p="property" Id="JrRjD3PoesbL2wlOKTZqDt" LanguageVersion="2021.3.0.3" Version="0.128">
+  <NugetDependency Id="DSWcAXJqILlL9F9cCISPZd" Location="VL.CoreLib" Version="2021.3.0-0003-g2d0532f332" />
   <Patch Id="Tg1nUwlwRLIOLdCV2932lh">
     <Canvas Id="JtRacgwi6KCMADk5eHM1EV" DefaultCategory="VL.Elementa.Layout" CanvasType="FullCategory">
       <!--
@@ -27,7 +27,7 @@
               <Pin Id="AvVDa7NvVtVQb6RvzV7kNH" Name="Anchor" Kind="InputPin" />
               <Pin Id="UMDCxnCCNfnL2ujcPix84m" Name="Layout Technique" Kind="InputPin" />
               <Pin Id="HmeQWQFDcQ4Of4b8FH6cmP" Name="Layout Technique Editor" Kind="InputPin" />
-              <Pin Id="BcYtbs7u0WqOTJuhhWKOqm" Name="Padding" Kind="InputPin" />
+              <Pin Id="BcYtbs7u0WqOTJuhhWKOqm" Name="Padding String" Kind="InputPin" />
               <Pin Id="P7GJC0CJx2QOmpBDxEcb6S" Name="Clip Elementa Layer" Kind="InputPin" />
               <Pin Id="G5iDGf6iG3rMVq5sJAH7X9" Name="Enable Helper" Kind="InputPin" />
               <Pin Id="IjgV4EukNFaPdCxxdawjlz" Name="Helper Color" Kind="InputPin" />
@@ -197,7 +197,11 @@
           <Link Id="THbB4mxipxALpfTRoz1dmJ" Ids="F0n1kLFXnYeMjIj0jzrV2M,NNYIoTsLYkjMXfgiv65DZp" IsHidden="true" />
           <Link Id="D9IJlvMOX0gLUgArzd44vK" Ids="NNYIoTsLYkjMXfgiv65DZp,QEpAAL7rS50MsaHGa8yLKO" />
           <Patch Id="QaaTVd5597fM5bBTdyulLp" Name="SetPadding (Internal)">
-            <Pin Id="VCVqMFUnW8DNAYMsPIjvmp" MergeId="1073130" Name="Padding String" Kind="InputPin" DefaultValue="" />
+            <Pin Id="VCVqMFUnW8DNAYMsPIjvmp" MergeId="1073130" Name="Padding String" Kind="InputPin" DefaultValue="">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
           </Patch>
           <Link Id="JrawnxeNn4KOHHjbgAIQCt" Ids="VCVqMFUnW8DNAYMsPIjvmp,JNWKpUSouIAOnNtcwPrpGy" IsHidden="true" />
           <Link Id="QrKXXprB0wJM3KtW7tvlQb" Ids="JNWKpUSouIAOnNtcwPrpGy,BcYtbs7u0WqOTJuhhWKOqm" />
@@ -239,8 +243,8 @@
           <Patch Id="M5P0iso48npQbx5CB1ZwHL" Name="SetMargin (Internal)">
             <Pin Id="Kith4By9oAUPISMK5zqQdw" MergeId="489995" Name="Margin" Kind="InputPin" />
           </Patch>
-          <Patch Id="BWgFQhXRKw7NRrIpiUIWaQ" Name="SetWidgetHorizontalAlignement (Internal)">
-            <Pin Id="PTFLZyYqldBNNQ5G4A9Sii" MergeId="518720" Name="Widget Horizontal Alignment" Kind="InputPin" Visibility="Optional" />
+          <Patch Id="BWgFQhXRKw7NRrIpiUIWaQ" Name="SetWidgetsSelfAlignement (Internal)">
+            <Pin Id="PTFLZyYqldBNNQ5G4A9Sii" MergeId="518720" Name="WidgetsSelfAlignment" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <Patch Id="BYjEaG7i9MLMJuYIwrd1yR" Name="SetAlignmentWithinBounds (Internal)">
             <Pin Id="Dm2jT3kI5QmNNCQXvVtKTx" MergeId="537872" Name="Alignment Within Bounds Enabled" Kind="InputPin" DefaultValue="True" Visibility="Optional">
@@ -321,7 +325,7 @@
               <Pin Id="MSaoEhhxTrtNJPCkd70Dsr" Name="Anchor" Kind="InputPin" />
               <Pin Id="RoBRtWp5R2pN5lyCOI0uz9" Name="Auto Size" Kind="InputPin" />
               <Pin Id="GeoOLHvlCnhN0sdpt17q26" Name="Margin" Kind="InputPin" />
-              <Pin Id="LXS4EOc21yCOX6u2vIXk6X" Name="Widget Horizontal Alignment" Kind="InputPin" />
+              <Pin Id="LXS4EOc21yCOX6u2vIXk6X" Name="WidgetsSelfAlignment" Kind="InputPin" />
               <Pin Id="UL9D2Bzx59YMLvBEeakyWN" Name="Alignment Within Bounds Enabled" Kind="InputPin" />
               <Pin Id="MqBSPpgmSrfO54pPJWmR33" Name="Alignment Within Bounds" Kind="InputPin" />
               <Pin Id="B5U7er9kouyNCFoSe621dP" Name="Padding String" Kind="InputPin" />
@@ -411,8 +415,8 @@
           <Link Id="SbfzpvmwC78OwbyNYuglpw" Ids="NxAPyNKLuUVMhn5NKh8b79,Fw1uhNVYZ0UO68BSa40wBY" IsHidden="true" />
           <Link Id="OVTfe52ZjiPOy8ubzDE9Ph" Ids="Fw1uhNVYZ0UO68BSa40wBY,RoBRtWp5R2pN5lyCOI0uz9" />
           <Link Id="SY5MplZl6eWLPY5FtLOtzk" Ids="S5CInADFOFLMk3fPF06Pvi,GeoOLHvlCnhN0sdpt17q26" />
-          <Patch Id="Cfcq8iDJ100MrspnIG0wy7" Name="SetWidgetHorizontalAlignement (Internal)">
-            <Pin Id="KhbKawAS8WTMXfteSxa0WP" MergeId="1242326" Name="Widget Horizontal Alignment" Kind="InputPin" Visibility="Optional" />
+          <Patch Id="Cfcq8iDJ100MrspnIG0wy7" Name="SetWidgetsSelfAlignement (Internal)">
+            <Pin Id="KhbKawAS8WTMXfteSxa0WP" MergeId="1242326" Name="Widget Self Alignment" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <Link Id="PG1K4IjGfXzNFq7uaQPxnK" Ids="KhbKawAS8WTMXfteSxa0WP,O8DHcDkPWQiLJA5S4QK5pY" IsHidden="true" />
           <Link Id="Oii4QFvEIhBLe2zJqNGsz9" Ids="O8DHcDkPWQiLJA5S4QK5pY,LXS4EOc21yCOX6u2vIXk6X" />
@@ -429,7 +433,7 @@
           <Link Id="EKGcLYT08QjNx1gXP0BYCn" Ids="CeUDtq5YILvN88c5w5mZvw,UL9D2Bzx59YMLvBEeakyWN" />
           <Link Id="QkFJC2gI2WbMHnidIJT0Tp" Ids="JenUgpDbvR6LufPQfbZfL6,MqBSPpgmSrfO54pPJWmR33" />
           <Patch Id="A7HevcVmpeGPEH2RGN6zyV" Name="SetPadding (Internal)">
-            <Pin Id="NFaeqPaPHvGN9rzsDZj8EI" MergeId="286165" Name="Padding" Kind="InputPin" DefaultValue="" />
+            <Pin Id="NFaeqPaPHvGN9rzsDZj8EI" MergeId="286165" Name="Padding String" Kind="InputPin" DefaultValue="" />
           </Patch>
           <Patch Id="R6dfrxfX315MVAWYc4ylaP" Name="SetClipElementaLayer (Internal)">
             <Pin Id="IqIeMYWbtIbLRHZpARsH1O" MergeId="286201" Name="Clip Elementa Layer" Kind="InputPin" Visibility="Optional">
@@ -504,7 +508,7 @@
               <Pin Id="A8AeUbQLQTgPeGcSC7ycra" Name="Anchor" Kind="InputPin" />
               <Pin Id="IsjtJRRXjTtPsVk0jwZ71p" Name="Layout Technique" Kind="InputPin" />
               <Pin Id="PmavNVI83wGLIytx2IOSuz" Name="Layout Technique Editor" Kind="InputPin" />
-              <Pin Id="JQXG2iIs0yCM4jEkc0DEkw" Name="Padding" Kind="InputPin" />
+              <Pin Id="JQXG2iIs0yCM4jEkc0DEkw" Name="Padding String" Kind="InputPin" />
               <Pin Id="EonoFDptgX1LJVtfwT14O5" Name="Clip Elementa Layer" Kind="InputPin" />
               <Pin Id="ElQt6EvsKlcNVBAkPlM7r4" Name="Enable Helper" Kind="InputPin" />
               <Pin Id="VgwaRKNiBvnP7lX19XSiFB" Name="Helper Color" Kind="InputPin" />
@@ -674,7 +678,11 @@
           <Link Id="Sb0hXRHa8nnNTZOW1dyvoW" Ids="FYTdoqItv2cOQX0V0yOmOC,AWzczDT3rDPPCsBOHqpvXZ" IsHidden="true" />
           <Link Id="GIeaX4JJuOeMTEapYTMhGF" Ids="AWzczDT3rDPPCsBOHqpvXZ,TynudJMjGJ5NdTaaNxsunc" />
           <Patch Id="G2YLpV9wCgIQYpSCgV6seo" Name="SetPadding (Internal)">
-            <Pin Id="Dxo3OSVjbtALgDyPM4kIO8" MergeId="1073130" Name="Padding" Kind="InputPin" DefaultValue="" />
+            <Pin Id="Dxo3OSVjbtALgDyPM4kIO8" MergeId="1073130" Name="Padding String" Kind="InputPin" DefaultValue="">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
           </Patch>
           <Link Id="VNNXiaKB3x6O2rEDGiuIAQ" Ids="Dxo3OSVjbtALgDyPM4kIO8,KoIb0f01CUrL2ROUxqFgOP" IsHidden="true" />
           <Link Id="IcB96BWJcxJLFelOtwLvW1" Ids="KoIb0f01CUrL2ROUxqFgOP,JQXG2iIs0yCM4jEkc0DEkw" />
@@ -739,8 +747,8 @@
             </Pin>
           </Patch>
           <Link Id="BNZnTSwcmrgMkuj9ZTIenT" Ids="MX0l0kHkqy3NWJaEorZl9R,PmavNVI83wGLIytx2IOSuz" />
-          <Patch Id="HHheGkFytYCMvaiUb5GrrB" Name="SetWidgetVerticalAlignment (Internal)">
-            <Pin Id="U7BLV9ZwJxdPtkGFdb1Qov" MergeId="971337" Name="Widget Vertical Alignment" Kind="InputPin" Visibility="Optional" />
+          <Patch Id="HHheGkFytYCMvaiUb5GrrB" Name="SetWidgetsSelfAlignment (Internal)">
+            <Pin Id="U7BLV9ZwJxdPtkGFdb1Qov" MergeId="971337" Name="Widgets Self Alignment" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <Link Id="IamLDxbqBweL7GWxc3Mj9m" Ids="U7BLV9ZwJxdPtkGFdb1Qov,NuCIAxzbOLmNSWkQVjWs1M" IsHidden="true" />
           <Link Id="NkZaeYp7XfvPAZRNNDzNFc" Ids="Puljj5SplbtO4diVXtO7Lu,GRtSFpbrg3DMeSxAKx9Gf1" />
@@ -799,10 +807,10 @@
               <Pin Id="SOJZRDrZKkmPOBK9O8ynx9" Name="Anchor" Kind="InputPin" />
               <Pin Id="Rp3MyGmmwGnPFYmiqmmm33" Name="Auto Size" Kind="InputPin" />
               <Pin Id="SHBYWNCkzv9Pgsma6iFtJr" Name="Margin" Kind="InputPin" />
-              <Pin Id="EKg3zLXMoTYMqgMyMp2wrG" Name="Widget Vertical Alignment" Kind="InputPin" />
+              <Pin Id="EKg3zLXMoTYMqgMyMp2wrG" Name="Widgets Self Alignment" Kind="InputPin" />
               <Pin Id="Jgv4X5rxLquO09MwjhkQbp" Name="Alignment Within Bounds Enabled" Kind="InputPin" />
               <Pin Id="COyet1LW01FQSJTZ8AnoRl" Name="Alignment Within Bounds" Kind="InputPin" />
-              <Pin Id="F7VhG4bk6LnMtbYOyEExCW" Name="Padding" Kind="InputPin" />
+              <Pin Id="F7VhG4bk6LnMtbYOyEExCW" Name="Padding String" Kind="InputPin" />
               <Pin Id="VzwRxMKSDk3PNYYyHFgZgq" Name="Clip Elementa Layer" Kind="InputPin" />
               <Pin Id="D68oUAxZ4IvOFzBqaHYvMf" Name="Enable Helper" Kind="InputPin" />
               <Pin Id="TCWDMEycRHLQTajHd6w4OM" Name="Helper Color" Kind="InputPin" />
@@ -905,7 +913,7 @@
           <Link Id="SH2Iq0DDgsGO72bRzopb3B" Ids="LjjBY8Djh8ePq8zcIEir5V,Jgv4X5rxLquO09MwjhkQbp" />
           <Link Id="F7vNCuIwteSM87LgeiWFAF" Ids="PKBRE02XsYnPp3PiDQIPsD,COyet1LW01FQSJTZ8AnoRl" />
           <Patch Id="QfgtSOdBR1eLXdb7xSIPyR" Name="SetPadding (Internal)">
-            <Pin Id="UCj2AcJnclGMas3ptFKCK0" MergeId="286165" Name="Padding" Kind="InputPin" DefaultValue="" />
+            <Pin Id="UCj2AcJnclGMas3ptFKCK0" MergeId="286165" Name="Padding String" Kind="InputPin" DefaultValue="" />
           </Patch>
           <Patch Id="Qy3i047Lk3HLmXcJoo4lE4" Name="SetClipElementaLayer (Internal)">
             <Pin Id="LwSDo6uN6wMQOPQOvbee72" MergeId="286201" Name="Clip Elementa Layer" Kind="InputPin" Visibility="Optional">
@@ -936,8 +944,8 @@
           <Link Id="Hab55sp5gf8PmWBFbYyOJm" Ids="RLjXQ5nTszHN5J5FXENeIy,D68oUAxZ4IvOFzBqaHYvMf" />
           <Link Id="V4USfR2klcLMvsJe9HtUcY" Ids="F7XRMMFJGNINCEnYsTVOqi,TCWDMEycRHLQTajHd6w4OM" />
           <Link Id="UtWRM0Ue8lPOskcemJAOhi" Ids="BjOBTkZ1ayVQdh7yeDkYaS,CUWP7rTxRKSQc2fbpmoT6z" />
-          <Patch Id="G8hE5H9W39tPt8ACQFFZHB" Name="SetWidgetVerticalAlignment (Internal)">
-            <Pin Id="FuybesTpBgiPJwZh3NeFwc" MergeId="3205057" Name="Widget Vertical Alignment" Kind="InputPin" Visibility="Optional" />
+          <Patch Id="G8hE5H9W39tPt8ACQFFZHB" Name="SetWidgetsSelfAlignment (Internal)">
+            <Pin Id="FuybesTpBgiPJwZh3NeFwc" MergeId="3205057" Name="Widgets Self Alignment" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <Link Id="Se5T2AbR3ujNyrsvP3QlZa" Ids="FuybesTpBgiPJwZh3NeFwc,OrLeP1tNJCaMlWqwzyfAHs" IsHidden="true" />
           <Link Id="GSYEl7RlFrFMjISGJ6AxAB" Ids="OrLeP1tNJCaMlWqwzyfAHs,EKg3zLXMoTYMqgMyMp2wrG" />
@@ -985,6 +993,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="BbWhESOglSwQaJengdU6CW" Location="VL.Skia" Version="2021.3.0-0005-g87211fe9ae" />
+  <NugetDependency Id="BbWhESOglSwQaJengdU6CW" Location="VL.Skia" Version="2021.3.0-0003-g2d0532f332" />
   <DocumentDependency Id="J7PpVMRRQJOMYP3GlBBmue" Location="./VL.Elementa.Layout.vl" />
 </Document>

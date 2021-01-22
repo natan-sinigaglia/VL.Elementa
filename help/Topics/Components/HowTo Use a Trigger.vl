@@ -49,11 +49,6 @@
             <Pin Id="MKwvejgHb3pQP6ovPNUQdn" Name="Enabled" Kind="InputPin" />
             <Pin Id="AozdXF0J2DlODSisagOku1" Name="Output" Kind="OutputPin" />
             <Pin Id="O16HCvfEforLeoNUjay6v1" Name="Context" Kind="OutputPin" />
-            <Pin Id="R6ovJAtiwtnMulVIZM8qA9" Name="Alignment Within Canvas" Kind="InputPin" DefaultValue="Center">
-              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="RectangleAnchor" />
-              </p:TypeAnnotation>
-            </Pin>
           </Node>
           <Node Bounds="196,849,165,19" Id="MVSsgCHSwH1Qc6S8xsGbMP">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
@@ -113,6 +108,7 @@
               </CategoryReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="VgzJZESc4L7OhG6YMNn9A2" Name="Update" Kind="ApplyPin" />
             <Pin Id="D31SyuuLR0lQX54msfChw6" Name="Trigger Condition" Kind="InputPin" />
             <Pin Id="IGZFTDIQ0fYPp3OtDFOamr" Name="Output" Kind="OutputPin" />
@@ -134,12 +130,23 @@
             </p:NodeReference>
             <Pin Id="U6uD798IueuNVAkcq8OSlW" Name="Input" Kind="InputPin" />
             <Pin Id="LJZsZdADQ3qNxqPSJSJ9My" Name="Position" Kind="InputPin" />
+            <Pin Id="FT5nSdfskgJQKkRFqYtbNB" Name="Auto Size" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="Ubie0gtLkmROVrOT0E1WOv" Name="Margin" Kind="InputPin" DefaultValue="0.38">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="C4CponBLmNtPcnonhgRyqv" Name="Alignment Within Bounds" Kind="InputPin" DefaultValue="Center">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="RectangleAnchor" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="KXMw2B3vem9MfonQDcnJmx" Name="Padding String" Kind="InputPin" />
+            <Pin Id="Tmp62woRqM6LMEfxSSEHcQ" Name="Component" Kind="InputPin" />
             <Pin Id="FkzoYouUzZvNPYhjlToTOH" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="256,689,110,19" Id="Ezn3AmXuXuEQQygZ9dVrqv">
@@ -213,6 +220,7 @@
               </CategoryReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="Ke4G9oUICIQQZDVU3sHx72" Name="Update" Kind="ApplyPin" />
             <Pin Id="KAAO5uvcMbFOZjU6go7ljJ" Name="Trigger Condition" Kind="InputPin" />
             <Pin Id="HkCVjHAzbpqQOkpvFhQAJz" Name="Output" Kind="OutputPin" />
@@ -422,14 +430,22 @@
           </Pad>
           <ControlPoint Id="DcgcKQVtfm3LaQFD5MhTUc" Bounds="949,450" />
           <Overlay Id="A1BHF3QScOhPeutjBJ5pjy" Name="" Bounds="665,142,283,491" />
+          <Node Bounds="356,741,52,19" Id="J8tBcYgG2p3MvOLR7fjGzz">
+            <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Component.Layout.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Flexible" />
+            </p:NodeReference>
+            <Pin Id="Ehs3mS6lxiLOdbKXRuibwd" Name="Flexibility" Kind="InputPin" DefaultValue="1, 1">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="U2kxyDfYrkMPX1fbup6qLB" Name="Max Size" Kind="InputPin" />
+            <Pin Id="He9HydHa2eyQVaPKBOZ5wz" Name="Output" Kind="StateOutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="FgvSIwqHLC4NX7KIeeIgxI" Name="Create" />
         <Patch Id="HmuNBNKzHQcMpDsBJepYGt" Name="Update" />
-        <!--
-
-    ************************  ************************
-
--->
         <ProcessDefinition Id="KFA9LaCwhp6MhjBbCvJly9">
           <Fragment Id="EF6lDFLhOTnMa7tSSkxbLc" Patch="FgvSIwqHLC4NX7KIeeIgxI" Enabled="true" />
           <Fragment Id="CkGyCb9OjuXLAvWRuc0orS" Patch="HmuNBNKzHQcMpDsBJepYGt" Enabled="true" />
@@ -473,6 +489,7 @@
         <Link Id="Qfy4Gtc06u5LSelG0CR2iQ" Ids="DJ8Gwm6W8I1Of1hSlUQaDL,SbglHMfERzXM3DMBBkicSx" />
         <Link Id="HSUZTjAElk4OKbYHx6hva5" Ids="ONULrs61rozOM7h8BwSkwr,TLwcwVYB34DLf1KrYLPYp7" />
         <Link Id="PGh5jwi6UFyLrni1C5yhRR" Ids="Uy7yE9xgbOFPcUb1IvtIbF,DcgcKQVtfm3LaQFD5MhTUc,QClb14yoWuuOhIdoGLx4Kr" />
+        <Link Id="HtVLdRPjaFqN0gocFqBsfW" Ids="He9HydHa2eyQVaPKBOZ5wz,Tmp62woRqM6LMEfxSSEHcQ" />
       </Patch>
     </Node>
   </Patch>
