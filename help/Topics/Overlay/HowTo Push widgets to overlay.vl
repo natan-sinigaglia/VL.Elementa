@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="KFOVHMVmowtL24UWsg2r6c" LanguageVersion="2020.3.0.176" Version="0.128">
-  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2020.3.0-0176-gbd949ae240" />
+<Document xmlns:p="property" Id="KFOVHMVmowtL24UWsg2r6c" LanguageVersion="2021.3.0.3" Version="0.128">
+  <NugetDependency Id="GppMEmuWTWwNu1380AsTBu" Location="VL.CoreLib" Version="2021.3.0-0003-g2d0532f332" />
   <Patch Id="U2OktPJIft6LmRYDfHRaRo">
     <Canvas Id="OnAcnjd8HswONAJUfjLtjR" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -69,7 +69,8 @@
             <Pin Id="AYrvCTCkxknLvcjHF0vhlq" Name="Margin" Kind="InputPin" />
             <Pin Id="Cv89DgDoljMO0dKOTF4Zrw" Name="Widget Horizontal Alignment" Kind="InputPin" />
             <Pin Id="HyuZ7nUBBwPQRVQ8SV9TAH" Name="Alignment Within Bounds Enabled" Kind="InputPin" />
-            <Pin Id="SUuKHj8tLaSPobiOe4DAG6" Name="Padding String" Kind="InputPin" />
+            <Pin Id="DdhsWXqYe28PlDheBWplgt" Name="Alignment Within Bounds" Kind="InputPin" />
+            <Pin Id="LBR8JOiS27dNhvJ1ErlzSZ" Name="Padding" Kind="InputPin" />
             <Pin Id="PSfInpnsmACLPVOmbbwW6Q" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="43,233,85,19" Id="L2JCg90nTnfQKL9s47trsp">
@@ -165,7 +166,16 @@
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
                 </Pin>
-                <Pin Id="JumwOwOZIW7OkQ6Jwq2kWs" Name="Padding String" Kind="InputPin" />
+                <Pin Id="EvzkeA9L8mwLOhIwzcW7Gx" Name="Padding" Kind="InputPin" DefaultValue="0.1">
+                  <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                    <Choice Kind="TypeFlag" Name="Spread" />
+                    <p:TypeArguments>
+                      <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="TypeFlag" Name="Float32" />
+                      </TypeReference>
+                    </p:TypeArguments>
+                  </p:TypeAnnotation>
+                </Pin>
                 <Pin Id="AyOghOyaGy9N13J8fK2Jmg" Name="Clip Elementa Layer" Kind="InputPin" />
                 <Pin Id="Syg2BnaMxL3LiJFXRv8ZmQ" Name="Components" Kind="InputPin" />
                 <Pin Id="KxpqNkOSakVQVgzWWoFcrX" Name="Output" Kind="OutputPin" />
@@ -240,18 +250,6 @@
                 <Pin Id="KkjyywQCVnON9B0FAif74V" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="GE13juoVEs6MGKCWjeT8BV" Name="On Interaction" Kind="OutputPin" />
                 <Pin Id="PuyHrXp2zuUNOWUY8jU2Va" Name="Value" Kind="OutputPin" />
-              </Node>
-              <Node Bounds="341,631,80,19" Id="A9FKkWy11kKPHnUOD8cXPm">
-                <p:NodeReference LastCategoryFullName="VL.Elementa.Utils" LastSymbolSource="VL.Elementa.Utils.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="PaddingString (Join)" />
-                </p:NodeReference>
-                <Pin Id="OeQWCK2XcguLy0Adeyb3fe" Name="Padding Value" Kind="InputPin" DefaultValue="0.09999999">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                    <Choice Kind="TypeFlag" Name="Float32" />
-                  </p:TypeAnnotation>
-                </Pin>
-                <Pin Id="DmngzFAEfX4NT2Wnh66ARG" Name="Padding String" Kind="OutputPin" />
               </Node>
               <Node Bounds="266,414,52,19" Id="Ggu70FGBlCENWB3G6geNGP">
                 <p:NodeReference LastCategoryFullName="VL.Elementa.Component" LastSymbolSource="VL.Elementa.Component.Layout.vl">
@@ -503,7 +501,6 @@
         <Link Id="Mx1DBhNXiY1MSxy81nbRrU" Ids="BwdLRSzqqugM8IxShjNRm9,JWO9C2ATNm6MThmW14Ujax" IsHidden="true" />
         <Link Id="LyXRynI6kYYLraQJ00Bl6Y" Ids="FbRg2vNoWoXL1EvDiVEWoo,L43mHiqpKJfN3LSIp4dbLv" />
         <Link Id="CZieZYTm72EMOjVOz9QZYv" Ids="PCmwcAJvV5RNx2vCGUt3tT,DUS1iS6U4bjLmhWHekEgu6" />
-        <Link Id="UY4d8mRg2XUO2J0xs79C1d" Ids="DmngzFAEfX4NT2Wnh66ARG,JumwOwOZIW7OkQ6Jwq2kWs" />
         <Link Id="L2CILrTgYBaPwPzuXOUeNB" Ids="VPj2D8rhXhKPvsSjcYgAwj,PVp9u4yFmsOQZr1I2uQJBy" />
         <Link Id="MxQZiR8hGnlMfhF0MnSG9H" Ids="DouCxCJhpAWO1JZ0owEY8U,QjgIkU8P6bKNd1Fm0hSxfa" />
         <Link Id="JnCogsglsBDMWS5o4hEYOF" Ids="HszmKOX3VzgQCqAzPHgr1F,GUGleBzh9Z5Pmrz8FMsguC" />
@@ -536,6 +533,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2020.3.0-0176-gbd949ae240" />
+  <NugetDependency Id="BK19P87Va2DQHghawJyKCN" Location="VL.Skia" Version="2021.3.0-0003-g2d0532f332" />
   <NugetDependency Id="B1lG1b3psS5PIydkLSstWR" Location="VL.Elementa" Version="0.0.0.0" />
 </Document>

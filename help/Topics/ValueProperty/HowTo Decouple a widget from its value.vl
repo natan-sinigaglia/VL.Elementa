@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="UlaMs6dZi1bMtH1kcQ0xpV" LanguageVersion="2020.3.0.176" Version="0.128">
-  <NugetDependency Id="R36Di7Wo9TBNCveoakw0SN" Location="VL.CoreLib" Version="2020.3.0-0176-gbd949ae240" />
+<Document xmlns:p="property" Id="UlaMs6dZi1bMtH1kcQ0xpV" LanguageVersion="2021.3.0.3" Version="0.128">
+  <NugetDependency Id="R36Di7Wo9TBNCveoakw0SN" Location="VL.CoreLib" Version="2021.3.0-0003-g2d0532f332" />
   <Patch Id="R51KCmB286qPISxbbmH5pB">
     <Canvas Id="QKUsJOlImlkMLaEPjNumIC" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -111,8 +111,8 @@
             <Pin Id="IUqVHv7HLVtQIKw4SyD8rf" Name="Size" Kind="InputPin" />
             <Pin Id="EWJewFROPhKMaySdsUM7OU" Name="Entries" Kind="InputPin" />
             <Pin Id="BFncjrYNzpWMILluX3zxeY" Name="Entries Label" Kind="InputPin" />
-            <Pin Id="L2i8woXvWEAQGOVJXrYqjB" Name="Component" Kind="InputPin" />
             <Pin Id="QT3b4E7lQ31MqDYhdCMadu" Name="Value" Kind="InputPin" />
+            <Pin Id="L2i8woXvWEAQGOVJXrYqjB" Name="Component" Kind="InputPin" />
             <Pin Id="DPmczspZP57LJrucrZ6bHU" Name="Update" Kind="InputPin" />
             <Pin Id="MlkAvFMmcp2LSw5wOeWsWi" Name="Output" Kind="StateOutputPin" />
             <Pin Id="HWqTb3uOJmkLqZJauaHVOX" Name="On Interaction" Kind="OutputPin" />
@@ -380,7 +380,7 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="UWRyLkWfY6yNORJzkpRu3q" Name="Padding String" Kind="InputPin" />
+            <Pin Id="RYel4Kn4MVKNkhyuaLcXSE" Name="Padding" Kind="InputPin" />
             <Pin Id="FGonUdPV8dsO5uLyS01R5X" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="48,637,165,19" Id="C8H1WQ5GAgsLoTR2TKaM3U">
@@ -397,7 +397,16 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="MKGcDQIcCHqNXVYElrWTC2" Name="Padding String" Kind="InputPin" />
+            <Pin Id="CwNBJoyAU2ELfzhaJQezVQ" Name="Padding" Kind="InputPin" DefaultValue="0.1">
+              <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments>
+                  <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="BoFvQpKdyafQQsL9rKVVuY" Name="Output" Kind="OutputPin" />
             <Pin Id="Njmt5130x8SMkXfdfAfD8p" Name="Graph Version" Kind="OutputPin" />
             <Pin Id="FOvMyFb7ZI9LYVi5UAb2Vz" Name="Layout Version" Kind="OutputPin" />
@@ -416,7 +425,7 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="OUHvBKE6cccMX9T2AAVXWO" Name="Padding String" Kind="InputPin" />
+            <Pin Id="IPnnEG1jz3zPNuKAzDPTek" Name="Padding" Kind="InputPin" />
             <Pin Id="AUNfGuBk42pQRCb3RYsrGk" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="505,505,125,19" Id="UuMaBSyHyjdN13nFMxV5xh">
@@ -433,7 +442,7 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="RNVZvWhc6TUPRT6d2vcED6" Name="Padding String" Kind="InputPin" />
+            <Pin Id="ON5l6BLwCdrO24TrCCaUfr" Name="Padding" Kind="InputPin" />
             <Pin Id="KcEhflqX2pBMPiO2bj4DIq" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="734,504,125,19" Id="KcSh7ASIAp9PLBtBijG2Uc">
@@ -450,7 +459,7 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="Qan01QbcJ6BMfycubFsbuU" Name="Padding String" Kind="InputPin" />
+            <Pin Id="ABbzjr9lQa5MZxbXjBTR2z" Name="Padding" Kind="InputPin" />
             <Pin Id="EBZd1jiaiZAMJ79vilxagM" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="894,243,57,19" Id="QdyGSb6ARBJLfM84rwfOfZ">
@@ -471,18 +480,6 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="208,599,80,19" Id="NdDfn76FcGTPWiLUqamrmJ">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Utils" LastSymbolSource="VL.Elementa.Utils.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="PaddingString (Join)" />
-            </p:NodeReference>
-            <Pin Id="FP0Y8gebk8nNVhXuJxdIVJ" Name="Padding Value" Kind="InputPin" DefaultValue="0.2">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Float32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="Ghl3HsmvC4KMifdyUA8CZT" Name="Padding String" Kind="OutputPin" />
-          </Node>
           <Node Bounds="48,557,691,19" Id="Fxlv7xrhNRvPkUNm4gHK73">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -570,7 +567,6 @@
         <Link Id="T7FNvNTXlXHOYYApBYQTaV" Ids="CduFSa2LQ2kMEDyFNbUH94,Nw9vVu9M4UZMGXxHRvUQlJ" />
         <Link Id="RLh9O6ZMwKkMaeRzpaj4NH" Ids="CduFSa2LQ2kMEDyFNbUH94,IJIno6wztkwM5iSKKmqBcG" />
         <Link Id="JdH2fCgFu2nOhB5P9XsIw9" Ids="A1aPZqsItGiLwaFSPOzRhA,EXQlupR9obONykQ31cUuFH" />
-        <Link Id="D6oSZV1sFn3OwaenU04zFP" Ids="Ghl3HsmvC4KMifdyUA8CZT,MKGcDQIcCHqNXVYElrWTC2" />
         <Link Id="R6ljRsWWn4sOXz8XJhui8G" Ids="Gmhm50qk2AxPVPbwTYuKjN,CnvXcfKwr5MOA8yrp2qOKT" />
         <Link Id="P5mmtUHec0FLxb0UOtbraE" Ids="AUNfGuBk42pQRCb3RYsrGk,OHWWRRNTmJlM70zIAjTTWA" />
         <Link Id="A16NfeLZ9tLNbrWBi2Xqzx" Ids="KcEhflqX2pBMPiO2bj4DIq,UWYc7NhHuCXOSiomiTlk6p" />
@@ -597,6 +593,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="F1F0O0fct3xOgPIB1ZaNYG" Location="VL.Skia" Version="2020.3.0-0176-gbd949ae240" />
+  <NugetDependency Id="F1F0O0fct3xOgPIB1ZaNYG" Location="VL.Skia" Version="2021.3.0-0003-g2d0532f332" />
   <NugetDependency Id="P3Af7Lng9Y3OyhZOEDFwOz" Location="VL.Elementa" Version="0.0.0.0" />
 </Document>
