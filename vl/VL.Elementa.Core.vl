@@ -6161,6 +6161,7 @@
                   <Choice Kind="OperationCallFlag" Name="Split" />
                 </p:NodeReference>
                 <Pin Id="AGxqPvx7L53NvJE6e3eIIn" Name="Input" Kind="StateInputPin" />
+                <Pin Id="DtjBC37tUW9NwvXZAWc8XW" Name="Client Area In Pixel" Kind="InputPin" />
                 <Pin Id="LEaufcG10nGL50VgzrOOj9" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="DhQXnNaFj8gOs74VkziJhl" Name="Viewport Bounds In Pixel" Kind="OutputPin" />
                 <Pin Id="KuGowekApEpLcHnd86Y7fx" Name="Viewport Bounds In World Space" Kind="OutputPin" />
@@ -6308,12 +6309,12 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="FilterNotification" />
                 </p:NodeReference>
-                <Pin Id="KyU4FKlmXobQROwGh85zeo" Name="Caller" Kind="InputPin" />
                 <Pin Id="Fm4xYhpubBeNNuZ0utZsGY" Name="Notification" Kind="InputPin" />
+                <Pin Id="KyU4FKlmXobQROwGh85zeo" Name="Caller" Kind="InputPin" />
                 <Pin Id="I04NxoDo2f7LQWDqcnvQxf" Name="Clipping Bounds" Kind="InputPin" />
                 <Pin Id="RncwvHx54A7POwprRXFOIT" Name="Propagate" Kind="OutputPin" />
               </Node>
-              <ControlPoint Id="H0y4G4ZwvQaPFVzhvLXEVE" Bounds="908,631,-120,0" />
+              <ControlPoint Id="H0y4G4ZwvQaPFVzhvLXEVE" Bounds="947,601,-120,0" />
               <!--
 
     ************************ Commands (Internal) ************************
@@ -6693,6 +6694,19 @@
                 <ControlPoint Id="Qs55fOBtEEYNAZ1THsisAc" Bounds="1051,794" Alignment="Bottom" />
                 <ControlPoint Id="OGa4M2fNa6MOEQDXNXRd6F" Bounds="1051,726" Alignment="Top" />
               </Node>
+              <ControlPoint Id="RQDu9kxr7QDNJBfECNKGOZ" Bounds="1886,247" />
+              <Node Bounds="996,523,156,26" Id="QV3MieUdpW5QODvgrXMLpW">
+                <p:NodeReference LastCategoryFullName="Main.ViewportData" LastSymbolSource="VL.Elementa.ToSkia.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="GetNotificationClippingBounds" />
+                </p:NodeReference>
+                <Pin Id="M8XKRC4tqvjQE9tD3nA3I3" Name="Input" Kind="StateInputPin" />
+                <Pin Id="OpQepNPb8CoOkoEZk5DWbF" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="RnV0FQ2VWQfOmhIpAOOjQ0" Name="Notification Clipping Bounds" Kind="OutputPin" />
+              </Node>
+              <Pad Id="M8KZoUbp3EELXHrG7CdkKI" SlotId="RGkYVX6Rr6XOqsCDP6Vsq3" Bounds="1061,499" />
+              <Pad Id="OXpYLPsSMMnMZUU9Jd1s1o" Comment="Propagate" Bounds="784,650,35,35" ShowValueBox="true" isIOBox="true" />
+              <Pad Id="KXEN9V44M2hPV7WSfvSzuJ" Comment="Notification Clipping Bounds" Bounds="1322,575,220,220" ShowValueBox="true" isIOBox="true" />
             </Canvas>
             <Patch Id="UNXdg6AgU4pLMKhmlrPyDh" Name="Create (Advanced)" ParticipatingElements="UeYsPJGfc47NTL1dFx134N,NsYRNQeDy1nPvciI5vciCC,Fd88wsDyuvIMM6wGV3pqVz,BX5X6Fe4muSM3Y8b8kOnHP,OIJBL96AV8tLdOJDtrV12i,JE94p1tecBbMKZUwSKpltn,Q67blQdzZpDMhI2Axwdmig">
               <Pin Id="LvY16vlTIiZMWlISfA541m" Name="Manager" Kind="InputPin" />
@@ -6723,7 +6737,7 @@
               <Pin Id="Pyx7w0rfiAOPtiZeqxk9Ks" Name="Global State" Kind="OutputPin" />
             </Patch>
             <Link Id="JE94p1tecBbMKZUwSKpltn" Ids="TWHPBa0r5csMSn5Zzbw84P,J10y1ShbbGsPlQtBJYZiCm" />
-            <Slot Id="RGkYVX6Rr6XOqsCDP6Vsq3" Name="Client Bounds">
+            <Slot Id="RGkYVX6Rr6XOqsCDP6Vsq3" Name="ViewportData">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="ViewportData" />
                 <CategoryReference Kind="Category" Name="Main" NeedsToBeDirectParent="true" />
@@ -6739,7 +6753,7 @@
               <Pin Id="Lj9miy8lDzEOPLwc28SARY" Name="Viewport Size In World Space" Kind="OutputPin" />
               <Pin Id="Fn7Ctu0XAubNYFJbw7KgjD" Name="Client Area In Pixel" Kind="OutputPin" />
             </Patch>
-            <Patch Id="G2a4aOu6dQpPlw2AtYBULO" Name="SetClientBounds (Advanced)">
+            <Patch Id="G2a4aOu6dQpPlw2AtYBULO" Name="SetViewportData (Advanced)">
               <Pin Id="LgBMBEDaaTjODt7PLk3LDT" Name="Client Bounds" Kind="InputPin" />
             </Patch>
             <Link Id="LrxS2XcbvMfMpt51PWAgnm" Ids="GLxrjF8ds2RQErs1ZIhXej,EzVIoohln4vLm5pKz5LGbb" />
@@ -6909,6 +6923,7 @@
               <Fragment Id="PBpBPqMSPYNOekTdANf89g" Patch="CEqxVON3P9xLeBbOrouxCv" />
               <Fragment Id="ErrA6qae4e3N7kOzueHXdK" Patch="LXz5gpJu1o9QUTVQ5d4zQO" Enabled="true" />
               <Fragment Id="DTxOdnf7oRMLQ5LAlqRRzd" Patch="Ev7idqHTv4kPI2WmZjeQpn" />
+              <Fragment Id="D58m8cwu8FNMGFnuFveTIP" Patch="ODmDVtipvbRMH1WPv0F1vc" />
             </ProcessDefinition>
             <Link Id="UwGYFd9XpYYLQi2zpmNob9" Ids="UIDzvUIEQ1VOUGRxTOSvHs,H0y4G4ZwvQaPFVzhvLXEVE" IsHidden="true" />
             <Link Id="U2BOIkjLcWuND3WOiz11Fu" Ids="H0y4G4ZwvQaPFVzhvLXEVE,KyU4FKlmXobQROwGh85zeo" />
@@ -6923,6 +6938,15 @@
             <Link Id="TKtzVhhhSRyNyRlFaS1D08" Ids="OGa4M2fNa6MOEQDXNXRd6F,Qs55fOBtEEYNAZ1THsisAc" IsFeedback="true" />
             <Link Id="VPaUkjU6aHYLr25NpNbu8x" Ids="M9cRDXQLqvzLXgsVg5oaVL,Qs55fOBtEEYNAZ1THsisAc" />
             <Link Id="MmsJ1nnxe52LgyilemytKq" Ids="Qs55fOBtEEYNAZ1THsisAc,JLuo62NPNMROokLQPr7flF" />
+            <Link Id="DExGU2PcUGvL38miYJ5azI" Ids="Ha03I0IDwVCPlUeJXdgBed,RQDu9kxr7QDNJBfECNKGOZ" />
+            <Link Id="TWnmYJFIlDMNbVDYZbudYZ" Ids="RQDu9kxr7QDNJBfECNKGOZ,GlWFJzZ5b8sMvNTedqVTP5" IsHidden="true" />
+            <Patch Id="ODmDVtipvbRMH1WPv0F1vc" Name="GetViewportData (Advanced)">
+              <Pin Id="GlWFJzZ5b8sMvNTedqVTP5" Name="ViewportData" Kind="OutputPin" />
+            </Patch>
+            <Link Id="NHD33WaChXjL18bZ5oVOkr" Ids="M8KZoUbp3EELXHrG7CdkKI,M8XKRC4tqvjQE9tD3nA3I3" />
+            <Link Id="KuVNlR4912hPiknzjyH7Tb" Ids="RnV0FQ2VWQfOmhIpAOOjQ0,I04NxoDo2f7LQWDqcnvQxf" />
+            <Link Id="A8zcV141SGZLWGLCUQgXsg" Ids="RncwvHx54A7POwprRXFOIT,OXpYLPsSMMnMZUU9Jd1s1o" />
+            <Link Id="TZ88xTytDv7MPYjSskZv8J" Ids="RnV0FQ2VWQfOmhIpAOOjQ0,KXEN9V44M2hPV7WSfvSzuJ" />
           </Patch>
         </Node>
         <!--
