@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="F5mF1O3FVTPLEbIh0SD9PO" LanguageVersion="2020.3.0.175" Version="0.128">
-  <NugetDependency Id="NwHIRyNdxrwNZtbd3dDPGo" Location="VL.CoreLib" Version="2020.3.0-0175-g22af060d72" />
+<Document xmlns:p="property" Id="F5mF1O3FVTPLEbIh0SD9PO" LanguageVersion="2021.3.0.3" Version="0.128">
+  <NugetDependency Id="NwHIRyNdxrwNZtbd3dDPGo" Location="VL.CoreLib" Version="2021.3.0-0003-g2d0532f332" />
   <Patch Id="Qq8fkcqBsQgMogHums79ce">
     <Canvas Id="MUJPaSMWDiuMOHWtW1kDI7" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -918,9 +918,14 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="CHvv4NETKTALp9w5woLwnw" Name="Widget Vertical Alignment" Kind="InputPin" />
-            <Pin Id="EEX0vuUcLoOOVFOZt5St9E" Name="Columns Padding String" Kind="InputPin" DefaultValue=".1">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
+            <Pin Id="EEX0vuUcLoOOVFOZt5St9E" Name="Columns Padding String" Kind="InputPin" DefaultValue="0.2">
+              <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments>
+                  <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </TypeReference>
+                </p:TypeArguments>
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="FNsQzCDzfPLODrOquNo8kL" Name="Column Width" Kind="InputPin" />
@@ -931,10 +936,17 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="QkSwW5ArXkpQL2ZntEdMKH" Name="Bounds Padding String" Kind="InputPin" DefaultValue="0.2">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
+              <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments>
+                  <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </TypeReference>
+                </p:TypeArguments>
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="PDbKC4Yg9RyPvFRAVfqiJU" Name="Bounds Padding" Kind="InputPin" />
+            <Pin Id="CrZJKAkIZcfNHtJ3fccalD" Name="Columns Padding" Kind="InputPin" />
             <Pin Id="TmSpr4Syl1NNAz8vil2qvJ" Name="Output" Kind="OutputPin" />
             <Pin Id="NK2FeGDPpn8OyQOWuaSkIR" Name="Graph Version" Kind="OutputPin" />
             <Pin Id="DYV6FIDa5gJPW4TJqd5hQk" Name="Layout Version" Kind="OutputPin" />
@@ -1135,18 +1147,6 @@
             <Pin Id="LdURZFSK1GUM98p71Z9WrW" Name="Spacing" Kind="InputPin" />
             <Pin Id="TmHygJaH5ZUPuC7dr2ax8O" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="292,717,80,19" Id="U3DLHKPpjAYOsdPqDWrGWu">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Utils" LastSymbolSource="VL.Elementa.Utils.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="PaddingString (Join)" />
-            </p:NodeReference>
-            <Pin Id="KsibRkHWPATPbCm2gwmFf1" Name="Padding Value" Kind="InputPin" DefaultValue="0.2">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Float32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RvopHw6raaPPtWNONn3Dwc" Name="Padding String" Kind="OutputPin" />
-          </Node>
           <Node Bounds="7765,-227,165,19" Id="QAR0QndPU3vOudqKsSXiLg">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Layout.Stack.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1161,10 +1161,11 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="N5ILytYOTfJP9QwkK8TJaN" Name="Padding String" Kind="InputPin" />
+            <Pin Id="QICIgUoHN68PaEhoOjT7ey" Name="Padding" Kind="InputPin" />
             <Pin Id="OMb1HfHQIHqP4nmtmaL6JF" Name="Output" Kind="OutputPin" />
             <Pin Id="C78NAauj3J2MdTNI5cuxDf" Name="Graph Version" Kind="OutputPin" />
             <Pin Id="VDsiI3oMT0qP3PiFf8wnhJ" Name="Layout Version" Kind="OutputPin" />
+            <Pin Id="N5ILytYOTfJP9QwkK8TJaN" Name="Padding String" Kind="InputPin" />
           </Node>
           <Node Bounds="7765,-368,45,19" Id="QNNMGpNzDr4Ozl7UQjvPqz">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Widget" LastSymbolSource="VL.Elementa.Widget.Slider.vl">
@@ -1988,7 +1989,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="TfuAoiKUwLkPyxBKpZhhs6" Name="Bounds" Kind="InputPin" DefaultValue="752, 1782, 1549, 795">
+            <Pin Id="TfuAoiKUwLkPyxBKpZhhs6" Name="Bounds" Kind="InputPin" DefaultValue="186, 123, 1664, 795">
               <p:TypeAnnotation LastCategoryFullName="System.Windows" LastSymbolSource="VL.CoreLib.Windows.vl">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -2364,8 +2365,9 @@
             <Pin Id="S4EETkVs2d7MdapsW9YrK8" Name="Input" Kind="InputPin" />
             <Pin Id="OmPldKiNs3ROShNxLddAbd" Name="Position" Kind="InputPin" />
             <Pin Id="EFb3lq52L84L8mTs6lDSpv" Name="Margin" Kind="InputPin" />
-            <Pin Id="SVeO8GdEKNFNgn0Wr1kH5Y" Name="Padding String" Kind="InputPin" />
+            <Pin Id="L9CVTEGNqQAOqYNIbjlM8P" Name="Padding" Kind="InputPin" />
             <Pin Id="AC19FWP2ZjvNqcl2ERyBRM" Name="Output" Kind="OutputPin" />
+            <Pin Id="SVeO8GdEKNFNgn0Wr1kH5Y" Name="Padding String" Kind="InputPin" />
           </Node>
           <Pad Id="Hj7wayM2J9MO3NAYTUnJkl" Comment="Margin" Bounds="8039,267,35,15" ShowValueBox="true" isIOBox="true" Value="0.05">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -2478,7 +2480,6 @@
         <Link Id="Cp7vv8SAVMpNnI8PqfC6rf" Ids="PTHm3np5VeAQSCqKVItlqt,LDL9vRGKUwoM35IlSACiy5" />
         <Link Id="JEzWJG1thN7LLYe96xYO5J" Ids="CqtG9ACyTI7OoaOONvR7sh,PELQuSJn9PeNfwceK3xAfP" />
         <Link Id="BgPmI2Fv6Z2M8WLBwlXClz" Ids="NKBgEcJPC4WQBpV1uBZeBw,BriPtkwrxnnLbc1euw3OHo" />
-        <Link Id="UUVPFuQ0BQCP7HbokVIuw0" Ids="RvopHw6raaPPtWNONn3Dwc,QkSwW5ArXkpQL2ZntEdMKH" />
         <Link Id="CpHwE9HEbyNOZpxQ209wMB" Ids="VlRXwGZ2FnmO2HgVS3hlUa,G5vjvn6btaiQbz2fQQcL4s" />
         <Link Id="C3Lht3A1x3BLMweu2PsCtb" Ids="JDxFUWfkQvRNwvU3j1Bm8d,Q2ooCtuUBAmLn1vIpYiV0d" />
         <Link Id="O3WgnEHP6EvMsmyJKYUgff" Ids="BVfUW9oYDz6OG4gqUU1iO5,PmEMh7MEkyXLS5xLNDSO57" />
@@ -2642,7 +2643,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="RfYigjkHiIpPU1SW9G9bRg" Location="VL.Skia" Version="2020.3.0-0175-g22af060d72" />
+  <NugetDependency Id="RfYigjkHiIpPU1SW9G9bRg" Location="VL.Skia" Version="2021.3.0-0003-g2d0532f332" />
   <NugetDependency Id="AKtjOKG8sWAQGNSxr6X6nL" Location="VL.Elementa" Version="3.0.0-beta" />
   <PlatformDependency Id="KjIhSUcD56wMVV8jbOaOq0" Location="System.IO" />
 </Document>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="KmSxdTXbesoQNurMYAooyr" LanguageVersion="2020.3.0.125" Version="0.128">
-  <NugetDependency Id="GGubXYBsV59PdnIv02pLZu" Location="VL.CoreLib" Version="2020.3.0-0125-gaf5344c6f5" />
+<Document xmlns:p="property" Id="KmSxdTXbesoQNurMYAooyr" LanguageVersion="2021.3.0.3" Version="0.128">
+  <NugetDependency Id="GGubXYBsV59PdnIv02pLZu" Location="VL.CoreLib" Version="2021.3.0-0003-g2d0532f332" />
   <Patch Id="AUqcB3ymyVaOa41bPQJlon">
     <Canvas Id="VJb5aNaqTaAPfDfE3rxTje" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="Qm1cZGJmaxcNWn0QGWoQNJ">
         <Canvas Id="VeHWMh15dWQMSqJ0R1Xyfp" CanvasType="Group">
-          <Node Bounds="91,425,-9,19" Id="OHvB79kSgSgLc4LM3IxPlR">
+          <Node Bounds="91,425,22,19" Id="OHvB79kSgSgLc4LM3IxPlR">
             <p:NodeReference LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Layout.Distribute.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Layout" NeedsToBeDirectParent="true">
@@ -28,7 +28,8 @@
             <Pin Id="RTZg5rQFIvIPolHBC2VSTh" Name="Position" Kind="InputPin" />
             <Pin Id="U0PPKPkUGm5OAKHgyrFZhs" Name="Size" Kind="InputPin" />
             <Pin Id="D75uSYKXUrlLs4Ch54u5rn" Name="Margin" Kind="InputPin" />
-            <Pin Id="OjFU0piYlOML5bXdC7Kwtv" Name="Padding String" Kind="InputPin" />
+            <Pin Id="AuD18KRoe4pOt0ooWzKuz5" Name="Padding" Kind="InputPin" />
+            <Pin Id="E4UdZMJIDCrLcZRydtjlf7" Name="Enable Content Bounds Helper" Kind="InputPin" />
             <Pin Id="T0gydTKknyyMQswlUDxfu0" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="CyWIeAldnXxNxTRVOChPwV" Bounds="27,86,297,51" ShowValueBox="true" isIOBox="true" Value="DistributeY distributes its children evenly on the Y axis.">
@@ -141,11 +142,6 @@
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="NxJk9KknHNCPjWttX9lLVb" Comment="Padding String" Bounds="173,408,35,15" ShowValueBox="true" isIOBox="true" Value="">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-          </Pad>
           <Overlay Id="KE4sdY8kynrQZsajK6ZEwj" Name="Basic usage" Bounds="35,140,427,405" />
           <Pad Id="TsDnlIHQocyLOwkg3Hso0x" Bounds="216,300,186,19" ShowValueBox="true" isIOBox="true" Value="Sets the position of the group">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -165,8 +161,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="EfDMw80BRiIOCD1OzzOY4G" Bounds="226,431,129,56" ShowValueBox="true" isIOBox="true" Value="Applies a padding inside the group. Must be used with">
-            <p:TypeAnnotation>
+          <Pad Id="EfDMw80BRiIOCD1OzzOY4G" Bounds="217,411,130,38" ShowValueBox="true" isIOBox="true" Value="Applies a padding inside the group.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -174,14 +170,6 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="238,485,80,19" Id="LfQH0SO36IONiz9YWset5L">
-            <p:NodeReference LastCategoryFullName="VL.Elementa.Utils" LastSymbolSource="VL.Elementa.Utils.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="PaddingString (Join)" />
-            </p:NodeReference>
-            <Pin Id="O6Vv4QlHLnMOji62rmImwc" Name="Padding Value" Kind="InputPin" />
-            <Pin Id="Clc3x9WOt3zOA5Z6aXfnat" Name="Padding String" Kind="OutputPin" />
-          </Node>
           <Pad Id="HmFJ6knE10KNfmLGHPqk72" Bounds="29,563,414,119" ShowValueBox="true" isIOBox="true" Value="A few things are done by default here :&#xD;&#xA;&#xD;&#xA;- The anchor of the stack is at its top left corner&#xD;&#xA;- All widgets are vertically aligned to the left&#xD;&#xA;&#xD;&#xA;Those settings can be tweaked with optional pins.&#xD;&#xA;">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
@@ -224,10 +212,11 @@
                 <Choice Kind="TypeFlag" Name="RectangleAnchor" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="Dhrl1kUn8ERQLZLhW91g3U" Name="Padding String" Kind="InputPin" />
+            <Pin Id="KYRH8YncfwfOfV0lXs9Qvd" Name="Padding" Kind="InputPin" />
             <Pin Id="DXfN3DVeOLkLYQS8QGbn1m" Name="Clip Elementa Layer" Kind="InputPin" />
             <Pin Id="C6XI3l6GOe8LmJyHwdMgGL" Name="Enable Helper" Kind="InputPin" />
             <Pin Id="AkWfPbuVrnTMGkGelsvxsC" Name="Helper Color" Kind="InputPin" />
+            <Pin Id="EjQiQzBJyEhPMlW4cRk8XP" Name="Enable Content Bounds Helper" Kind="InputPin" />
             <Pin Id="MJpPvhZl1MIMlpGznL7YFl" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="539,273,158,19" Id="A2btPBxi028OkHg5eQfieb">
@@ -374,7 +363,7 @@
             <Pin Id="JoxSOP60h6QNgLKGThAFbJ" Name="Position" Kind="InputPin" />
             <Pin Id="Sbfdha9wMiROXd1uLbKdMx" Name="Size" Kind="InputPin" />
             <Pin Id="A0dGoyV8mjCN0j9laygjD7" Name="Margin" Kind="InputPin" />
-            <Pin Id="EptfcgLE67ANaPSCWzh0U3" Name="Padding String" Kind="InputPin" />
+            <Pin Id="EL4AeFWO3S5O7GlOpFHXcU" Name="Padding" Kind="InputPin" />
             <Pin Id="QI2RRYvNYKtNgRL1xV5tBb" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="NUsQxNJEDyWLq0RjLAj1e7" Bounds="39,712,396,114" ShowValueBox="true" isIOBox="true" Value="Note that Layout nodes can also use components! Simply press CTRL/+ to add Component inputs.&#xD;&#xA;&#xD;&#xA;Also, the node comes with a Spectral version that takes a spread of components instead of a pingroup (via a hidden pin). This is only useful for advanced scenarios.">
@@ -425,6 +414,16 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Pad Id="UVa77WZ4MoRQROTg8O3GCd" Comment="Padding" Bounds="173,387,35,34" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Float32" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+          </Pad>
         </Canvas>
         <Patch Id="HKuxaPU821WLkFPOSAVfa0" Name="Create" />
         <Patch Id="U6R7oHupWoLQSDtwyaWqFR" Name="Update" />
@@ -439,7 +438,6 @@
         <Link Id="EwiX5J6jIczOVRs3ewrras" Ids="T0gydTKknyyMQswlUDxfu0,BgRTLDGrv0EMnC9sgp00z0" />
         <Link Id="RRidyedmoHWNLXCQDc3BOy" Ids="Jwo93j61Kd6LcBmkBtGCEt,V6gfeVOGkPJO333tnKrRon" />
         <Link Id="E5apuf3PW06Oleb0CkqVT5" Ids="DV7QwXR8PoMMW7b6vXQRUf,RTZg5rQFIvIPolHBC2VSTh" />
-        <Link Id="MGE0CiaAHJjLKiOTwTzN9a" Ids="NxJk9KknHNCPjWttX9lLVb,OjFU0piYlOML5bXdC7Kwtv" />
         <Link Id="QJdvzbBRjaANpiC0jCCh4F" Ids="CsEaFRWcjZQNKt6WDAEd2g,VkKmCVdDdmGLBCET8KA0Z2" />
         <Link Id="P2Kc1PhKlGlNlfJqrsTH4t" Ids="C3Fs4hwh6zrNYUNSKex7gx,P9OSPvHEpOXPAKhtaJN4ox" />
         <Link Id="Ux9pxzENzJWPep1ort4xKI" Ids="AxZwuUOyryzMf539c9XCnk,IdWvwzgmxjfNuBhO2z2lqX" />
@@ -453,9 +451,10 @@
         <Link Id="Db3JtLPjRHaMp83StW60jm" Ids="KuKpo27vXtMNMAOkdoD8dh,DXfN3DVeOLkLYQS8QGbn1m" />
         <Link Id="B4nAGah6TWgQBPUGDCdoIc" Ids="VncgXrdhn3uOj9i3j5oqYP,RdNrCFBOhPiMtWmFGMLhgz" />
         <Link Id="Rd8pY0OmxLtPkl7t877c8L" Ids="HzUN3snGwjKQQT8vbnCRGx,SRYXxeD0nx5PHpKLnm36I3" />
+        <Link Id="DnbZHgLqamPNtU91tWeL1T" Ids="UVa77WZ4MoRQROTg8O3GCd,AuD18KRoe4pOt0ooWzKuz5" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="B73uWps1ILCNGfTcpYJYKr" Location="VL.Skia" Version="2020.3.0-0125-gaf5344c6f5" />
+  <NugetDependency Id="B73uWps1ILCNGfTcpYJYKr" Location="VL.Skia" Version="2021.3.0-0003-g2d0532f332" />
   <NugetDependency Id="NUX3kRxqunAMVSj3eIqR8w" Location="VL.Elementa" Version="0.0.0.0" />
 </Document>

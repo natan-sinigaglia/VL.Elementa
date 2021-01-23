@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="SrV45OhGbB2MNd9btzKhml" LanguageVersion="2020.3.0.176" Version="0.128">
-  <NugetDependency Id="MAUz1vniMLrPXB3K6APWL6" Location="VL.CoreLib" Version="2020.3.0-0176-gbd949ae240" />
+<Document xmlns:p="property" Id="SrV45OhGbB2MNd9btzKhml" LanguageVersion="2021.3.0.3" Version="0.128">
+  <NugetDependency Id="MAUz1vniMLrPXB3K6APWL6" Location="VL.CoreLib" Version="2021.3.0-0003-g2d0532f332" />
   <Patch Id="C4HtJRGizGQM9dTUeBIPFN">
     <Canvas Id="C2EVevNfvCYNd4pEBn4SGT" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="UEG3E9Oj49AMDRrT0huGXk">
         <Canvas Id="SvVFrEuM4VWQFItYlmvWtF" CanvasType="Group">
-          <Node Bounds="48,920,165,19" Id="K7npo2mXLfuQMr4h8ejVeb">
+          <Node Bounds="47,921,165,19" Id="K7npo2mXLfuQMr4h8ejVeb">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
@@ -52,7 +52,6 @@
             </p:NodeReference>
             <Pin Id="Hc202KnAl55PUEzINqhFgn" Name="Input" Kind="InputPin" />
             <Pin Id="PmgMhpPmuwMPaysltGgfbP" Name="Enabled" Kind="InputPin" />
-            <Pin Id="VtJprkXrtLVLvuqYImKaxt" Name="Root Components" Kind="InputPin" />
             <Pin Id="HRgFbT7z4isN87b3254W7A" Name="Output" Kind="OutputPin" />
             <Pin Id="BpMgiCpUMUQPJ93a40sPWc" Name="Context" Kind="OutputPin" />
           </Node>
@@ -83,7 +82,16 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="CwGYQJw37l5MMvge1IOOL2" Name="Padding String" Kind="InputPin" />
+            <Pin Id="FdGbklQgo84QYa7COq93AZ" Name="Padding" Kind="InputPin" DefaultValue="0.1">
+              <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                <Choice Kind="TypeFlag" Name="Spread" />
+                <p:TypeArguments>
+                  <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </TypeReference>
+                </p:TypeArguments>
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="GCJpBJMu3nHMybkSCgKWx8" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="87,812,289,19" Id="P5ooSEFWErpLrqgIUSOXs0">
@@ -122,7 +130,16 @@
               <Choice Kind="ProcessAppFlag" Name="Bang" />
             </p:NodeReference>
             <Pin Id="SWGJTGg4BfBPFytDx4XKyQ" Name="Position" Kind="InputPin" />
-            <Pin Id="KtHx9HvovECMPdlwpKL314" Name="Size" Kind="InputPin" />
+            <Pin Id="KtHx9HvovECMPdlwpKL314" Name="Size" Kind="InputPin" DefaultValue="1.36, 0.59">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="NI1jbYhnIInOIbwKOGc2Zd" Name="Display Text" Kind="InputPin" DefaultValue="Open first overlay">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="RNFG3PE8A55PoCGwR2qETi" Name="Value" Kind="InputPin" />
             <Pin Id="FPVzN7ylYz5NX7ISAOXC0z" Name="Output" Kind="OutputPin" />
             <Pin Id="BPeTOfnOLEHOxeAfSGkOwx" Name="On Interaction" Kind="OutputPin" />
@@ -142,7 +159,11 @@
               <Choice Kind="ProcessAppFlag" Name="TextField" />
             </p:NodeReference>
             <Pin Id="RyjMnxAbIR7PN9Eukjne9C" Name="Position" Kind="InputPin" />
-            <Pin Id="LvkTqmAh5l4PTT4pnD5iZS" Name="Size" Kind="InputPin" />
+            <Pin Id="LvkTqmAh5l4PTT4pnD5iZS" Name="Size" Kind="InputPin" DefaultValue="0.96, 0.25">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="BznAyBDZy0ZN4NMUuqEV7n" Name="Remove Empty Lines" Kind="InputPin" />
             <Pin Id="MKiN0ssAO7CN4CzzZhA8Gf" Name="Break at Words" Kind="InputPin" />
             <Pin Id="Hig9Zax88jpMlOSPolhb5Q" Name="Value" Kind="InputPin" />
@@ -161,6 +182,19 @@
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="PushToOverlay (Elementum)" />
             </p:NodeReference>
+            <Pin Id="GhjSWHUKZeXPWfdL3FF1gX" Name="Close On Click Outside" Kind="InputPin" />
+            <Pin Id="QI9g7NPpbEfLxNr7fuf4GR" Name="Position" Kind="InputPin" />
+            <Pin Id="MfsQpKQ15hQPAbqtXDzH5F" Name="Open Event" Kind="InputPin" />
+            <Pin Id="NErXm6YYUi0LRsREdiqIuo" Name="SetOpenEvent" Kind="InputPin" />
+            <Pin Id="GXzefoAeIeQQL576bgbTYI" Name="Close Event" Kind="InputPin" />
+            <Pin Id="UzXgNEcrDQ4QEum2G5dnpL" Name="SetCloseEvent" Kind="InputPin" />
+            <Pin Id="AJubtJpf52ZPG1crhqqBa3" Name="Close Overlays Before Opening New" Kind="InputPin" />
+            <Pin Id="DaII2tNC5kKMuajY6UQYuJ" Name="Block Background Notification" Kind="InputPin" />
+            <Pin Id="OYdwhlgXkYDP9ZmChR3Qn4" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="CUUkemX0Mz1PGjrCwfhCzw" Name="Overlay Active" Kind="OutputPin" />
+            <Pin Id="A4NCFeBfKvkQaec1Fya6ZS" Name="Context" Kind="OutputPin" />
+            <Pin Id="SlHhsc4D2EROxsrCzTHzy0" Name="Overlay" Kind="OutputPin" />
+            <Pin Id="APx8SlcYjHvPKYfQB8fm45" Name="Elementum" Kind="OutputPin" />
             <Patch Id="HzpZXLaCMn4NJmGbndI3qH" ManuallySortedPins="true">
               <ControlPoint Id="GPfCOh87CYrPZPDpIuqSkX" Bounds="314,691" />
               <Node Bounds="312,644,85,19" Id="CI4JyqCsPKYQRBAr0MeGPq">
@@ -174,7 +208,7 @@
                 <Pin Id="SWf9rd4HdYXNeSEMQcofVG" Name="Input" Kind="InputPin" />
                 <Pin Id="BQ3yNLgXh4SPR6UrWM88XE" Name="Position" Kind="InputPin" />
                 <Pin Id="UlEOQLTFCKuQI1AWMLhdKT" Name="Margin" Kind="InputPin" />
-                <Pin Id="AUXeh2hk71OPnJjyJosAuB" Name="Padding String" Kind="InputPin" />
+                <Pin Id="IFwedBDM8FzLYYbe6s4MPh" Name="Padding" Kind="InputPin" />
                 <Pin Id="FS0p9MRscDyQKL8o7BhIKC" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="312,607,407,19" Id="PHwGdu0BadfNPJqsV7pRt4">
@@ -221,7 +255,11 @@
                   <Choice Kind="ProcessAppFlag" Name="Bang" />
                 </p:NodeReference>
                 <Pin Id="HBQDbErcPrMMrMrBDewyUV" Name="Position" Kind="InputPin" />
-                <Pin Id="JUZk3f3tMh2NxRY4zE1mvt" Name="Size" Kind="InputPin" />
+                <Pin Id="JUZk3f3tMh2NxRY4zE1mvt" Name="Size" Kind="InputPin" DefaultValue="0.85, 0.25">
+                  <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </p:TypeAnnotation>
+                </Pin>
                 <Pin Id="NuZOgFbWKoMQJT0V05aFdH" Name="Display Text" Kind="InputPin" DefaultValue="Close">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="String" />
@@ -274,6 +312,17 @@
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="PushToOverlay (Elementum)" />
                 </p:NodeReference>
+                <Pin Id="FSNqI0TBopNNpvyRsIftNO" Name="Close On Click Outside" Kind="InputPin" />
+                <Pin Id="I1S490vt2l2QYmajFr90q8" Name="Position" Kind="InputPin" />
+                <Pin Id="GYaNQiVuinsLFNL7V8rckr" Name="Open Event" Kind="InputPin" />
+                <Pin Id="UOK4kavZDiZLCT1ju61mT1" Name="Close Event" Kind="InputPin" />
+                <Pin Id="Fs06NYm4p4wPZvr4StuGkJ" Name="Close Overlays Before Opening New" Kind="InputPin" />
+                <Pin Id="E5ywCoRiOndL8gFMT3MR9c" Name="Block Background Notification" Kind="InputPin" />
+                <Pin Id="JKE9ajK6Ve9OaYuhwKmw5F" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="M9jsFRFXPeJPmvFbbQYwBD" Name="Overlay Active" Kind="OutputPin" />
+                <Pin Id="S0KD89OIoI8OX3G2sDpDgA" Name="Context" Kind="OutputPin" />
+                <Pin Id="FzdOkaLKna8LVrn4OXHR7X" Name="Overlay" Kind="OutputPin" />
+                <Pin Id="D82Vm88PjD9Mjd9Ebqb2t3" Name="Elementum" Kind="OutputPin" />
                 <Patch Id="NvN5D3pp6HBOIpf6d4HqYx" ManuallySortedPins="true">
                   <ControlPoint Id="RT0pZVgAVkjQAYoqA3o3Gp" Bounds="728,560" />
                   <Node Bounds="726,490,85,19" Id="Avz0iZQ29sCMFwAthu335C">
@@ -287,7 +336,7 @@
                     <Pin Id="ACAQvZsY2YGMTdj9IiLXwF" Name="Input" Kind="InputPin" />
                     <Pin Id="JJSd4VdcZVCNdUPNiWZIGp" Name="Position" Kind="InputPin" />
                     <Pin Id="DAETglfg6zzQMHwkPBdbhL" Name="Margin" Kind="InputPin" />
-                    <Pin Id="CdF0Fbz70mLPo4pXnM0wx6" Name="Padding String" Kind="InputPin" />
+                    <Pin Id="Tz5A4eDdELKLtnZFiINiin" Name="Padding" Kind="InputPin" />
                     <Pin Id="PnljHIMSQXNM9HEYwHcPxp" Name="Output" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="726,452,45,19" Id="RM3ZmexlY8yOVhw8SAXJH6">
@@ -332,7 +381,11 @@
                       <Choice Kind="ProcessAppFlag" Name="Bang" />
                     </p:NodeReference>
                     <Pin Id="AJsEsgRY0p3MYngU3Xu3lx" Name="Position" Kind="InputPin" />
-                    <Pin Id="QCDIAATA6RVLsa1582GbZU" Name="Size" Kind="InputPin" />
+                    <Pin Id="QCDIAATA6RVLsa1582GbZU" Name="Size" Kind="InputPin" DefaultValue="0.85, 0.25">
+                      <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="TypeFlag" Name="Vector2" />
+                      </p:TypeAnnotation>
+                    </Pin>
                     <Pin Id="I73fi3gtIWfOVB7vrjwAm9" Name="Display Text" Kind="InputPin" DefaultValue="Close">
                       <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                         <Choice Kind="TypeFlag" Name="String" />
@@ -381,17 +434,6 @@
                     <Pin Id="BSltaMjOAYzQPPw8bczyOl" Name="Output" Kind="OutputPin" />
                   </Patch>
                 </Patch>
-                <Pin Id="FSNqI0TBopNNpvyRsIftNO" Name="Close On Click Outside" Kind="InputPin" />
-                <Pin Id="I1S490vt2l2QYmajFr90q8" Name="Position" Kind="InputPin" />
-                <Pin Id="GYaNQiVuinsLFNL7V8rckr" Name="Open Event" Kind="InputPin" />
-                <Pin Id="UOK4kavZDiZLCT1ju61mT1" Name="Close Event" Kind="InputPin" />
-                <Pin Id="Fs06NYm4p4wPZvr4StuGkJ" Name="Close Overlays Before Opening New" Kind="InputPin" />
-                <Pin Id="E5ywCoRiOndL8gFMT3MR9c" Name="Block Background Notification" Kind="InputPin" />
-                <Pin Id="JKE9ajK6Ve9OaYuhwKmw5F" Name="Output" Kind="StateOutputPin" />
-                <Pin Id="M9jsFRFXPeJPmvFbbQYwBD" Name="Overlay Active" Kind="OutputPin" />
-                <Pin Id="S0KD89OIoI8OX3G2sDpDgA" Name="Context" Kind="OutputPin" />
-                <Pin Id="FzdOkaLKna8LVrn4OXHR7X" Name="Overlay" Kind="OutputPin" />
-                <Pin Id="D82Vm88PjD9Mjd9Ebqb2t3" Name="Elementum" Kind="OutputPin" />
               </Node>
               <Pad Id="AvpLcbOBUQkL1IInlGveII" Comment="Position" Bounds="762,242,35,28" ShowValueBox="true" isIOBox="true" Value="2.26, 0">
                 <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
@@ -404,7 +446,11 @@
                   <Choice Kind="ProcessAppFlag" Name="Bang" />
                 </p:NodeReference>
                 <Pin Id="JCQ5WftRBstO3owR8UceDg" Name="Position" Kind="InputPin" />
-                <Pin Id="UipO1ymd51bQHu2xF5ZHD9" Name="Size" Kind="InputPin" />
+                <Pin Id="UipO1ymd51bQHu2xF5ZHD9" Name="Size" Kind="InputPin" DefaultValue="0.85, 0.25">
+                  <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Vector2" />
+                  </p:TypeAnnotation>
+                </Pin>
                 <Pin Id="LXOwfRohQgyNQfREVtZpDS" Name="Display Text" Kind="InputPin" DefaultValue="Open">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="String" />
@@ -438,19 +484,6 @@
                 <Pin Id="PgpRdidQMuePfku6C00YO6" Name="Output" Kind="StateOutputPin" />
               </Node>
             </Patch>
-            <Pin Id="GhjSWHUKZeXPWfdL3FF1gX" Name="Close On Click Outside" Kind="InputPin" />
-            <Pin Id="QI9g7NPpbEfLxNr7fuf4GR" Name="Position" Kind="InputPin" />
-            <Pin Id="MfsQpKQ15hQPAbqtXDzH5F" Name="Open Event" Kind="InputPin" />
-            <Pin Id="NErXm6YYUi0LRsREdiqIuo" Name="SetOpenEvent" Kind="InputPin" />
-            <Pin Id="GXzefoAeIeQQL576bgbTYI" Name="Close Event" Kind="InputPin" />
-            <Pin Id="UzXgNEcrDQ4QEum2G5dnpL" Name="SetCloseEvent" Kind="InputPin" />
-            <Pin Id="AJubtJpf52ZPG1crhqqBa3" Name="Close Overlays Before Opening New" Kind="InputPin" />
-            <Pin Id="DaII2tNC5kKMuajY6UQYuJ" Name="Block Background Notification" Kind="InputPin" />
-            <Pin Id="OYdwhlgXkYDP9ZmChR3Qn4" Name="Output" Kind="StateOutputPin" />
-            <Pin Id="CUUkemX0Mz1PGjrCwfhCzw" Name="Overlay Active" Kind="OutputPin" />
-            <Pin Id="A4NCFeBfKvkQaec1Fya6ZS" Name="Context" Kind="OutputPin" />
-            <Pin Id="SlHhsc4D2EROxsrCzTHzy0" Name="Overlay" Kind="OutputPin" />
-            <Pin Id="APx8SlcYjHvPKYfQB8fm45" Name="Elementum" Kind="OutputPin" />
           </Node>
           <Pad Id="QDt9MPOpkrZODZvkCkpPV6" Comment="Overlay Active" Bounds="518,728,35,15" ShowValueBox="true" isIOBox="true" />
           <Pad Id="OpbmXbH8rG8Qdl0ikrTucY" Bounds="786,163" />
@@ -470,6 +503,15 @@
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="SiYBXm4hSEUNEufXJTy41s" Bounds="25,283,170,399" ShowValueBox="true" isIOBox="true" Value="This patch shows how you can nest overlays inside each other (ie an overlay opens an overlay, which can open an overlay ...). &#xD;&#xA;&#xD;&#xA;Pay attention to the Block background notification pin : if this is true, all widgets that are &quot;under&quot; this overlay cannot be interacted with. &#xD;&#xA;&#xD;&#xA;Also, have a look at the Close on click outside pin. If this is true, clicking outside the bounds of the overlay closes it. If this is false, you have to manually close it from the patch.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
         </Canvas>
@@ -529,5 +571,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="SlJb5hSb53iO2izbPmWPuF" Location="VL.Elementa" Version="0.0.0.0" />
-  <NugetDependency Id="Sv4P9a4PQrSNnhQR4Psq8x" Location="VL.Skia" Version="2020.3.0-0176-gbd949ae240" />
+  <NugetDependency Id="Sv4P9a4PQrSNnhQR4Psq8x" Location="VL.Skia" Version="2021.3.0-0003-g2d0532f332" />
 </Document>
