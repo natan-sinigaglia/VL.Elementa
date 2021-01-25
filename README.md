@@ -52,15 +52,25 @@ _Not released yet, available as a preview package_
 
 - `AnyEditing` node in the `Getters` category
 - `ScrollableValue` component, comes with two help patches
+- Layout operators' helper now also shows widget's bounds
+- Elementa node now has a `Viewport` input
+- `ScrollableValue` component allowing to modify a widget's value using mouse scroll
 
 ### Changed
 
+- Layout operator widget alignment option is now "Widgets self alignment" (no more horizontal/vertical)
+- All widgets and layout operators are now fragmented
 - Default style is now more wireframe-ish
 - Default font is now SegoeUI
+- Panel now only allows for vertical and horizontal scrolls
+- Tooltip is now using Tasks internally and can be drawn anywhere around the widget it's connected to
+- Padding is now expressed as a spread of floats instead of a string
+- Overlay system total revamp. Any number of overlays can now be opened on top of each other
 
 ### Fixed
 
 - Polar widgets got added to `Widgets In Action` and `Widget Overview` help patches
+- Dropdown widgets now behave correctly
 
 ### 4.0.5
 
