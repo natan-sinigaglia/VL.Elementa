@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="N3HUlAZvzyEPx40IUZX6FH" Summary="A label to display close to the input widget" LanguageVersion="2021.3.0.5" Version="0.128">
-  <NugetDependency Id="MMgLgP7qz73PQ2sFeV3DzT" Location="VL.CoreLib" Version="2021.3.0-0005-g87211fe9ae" />
+<Document xmlns:p="property" Id="N3HUlAZvzyEPx40IUZX6FH" Summary="A label to display close to the input widget" LanguageVersion="2021.3.0.21" Version="0.128">
+  <NugetDependency Id="MMgLgP7qz73PQ2sFeV3DzT" Location="VL.CoreLib" Version="2021.3.0-0021-g44253d2755" />
   <Patch Id="M2dy8OrL543LCQwJk02qGc">
     <Canvas Id="GsYSiAhwIleQHDS11AiOTn" DefaultCategory="VL.Elementa.Widget" CanvasType="FullCategory">
       <!--
@@ -63,11 +63,7 @@
                     </p:TypeAnnotation>
                   </Pin>
                   <Pin Id="LtsAEcGfCJsLYIehDsYBEz" Name="Alignment Within Bounds" Kind="InputPin" />
-                  <Pin Id="BRZsUqJcUSkMsiTb9Ihk5e" Name="Padding" Kind="InputPin" DefaultValue="">
-                    <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                      <Choice Kind="TypeFlag" Name="String" />
-                    </p:TypeAnnotation>
-                  </Pin>
+                  <Pin Id="BRZsUqJcUSkMsiTb9Ihk5e" Name="Padding" Kind="InputPin" />
                   <Pin Id="SedodlXYjvPPmPkljlMpij" Name="Enable Helper" Kind="InputPin" DefaultValue="True">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Boolean" />
@@ -309,8 +305,13 @@
                 <p:buttonmode p:Type="String">Toggle</p:buttonmode>
               </p:ValueBoxSettings>
             </Pad>
+            <Pad Id="JbBPtC6AterLXZeRXCJq6m" Comment="" Bounds="439,85,35,15" ShowValueBox="true" isIOBox="true" Value="0.05">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pad>
           </Canvas>
-          <Patch Id="EQZ8hrNOIcbLVHgCGWGGTc" Name="Create" ParticipatingElements="BmMDfRisu4cLtpeJ8VwPYQ,CU53z9pjZkRLou1b9hKyLz,C2ciI7k0G1ZLdsNuy4Ptia,FYATmE5xm6eMviDxqmccWK,J55W4cINhAvPVXElywTkw5,LehuiRUYdk6MstoRLaS9iy" />
+          <Patch Id="EQZ8hrNOIcbLVHgCGWGGTc" Name="Create" ParticipatingElements="BmMDfRisu4cLtpeJ8VwPYQ,CU53z9pjZkRLou1b9hKyLz,C2ciI7k0G1ZLdsNuy4Ptia,FYATmE5xm6eMviDxqmccWK,J55W4cINhAvPVXElywTkw5,LehuiRUYdk6MstoRLaS9iy,BSuz2VRisA0MZDQ4m0OoIx" />
           <Patch Id="AQ7PFSYBCqgO45XTgTEXdF" Name="Update" ManuallySortedPins="true" />
           <Link Id="HNSYsr7fzRLPnPl0TCG6ac" Ids="HRS0vB6fxmFO1wwdsRqOY8,UPMI3XAeHmHNuvES97eL5Y" IsHidden="true" />
           <Link Id="NMUEviJpPFNMAttDODl5i1" Ids="MswRwrqFCPDMnWPEodLVEr,Fl3JYEWMewzOPFWuR9U254" IsHidden="true" />
@@ -370,7 +371,11 @@
           <Link Id="AqMTy3qsqNaOz2ZARryfgF" Ids="FsGChFhTMhJOYjPEKIBl1X,QPE8mMJGvl6P3nzelWja3b" />
           <Link Id="Lqe9o34sVE5QB5KhM1u9ER" Ids="Fo57W9WN6IaNDeK8w54dW0,PFh9woSaOVqLBTGntNDaR9" />
           <Patch Id="GcD2nF9dkwIN2OzrZm34RJ" Name="SetSpacing (Internal)">
-            <Pin Id="KfbGYi3cSj5QT3RJ4YY87m" Name="Spacing" Kind="InputPin" Visibility="Optional" />
+            <Pin Id="KfbGYi3cSj5QT3RJ4YY87m" Name="Spacing" Kind="InputPin" DefaultValue="0.05" Visibility="Optional">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
           </Patch>
           <Link Id="RY1SNS00xgnLB7HopxeuHR" Ids="Nvg5RUsmTE4OC1U9TyyWg3,UOwtHqsU6RcNPpHHNDbDRO" />
           <Link Id="Rtg6UnVianML6Bk10dZFCh" Ids="NgmPhUazTj7O6vezxrDswA,PnMTt1ER0v6MxGJeweUv6o" />
@@ -443,20 +448,21 @@
           <Link Id="F0JS2x5WUsJQN1iVP8ST2S" Ids="KMN6Ngbq3cKPS9SEclvAOp,O70bIa7nEKNOOhYAfv3ubB" />
           <Link Id="VnuajMw8xyOPlwahmuqDZr" Ids="UCYm995kJpkLbvlHxZDban,DAJh3ocBQpcLjV8OoAqijS" />
           <Link Id="GbrTHnT7K7fLv3bFNtuBvz" Ids="A0AHIqe7Zv2NanvpKi7o7H,K3xmtPUNpWQOe9x2Rlwr7L" />
+          <Link Id="LehuiRUYdk6MstoRLaS9iy" Ids="EFjkK3qK1zuOOPB2w5SfUn,IZHdEblFkvGMOil6cjHQQo" />
+          <Link Id="BSuz2VRisA0MZDQ4m0OoIx" Ids="JbBPtC6AterLXZeRXCJq6m,CB4SpuIYDtPM5qiNhIdPo3" />
           <ProcessDefinition Id="LVQRGgQuTeuMI7P9CxPEmK">
             <Fragment Id="UNFbFgz0t2xO6UBY64IYRC" Patch="EQZ8hrNOIcbLVHgCGWGGTc" Enabled="true" />
-            <Fragment Id="HWEouTGaYuSOffMAQ0MR61" Patch="MrJAWQi7ahbQUz9QSgB0TG" Enabled="true" />
             <Fragment Id="JwgY89ZcIlgLoR7ODJrX7L" Patch="PhJQjSeOTpjNO3gSJKUQNO" Enabled="true" />
+            <Fragment Id="HWEouTGaYuSOffMAQ0MR61" Patch="MrJAWQi7ahbQUz9QSgB0TG" Enabled="true" />
             <Fragment Id="GttsUVNA0d8LxXXFxhWyRt" Patch="DnKpKSg5LZOLZowkBFudoy" Enabled="true" />
             <Fragment Id="HXcBKeo1Z02LQE7A4jsZbB" Patch="AH42WnejR8VMT2u6owQ8T8" Enabled="true" />
             <Fragment Id="Px4xKvkRsb8QG4xwU7jQJ6" Patch="GcD2nF9dkwIN2OzrZm34RJ" Enabled="true" />
             <Fragment Id="HQwuhV5JTleL73T8Yii6Kw" Patch="Mwkgeh1SZ0nP5xFiRhR46M" Enabled="true" />
-            <Fragment Id="MV3BogzwaLBPvYjPgn1bbU" Patch="AQ7PFSYBCqgO45XTgTEXdF" />
+            <Fragment Id="MV3BogzwaLBPvYjPgn1bbU" Patch="AQ7PFSYBCqgO45XTgTEXdF" Enabled="true" />
             <Fragment Id="EzDN0GQWTUYPO4TZBLctlK" Patch="Tt5TFDF8LqbO4siqxSRyzY" Enabled="true" />
             <Fragment Id="RFkyTEz4BGZNF5n2AefqJI" Patch="LGBCXkCUrs0NanBxOnbA4c" Enabled="true" />
             <Fragment Id="SgsELGmBiekL3Um9X0GZ8J" Patch="Gm4v03OzaUnLcJRXM1qiGD" Enabled="true" />
           </ProcessDefinition>
-          <Link Id="LehuiRUYdk6MstoRLaS9iy" Ids="EFjkK3qK1zuOOPB2w5SfUn,IZHdEblFkvGMOil6cjHQQo" />
         </Patch>
       </Node>
       <!--
@@ -1415,7 +1421,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="EG25Shu4dDfPj2ySga2eVz" Location="VL.Skia" Version="2021.3.0-0005-g87211fe9ae" />
+  <NugetDependency Id="EG25Shu4dDfPj2ySga2eVz" Location="VL.Skia" Version="2021.3.0-0021-g44253d2755" />
   <PlatformDependency Id="DltLAd3UkQgNuvgjQ2XvHr" Location="mscorlib" />
   <DocumentDependency Id="JaroTB5LuDDODcFFxPPjiq" Location="../VL.Elementa.Core.vl" />
   <DocumentDependency Id="UXMEEWm6rHVN7CTeuRRC5s" Location="../VL.Elementa.Components.vl" />
