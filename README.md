@@ -58,6 +58,7 @@ _Not released yet, available as a preview package_
 
 ### Changed
 
+- All nodes now live under the `Elementa` category, instead of `VL.Elementa`
 - Layout operator widget alignment option is now "Widgets self alignment" (no more horizontal/vertical)
 - All widgets and layout operators are now fragmented
 - Default style is now more wireframe-ish
