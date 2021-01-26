@@ -23,12 +23,25 @@ namespace MyTests
     [TestFixture]
     public class PatchTests
     {
-        static string[] Packs = new string[]{ 
-        
-            //  FIX ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            @"C:\Program Files\vvvv\vvvv_gamma_2021.3.0-0021-g44253d2755\lib\packs",
-
+        static string[] Packs = new string[]{         
+            @"C:\Program Files\vvvv\vvvv_gamma_2021.3.0-0023-g0462360ded\lib\packs",
         };
+
+
+
+        // ------------------------------------------------------------
+        // Troubleshooting red tests that shouldn't be red:
+        // - Release build
+        // - Build Solution
+        // - The vvvv gamma version mentioned above should be the same as the NuGet versions of all VL packages.
+        //  So either
+        //  * install the vvvv gamma version specified above
+        //  OR
+        //  * fix this line to match your installed vvvv gamma version and
+        //    fix the package references in Elementa.csproj and NUnitTests.csproj to match the version
+        // ------------------------------------------------------------
+
+
 
         // DO YOU WANT TO SAVE THE VL DOCS TO DISK? 
         static SaveDocCondition SaveDocCondition = SaveDocCondition.WhenGreen;
