@@ -3387,10 +3387,18 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="KoorJyleFqiMf2ttT0O7ut" Name="Selector" Kind="InputPin" Bounds="10,294" />
-              <Pin Id="DMOJMjqx6RKMaZ6zEYg3Tl" Name="Padding" Kind="InputPin" DefaultValue="0">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="String" />
+              <Pin Id="DMOJMjqx6RKMaZ6zEYg3Tl" Name="Padding" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
                 </p:TypeAnnotation>
+                <p:DefaultValue>
+                  <Item>0</Item>
+                </p:DefaultValue>
               </Pin>
               <Pin Id="Hp2dYS5DxPuQOIVSQpXA3X" Name="Stroke Paint" Kind="InputPin">
                 <p:TypeAnnotation>
@@ -3604,10 +3612,18 @@
               </Pin>
               <Pin Id="VlX9KiKCSPVOF1g67VTrD2" Name="Output" Kind="OutputPin" />
               <Pin Id="TaHJNQBi8fRPAiZIFjBZtn" Name="Selector" Kind="InputPin" Bounds="10,294" />
-              <Pin Id="LzsiuvgqbvnLpOGaQ1N3BV" Name="Padding" Kind="InputPin" DefaultValue="0">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="String" />
+              <Pin Id="LzsiuvgqbvnLpOGaQ1N3BV" Name="Padding" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
                 </p:TypeAnnotation>
+                <p:DefaultValue>
+                  <Item>0</Item>
+                </p:DefaultValue>
               </Pin>
               <Pin Id="L49R85Aq1vJM6iPvTLbj5E" Name="Stroke Paint" Kind="InputPin">
                 <p:TypeAnnotation>
@@ -3850,10 +3866,18 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="JlesREPwMQEN8xS3fPqlJm" Name="Selector" Kind="InputPin" Bounds="10,294" />
-              <Pin Id="TQUQyzFjAQJMO3A8gqQ6Hh" Name="Text Padding" Kind="InputPin" DefaultValue="0.02">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="String" />
+              <Pin Id="TQUQyzFjAQJMO3A8gqQ6Hh" Name="Text Padding" Kind="InputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
                 </p:TypeAnnotation>
+                <p:DefaultValue>
+                  <Item>0.02</Item>
+                </p:DefaultValue>
               </Pin>
               <Pin Id="CyxIvmTg3RhNvBW7uGFFCW" Name="Horizontal Alignment" Kind="InputPin" Bounds="666,279" DefaultValue="Left">
                 <p:TypeAnnotation LastCategoryFullName="Graphics.Skia.Unwrapped.Enums" LastSymbolSource="VL.Skia.vl">
@@ -6532,11 +6556,6 @@
                   <Choice Kind="TypeFlag" Name="StyleProperties" />
                 </p:TypeAnnotation>
               </Pad>
-              <Pad Id="UU9YvNi9VwAPIGOsUlsk1W" Bounds="4511,419,35,15" ShowValueBox="true" isIOBox="true" Value="0.02">
-                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="String" />
-                </p:TypeAnnotation>
-              </Pad>
               <Pad Id="BCyx9GTn3rLLrbU0g6Rzex" Comment="Vertical Alignment" Bounds="4631,419,65,15" ShowValueBox="true" isIOBox="true" Value="Top">
                 <p:TypeAnnotation LastCategoryFullName="Graphics.Skia.Unwrapped.Enums" LastSymbolSource="VL.Skia.vl">
                   <Choice Kind="TypeFlag" Name="VerticalTextAlignment" />
@@ -8452,6 +8471,16 @@
                   </p:TypeArguments>
                 </p:TypeAnnotation>
               </Pad>
+              <Pad Id="JIwoWhEqYbHOvW63lXmRJX" Comment="" Bounds="4564,337,35,34" ShowValueBox="true" isIOBox="true" Value="0.02">
+                <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </p:TypeAnnotation>
+              </Pad>
             </Canvas>
             <Patch Id="T2FFhIVWkiiMRTMOwxFKDW" Name="Create" />
             <Patch Id="LYJdTu9DhvuNhTEyJGfln8" Name="Update">
@@ -8475,11 +8504,29 @@
               <Pin Id="OtY1IMCol1DMZUyJ6BuGlS" Name="Background Stroke Color" Kind="InputPin" Bounds="187,342" />
               <Pin Id="CC7nzwNsAbVPAlUZD6emvr" Name="Background Enabled" Kind="InputPin" Bounds="-249,253" Visibility="Optional" />
               <Pin Id="ORIuQBbATajQchFzlo0JuA" Name="Background Paint" Kind="InputPin" Bounds="-230,230" Visibility="Optional" />
-              <Pin Id="D5FBgDH2yS9NS0kfoQpu0h" Name="Background Padding" Kind="InputPin" Bounds="-189,274" Visibility="Optional" />
+              <Pin Id="D5FBgDH2yS9NS0kfoQpu0h" Name="Background Padding" Kind="InputPin" Bounds="-189,274" Visibility="Optional">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </p:TypeAnnotation>
+              </Pin>
               <Pin Id="NFxtGBOfNVuMWrHcAziA3N" Name="Background Stroke Paint" Kind="InputPin" Bounds="-149,323" Visibility="Optional" />
               <Pin Id="A0Hb5ohroJJONOx1uSML11" Name="Foreground Enabled" Kind="InputPin" Bounds="-87,243" Visibility="Optional" />
               <Pin Id="Rum2akmRrDKQbL8l4quh9j" Name="Foreground Paint" Kind="InputPin" Bounds="-67,264" Visibility="Optional" />
-              <Pin Id="HBUfpdRRxs0MTbTM0V2ZIs" Name="Foreground Padding" Kind="InputPin" Bounds="-7,330" Visibility="Optional" />
+              <Pin Id="HBUfpdRRxs0MTbTM0V2ZIs" Name="Foreground Padding" Kind="InputPin" Bounds="-7,330" Visibility="Optional">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference>
+                      <Choice Kind="TypeFlag" Name="Float32" />
+                    </TypeReference>
+                  </p:TypeArguments>
+                </p:TypeAnnotation>
+              </Pin>
               <Pin Id="RQIxURLkuCiQM6TPKKPBuu" Name="Foreground Stroke Enabled" Kind="InputPin" Bounds="13,301" />
               <Pin Id="GkoVTKf6rvSO8A6KHQQojB" Name="Foreground Stroke Paint" Kind="InputPin" Bounds="33,322" Visibility="Optional" />
               <Pin Id="QG5MyYPuVlEPh5OkJoEXjk" Name="Foreground Stroke Color" Kind="InputPin" Bounds="53,345" />
@@ -8636,7 +8683,6 @@
             <Link Id="TRZ5L8q7e2tOkuA8CLl3Lu" Ids="VFhTCV3iNyxMnmhO3EN2Uz,LWWokmQf4Q6QWK4x76L1y7" />
             <Link Id="LKVso1E6HmoMBqaHg0atWl" Ids="IjfmTfI59LYP54316zp0qs,COPngWgl4gNPKgsxTGWSwI" />
             <Link Id="Uv9Ng1bNWX7O62cY08j7T3" Ids="CVMN1RWXfvoOdPn7u7V6gC,GAkiqxQeiqlLpoquhodbVW" />
-            <Link Id="RA8U4KHQaRUOMbiQ7vmQKf" Ids="UU9YvNi9VwAPIGOsUlsk1W,Et0XCkijMrkPNRsdK3N41y" />
             <Link Id="Day5mZE8LYELLHVfT6K8ov" Ids="JJ1wEO8e7aBOnNEFbwfTZO,Bb2qwUUXT1dNQhgNC4Dozd" />
             <Link Id="SRGslSbkFTQNLvDqq835Y9" Ids="BCyx9GTn3rLLrbU0g6Rzex,TXYH0nbsoj5OtMkmC298LB" />
             <Link Id="G8LDYz1TOFFOWrGbAASf2w" Ids="Q0JEKEcEs1eLLBouuKRixg,EO7Q5GRSRdDPUSpHYMhJd2" />
@@ -8916,6 +8962,7 @@
             <Link Id="CkYE1Jr8WQhO1iCegsqQU8" Ids="RezpqffD7rAMhKIPD8aM07,GLeno2dq3yUOIwxdlkJSdx" />
             <Link Id="ANkoJS9TkSpLahAhG97UWL" Ids="DaR6bZ9LlrsNnUxsfz6kdg,TT2YIo9lWyzLDkY6QCTHG3" />
             <Link Id="GPRYWmG7GgnL13Rzxu7bHl" Ids="EIFPy2Fz3vULdLMyilWNOi,HbnIPBWF18QPTwRtUsZAgd" />
+            <Link Id="IoBoclnKl6hLBghiIexi7W" Ids="JIwoWhEqYbHOvW63lXmRJX,Et0XCkijMrkPNRsdK3N41y" />
           </Patch>
         </Node>
         <!--
