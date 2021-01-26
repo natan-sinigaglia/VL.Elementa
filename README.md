@@ -51,13 +51,13 @@ _Not released yet, available as a preview package_
 ### New
 
 - `AnyEditing` node in the `Getters` category
-- `ScrollableValue` component, comes with two help patches
 - Layout operators' helper now also shows widget's bounds
 - Elementa node now has a `Viewport` input
-- `ScrollableValue` component allowing to modify a widget's value using mouse scroll
+- `ScrollableValue` component allowing to modify a widget's value using mouse scroll. Comes with help patches
 
 ### Changed
 
+- The first widget connected to the Elementa node can use Flexibility to stretch to the viewport
 - All nodes now live under the `Elementa` category, instead of `VL.Elementa`
 - Layout operator widget alignment option is now "Widgets self alignment" (no more horizontal/vertical)
 - All widgets and layout operators are now fragmented
