@@ -31,14 +31,19 @@ namespace MyTests
 
         // ------------------------------------------------------------
         // Troubleshooting red tests that shouldn't be red:
-        // - Release build
-        // - Build Solution
+        //
+        // - use "Release" build
+        //
         // - The vvvv gamma version mentioned above should be the same as the NuGet versions of all VL packages.
         //  So either
         //  * install the vvvv gamma version specified above
         //  OR
         //  * fix this line to match your installed vvvv gamma version and
         //    fix the package references in Elementa.csproj and NUnitTests.csproj to match the version
+        //
+        // - build Solution
+        //
+        // - run tests
         // ------------------------------------------------------------
 
 
