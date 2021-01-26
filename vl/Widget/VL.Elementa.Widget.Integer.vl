@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GySySreGYhgPsWhJzBPQJD" LanguageVersion="2020.3.0.138" Version="0.128">
-  <NugetDependency Id="FBRGOL7tBHwP2uwjT1utIK" Location="VL.CoreLib" Version="2021.3.0-0021-g44253d2755" />
+<Document xmlns:p="property" Id="GySySreGYhgPsWhJzBPQJD" LanguageVersion="2021.3.0.23" Version="0.128">
+  <NugetDependency Id="FBRGOL7tBHwP2uwjT1utIK" Location="VL.CoreLib" Version="2020.3.0-0092-gae02f44ee4" />
   <Patch Id="Mhl40OSRv0jLxoVRpgvcee">
     <Canvas Id="AYw2iIdItrUL3MPpUzrLaj" DefaultCategory="Elementa.Widget" CanvasType="FullCategory">
       <!--
@@ -2208,10 +2208,10 @@
                 <Choice Kind="TypeFlag" Name="Vector2" />
               </p:TypeAnnotation>
             </Pad>
-            <ControlPoint Id="VEtktM8tYDcNNwsR2RfMea" Bounds="308,929" />
+            <ControlPoint Id="VEtktM8tYDcNNwsR2RfMea" Bounds="255,912" />
             <ControlPoint Id="KPUt9knEATiMVX0byVjGyT" Bounds="388,1034" />
-            <ControlPoint Id="QgseWLH33bKQCptHIqdT07" Bounds="309,1062" />
-            <ControlPoint Id="H0IcNM3NKFkPKmMGaSFpLx" Bounds="388,956" />
+            <ControlPoint Id="QgseWLH33bKQCptHIqdT07" Bounds="335,1063" />
+            <ControlPoint Id="H0IcNM3NKFkPKmMGaSFpLx" Bounds="282,951" />
             <Node Bounds="227,988,164,19" Id="EXIvI9e3hPZOQ91ub1pZjU">
               <p:NodeReference LastCategoryFullName="Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -2220,7 +2220,11 @@
               <Pin Id="V7DAgncuA5LL5R0XzWUrsh" Name="Internal Components" Kind="InputPin" />
               <Pin Id="MVMYXNQaMkTNCY3ScVQcH2" Name="External Components" Kind="InputPin" />
               <Pin Id="U9srrhLQnvBQEQ19mDTZIu" Name="Me" Kind="InputPin" />
+              <Pin Id="Drm90NuF0DkLc36Q4qZoKE" Name="Activate Warning For Parent" Kind="InputPin" />
+              <Pin Id="UaggpBZfpH0OR4piSGu4xa" Name="Activate Warning For Children" Kind="InputPin" />
               <Pin Id="Tz8b3DICPHCNPXOEJwr25d" Name="Children" Kind="InputPin" />
+              <Pin Id="O9ygBOq7sVzP9H4hJBaPP3" Name="Update" Kind="InputPin" />
+              <Pin Id="HGlERlYdpekPzfAzKo3Lqe" Name="Output" Kind="OutputPin" />
               <Pin Id="FBBMpqrny15Lu8XwOchCW2" Name="Has Changed" Kind="OutputPin" />
               <Pin Id="OjMNo66sdaALcBZOYAhaSd" Name="Components Version" Kind="OutputPin" />
               <Pin Id="QblGDywcjtwOzV6z2noc7k" Name="Components" Kind="StateOutputPin" />
@@ -2321,6 +2325,7 @@
               </Pin>
               <Pin Id="Qig5q4Zx2aeQZihmxhsEr2" Name="Output" Kind="StateOutputPin" />
             </Node>
+            <ControlPoint Id="EyiDIf3oVt6N4II2iCX830" Bounds="229,1101" />
           </Canvas>
           <Link Id="V7KrsZeJARwPUE3NJvqtfg" Ids="TPlMNgRO18QPQD6pFNjIxB,L90pLKYvuz0OIu8M4U1rmW" />
           <Link Id="UMgt1reJlXwMWuT2Y94lQY" Ids="VJwJEkghd1BMZilkI2FYbf,UTArMM1Q7roQU58zMvb7Pv" />
@@ -2537,11 +2542,21 @@
             <Fragment Id="I6haDXzpadPLVL8BfQPJDU" Patch="RCsns0kF3FXN3tuqs7A6wC" />
             <Fragment Id="EGdFYYvggR7P8I7SqEzK1Q" Patch="GHdgV9aVEffMNFFaTcxmN1" />
             <Fragment Id="IoJBCm3aPNDMyFZCzaducv" Patch="DizddiioYKVQJSivjFMR6P" />
+            <Fragment Id="VKNIWN6N8NSLg1UPnUHHs2" Patch="KDgUrzIsZ7cPsUlAGV7QPK" />
           </ProcessDefinition>
           <Link Id="PMn8QyYnekKQdJ75U76vyC" Ids="DecZ1Pb7gEdPUNTtHptBtJ,FWlK5C25dmFQbQgYa17lha" />
           <Link Id="LdNDYi8NspULVFtkUcU6z9" Ids="DSWNi5ZfoNPLEw8UaIRjAN,NwnnXVe6YuXPfrC4clwF1b" />
           <Link Id="KCUue9SAIRPNc5xojhJVW2" Ids="DHLwSMnuAufOsDN1nQgmCj,IlUVIdKWS2hNZ58QsdCTyh" />
           <Link Id="GN9PNTIvzprOcyUoV9E8TX" Ids="VtlOXIpSSylPjUB4ZDZU61,KHfYwrCJuAdPp82oCpo42B" />
+          <Patch Id="KDgUrzIsZ7cPsUlAGV7QPK" Name="GetComponentsManager">
+            <Pin Id="Q7lOTOA2XbROqGMEwP6hdR" MergeId="644347" Name="Components Manager" Kind="OutputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="ElementumComponentsManager" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <Link Id="NLHOJoMAgXzPYKJZ7hvGPz" Ids="EyiDIf3oVt6N4II2iCX830,Q7lOTOA2XbROqGMEwP6hdR" IsHidden="true" />
+          <Link Id="QkEotOkEhM8Ov7Q7YuWbzd" Ids="HGlERlYdpekPzfAzKo3Lqe,EyiDIf3oVt6N4II2iCX830" />
         </Patch>
       </Node>
       <!--
@@ -2730,7 +2745,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="MQJM39L7PQxLCbc7jQb2ix" Location="VL.Skia" Version="2021.3.0-0021-g44253d2755" />
+  <NugetDependency Id="MQJM39L7PQxLCbc7jQb2ix" Location="VL.Skia" Version="2020.3.0-0092-gae02f44ee4" />
   <DocumentDependency Id="BoUGwO5t0IhLYVkGbyAynn" Location="../VL.Elementa.Core.vl" />
   <DocumentDependency Id="M9CijSwmgvPNDLxjFhMmoy" Location="../VL.Elementa.Components.vl" />
 </Document>

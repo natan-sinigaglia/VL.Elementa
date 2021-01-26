@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="U6qXfSVLd5UPwwMu7YvkHx" LanguageVersion="2021.3.0.21" Version="0.128">
-  <NugetDependency Id="CMYi1hxsI29PI7H7Ipcs9K" Location="VL.CoreLib" Version="2021.3.0-0021-g44253d2755" />
+<Document xmlns:p="property" Id="U6qXfSVLd5UPwwMu7YvkHx" LanguageVersion="2021.3.0.23" Version="0.128">
+  <NugetDependency Id="CMYi1hxsI29PI7H7Ipcs9K" Location="VL.CoreLib" Version="2020.3.0-0092-gae02f44ee4" />
   <Patch Id="De09OK3SsILMorMcNpQIsX">
     <Canvas Id="DIOy17J8w9xPl8VKEhm2EE" DefaultCategory="Elementa.Widget" CanvasType="FullCategory">
       <!--
@@ -1279,9 +1279,9 @@
                 <Pin Id="QLoYt902lGXNpCr2Q5TGOS" Name="Output" Kind="OutputPin" />
                 <Pin Id="TzZGlgi9eFdNSiNsz1RHq1" Name="Context" Kind="OutputPin" />
               </Node>
-              <ControlPoint Id="J6WUiKwci3VPPFSV9yYqMI" Bounds="604,1520" />
-              <ControlPoint Id="JTd5sBjt0Z8NcX1qI1V7tw" Bounds="494,1406" />
-              <ControlPoint Id="GEwZr5f3O0cOfrmxpL5fW2" Bounds="554,1428" />
+              <ControlPoint Id="J6WUiKwci3VPPFSV9yYqMI" Bounds="607,1520" />
+              <ControlPoint Id="JTd5sBjt0Z8NcX1qI1V7tw" Bounds="475,1404" />
+              <ControlPoint Id="GEwZr5f3O0cOfrmxpL5fW2" Bounds="501,1440" />
               <Node Bounds="446,1462,143,19" Id="P3nXNL531ZuQVAOptkeim9">
                 <p:NodeReference LastCategoryFullName="Elementa.Component" LastSymbolSource="VL.Elementa.Core.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -1290,7 +1290,11 @@
                 <Pin Id="O7Dwu7ZHqZUQQ2auuijfhs" Name="Internal Components" Kind="InputPin" />
                 <Pin Id="NTlJM3yr4IOLYRZ1nr1Sog" Name="External Components" Kind="InputPin" />
                 <Pin Id="RZeCTrAfIwiLrovcWiJnQR" Name="Me" Kind="InputPin" />
+                <Pin Id="FCCu7Y0qBvtNNQD834y3wz" Name="Activate Warning For Parent" Kind="InputPin" />
+                <Pin Id="LAJhWcB0eglNRNo8Zr6WLv" Name="Activate Warning For Children" Kind="InputPin" />
                 <Pin Id="Sh9S0PdFQyrOi1bBouXMtR" Name="Children" Kind="InputPin" />
+                <Pin Id="JTBQNeaJnUDMaFVQaB8rdQ" Name="Update" Kind="InputPin" />
+                <Pin Id="IzbBlcMGGFnOXHkVQym03h" Name="Output" Kind="OutputPin" />
                 <Pin Id="BmhYxRWqV9ALGDe3l1qieC" Name="Has Changed" Kind="OutputPin" />
                 <Pin Id="EflsAe47iw9NiYFk555xK7" Name="Components Version" Kind="OutputPin" />
                 <Pin Id="BYwHe8faRBtLXvt3OX5DnK" Name="Components" Kind="OutputPin" />
@@ -2727,7 +2731,8 @@
                 <Pin Id="LVWhYtAnvxDOJQGqD6f0K6" Name="Enabled" Kind="OutputPin" />
               </Node>
               <Pad Id="Am1JD8SovMFP0iFUTujeEU" SlotId="STFqo1pCSVEQWVnKYCO93I" Bounds="1462,844" />
-              <ControlPoint Id="UdznlpEpP7nLMv8GEUYeHO" Bounds="525,1555" />
+              <ControlPoint Id="UdznlpEpP7nLMv8GEUYeHO" Bounds="553,1552" />
+              <ControlPoint Id="RTx4RxWukClPBBJ6wCsae0" Bounds="448,1586" />
             </Canvas>
             <Link Id="Gi1mrjrl7SYPJ9XLbqxgo4" Ids="JuqIqz1USdqP1mUXJQJSGK,HaThCWCIQs4N4POQJdiU7Q" IsHidden="true" />
             <ProcessDefinition Id="IeNuVnjwWkiNSmH18BfkIN" HasStateOut="true">
@@ -2745,6 +2750,7 @@
               <Fragment Id="CdKIQEv9rdJN3ePB5rEgco" Patch="AipRkCti4FuNoYU35IQsOZ" />
               <Fragment Id="HkfGFE0vk6iMlXxqPc5Mz9" Patch="GE7YI7dwbpFLQT96LzNoAq" />
               <Fragment Id="LODxJ5opnolOHCbmeqBl1C" Patch="DFWkRH5KNevMgvBUeFiJBP" />
+              <Fragment Id="IogLa21bGalQEnkWmotJlT" Patch="Djfw7ditapSMDNTRkHfHhX" />
             </ProcessDefinition>
             <Slot Id="AFt5uKtzAeHOu9lahCbJp9" Name="Me">
               <p:TypeAnnotation>
@@ -2922,6 +2928,15 @@
             </Patch>
             <Link Id="EXLQcQSHJNVMHw6CI5lLFE" Ids="EflsAe47iw9NiYFk555xK7,UdznlpEpP7nLMv8GEUYeHO" />
             <Link Id="AazKgOm16J7PdJ3EK4Pjj9" Ids="IHK3gL59tgGQaPWFpBb84p,BKmQhimEK5ZQSG4KtrkEaG" />
+            <Patch Id="Djfw7ditapSMDNTRkHfHhX" Name="GetComponentsManager">
+              <Pin Id="PkE8MZiMmpbOkssFb6b4lc" MergeId="906723" Name="Components Manager" Kind="OutputPin">
+                <p:TypeAnnotation>
+                  <Choice Kind="TypeFlag" Name="ElementumComponentsManager" />
+                </p:TypeAnnotation>
+              </Pin>
+            </Patch>
+            <Link Id="MevdNLOh16vQaR2y3Q9tjg" Ids="RTx4RxWukClPBBJ6wCsae0,PkE8MZiMmpbOkssFb6b4lc" IsHidden="true" />
+            <Link Id="SLLcwKg3zSXPBTkVV73ZKd" Ids="IzbBlcMGGFnOXHkVQym03h,RTx4RxWukClPBBJ6wCsae0" />
           </Patch>
         </Node>
         <!--
@@ -7184,15 +7199,19 @@
               <Pin Id="IM0AJ8uLtNqLptW2OpiI9q" Name="Internal Components" Kind="InputPin" />
               <Pin Id="BO7hK9uyACjNg1bq2w2i7u" Name="External Components" Kind="InputPin" />
               <Pin Id="Jz16o29sNFvPcuH1qcn5Av" Name="Me" Kind="InputPin" />
+              <Pin Id="PNbrcwozMn6NQKnZiM4zhK" Name="Activate Warning For Parent" Kind="InputPin" />
+              <Pin Id="A7eqXd6nRzmMjZGaNmVqxN" Name="Activate Warning For Children" Kind="InputPin" />
               <Pin Id="HfONsy0zAq3OD5ZE39WeY2" Name="Children" Kind="InputPin" />
+              <Pin Id="NrfKV0iGhVDNMEYiXr1tb3" Name="Update" Kind="InputPin" />
+              <Pin Id="LL7EkQMkXJYO2sYaXaR2Ez" Name="Output" Kind="OutputPin" />
               <Pin Id="JDK09Y43JlfOJ93cJErRqc" Name="Has Changed" Kind="OutputPin" />
               <Pin Id="FIvJ8p3F0X6O2KKNUOoQZi" Name="Components Version" Kind="OutputPin" />
               <Pin Id="Cw05Hln4jvFMDTI8HPbNOZ" Name="Components" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="JFP6JvGJuxzQC1FQUNY6m9" Bounds="233,873" />
-            <ControlPoint Id="C8aLSy0rHrdMJ9whfrFcPK" Bounds="258,1027" />
-            <ControlPoint Id="QffGZEhAIiVOQ0wcqKA9nv" Bounds="286,907" />
-            <ControlPoint Id="L24u7jyW6GdMcEHWUtO19a" Bounds="343,997" />
+            <ControlPoint Id="JFP6JvGJuxzQC1FQUNY6m9" Bounds="206,878" />
+            <ControlPoint Id="C8aLSy0rHrdMJ9whfrFcPK" Bounds="286,1019" />
+            <ControlPoint Id="QffGZEhAIiVOQ0wcqKA9nv" Bounds="233,906" />
+            <ControlPoint Id="L24u7jyW6GdMcEHWUtO19a" Bounds="339,988" />
             <ControlPoint Id="G2J3kIW1lSYN2NJIOF7JaK" Bounds="178,378" />
             <Pad Id="M4MLWAWjQ9APtMY81ujVcd" SlotId="TMspm9DqzJUNnRResmnpMx" Bounds="178,321" />
             <ControlPoint Id="LBou9uxyqO1LfFIoT0TgkE" Bounds="178,270" />
@@ -9317,6 +9336,7 @@
               <Pin Id="Qq7H52ixXFjQCeXSl1lk9r" Name="Result" Kind="OutputPin" />
               <Pin Id="FbteZSrYUEVMKMI4egh6o0" Name="Unchanged" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="Hk2yN8HTZJZOD0Fi9AdZfE" Bounds="179,1054" />
           </Canvas>
           <Slot Id="DPZARZHdep5O0h6qkpIbr8" Name="Parent">
             <p:TypeAnnotation>
@@ -9440,6 +9460,7 @@
             <Fragment Id="DIFjTFhgf6NP58gUUPxVY2" Patch="VtmGKAWYJQoQB3QTsWqR5y" />
             <Fragment Id="CmiE1xThyqSLoNb6DdFQ5j" Patch="Aw2qIudFlDOMqjrz4xmHAT" />
             <Fragment Id="D64epGIX7AXM68shxVK5kt" Patch="RlZU8nPlZ5pMIrsWAdoaKZ" />
+            <Fragment Id="OwVVbHjf5TtPvQyyHBIJM6" Patch="AmLhrxGqeCmPxjfLGlMGNN" />
           </ProcessDefinition>
           <Patch Id="MOWsSmIgAIeOsxI4yxJzyQ" Name="GetNodeContext (Internal)">
             <Pin Id="MC4S8CJgk3ZQahwiQiiKUz" MergeId="295243" Name="Node Context" Kind="OutputPin">
@@ -9528,6 +9549,15 @@
           <Link Id="EPvUtQByQBQPimxC8dou1m" Ids="QffGZEhAIiVOQ0wcqKA9nv,Jz16o29sNFvPcuH1qcn5Av" />
           <Link Id="IWFleGoxoOHMoOpsOYhJYJ" Ids="U2LlDMbSDeRLTzogVTv1fN,LPfus4ebHAqNg1d2u6qVbD" />
           <Link Id="GnLWHONd7B8O15g7mZFKeL" Ids="V02ZE4P5lhONCYMkJZ733C,USQ4W8HFviKOyGP1DABJ6B" />
+          <Patch Id="AmLhrxGqeCmPxjfLGlMGNN" Name="GetComponentsManager">
+            <Pin Id="NsiVHz2Um59OkCrRSx1OJW" MergeId="786190" Name="Components Manager" Kind="OutputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="ElementumComponentsManager" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <Link Id="VVq1SUI0UXHOuKGcvmnO77" Ids="Hk2yN8HTZJZOD0Fi9AdZfE,NsiVHz2Um59OkCrRSx1OJW" IsHidden="true" />
+          <Link Id="DKy0XeGVayTNagt4PkEZGk" Ids="LL7EkQMkXJYO2sYaXaR2Ez,Hk2yN8HTZJZOD0Fi9AdZfE" />
         </Patch>
       </Node>
       <!--
@@ -10276,15 +10306,19 @@
               <Pin Id="HRmbPtSjbRXPXqbVSgre4k" Name="Internal Components" Kind="InputPin" />
               <Pin Id="NUuFo9MqmmwL2BD2lpWXeM" Name="External Components" Kind="InputPin" />
               <Pin Id="LMBPZuazRYqOiXXEthbl5p" Name="Me" Kind="InputPin" />
+              <Pin Id="CETcZ9xe60HLmmhW6eVOuL" Name="Activate Warning For Parent" Kind="InputPin" />
+              <Pin Id="K2m0zRShPqkPH7U6NqXqCJ" Name="Activate Warning For Children" Kind="InputPin" />
               <Pin Id="BeQHh4CcGuQLrOkyV8UDaj" Name="Children" Kind="InputPin" />
+              <Pin Id="VdB7obGkcOTNVlLw1fMfpz" Name="Update" Kind="InputPin" />
+              <Pin Id="Avd5JcHqP8jL8Jc2221Dnc" Name="Output" Kind="OutputPin" />
               <Pin Id="KZYwSGr3w9RPE8LvwjumvS" Name="Has Changed" Kind="OutputPin" />
               <Pin Id="MxkO3i2KsY2MTGmXg09YIF" Name="Components Version" Kind="OutputPin" />
               <Pin Id="DF2yDDLQO73NBrKgNGVGLn" Name="Components" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="I7tHJYF5DH6QKIpKt8FVce" Bounds="233,903,-336,0" />
-            <ControlPoint Id="JJa8QGB9bSXLptQjsiESAv" Bounds="258,1057,-336,0" />
-            <ControlPoint Id="PcqCrMWtHcqLqa4gHBEXXi" Bounds="286,937,-336,0" />
-            <ControlPoint Id="OjzS8ZIeqybPfTHdwDkAZK" Bounds="343,1027,-336,0" />
+            <ControlPoint Id="I7tHJYF5DH6QKIpKt8FVce" Bounds="207,903,-336,0" />
+            <ControlPoint Id="JJa8QGB9bSXLptQjsiESAv" Bounds="286,1048,-336,0" />
+            <ControlPoint Id="PcqCrMWtHcqLqa4gHBEXXi" Bounds="233,937,-336,0" />
+            <ControlPoint Id="OjzS8ZIeqybPfTHdwDkAZK" Bounds="339,1019,-336,0" />
             <ControlPoint Id="UccdMDIH06JOsstNhsBytb" Bounds="178,378" />
             <Pad Id="KvQpRQjSUnmNY0hWthjcHG" SlotId="DHpOvn69Tu4LYj79IioGzW" Bounds="178,321" />
             <ControlPoint Id="PQm3Pl9gnVqLU4ESDkiF4n" Bounds="178,270" />
@@ -12365,6 +12399,7 @@
               <Pin Id="TeT5U9ou4rLNAboFvFyiRi" Name="Context" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="D1XaR3zZBvTLXTFIzvv0CV" Bounds="71,599" />
+            <ControlPoint Id="CSDJ5tTR5fXPctbWJZsrC4" Bounds="179,1084" />
           </Canvas>
           <Slot Id="CZ0A3ToTYwDPDtXqMYJ1Vp" Name="Parent">
             <p:TypeAnnotation>
@@ -12523,6 +12558,7 @@
             <Fragment Id="MQ0yzmNuPfqMR9ZEj0Z8kN" Patch="HEArgHqGMQpNMqMISKVgPy" Enabled="true" />
             <Fragment Id="EuC5BKtvmUGQdtVzaE9EDF" Patch="EMnk2dhpCbKN0lbEgdMOEX" Enabled="true" />
             <Fragment Id="DTDNco68FUeLq7EBStXlza" Patch="MvKMUHQA92fNy8EPaBBohr" />
+            <Fragment Id="OgXyNJlmrSAPtqhOwv6kos" Patch="G251uyopLpuQCFsdK1jBJo" />
           </ProcessDefinition>
           <Link Id="F0LaxIruDkEOJB12mbIn5p" Ids="FVKnL7J0oHtOXDfILWvoG9,EmnyQkRkLTTPTYp1dTlGml" />
           <Patch Id="HEArgHqGMQpNMqMISKVgPy" Name="SetExternalComponents (Internal)">
@@ -12567,6 +12603,15 @@
           <Patch Id="MvKMUHQA92fNy8EPaBBohr" Name="GetInternalElementaContext (Advanced)">
             <Pin Id="LY9jaSSjlURNSfP7dxpcsN" Name="Context" Kind="OutputPin" />
           </Patch>
+          <Patch Id="G251uyopLpuQCFsdK1jBJo" Name="GetComponentsManager">
+            <Pin Id="CKH3nP6GfUcPYahwJiiUia" MergeId="786190" Name="Components Manager" Kind="OutputPin">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="ElementumComponentsManager" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <Link Id="QBmHg30rgZ3OfZhdxCv5JY" Ids="CSDJ5tTR5fXPctbWJZsrC4,CKH3nP6GfUcPYahwJiiUia" IsHidden="true" />
+          <Link Id="CChuhATzKuoMNveeH5RsX8" Ids="Avd5JcHqP8jL8Jc2221Dnc,CSDJ5tTR5fXPctbWJZsrC4" />
         </Patch>
       </Node>
     </Canvas>
@@ -12591,7 +12636,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="LHrKPi9ZBXtPDjmEElNpdZ" Location="VL.Skia" Version="2021.3.0-0021-g44253d2755" />
+  <NugetDependency Id="LHrKPi9ZBXtPDjmEElNpdZ" Location="VL.Skia" Version="2020.3.0-0092-gae02f44ee4" />
   <DocumentDependency Id="Qoyv6RSy5MNNWdcTVTngYr" Location="../VL.Elementa.Core.vl" />
   <DocumentDependency Id="D43FXkKayxLMhBrl43PPm0" Location="./VL.Elementa.Widget.RangeFloat.vl" />
   <DocumentDependency Id="Q8iqHR7AgWgO8jasyzvw60" Location="./VL.Elementa.Widget.Press.vl" />
