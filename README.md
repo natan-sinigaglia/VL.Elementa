@@ -44,16 +44,27 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 5.0.1
+
+#### New
+
+- Panel widget has a new optional pin for space transformation
+
+#### Fixes
+
+- fixes in `Panel` widget (got rid of the internal group elementum)
+- fix in `TextWithBackground` not updating text when output assigned to create
+
 ### 5.0.0
 
-### New
+#### New
 
 - `AnyEditing` node in the `Getters` category
 - Layout operators' helper now also shows widget's bounds
 - Elementa node now has a `Viewport` input
 - `ScrollableValue` component allowing to modify a widget's value using mouse scroll. Comes with help patches
 
-### Changed
+#### Changed
 
 - The first widget connected to the Elementa node can use Flexibility to stretch to the viewport
 - All nodes now live under the `Elementa` category, instead of `VL.Elementa`
@@ -66,7 +77,7 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 - Padding is now expressed as a spread of floats instead of a string
 - Overlay system total revamp. Any number of overlays can now be opened on top of each other
 
-### Fixed
+#### Fixed
 
 - Polar widgets got added to `Widgets In Action` and `Widget Overview` help patches
 - Dropdown widgets now behave correctly
