@@ -46,8 +46,6 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ### 5.0.0
 
-_Not released yet, available as a preview package_
-
 ### New
 
 - `AnyEditing` node in the `Getters` category
