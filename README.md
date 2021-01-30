@@ -44,6 +44,12 @@ MIT License - You're free to use VL.Elementa in your creative & commercial proje
 
 ## Changelog
 
+### 5.0.2
+
+#### Fixes
+
+- added Flexibility Input pin in MenuEntry and MenuFolder
+
 ### 5.0.1
 
 #### New
