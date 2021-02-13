@@ -11,7 +11,6 @@ The library includes:
 - A bunch of utilities and help patches
 
 
-
 ## Installing
 
 To use the latest stable version:
@@ -21,8 +20,6 @@ To use the latest stable version:
 	nuget install VL.Elementa
 	```
 2. Press Enter and wait the ending of the installation process
-
-s
 
 ## Contributing to the development
 
