@@ -10,6 +10,7 @@
 
 - Fixed selection by single click over selectable widget
 - Renamed ForceStartSelectionFunc in SelectableComponentProcessorSettings to EnableSelectionCondition
+- Quick fix for label being clipped
 
 ### 5.0.2
 
