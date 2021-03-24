@@ -1,5 +1,11 @@
 # Changelog
 
+### 5.0.5
+
+#### New
+
+- Added enable option for default stroke for selected widgets in the selectableProcessorSettings
+
 ### 5.0.3
 
 #### New
