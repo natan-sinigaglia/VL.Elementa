@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.0.7
+
+- Fixes wrong assignment of two nodes inside Dropdown node - bug surfaces in new vvvv preview builds
+
 ### 5.0.5
 
 #### New
