@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.0.8
+
+- Added FUNDING.yml file
+
 ### 5.0.7
 
 - Fixes wrong assignment of two nodes inside Dropdown node - bug surfaces in new vvvv preview builds
