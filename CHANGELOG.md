@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.0.9
+
+- Fixes bang's boolean output acting like a toggle
+
 ### 5.0.8
 
 - Added FUNDING.yml file
