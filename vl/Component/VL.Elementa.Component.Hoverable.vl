@@ -1031,7 +1031,19 @@
                         <Pin Id="A8nPZx9nID8MajUMI9tRur" Name="Input" Kind="StateInputPin" />
                         <Pin Id="P0rVpPPkchmLnc4sB6KWem" Name="Item" Kind="InputPin" />
                         <Pin Id="AZhd09FAOYKPX9tam5VETT" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="SZZ6Y3RB3JXMeM8KtQM0fS" Name="Apply" Kind="InputPin" />
                       </Node>
+                      <Node Bounds="1517,1019,83,26" Id="TXOGR15oPIlPypULPQV81K">
+                        <p:NodeReference LastCategoryFullName="Elementa.Component.IComponent" LastSymbolSource="VL.Elementa.Core.vl">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <Choice Kind="OperationCallFlag" Name="GetElementum" />
+                          <CategoryReference Kind="InterfaceTypeFlag" Name="IComponent" NeedsToBeDirectParent="true" />
+                        </p:NodeReference>
+                        <Pin Id="C18RXk331UoOWz93MErvCv" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="NIE4ntIkcmnMH0MQ7nLQh5" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="FORyY564NWGPZ2U4c3ZEJY" Name="Elementum" Kind="OutputPin" />
+                      </Node>
+                      <Pad Id="BPfY0HIP9AtOMlbHxSniRe" Comment="" Bounds="770,902,35,35" ShowValueBox="true" isIOBox="true" />
                     </Patch>
                     <ControlPoint Id="U7j1kPIVkBGNZMGzvJHhpd" Bounds="1563,808" Alignment="Top" />
                     <ControlPoint Id="FxRZRNzhOXuLllkJqGOqpZ" Bounds="1563,1350" Alignment="Bottom" />
@@ -1160,7 +1172,6 @@
             <Link Id="GXBrqhWtIeTMq0yE1eTkxO" Ids="OAZ4pkeS5u3MhhjGtbGus6,JjDX8ZvpxrTPjq7RE09DCP" />
             <Link Id="UnYXpszN7R9LoLjcJ9IIvO" Ids="U6r3Tb9Zgs5PqqbWRzL8eB,Acw7Dqgpd6LOz1fBNacb3W" />
             <Link Id="JR9PW3k2m94LqviXNYM8eG" Ids="Ni2pyA3hZShLEVzZ1zBXVR,EQC0O0R3mmdOA0WOlIdp6n" IsHidden="true" />
-            <Link Id="V8ZDdtwMBSjP6q0Ix8rSh2" Ids="EQC0O0R3mmdOA0WOlIdp6n,HmSZMK3AUJVPbTBeKGlQ8P" />
             <ProcessDefinition Id="B5Cm4AqVXpNN3i5wOtr0to" HasStateOut="true">
               <Fragment Id="BciaRRZkh2jNudySjJ7NcJ" Patch="BY7knaelElJNS9m9SZSXmA" Enabled="true" />
               <Fragment Id="AVLIMjnx21LNwD3E9tMDT7" Patch="BvAIbLG6TENMFCCeuLCi5N" />
@@ -1355,11 +1366,7 @@
               </Pin>
             </Patch>
             <Patch Id="SaHX5MfDPpHNNrSCLg0khs" Name="SetContext (Internal)">
-              <Pin Id="Ni2pyA3hZShLEVzZ1zBXVR" MergeId="4080781" Name="Context" Kind="InputPin">
-                <p:TypeAnnotation>
-                  <Choice Kind="TypeFlag" Name="Context" />
-                </p:TypeAnnotation>
-              </Pin>
+              <Pin Id="Ni2pyA3hZShLEVzZ1zBXVR" MergeId="4080781" Name="Context" Kind="InputPin" />
             </Patch>
             <Patch Id="VHEvlUSB9QeOnl8kYFheIW" Name="GetFirstHovered (Advanced)">
               <Pin Id="H8abwIPLd8yP8iYYoBJ43M" Name="First Hovered" Kind="OutputPin" />
@@ -1391,7 +1398,6 @@
             <Link Id="CAg6YTvq2E1QKEKByF4OPf" Ids="CJqgE0cMx4UMG1A9ejsRGN,MfiWyFlqsbzLDPfj7lTonu" />
             <Link Id="E6QG02Y4pr3P8ollM6f3Qh" Ids="TT4Tp1ap5H4OMYHfhi65RK,VdWorlneyP9LPNOQtmE62L" />
             <Link Id="VlTzedbkuClLu91RgabEGP" Ids="T625jJq1mXJLw0qsy4Alzw,VRAIok6gLpTMEkfI6FqAhL" />
-            <Link Id="PrBLZ7iJ7RDMghFn4A1ELQ" Ids="LzLr7rc67z2Owgb4MdYE2y,P0rVpPPkchmLnc4sB6KWem" />
             <Link Id="UJRnwoOmDMiOfcOU5X9Ajn" Ids="U7j1kPIVkBGNZMGzvJHhpd,FxRZRNzhOXuLllkJqGOqpZ" IsFeedback="true" />
             <Link Id="JLhiSVqJWf7Mu2wxQL39Ec" Ids="U7j1kPIVkBGNZMGzvJHhpd,A8nPZx9nID8MajUMI9tRur" />
             <Link Id="LyWbpJi0B6TPcLjckehWgL" Ids="KsaSS0WhhWdLPsln4cVAZB,OCx2CNaCsyGPHztYBI0fWr" IsFeedback="true" />
@@ -1407,6 +1413,11 @@
             <Patch Id="HvWNzPIKSBwLpsNf2MeBI7" Name="GetAllHitElementa">
               <Pin Id="EmkNUJXdFuqPi4J1xMB7UP" Name="Hit Elementa" Kind="OutputPin" />
             </Patch>
+            <Link Id="VuYs0liu8NoQcF0ZtDv1AE" Ids="LzLr7rc67z2Owgb4MdYE2y,C18RXk331UoOWz93MErvCv" />
+            <Link Id="OrE5dt3w3WJPr7pX67960f" Ids="FORyY564NWGPZ2U4c3ZEJY,P0rVpPPkchmLnc4sB6KWem" />
+            <Link Id="CD5JzOY4siXQapvip2dOru" Ids="QwyVhe7PivgMyaJJ2lU1wU,SZZ6Y3RB3JXMeM8KtQM0fS" />
+            <Link Id="M9ZRYRfXnIrNbD84g0PtsA" Ids="QwyVhe7PivgMyaJJ2lU1wU,BPfY0HIP9AtOMlbHxSniRe" />
+            <Link Id="H6ex35AkdDSLJIKQQUf332" Ids="EQC0O0R3mmdOA0WOlIdp6n,HmSZMK3AUJVPbTBeKGlQ8P" />
           </Patch>
         </Node>
         <!--
