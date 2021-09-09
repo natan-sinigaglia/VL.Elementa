@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.0.10
+
+- Various fixes and improvements
+
 ### 5.0.9
 
 - Fixes bang's boolean output acting like a toggle
