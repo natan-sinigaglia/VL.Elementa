@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.0.11
+
+- Fix in the Group (Layout) node. flexible widgets now managed correctcly
+
 ### 5.0.10
 
 - Various fixes and improvements
