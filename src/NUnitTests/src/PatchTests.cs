@@ -23,8 +23,8 @@ namespace MyTests
     [TestFixture]
     public class PatchTests
     {
-        static string[] Packs = new string[]{         
-            @"C:\Program Files\vvvv\vvvv_gamma_2021.3.0-0023-g0462360ded\lib\packs",
+        static string[] Packs = new string[]{
+            @"C:\Program Files\vvvv\vvvv_gamma_2021.4.1-0654-gd60507ffd7\lib\packs",
         };
 
 
@@ -95,7 +95,7 @@ namespace MyTests
                 SynchronizationContext.SetSynchronizationContext(new WindowsFormsSynchronizationContext());
 
 
-            Session = new VLSession("gamma", SynchronizationContext.Current, includeUserPackages: false)
+            Session = new VLSession("gamma", includeUserPackages: false)
             {
                 CheckSolution = false,
                 IgnoreDynamicEnumErrors = true,
@@ -129,7 +129,7 @@ namespace MyTests
                 Assert.IsFalse(dep.RemoteSymbolSource is Dummy, $"Couldn't find dependency {dep}");
 
             // Check all containers and process node definitions, including application entry point
-            CheckNodes(document.AllTopLevelDefinitions);
+            CompileTimeTests.CheckNodes(solution.Compilation, document.AllTopLevelDefinitions);
 
             if (SaveDocCondition == SaveDocCondition.Always || (SaveDocCondition == SaveDocCondition.WhenGreen && Success()))
                 document.Save(isTrusted: false); // TODO: discuss when this can be turned on.
@@ -151,26 +151,12 @@ namespace MyTests
             return solution.WithFreshCompilation();
         }
 
-        public static void CheckNodes(IEnumerable<Node> nodes)
-        {
-            Parallel.ForEach(nodes, definition =>
-            {
-                var definitionSymbol = definition.GetSymbol() as IDefinitionSymbol;
-                Assert.IsNotNull(definitionSymbol, $"No symbol for {definition}.");
-                var errorMessages = definitionSymbol.Messages.Where(m => m.Severity == MessageSeverity.Error);
-                Assert.That(errorMessages.None(), () => $"{definition}: {string.Join(Environment.NewLine, errorMessages)}");
-                Assert.IsFalse(definitionSymbol.IsUnused, $"The symbol of {definition} is marked as unused.");
-            });
-        }
-
-
-
 
 
         [TestCaseSource(nameof(TestNodes))]
-        public async Task ActualTestPatches(Node testNode)
+        public void ActualTestPatches(Node testNode)
         {
-            await LanguageTests.RunTest(testNode);
+            RuntimeTests.RunTest(Session, testNode);
         }
 
         /// <summary>
