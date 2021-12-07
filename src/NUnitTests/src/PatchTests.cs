@@ -24,7 +24,7 @@ namespace MyTests
     public class PatchTests
     {
         static string[] Packs = new string[]{
-            @"C:\Program Files\vvvv\vvvv_gamma_2021.4.1-0654-gd60507ffd7\lib\packs",
+            @"C:\Program Files\vvvv\vvvv_gamma_2021.4.0\lib\packs",
         };
 
 
@@ -145,10 +145,8 @@ namespace MyTests
 
         static Solution Compile(IEnumerable<string> docs)
         {
-            var solution = Session.CurrentSolution;
-            foreach (var f in docs)
-                solution = solution.GetOrAddDocument(f).Solution;
-            return solution.WithFreshCompilation();
+            Session.TaskFactory.Run(() => Session.LoadDocuments(docs));
+            return Session.CurrentSolution;
         }
 
 
