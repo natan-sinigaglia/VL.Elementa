@@ -1,5 +1,13 @@
 # Changelog
 
+### 5.0.13
+
+- Fixes LocalStyle eating massive amounts of CPU
+
+- Adds a new help patch showing how to apply style to a Layout Operator
+
+- Fixes description of Flexibility in its help patch
+
 ### 5.0.11
 
 - Fix in the Group (Layout) node. flexible widgets now managed correctcly
@@ -91,17 +99,19 @@
 ### 4.0.4
 
 #### New
+
 - Massive documentation update : many new help patches, pin and nodes descriptions
 - New widgets :
-	- DropdownGrid
-	- DropdownGridEnum
-	- IntegerPolar
-	- ValuePolar
-	- IntegerPolarUpDown
+  - DropdownGrid
+  - DropdownGridEnum
+  - IntegerPolar
+  - ValuePolar
+  - IntegerPolarUpDown
 - New StylePresets : readymade stylesheets you can plug to your Elementa graph. Contribute your own!
 - AnyHovered : tells you if any widget of your graph is hovered. Comes with its help patch
 
 #### Changed/Updated
+
 - Changed pin names in Layout nodes. `Inherit Size From Children` and all similar names are now `Auto Size`
 - Masked irrelevant pins for some Layout nodes
 - Layout nodes now have an optionnal pin to that draws a helper stroke to visualize them more easily
