@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.1.0
+
+- Adds a new SaveDialog widget
+
 ### 5.0.13
 
 - Fixes LocalStyle eating massive amounts of CPU
