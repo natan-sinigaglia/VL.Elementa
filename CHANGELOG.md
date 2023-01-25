@@ -1,5 +1,13 @@
 # Changelog
 
+### 5.1.2
+
+- Fixes little performance issue in `GetActiveStates` by turning a cached LINQ query into a spread. Came up while profiling the patch posted [here](https://discourse.vvvv.org/t/elementa-frame-rate-issues/20798) (by @azeno) 
+
+### 5.1.1
+
+- Makes IsSelectable public
+
 ### 5.1.0
 
 - Adds a new SaveDialog widget
