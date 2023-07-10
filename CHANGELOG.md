@@ -1,5 +1,9 @@
 # Changelog
 
+### 5.1.3
+
+- Fixes PathDialog's _Initial Directory_ pin not being taken into account. This made the _Use Last Directory_ toggle not working. See [forum thread](https://discourse.vvvv.org/t/elementa-pathdialog-cant-set-initial-directory/21642).
+
 ### 5.1.2
 
 - Fixes little performance issue in `GetActiveStates` by turning a cached LINQ query into a spread. Came up while profiling the patch posted [here](https://discourse.vvvv.org/t/elementa-frame-rate-issues/20798) (by @azeno) 
