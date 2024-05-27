@@ -1,5 +1,11 @@
 # Changelog
 
+### 6.0.0
+_No stable release yet_
+
+- If a Panel is only horizontally constrained, you don't have to press CTRL anymore to scroll it (by @lasalillo)
+- New DropdownScrollable widget that lets you scroll through dropdown entries
+
 ### 5.1.3
 
 - Fixes PathDialog's _Initial Directory_ pin not being taken into account. This made the _Use Last Directory_ toggle not working. See [forum thread](https://discourse.vvvv.org/t/elementa-pathdialog-cant-set-initial-directory/21642).
